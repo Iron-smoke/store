@@ -1,0 +1,101 @@
+:root {
+    --bg-color-green:#114F3C;
+    --bg-color-nav: #98BC6D;
+    --bg-gradiend-hero: linear-gradient(to right, #F8A900, #FCEAB4);
+    --bg-gradiend-about:linear-gradient(to bottom, #114F3C, #FCEAB4);
+    --bg-gradiend-products:linear-gradient(to right, #FCEAB4, #F8A900);
+    /*--bg-gradiend-brands:linear-gradient(to bottom, #F77A07, #416E54, #4D6F5C);*/
+    --bg-gradiend-blog:linear-gradient(to bottom, #F87B08, #98BC6D, #114F3C 70%, #F6DEAE);
+    --bg-gradiend-stores:linear-gradient(to bottom, #F6DEAE, #F48D09 50%, #F7DFAF);
+    --bg-gradiend-questions:linear-gradient(to bottom, #F7DFAF, #F2A300, #B75A33);
+    --bg-gradiend-brands: linear-gradient(to bottom, #F77A07, #416E54 70%);
+    --color-review: linear-gradient(to right, #338AFB, #B038FF, #CF29BF, #1A34DE);
+
+
+
+}
+
+
+@font-face {
+    font-family: 'Title';
+    src: url('/fonts/Stylo_Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'typography';
+    src: url('/fonts/Rosarium.ttf') format('truetype');
+}
+
+
+html,body {
+    height: 100%;
+}
+
+
+body {
+    min-width: 320px;
+}
+.btn-group{
+    font-family: 'typography',sans-serif;
+}
+
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main.main{
+    flex: 1 1 auto;
+}
+h1, h2, h3 {
+    font-family: 'Title', sans-serif;
+}
+
+p {
+    font-family: 'typography', sans-serif;
+}
+
+header{
+    color: var(--bg-gradiend-hero);
+
+}
+
+footer{
+
+    background-color:var(--bg-color-green);
+}
+.about-company {
+    background:var(--bg-gradiend-about);
+}
+.banner-dog {
+
+}
+.products{
+    background: var(--bg-gradiend-products);
+}
+.Blog {
+    background:var(--bg-gradiend-blog) ;
+}
+.Stores{
+    background: var(--bg-gradiend-stores);
+}
+.brands{
+background: var(--bg-gradiend-brands);
+}
+.questions{
+    background: var(--bg-gradiend-questions);
+}
+.header-top{
+    position: absolute;
+    width: 1440px;
+    height: 28px;
+    background: var(--bg-color-nav);
+}
+.menu-element__link__review{
+color: var(--color-review);
+}
+
+.advertisment{
+    background: var(--bg-color-green);
+
+}
