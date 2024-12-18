@@ -216,3 +216,58 @@ ul.social-icons a:hover {
         padding-left: 1rem;
     }
 }
+
+.advertisment{
+    background-color: var(--bg-color-green);
+}
+.carousel-caption{
+    text-shadow: 0 0 2px rgba(0, 0, 0, .9);
+ }
+.carousel-caption p{
+    font-size: 1.5em;
+ }
+section{
+    padding: 50px 0;
+}
+
+.section-title {
+    position: relative;
+    text-transform: uppercase;
+    color:var(--contrast-color) ;
+    font-weight: 700;
+}
+.section-title span{
+background-color: var(--bg-color);
+    padding-right: 1rem;
+}
+
+.section-title::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    top: 50%;
+    left: 0;
+    border-top: 1px dashed var(--text-color);
+}
+.advantages .items {
+    margin-top: 50px;
+}
+.advantages .items .item{
+    background-color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all .3s;
+
+}
+.advantages .items .item:hover{
+    box-shadow: 0 15px 30px -20px rgba(0,0,0,1);
+
+}
+
+.advantages i{
+    font-size: 70px;
+    color: var(--accent-color);
+}
