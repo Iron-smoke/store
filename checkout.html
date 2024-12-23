@@ -306,143 +306,80 @@
                     <nav class="breadcrumbs">
                         <ul>
                             <li><a href="index.html">Home</a></li>
-                            <li><span>Cart</span></li>
+                            <li><span>Checkout</span></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            <div class="page-register bg-white p-3 mb-3">
-                <h1 class="section-title h3"><span>Cart</span></h1>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-8 mb-3">
-            <div class="cart-content p-3 h-100 bg-white">
-                <div class="table-responsive">
+    <form action="" class="needs-validation" novalidate>
 
-                    <table class="table align-middle table-hover">
-                        <thead class="table-dark ">
-                        <tr>
-                            <th>Photo</th>
-                            <th>Product</th>
-                            <th>Price</th>
-                            <th>Qty</th>
-                            <th><i class="fa-regular fa-trash-can"></i></th>
+        <div class="row">
+            <div class="col-lg-8 mb-3">
+                <div class="Checkout p-3 h-100 bg-white">
+                    <h1 class="section-title h5">
+                        <span>Billing address</span>
+                    </h1>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" aria-label="Name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="example@gmail.com" aria-label="Email" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">Phone number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+12365824" aria-label="Phone number" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="country" class="form-label">Country</label>
+                            <select id="country" name="country" class="form-select" aria-label="Country" required>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="city" class="form-label">city</label>
+                            <input type="text" id="city" name="city" class="form-control" placeholder="New York" aria-label="city" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="address" class="form-label">address</label>
+                            <input type="text" id="address" name="address" class="form-control" placeholder="St.home 123" aria-label="address" required>
+                        </div>
+                        <div class="col">
+                            <label for="comment" class="form-label">comment</label>
+                            <textarea name="comment" id="comment" cols="30" rows="3" placeholder="Order note" class="form-control"></textarea>
+                        </div>
+                    </div>
 
-                        </tr>
-
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td class="product-img-td">
-                                <a href="">
-                                    <img src="img/products/1.jpg" alt="">
-                                </a>
-                            </td>
-                            <td>
-                                <a href="" class="cart-content-title">Lorem ipsum dolor sit amet 1</a>
-                            </td>
-                            <td>$65</td>
-                            <td>
-                                <input type="number" value="1" class="form-control cart-qty">
-                            </td>
-                            <td>
-                                <button class="btn btn-danger"><i class="fa-regular fa-circle-xmark"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="product-img-td">
-                                <a href="">
-                                    <img src="img/products/2.jpg" alt="">
-                                </a>
-                            </td>
-                            <td>
-                                <a href="" class="cart-content-title">Product 2</a>
-                            </td>
-                            <td>$70</td>
-                            <td><input type="number" value="2" class="form-control cart-qty"></td>
-                            <td>
-                                <button class="btn btn-danger"><i class="fa-regular fa-circle-xmark"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="product-img-td">
-                                <a href="">
-                                    <img src="img/products/3.jpg" alt="">
-                                </a>
-                            </td>
-                            <td>
-                                <a href="" class="cart-content-title">Lorem ipsum dolor sit amet Product 3</a>
-                            </td>
-                            <td>$80</td>
-                            <td><input type="number" value="1" class="form-control cart-qty"></td>
-                            <td>
-                                <button class="btn btn-danger"><i class="fa-regular fa-circle-xmark"></i></button>
-                            </td>
-                        </tr>
-                        </tbody>
-                        <tfoot>
-                        <tr>
-                            <td colspan="5" class="text-end">
-<button class="btn btn-outline-warning"> Update Cart</button>
-                            </td>
-                        </tr>
-                        </tfoot>
-                    </table>
                 </div>
             </div>
-        </div>
 
 
 
-        <div class="col-lg-4 mb-3 h-100 " >
-            <div class="cart-summary p3 bg-white px-3 my-3">
-<h5 class="section-title"><span>Cart Summary</span></h5>
-                <div class="d-flex justify-content-between my-3">
-                    <h6>Subtotal</h6>
-                    <h6>$1000</h6>
-            </div>
-                <div class="d-flex justify-content-between my-3 border-bottom">
-                    <h6>Coupon</h6>
-                    <h6>-20%</h6>
-                </div>
-                <div class="d-flex justify-content-between my-3 border-bottom">
-                    <h6>Shipping</h6>
-                    <h6>$10</h6>
-                </div>
+            <div class="col-lg-4 h-100 " >
 
-                <button class="btn btn-link px-0 btn-coupon" data-bs-toggle="collapse" data-bs-target="#collapseCoupon" >
-                    Have a Coupon ?
-                </button>
-                <div class="input-group collapse" id="collapseCoupon">
-                <input type="text" class="form-control "  placeholder="Coupon Code" >
-                <button class="btn btn-warning" >
-                    <i class="fa-regular fa-circle-check"></i>
-                </button>
-                </div>
+                <div class="cart-summary p-3 bg-white ">
 
-                <div class="d-flex justify-content-between my-3 border-bottom">
-                    <h3>Total</h3>
-                    <h3>$900</h3>
-                </div>
-
+                    <h5 class="section-title">
+                        <span>Cart Summary</span>
+                    </h5>
                     <div class="d-grid">
                         <a href="" class="btn btn-warning">
-                        Checkout
-                </a>
+                            Checkout
+                        </a>
                     </div>
 
 
+                </div>
             </div>
         </div>
-    </div>
+    </form>
+
 
 
 </div>

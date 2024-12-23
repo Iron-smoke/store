@@ -268,8 +268,10 @@ section{
     font-weight: 700;
 }
 .section-title span{
-background-color: var(--bg-color);
+    background-color: var(--bg-color);
     padding-right: 1rem;
+    position: relative;
+    z-index: 1;
 }
 
 .section-title::after{
@@ -406,7 +408,7 @@ background-color: var(--red-color);
 .sidebar .section-title span,
 .bg-white .section-title span
 {
-    background-color: #fff;
+    background-color: #FFFFFF;
 }
 footer {
     background-color: var(--contrast-color);
@@ -594,4 +596,22 @@ max-width: 50px;
 .cart-qty{
     width: 57px;
 
+}
+.btn-coupon{
+    color: var(--text-color);
+    text-decoration: none;
+}
+.btn-coupon:hover{
+    color: var(--contrast-color);
+}
+.cart-summary{
+    color:black;
+    font-weight: bold;
+}
+.cart-summary .btn{
+    padding: .7rem;
+}
+
+textarea {
+    resize: none;
 }
