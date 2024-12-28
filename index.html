@@ -17,17 +17,11 @@
 <body>
 
 <div class="wrapper">
-    <div class="header-bottom sticky-top" id="header-nav">
+    <div class="header-bottom sticky-top" id="header-nav" >
         <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
                 <div class="d-block ">
                     <div class="d-flex justify-content-center align-items-center">
-                        <!-- Блок телефона -->
-                        <div class="d-flex align-items-center me-3">
-                            <i class="fa-solid fa-mobile-screen"></i>
-                            <a href="tel:89528291555" class="ms-2 text-decoration-none">8(952)829-15-55</a>
-                        </div>
-
                         <!-- Блок соцсетей -->
                         <ul class="social-icons d-flex m-0 p-0">
                             <li class="mx-2">
@@ -43,16 +37,16 @@
                 </button>
                 <div class="offcanvas offcanvas-start" id="offcanvasNavbar" tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Catalog</h5>
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav">
-                            <li class="nav-item Logoimg">
-                                <img src="images/Logo+titile.svg" alt="">
+                            <li class="navbar-brand">
+                                <img src="images/Logo+titile.svg" alt="" class="logo-homka">
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                <a class="nav-link dropdown-toggle fw-bold fs-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                     Каталог
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
@@ -140,128 +134,122 @@
                                             </li>
                                         </ul>
                                     </li>
-
-
-
                                 </ul>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item fw-bold fs-4">
                                 <a class="nav-link" href="#">Акции</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item fw-bold fs-4">
                                 <a class="nav-link" href="#">О компании</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item fw-bold fs-4">
                                 <a class="nav-link" href="#">Частые вопросы</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item fw-bold fs-4">
                                 <a class="nav-link" href="#">Блог</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item fw-bold fs-4">
                                 <a class="nav-link" href="#">КормПрофи</a>
                             </li>
 
-                            <li class="nav-item">
+                            <li class="nav-item fw-bold fs-4">
                                 <a class="nav-link" href="#">Оставить отзыв</a>
                             </li>
 
                         </ul>
                     </div>
                 </div>
-
-
-
             </div>
         </nav>
     </div>
     <header class="header">
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasCartLabel">Cart</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <div class="table-responsive">
-                    <table class="table offcanvasCart-table">
-<tbody>
-<tr>
-    <td class="product-img-td">
-        <a href="">
-            <img src="img/products/1.jpg" alt="">
-        </a>
-    </td>
-    <td>
-        <a href="">Lorem ipsum dolor sit amet 1</a>
-    </td>
-    <td>$65</td>
-    <td>&times;1</td>
-    <td>
-        <button class="btn btn-danger"><i class="fa-regular fa-circle-xmark"></i></button>
-    </td>
-</tr>
-<tr>
-    <td class="product-img-td">
-        <a href="">
-            <img src="img/products/2.jpg" alt="">
-        </a>
-    </td>
-    <td>
-        <a href="">Product 2</a>
-    </td>
-    <td>$70</td>
-    <td>&times;2</td>
-    <td>
-        <button class="btn btn-danger"><i class="fa-regular fa-circle-xmark"></i></button>
-    </td>
-</tr>
-<tr>
-    <td class="product-img-td">
-        <a href="">
-            <img src="img/products/3.jpg" alt="">
-        </a>
-    </td>
-    <td>
-        <a href="">Lorem ipsum dolor sit amet Product 3</a>
-    </td>
-    <td>$80</td>
-    <td>&times;1</td>
-    <td>
-        <button class="btn btn-danger"><i class="fa-regular fa-circle-xmark"></i></button>
-    </td>
-</tr>
-</tbody>
-                    <tfoot>
-                    <tr>
-                        <td colspan="4" class="text-end">
-                            Total:
-                        </td>
-                        <td>$325</td>
-                    </tr>
-                    </tfoot>
-                    </table>
-                </div>
-                <div class="text-end">
-                <a href="" class="btn btn-outline-warning">Cart</a>
-                <a href="" class="btn btn-outline-secondary">Checkout</a>
-                </div>
-                <div class="dropdown mt-3">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                        Dropdown button
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a class="dropdown-item closecart" href="#footer" data-href="footer">Footer</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item closecart" href="#about-us" data-href="about-us" >About us</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item closecart" href="#map" data-href="map">map</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+<!--        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">-->
+<!--            <div class="offcanvas-header">-->
+<!--                <h5 class="offcanvas-title" id="offcanvasCartLabel">Cart</h5>-->
+<!--                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>-->
+<!--            </div>-->
+<!--            <div class="offcanvas-body">-->
+<!--                <div class="table-responsive">-->
+<!--                    <table class="table offcanvasCart-table">-->
+<!--<tbody>-->
+<!--<tr>-->
+<!--    <td class="product-img-td">-->
+<!--        <a href="">-->
+<!--            <img src="img/products/1.jpg" alt="">-->
+<!--        </a>-->
+<!--    </td>-->
+<!--    <td>-->
+<!--        <a href="">Lorem ipsum dolor sit amet 1</a>-->
+<!--    </td>-->
+<!--    <td>$65</td>-->
+<!--    <td>&times;1</td>-->
+<!--    <td>-->
+<!--        <button class="btn btn-danger"><i class="fa-regular fa-circle-xmark"></i></button>-->
+<!--    </td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td class="product-img-td">-->
+<!--        <a href="">-->
+<!--            <img src="img/products/2.jpg" alt="">-->
+<!--        </a>-->
+<!--    </td>-->
+<!--    <td>-->
+<!--        <a href="">Product 2</a>-->
+<!--    </td>-->
+<!--    <td>$70</td>-->
+<!--    <td>&times;2</td>-->
+<!--    <td>-->
+<!--        <button class="btn btn-danger"><i class="fa-regular fa-circle-xmark"></i></button>-->
+<!--    </td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--    <td class="product-img-td">-->
+<!--        <a href="">-->
+<!--            <img src="img/products/3.jpg" alt="">-->
+<!--        </a>-->
+<!--    </td>-->
+<!--    <td>-->
+<!--        <a href="">Lorem ipsum dolor sit amet Product 3</a>-->
+<!--    </td>-->
+<!--    <td>$80</td>-->
+<!--    <td>&times;1</td>-->
+<!--    <td>-->
+<!--        <button class="btn btn-danger"><i class="fa-regular fa-circle-xmark"></i></button>-->
+<!--    </td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--                    <tfoot>-->
+<!--                    <tr>-->
+<!--                        <td colspan="4" class="text-end">-->
+<!--                            Total:-->
+<!--                        </td>-->
+<!--                        <td>$325</td>-->
+<!--                    </tr>-->
+<!--                    </tfoot>-->
+<!--                    </table>-->
+<!--                </div>-->
+<!--                <div class="text-end">-->
+<!--                <a href="" class="btn btn-outline-warning">Cart</a>-->
+<!--                <a href="" class="btn btn-outline-secondary">Checkout</a>-->
+<!--                </div>-->
+<!--                <div class="dropdown mt-3">-->
+<!--                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">-->
+<!--                        Dropdown button-->
+<!--                    </button>-->
+<!--                    <ul class="dropdown-menu">-->
+<!--                        <li>-->
+<!--                            <a class="dropdown-item closecart" href="#footer" data-href="footer">Footer</a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a class="dropdown-item closecart" href="#about-us" data-href="about-us" >About us</a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a class="dropdown-item closecart" href="#map" data-href="map">map</a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
     </header>
     <main class="main">
         <section class="hero container-fluid position-relative px-0 py-0">
@@ -330,571 +318,651 @@
                     alt="paws"
                     class="hero-paws  "
             />
-            <img
-                    src="images/paws2.svg"
-                    alt="paws"
-                    class="hero-paws-2 d-none d-md-block"
-            />
-            <img
-                    src="images/paws2.svg"
-                    alt="paws"
-                    class="hero-paws-3 d-none d-md-block"
-            />
         </section>
-        <section class="advantages">
-        <div class="container-fluid">
-<div class="row mb-5">
-    <div class="col-12">
-<h2 class="section-title">
-    <span>
-        Наши преимущества
-    </span>
-</h2>
-    </div>
-</div>
-                <div class="row gy-3 items">
-                    <div class="col-lg-2 col-sm-4">
-                        <div class="item">
-                            <p><i class="fa-solid fa-check"></i></p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
+<!--        <div class="container-fluid">-->
+<!--<div class="row mb-5">-->
+<!--    <div class="col-12">-->
+<!--<h2 class="section-title">-->
+<!--    <span>-->
+<!--        Наши преимущества-->
+<!--    </span>-->
+<!--</h2>-->
+<!--    </div>-->
+<!--</div>-->
+<!--                <div class="row gy-3 items">-->
+<!--                    <div class="col-lg-2 col-sm-4">-->
+<!--                        <div class="item">-->
+<!--                            <p><i class="fa-solid fa-check"></i></p>-->
+<!--                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <div class="col-lg-2 col-sm-4">
-                        <div class="item">
-                            <p><i class="fa-solid fa-truck-fast"></i></p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
+<!--                    <div class="col-lg-2 col-sm-4">-->
+<!--                        <div class="item">-->
+<!--                            <p><i class="fa-solid fa-truck-fast"></i></p>-->
+<!--                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <div class="col-lg-2 col-sm-4">
-                        <div class="item">
-                            <p><i class="fa-solid fa-hippo"></i></p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
+<!--                    <div class="col-lg-2 col-sm-4">-->
+<!--                        <div class="item">-->
+<!--                            <p><i class="fa-solid fa-hippo"></i></p>-->
+<!--                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <div class="col-lg-2 col-sm-4">
-                        <div class="item">
-                            <p><i class="fa-brands fa-slack"></i></p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-sm-4">
-                        <div class="item">
-                            <p><i class="fa-brands fa-slack"></i></p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-sm-4">
-                        <div class="item">
-                            <p><i class="fa-brands fa-slack"></i></p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                </div>
-        </div>
+<!--                    <div class="col-lg-2 col-sm-4">-->
+<!--                        <div class="item">-->
+<!--                            <p><i class="fa-brands fa-slack"></i></p>-->
+<!--                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-2 col-sm-4">-->
+<!--                        <div class="item">-->
+<!--                            <p><i class="fa-brands fa-slack"></i></p>-->
+<!--                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-2 col-sm-4">-->
+<!--                        <div class="item">-->
+<!--                            <p><i class="fa-brands fa-slack"></i></p>-->
+<!--                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--        </div>-->
 
-        </section>
-        <section class="featured-products px-lg-3">
-            <div class="container-fluid">
-                <div class="row mb-5">
-                    <div class="col-12">
-                        <h2 class="section-title">
-                            <span>Рекомендуемые товары</span>
-                        </h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                        <div class="product-card">
-                            <div class="product-card-offer">
-                                <div class="offer-hit">Hit</div>
-                                <div class="offer-new">New</div>
-                            </div>
-                            <div class="product-thumb">
-                                <a href="product.html"> <img src="img/products/1.jpg" alt=""></a>
-                            </div>
-                            <div class="product-details">
-                                <h4>
-                                    <a href="product.html">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing.
-                                    </a>
-                                </h4>
-                                <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Quas, vel?</p>
-                                <div class="product-bottom-details d-flex justify-content-between">
-                                    <div class="product-price">
-                                        100$
-                                    </div>
-                                    <div class="product-links">
-                                        <a href="#" class="btn btn-outline-secondary add-to-cart">
-                                            <i class="fas fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                        <div class="product-card">
-                            <div class="product-card-offer">
-                                <div class="offer-hit">Hit</div>
-                            </div>
-                            <div class="product-thumb">
-                                <a href="product.html"> <img src="img/products/2.jpg" alt=""></a>
-                            </div>
-                            <div class="product-details">
-                                <h4>
-                                    <a href="product.html">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing.
-                                    </a>
-                                </h4>
-                                <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Quas, vel?</p>
-                                <div class="product-bottom-details d-flex justify-content-between">
-                                    <div class="product-price">
-                                        <small>$70</small>
-                                        65$
-                                    </div>
-                                    <div class="product-links">
-                                        <a href="#" class="btn btn-outline-secondary add-to-cart">
-                                            <i class="fas fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                        <div class="product-card">
-                            <div class="product-card-offer">
-                                <div class="offer-hit">Hit</div>
+<!--        </section>-->
+<!--        <section class="featured-products px-lg-3">-->
+<!--            <div class="container-fluid">-->
+<!--                <div class="row mb-5">-->
+<!--                    <div class="col-12">-->
+<!--                        <h2 class="section-title">-->
+<!--                            <span>Рекомендуемые товары</span>-->
+<!--                        </h2>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">-->
+<!--                        <div class="product-card">-->
+<!--                            <div class="product-card-offer">-->
+<!--                                <div class="offer-hit">Hit</div>-->
 <!--                                <div class="offer-new">New</div>-->
-                            </div>
-                            <div class="product-thumb">
-                                <a href="product.html"> <img src="img/products/3.jpg" alt=""></a>
-                            </div>
-                            <div class="product-details">
-                                <h4>
-                                    <a href="product.html">
-                                        Lorem ipsum dolor 2
-                                    </a>
-                                </h4>
-                                <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing </p>
-                                <div class="product-bottom-details d-flex justify-content-between">
-                                    <div class="product-price">
-                                        <small>$70</small>
-                                        65$
-                                    </div>
-                                    <div class="product-links">
-                                        <a href="#" class="btn btn-outline-secondary add-to-cart">
-                                            <i class="fas fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                        <div class="product-card">
-                            <div class="product-card-offer">
-                                <div class="offer-new">New</div>
-                            </div>
-                            <div class="product-thumb">
-                                <a href="product.html"> <img src="img/products/4.jpg" alt=""></a>
-                            </div>
-                            <div class="product-details">
-                                <h4>
-                                    <a href="product.html">
-                                        Lorem 3
-                                    </a>
-                                </h4>
-                                <p class="product-excerpt">Lorem ipsum dolor sit amet, 3</p>
-                                <div class="product-bottom-details d-flex justify-content-between">
-                                    <div class="product-price">
-                                        <small>$70</small>
-                                        65$
-                                    </div>
-                                    <div class="product-links">
-                                        <a href="#" class="btn btn-outline-secondary add-to-cart">
-                                            <i class="fas fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                        <div class="product-card">
-                            <div class="product-card-offer">
-                                <div class="offer-hit">Hit</div>
-                                <div class="offer-new">New</div>
-                            </div>
-                            <div class="product-thumb">
-                                <a href="product.html"> <img src="img/products/5.jpg" alt=""></a>
-                            </div>
-                            <div class="product-details">
-                                <h4>
-                                    <a href="product.html">
-                                        Lorem ipsum 4
-                                    </a>
-                                </h4>
-                                <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing 4</p>
-                                <div class="product-bottom-details d-flex justify-content-between">
-                                    <div class="product-price">
-                                        <small>$70</small>
-                                        65$
-                                    </div>
-                                    <div class="product-links">
-                                        <a href="#" class="btn btn-outline-secondary add-to-cart">
-                                            <i class="fas fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                        <div class="product-card">
-                            <div class="product-card-offer">
-                                <div class="offer-hit">Hit</div>
-                                <div class="offer-new">New</div>
-                            </div>
-                            <div class="product-thumb">
-                                <a href="product.html"> <img src="img/products/6.jpg" alt=""></a>
-                            </div>
-                            <div class="product-details">
-                                <h4>
-                                    <a href="product.html">
-                                        Lorem ipsum dolor sit 5
-                                    </a>
-                                </h4>
-                                <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Quas, vel?</p>
-                                <div class="product-bottom-details d-flex justify-content-between">
-                                    <div class="product-price">
-                                        <small>$70</small>
-                                        65$
-                                    </div>
-                                    <div class="product-links">
-                                        <a href="#" class="btn btn-outline-secondary add-to-cart">
-                                            <i class="fas fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                        <div class="product-card">
-                            <div class="product-card-offer">
+<!--                            </div>-->
+<!--                            <div class="product-thumb">-->
+<!--                                <a href="product.html"> <img src="img/products/1.jpg" alt=""></a>-->
+<!--                            </div>-->
+<!--                            <div class="product-details">-->
+<!--                                <h4>-->
+<!--                                    <a href="product.html">-->
+<!--                                        Lorem ipsum dolor sit amet, consectetur adipisicing.-->
+<!--                                    </a>-->
+<!--                                </h4>-->
+<!--                                <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur-->
+<!--                                    adipisicing elit. Quas, vel?</p>-->
+<!--                                <div class="product-bottom-details d-flex justify-content-between">-->
+<!--                                    <div class="product-price">-->
+<!--                                        100$-->
+<!--                                    </div>-->
+<!--                                    <div class="product-links">-->
+<!--                                        <a href="#" class="btn btn-outline-secondary add-to-cart">-->
+<!--                                            <i class="fas fa-shopping-cart"></i>-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">-->
+<!--                        <div class="product-card">-->
+<!--                            <div class="product-card-offer">-->
+<!--                                <div class="offer-hit">Hit</div>-->
+<!--                            </div>-->
+<!--                            <div class="product-thumb">-->
+<!--                                <a href="product.html"> <img src="img/products/2.jpg" alt=""></a>-->
+<!--                            </div>-->
+<!--                            <div class="product-details">-->
+<!--                                <h4>-->
+<!--                                    <a href="product.html">-->
+<!--                                        Lorem ipsum dolor sit amet, consectetur adipisicing.-->
+<!--                                    </a>-->
+<!--                                </h4>-->
+<!--                                <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur-->
+<!--                                    adipisicing elit. Quas, vel?</p>-->
+<!--                                <div class="product-bottom-details d-flex justify-content-between">-->
+<!--                                    <div class="product-price">-->
+<!--                                        <small>$70</small>-->
+<!--                                        65$-->
+<!--                                    </div>-->
+<!--                                    <div class="product-links">-->
+<!--                                        <a href="#" class="btn btn-outline-secondary add-to-cart">-->
+<!--                                            <i class="fas fa-shopping-cart"></i>-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">-->
+<!--                        <div class="product-card">-->
+<!--                            <div class="product-card-offer">-->
+<!--                                <div class="offer-hit">Hit</div>-->
+<!--&lt;!&ndash;                                <div class="offer-new">New</div>&ndash;&gt;-->
+<!--                            </div>-->
+<!--                            <div class="product-thumb">-->
+<!--                                <a href="product.html"> <img src="img/products/3.jpg" alt=""></a>-->
+<!--                            </div>-->
+<!--                            <div class="product-details">-->
+<!--                                <h4>-->
+<!--                                    <a href="product.html">-->
+<!--                                        Lorem ipsum dolor 2-->
+<!--                                    </a>-->
+<!--                                </h4>-->
+<!--                                <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur-->
+<!--                                    adipisicing </p>-->
+<!--                                <div class="product-bottom-details d-flex justify-content-between">-->
+<!--                                    <div class="product-price">-->
+<!--                                        <small>$70</small>-->
+<!--                                        65$-->
+<!--                                    </div>-->
+<!--                                    <div class="product-links">-->
+<!--                                        <a href="#" class="btn btn-outline-secondary add-to-cart">-->
+<!--                                            <i class="fas fa-shopping-cart"></i>-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">-->
+<!--                        <div class="product-card">-->
+<!--                            <div class="product-card-offer">-->
 <!--                                <div class="offer-new">New</div>-->
-                            </div>
-                            <div class="product-thumb">
-                                <a href="product.html"> <img src="img/products/8.jpg" alt=""></a>
-                            </div>
-                            <div class="product-details">
-                                <h4>
-                                    <a href="product.html">
-                                        Lorem ipsum dolor sit amet, consectetur 6
-                                    </a>
-                                </h4>
-                                <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing 6</p>
-                                <div class="product-bottom-details d-flex justify-content-between">
-                                    <div class="product-price">
-                                        <small>$70</small>
-                                        65$
-                                    </div>
-                                    <div class="product-links">
-                                        <a href="#" class="btn btn-outline-secondary add-to-cart">
-                                            <i class="fas fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                        <div class="product-card">
-                        <div class="product-card-offer">
+<!--                            </div>-->
+<!--                            <div class="product-thumb">-->
+<!--                                <a href="product.html"> <img src="img/products/4.jpg" alt=""></a>-->
+<!--                            </div>-->
+<!--                            <div class="product-details">-->
+<!--                                <h4>-->
+<!--                                    <a href="product.html">-->
+<!--                                        Lorem 3-->
+<!--                                    </a>-->
+<!--                                </h4>-->
+<!--                                <p class="product-excerpt">Lorem ipsum dolor sit amet, 3</p>-->
+<!--                                <div class="product-bottom-details d-flex justify-content-between">-->
+<!--                                    <div class="product-price">-->
+<!--                                        <small>$70</small>-->
+<!--                                        65$-->
+<!--                                    </div>-->
+<!--                                    <div class="product-links">-->
+<!--                                        <a href="#" class="btn btn-outline-secondary add-to-cart">-->
+<!--                                            <i class="fas fa-shopping-cart"></i>-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">-->
+<!--                        <div class="product-card">-->
+<!--                            <div class="product-card-offer">-->
+<!--                                <div class="offer-hit">Hit</div>-->
+<!--                                <div class="offer-new">New</div>-->
+<!--                            </div>-->
+<!--                            <div class="product-thumb">-->
+<!--                                <a href="product.html"> <img src="img/products/5.jpg" alt=""></a>-->
+<!--                            </div>-->
+<!--                            <div class="product-details">-->
+<!--                                <h4>-->
+<!--                                    <a href="product.html">-->
+<!--                                        Lorem ipsum 4-->
+<!--                                    </a>-->
+<!--                                </h4>-->
+<!--                                <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur-->
+<!--                                    adipisicing 4</p>-->
+<!--                                <div class="product-bottom-details d-flex justify-content-between">-->
+<!--                                    <div class="product-price">-->
+<!--                                        <small>$70</small>-->
+<!--                                        65$-->
+<!--                                    </div>-->
+<!--                                    <div class="product-links">-->
+<!--                                        <a href="#" class="btn btn-outline-secondary add-to-cart">-->
+<!--                                            <i class="fas fa-shopping-cart"></i>-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">-->
+<!--                        <div class="product-card">-->
+<!--                            <div class="product-card-offer">-->
+<!--                                <div class="offer-hit">Hit</div>-->
+<!--                                <div class="offer-new">New</div>-->
+<!--                            </div>-->
+<!--                            <div class="product-thumb">-->
+<!--                                <a href="product.html"> <img src="img/products/6.jpg" alt=""></a>-->
+<!--                            </div>-->
+<!--                            <div class="product-details">-->
+<!--                                <h4>-->
+<!--                                    <a href="product.html">-->
+<!--                                        Lorem ipsum dolor sit 5-->
+<!--                                    </a>-->
+<!--                                </h4>-->
+<!--                                <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur-->
+<!--                                    adipisicing elit. Quas, vel?</p>-->
+<!--                                <div class="product-bottom-details d-flex justify-content-between">-->
+<!--                                    <div class="product-price">-->
+<!--                                        <small>$70</small>-->
+<!--                                        65$-->
+<!--                                    </div>-->
+<!--                                    <div class="product-links">-->
+<!--                                        <a href="#" class="btn btn-outline-secondary add-to-cart">-->
+<!--                                            <i class="fas fa-shopping-cart"></i>-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">-->
+<!--                        <div class="product-card">-->
+<!--                            <div class="product-card-offer">-->
+<!--&lt;!&ndash;                                <div class="offer-new">New</div>&ndash;&gt;-->
+<!--                            </div>-->
+<!--                            <div class="product-thumb">-->
+<!--                                <a href="product.html"> <img src="img/products/8.jpg" alt=""></a>-->
+<!--                            </div>-->
+<!--                            <div class="product-details">-->
+<!--                                <h4>-->
+<!--                                    <a href="product.html">-->
+<!--                                        Lorem ipsum dolor sit amet, consectetur 6-->
+<!--                                    </a>-->
+<!--                                </h4>-->
+<!--                                <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur-->
+<!--                                    adipisicing 6</p>-->
+<!--                                <div class="product-bottom-details d-flex justify-content-between">-->
+<!--                                    <div class="product-price">-->
+<!--                                        <small>$70</small>-->
+<!--                                        65$-->
+<!--                                    </div>-->
+<!--                                    <div class="product-links">-->
+<!--                                        <a href="#" class="btn btn-outline-secondary add-to-cart">-->
+<!--                                            <i class="fas fa-shopping-cart"></i>-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">-->
+<!--                        <div class="product-card">-->
+<!--                        <div class="product-card-offer">-->
+<!--&lt;!&ndash;                            <div class="offer-hit">Hit</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="offer-new">New</div>&ndash;&gt;-->
+<!--                        </div>-->
+<!--                        <div class="product-thumb">-->
+<!--                            <a href="product.html"> <img src="img/products/7.jpg" alt=""></a>-->
+<!--                        </div>-->
+<!--                            <div class="product-details">-->
+<!--                                <h4>-->
+<!--                                    <a href="product.html">-->
+<!--                                        Lorem ipsum dolor sit amet, consectetur adipisicing.-->
+<!--                                    </a>-->
+<!--                                </h4>-->
+<!--                                <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur-->
+<!--                                    adipisicing elit. Quas, vel?</p>-->
+<!--                                <div class="product-bottom-details d-flex justify-content-between">-->
+<!--                                    <div class="product-price">-->
+<!--                                        <small>$70</small>-->
+<!--                                        65$-->
+<!--                                    </div>-->
+<!--                                    <div class="product-links">-->
+<!--                                        <a href="#" class="btn btn-outline-secondary add-to-cart">-->
+<!--                                            <i class="fas fa-shopping-cart"></i>-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+
+<!--        </section>-->
+<!--        <section class="new-products">-->
+<!--            <div class="container-fluid">-->
+<!--                <div class="row mb-5">-->
+<!--                    <div class="col-12">-->
+<!--                        <h2 class="section-title">-->
+<!--                            <span>Новинки</span>-->
+<!--                        </h2>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="owl-carousel owl-theme owl-carousel-full">-->
+<!--                    <div class="product-card">-->
+<!--                        <div class="product-card-offer">-->
 <!--                            <div class="offer-hit">Hit</div>-->
 <!--                            <div class="offer-new">New</div>-->
-                        </div>
-                        <div class="product-thumb">
-                            <a href="product.html"> <img src="img/products/7.jpg" alt=""></a>
-                        </div>
-                            <div class="product-details">
-                                <h4>
-                                    <a href="product.html">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing.
-                                    </a>
-                                </h4>
-                                <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Quas, vel?</p>
-                                <div class="product-bottom-details d-flex justify-content-between">
-                                    <div class="product-price">
-                                        <small>$70</small>
-                                        65$
-                                    </div>
-                                    <div class="product-links">
-                                        <a href="#" class="btn btn-outline-secondary add-to-cart">
-                                            <i class="fas fa-shopping-cart"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+<!--                        </div>-->
+<!--                        <div class="product-thumb">-->
+<!--                            <a href="product.html"> <img src="img/products/1.jpg" alt=""></a>-->
+<!--                        </div>-->
+<!--                        <div class="product-details">-->
+<!--                            <h4>-->
+<!--                                <a href="product.html">-->
+<!--                                    Lorem ipsum dolor sit amet, consectetur adipisicing.-->
+<!--                                </a>-->
+<!--                            </h4>-->
+<!--                            <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur-->
+<!--                                adipisicing elit. Quas, vel?</p>-->
+<!--                            <div class="product-bottom-details d-flex justify-content-between">-->
+<!--                                <div class="product-price">-->
+<!--                                    100$-->
+<!--                                </div>-->
+<!--                                <div class="product-links">-->
+<!--                                    <a href="#" class="btn btn-outline-secondary add-to-cart">-->
+<!--                                        <i class="fas fa-shopping-cart"></i>-->
+<!--                                    </a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="product-card">-->
+<!--                        <div class="product-card-offer">-->
+<!--                            <div class="offer-hit">Hit</div>-->
+<!--                            &lt;!&ndash;                                <div class="offer-new">New</div>&ndash;&gt;-->
+<!--                        </div>-->
+<!--                        <div class="product-thumb">-->
+<!--                            <a href="product.html"> <img src="img/products/3.jpg" alt=""></a>-->
+<!--                        </div>-->
+<!--                        <div class="product-details">-->
+<!--                            <h4>-->
+<!--                                <a href="product.html">-->
+<!--                                    Lorem ipsum dolor 2-->
+<!--                                </a>-->
+<!--                            </h4>-->
+<!--                            <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur-->
+<!--                                adipisicing </p>-->
+<!--                            <div class="product-bottom-details d-flex justify-content-between">-->
+<!--                                <div class="product-price">-->
+<!--                                    <small>$70</small>-->
+<!--                                    65$-->
+<!--                                </div>-->
+<!--                                <div class="product-links">-->
+<!--                                    <a href="#" class="btn btn-outline-secondary add-to-cart">-->
+<!--                                        <i class="fas fa-shopping-cart"></i>-->
+<!--                                    </a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="product-card">-->
+<!--                        <div class="product-card-offer">-->
+<!--                            <div class="offer-new">New</div>-->
+<!--                        </div>-->
+<!--                        <div class="product-thumb">-->
+<!--                            <a href="product.html"> <img src="img/products/4.jpg" alt=""></a>-->
+<!--                        </div>-->
+<!--                        <div class="product-details">-->
+<!--                            <h4>-->
+<!--                                <a href="product.html">-->
+<!--                                    Lorem 3-->
+<!--                                </a>-->
+<!--                            </h4>-->
+<!--                            <p class="product-excerpt">Lorem ipsum dolor sit amet, 3</p>-->
+<!--                            <div class="product-bottom-details d-flex justify-content-between">-->
+<!--                                <div class="product-price">-->
+<!--                                    <small>$70</small>-->
+<!--                                    65$-->
+<!--                                </div>-->
+<!--                                <div class="product-links">-->
+<!--                                    <a href="#" class="btn btn-outline-secondary add-to-cart">-->
+<!--                                        <i class="fas fa-shopping-cart"></i>-->
+<!--                                    </a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="product-card">-->
+<!--                        <div class="product-card-offer">-->
+<!--                            <div class="offer-hit">Hit</div>-->
+<!--                            <div class="offer-new">New</div>-->
+<!--                        </div>-->
+<!--                        <div class="product-thumb">-->
+<!--                            <a href="product.html"> <img src="img/products/5.jpg" alt=""></a>-->
+<!--                        </div>-->
+<!--                        <div class="product-details">-->
+<!--                            <h4>-->
+<!--                                <a href="product.html">-->
+<!--                                    Lorem ipsum 4-->
+<!--                                </a>-->
+<!--                            </h4>-->
+<!--                            <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur-->
+<!--                                adipisicing 4</p>-->
+<!--                            <div class="product-bottom-details d-flex justify-content-between">-->
+<!--                                <div class="product-price">-->
+<!--                                    <small>$70</small>-->
+<!--                                    65$-->
+<!--                                </div>-->
+<!--                                <div class="product-links">-->
+<!--                                    <a href="#" class="btn btn-outline-secondary add-to-cart">-->
+<!--                                        <i class="fas fa-shopping-cart"></i>-->
+<!--                                    </a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="product-card">-->
+<!--                        <div class="product-card-offer">-->
+<!--                            <div class="offer-hit">Hit</div>-->
+<!--                            <div class="offer-new">New</div>-->
+<!--                        </div>-->
+<!--                        <div class="product-thumb">-->
+<!--                            <a href="product.html"> <img src="img/products/6.jpg" alt=""></a>-->
+<!--                        </div>-->
+<!--                        <div class="product-details">-->
+<!--                            <h4>-->
+<!--                                <a href="product.html">-->
+<!--                                    Lorem ipsum dolor sit 5-->
+<!--                                </a>-->
+<!--                            </h4>-->
+<!--                            <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur-->
+<!--                                adipisicing elit. Quas, vel?</p>-->
+<!--                            <div class="product-bottom-details d-flex justify-content-between">-->
+<!--                                <div class="product-price">-->
+<!--                                    <small>$70</small>-->
+<!--                                    65$-->
+<!--                                </div>-->
+<!--                                <div class="product-links">-->
+<!--                                    <a href="#" class="btn btn-outline-secondary add-to-cart">-->
+<!--                                        <i class="fas fa-shopping-cart"></i>-->
+<!--                                    </a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="product-card">-->
+<!--                        <div class="product-card-offer">-->
+<!--                            &lt;!&ndash;                                <div class="offer-new">New</div>&ndash;&gt;-->
+<!--                        </div>-->
+<!--                        <div class="product-thumb">-->
+<!--                            <a href="product.html"> <img src="img/products/8.jpg" alt=""></a>-->
+<!--                        </div>-->
+<!--                        <div class="product-details">-->
+<!--                            <h4>-->
+<!--                                <a href="product.html">-->
+<!--                                    Lorem ipsum dolor sit amet, consectetur 6-->
+<!--                                </a>-->
+<!--                            </h4>-->
+<!--                            <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur-->
+<!--                                adipisicing 6</p>-->
+<!--                            <div class="product-bottom-details d-flex justify-content-between">-->
+<!--                                <div class="product-price">-->
+<!--                                    <small>$70</small>-->
+<!--                                    65$-->
+<!--                                </div>-->
+<!--                                <div class="product-links">-->
+<!--                                    <a href="#" class="btn btn-outline-secondary add-to-cart">-->
+<!--                                        <i class="fas fa-shopping-cart"></i>-->
+<!--                                    </a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="product-card">-->
+<!--                        <div class="product-card-offer">-->
+<!--                            &lt;!&ndash;                            <div class="offer-hit">Hit</div>&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            <div class="offer-new">New</div>&ndash;&gt;-->
+<!--                        </div>-->
+<!--                        <div class="product-thumb">-->
+<!--                            <a href="product.html"> <img src="img/products/7.jpg" alt=""></a>-->
+<!--                        </div>-->
+<!--                        <div class="product-details">-->
+<!--                            <h4>-->
+<!--                                <a href="product.html">-->
+<!--                                    Lorem ipsum dolor sit amet, consectetur adipisicing.-->
+<!--                                </a>-->
+<!--                            </h4>-->
+<!--                            <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur-->
+<!--                                adipisicing elit. Quas, vel?</p>-->
+<!--                            <div class="product-bottom-details d-flex justify-content-between">-->
+<!--                                <div class="product-price">-->
+<!--                                    <small>$70</small>-->
+<!--                                    65$-->
+<!--                                </div>-->
+<!--                                <div class="product-links">-->
+<!--                                    <a href="#" class="btn btn-outline-secondary add-to-cart">-->
+<!--                                        <i class="fas fa-shopping-cart"></i>-->
+<!--                                    </a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="product-card">-->
+<!--                        <div class="product-card-offer">-->
+<!--                            <div class="offer-hit">Hit</div>-->
+<!--                        </div>-->
+<!--                        <div class="product-thumb">-->
+<!--                            <a href="product.html"> <img src="img/products/2.jpg" alt=""></a>-->
+<!--                        </div>-->
+<!--                        <div class="product-details">-->
+<!--                            <h4>-->
+<!--                                <a href="product.html">-->
+<!--                                    Lorem ipsum dolor sit amet, consectetur adipisicing.-->
+<!--                                </a>-->
+<!--                            </h4>-->
+<!--                            <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur-->
+<!--                                adipisicing elit. Quas, vel?</p>-->
+<!--                            <div class="product-bottom-details d-flex justify-content-between">-->
+<!--                                <div class="product-price">-->
+<!--                                    <small>$70</small>-->
+<!--                                    65$-->
+<!--                                </div>-->
+<!--                                <div class="product-links">-->
+<!--                                    <a href="#" class="btn btn-outline-secondary add-to-cart">-->
+<!--                                        <i class="fas fa-shopping-cart"></i>-->
+<!--                                    </a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+        <section class="about-us position-relative" id="about-us">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Левая колонка: картинка и лапы -->
+                    <div class="col-md-6 position-relative d-flex justify-content-center">
+                        <!-- Основная картинка -->
+                        <img
+                                src="images/girl.svg"
+                                alt="Девушка с собакой"
+                                class="about-img"
+                        >
+                        <!-- Лапы сверху (absolute) -->
+                        <img
+                                src="images/paws2.svg"
+                                alt="Лапы"
+                                class="about-paws about-paws-top"
+                        >
+                        <!-- Лапы снизу (absolute) -->
+                        <img
+                                src="images/paws2.svg"
+                                alt="Лапы"
+                                class="about-paws about-paws-bottom"
+                        >
                     </div>
-                </div>
-            </div>
 
-
-        </section>
-        <section class="new-products">
-            <div class="container-fluid">
-                <div class="row mb-5">
-                    <div class="col-12">
-                        <h2 class="section-title">
-                            <span>Новинки</span>
+                    <!-- Правая колонка: заголовки и текст -->
+                    <div class="col-md-5 offset-md-1 mt-4 mt-md-0">
+                        <h2 class="about-title mb-4">
+                            Почему Выбирают нас
                         </h2>
-                    </div>
-                </div>
-                <div class="owl-carousel owl-theme owl-carousel-full">
-                    <div class="product-card">
-                        <div class="product-card-offer">
-                            <div class="offer-hit">Hit</div>
-                            <div class="offer-new">New</div>
-                        </div>
-                        <div class="product-thumb">
-                            <a href="product.html"> <img src="img/products/1.jpg" alt=""></a>
-                        </div>
-                        <div class="product-details">
-                            <h4>
-                                <a href="product.html">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing.
-                                </a>
-                            </h4>
-                            <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Quas, vel?</p>
-                            <div class="product-bottom-details d-flex justify-content-between">
-                                <div class="product-price">
-                                    100$
-                                </div>
-                                <div class="product-links">
-                                    <a href="#" class="btn btn-outline-secondary add-to-cart">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-card-offer">
-                            <div class="offer-hit">Hit</div>
-                            <!--                                <div class="offer-new">New</div>-->
-                        </div>
-                        <div class="product-thumb">
-                            <a href="product.html"> <img src="img/products/3.jpg" alt=""></a>
-                        </div>
-                        <div class="product-details">
-                            <h4>
-                                <a href="product.html">
-                                    Lorem ipsum dolor 2
-                                </a>
-                            </h4>
-                            <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur
-                                adipisicing </p>
-                            <div class="product-bottom-details d-flex justify-content-between">
-                                <div class="product-price">
-                                    <small>$70</small>
-                                    65$
-                                </div>
-                                <div class="product-links">
-                                    <a href="#" class="btn btn-outline-secondary add-to-cart">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-card-offer">
-                            <div class="offer-new">New</div>
-                        </div>
-                        <div class="product-thumb">
-                            <a href="product.html"> <img src="img/products/4.jpg" alt=""></a>
-                        </div>
-                        <div class="product-details">
-                            <h4>
-                                <a href="product.html">
-                                    Lorem 3
-                                </a>
-                            </h4>
-                            <p class="product-excerpt">Lorem ipsum dolor sit amet, 3</p>
-                            <div class="product-bottom-details d-flex justify-content-between">
-                                <div class="product-price">
-                                    <small>$70</small>
-                                    65$
-                                </div>
-                                <div class="product-links">
-                                    <a href="#" class="btn btn-outline-secondary add-to-cart">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-card-offer">
-                            <div class="offer-hit">Hit</div>
-                            <div class="offer-new">New</div>
-                        </div>
-                        <div class="product-thumb">
-                            <a href="product.html"> <img src="img/products/5.jpg" alt=""></a>
-                        </div>
-                        <div class="product-details">
-                            <h4>
-                                <a href="product.html">
-                                    Lorem ipsum 4
-                                </a>
-                            </h4>
-                            <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur
-                                adipisicing 4</p>
-                            <div class="product-bottom-details d-flex justify-content-between">
-                                <div class="product-price">
-                                    <small>$70</small>
-                                    65$
-                                </div>
-                                <div class="product-links">
-                                    <a href="#" class="btn btn-outline-secondary add-to-cart">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-card-offer">
-                            <div class="offer-hit">Hit</div>
-                            <div class="offer-new">New</div>
-                        </div>
-                        <div class="product-thumb">
-                            <a href="product.html"> <img src="img/products/6.jpg" alt=""></a>
-                        </div>
-                        <div class="product-details">
-                            <h4>
-                                <a href="product.html">
-                                    Lorem ipsum dolor sit 5
-                                </a>
-                            </h4>
-                            <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Quas, vel?</p>
-                            <div class="product-bottom-details d-flex justify-content-between">
-                                <div class="product-price">
-                                    <small>$70</small>
-                                    65$
-                                </div>
-                                <div class="product-links">
-                                    <a href="#" class="btn btn-outline-secondary add-to-cart">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-card-offer">
-                            <!--                                <div class="offer-new">New</div>-->
-                        </div>
-                        <div class="product-thumb">
-                            <a href="product.html"> <img src="img/products/8.jpg" alt=""></a>
-                        </div>
-                        <div class="product-details">
-                            <h4>
-                                <a href="product.html">
-                                    Lorem ipsum dolor sit amet, consectetur 6
-                                </a>
-                            </h4>
-                            <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur
-                                adipisicing 6</p>
-                            <div class="product-bottom-details d-flex justify-content-between">
-                                <div class="product-price">
-                                    <small>$70</small>
-                                    65$
-                                </div>
-                                <div class="product-links">
-                                    <a href="#" class="btn btn-outline-secondary add-to-cart">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-card-offer">
-                            <!--                            <div class="offer-hit">Hit</div>-->
-                            <!--                            <div class="offer-new">New</div>-->
-                        </div>
-                        <div class="product-thumb">
-                            <a href="product.html"> <img src="img/products/7.jpg" alt=""></a>
-                        </div>
-                        <div class="product-details">
-                            <h4>
-                                <a href="product.html">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing.
-                                </a>
-                            </h4>
-                            <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Quas, vel?</p>
-                            <div class="product-bottom-details d-flex justify-content-between">
-                                <div class="product-price">
-                                    <small>$70</small>
-                                    65$
-                                </div>
-                                <div class="product-links">
-                                    <a href="#" class="btn btn-outline-secondary add-to-cart">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-card-offer">
-                            <div class="offer-hit">Hit</div>
-                        </div>
-                        <div class="product-thumb">
-                            <a href="product.html"> <img src="img/products/2.jpg" alt=""></a>
-                        </div>
-                        <div class="product-details">
-                            <h4>
-                                <a href="product.html">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing.
-                                </a>
-                            </h4>
-                            <p class="product-excerpt">Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Quas, vel?</p>
-                            <div class="product-bottom-details d-flex justify-content-between">
-                                <div class="product-price">
-                                    <small>$70</small>
-                                    65$
-                                </div>
-                                <div class="product-links">
-                                    <a href="#" class="btn btn-outline-secondary add-to-cart">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+
+                        <p class="about-highlight">
+                            Долгий опыт работы
+                            <span class="highlight-text"> с 2000 года</span> мы помогаем заботиться о питомцах
+                        </p>
+                        <p class="about-highlight">
+                            Широкий ассортимент
+                            <span class="highlight-text"> качественные, безопасные и проверенные товары</span>
+                            для всех видов питомцев
+                        </p>
+                        <p class="about-highlight">
+                            Профессиональные сотрудники
+                            <span class="highlight-text"> с глубокими знаниями и искренней любовью к животным</span>
+                        </p>
+
+                        <p>
+                            У нас представлены только ведущие бренды и проверенные производители.<br>
+                            Мы постоянно расширяем ассортимент, чтобы удовлетворить потребности всех питомцев.<br>
+                            Мы гордимся тем, что обслужили тысячи счастливых клиентов за 25 лет.
+                        </p>
+                        <p>
+                            Каждый наш магазин — это уголок комфорта и заботы о животных.<br>
+                            Удобное расположение и график работы магазинов для максимального комфорта клиентов.
+                        </p>
+
+                        <h3 class="about-subtitle mt-4">
+                            Доверие  клиентов — наша главная награда
+                        </h3>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="about-us" id="about-us">
+        <section class="banner-buy position-relative overflow-hidden">
+            <!-- Фоновая картинка через CSS или inline-стиль -->
+            <!-- Если хочешь через CSS:
+                 .banner-buy { background-image: url('images/dog.jpg'); } -->
+
+            <!-- Надпись -->
+            <div class="banner-text">
+                <h2 class="banner-title">
+                    Покупайте в любом из наших магазинов
+                </h2>
+            </div>
+
+            <!-- Сердечко (SVG) + кнопки внутри -->
+            <div class="heart-container position-absolute">
+                <!-- Само сердечко (SVG) -->
+                <img
+                        src="images/heart.svg"
+                        alt="heart"
+                        class="heart-svg"
+                >
+
+                <!-- Кнопки -->
+                <button class="banner-btn location-btn d-none d-md-block">
+                    Расположение
+                </button>
+                <button class="banner-btn discount-btn d-none d-md-block">
+                    Скидки
+                </button>
+            </div>
+        </section>
 <div class="container-fluid">
     <div class="row mb-5" >
         <h2 class="section-title">

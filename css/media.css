@@ -3,6 +3,9 @@
         /* Вместо 60vh + 200px можно сделать поменьше,
            или оставить, но тогда собака может смотреться огромной */
         min-height: calc(50vh + 150px);
+        /*clip-path: polygon(0 0, 55% 0, 100% 0, 100% 93%, 50% 100%, 0 92%);*/
+        /*padding-top: 2rem !important;*/
+        /*padding-bottom: 0 !important;*/
     }
 
     .hero-yellow {
@@ -10,7 +13,7 @@
     }
 
     .hero-green {
-        height: 150px;
+        height: 180px !important;
     }
 
     .hero-dog {
@@ -158,5 +161,122 @@
     .hero-image {
         max-width: 25%;
         /* Только 3 картинки останется, можно сделать их крупнее */
+    }
+}
+@media (min-width: 992px) {
+    .navbar-nav {
+        /* Когда открыто в обычном виде, а не в оффканвасе */
+        display: flex;
+        flex: 1 1 auto;
+        justify-content: space-evenly; /* space-around или space-between */
+    }
+    .navbar-nav .nav-item {
+        flex: 0 0 auto; /* или 1 1 auto, если хочешь равномерное распределение */
+        text-align: center;
+    }
+}
+@media (max-width: 576px) {
+    .logo-homka {
+        margin-left: 13%;
+        max-height: 60px;
+    }
+}
+@media (max-width: 768px) {
+    /* Поменяем порядок:
+       col-md-6 => col-12,
+       а ещё можно поменять порядок с помощью flex-column-reverse,
+       но проще пусть идёт картинка потом текст
+    */
+    .about-us{
+        top:10%;
+    }
+    .about-us .row {
+        flex-direction: column;
+    }
+
+    .about-img {
+        margin-bottom: 1.5rem;
+        transform: rotate(0deg); /* уберём наклон на мобилке */
+        width: 90%; /* чтоб занимала почти всю ширину */
+        max-width: none;
+    }
+
+    /* Уменьшим лапы или спрячем */
+    .about-paws-top, .about-paws-bottom {
+        display: none;
+    }
+
+    .about-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .about-highlight {
+        font-size: 1rem;
+    }
+    .highlight-text {
+        color: #ffd700; /* можно чуть другой акцент */
+    }
+    .about-subtitle {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .banner-title {
+        font-size: 60px;
+        line-height: 62px;
+    }
+    .heart-svg {
+        width: 200px; /* large heart */
+        border-width: 11px;
+    }
+    .banner-btn {
+        font-size: 18px;
+        border-radius: 20px;
+    }
+}
+
+/* Мобильная версия: до 576px */
+@media (max-width: 576px) {
+    .banner-buy {
+        min-height: 168px;
+        /* либо height: 168px, если фиксируешь */
+    }
+    .banner-title {
+        font-size: 18px;
+        line-height: 19px;
+        text-align: center;
+        /* из макета */
+        width: 100%; /* центрируем */
+        position: absolute;
+        top: 10px; left: 0;
+    }
+    .heart-container {
+        top: 40%;  /* или другое */
+        left: 8%;  /* как в макете */
+    }
+    .heart-svg {
+        width: 80px;
+        border-width: 5px;
+    }
+    .banner-btn {
+        font-size: 10px;
+        padding: 4px;
+        border-radius: 20px;
+    }
+    .location-btn {
+        top: 20px;
+        left: 15px;
+        width: 60px;
+        height: 20px;
+    }
+    .discount-btn {
+        top: 50px;
+        left: 20px;
+        width: 50px;
+        height: 22px;
+        color: #000;
     }
 }

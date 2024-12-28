@@ -188,12 +188,17 @@ ul.social-icons a:hover {
 .header-bottom {
     box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
 }
-
+.navbar-nav {
+    width: 100%;              /* или auto, если нужно именно растягивать на всю полосу */
+    justify-content: space-around;
+    /* или space-between, если хочешь, чтобы первый и последний пункты прижимались к краям */
+}
 
 .header-bottom .navbar,
 .header-bottom .navbar .dropdown-menu {
     background-color: transparent !important;
 }
+
 
 .header-bottom .nav-item:first-child .nav-link {
     padding-left: 0;
@@ -378,11 +383,9 @@ background-color: var(--red-color);
     width: auto;
 }
 
-.about-us{
-    background-color: #fff3cd;
-}
 
-.about-us .section-title span,
+
+.section-title span,
 .sidebar .section-title span,
 .bg-white .section-title span
 {
@@ -679,12 +682,12 @@ textarea {
 /* Лапы */
 .hero-paws {
     position: absolute;
-    bottom: 20rem;
-    left: 3rem;
-    height: 40vh;
+    bottom: 35%;
+    left: 5%;
+    height: 65%;
     width: auto;
     z-index: 3;
-    transform: rotate(15deg);
+    transform: rotate(25deg);
     transform-origin: center;
     transition: transform 0.3s ease;
 }
@@ -755,31 +758,178 @@ textarea {
     display: block;
 }
 
-
-.hero-paws-2 {
-    position: absolute;
-    bottom: 30vh;
-    right: 24vw;
-    height: 20vh;
-    width: auto;
-    z-index: 3;
-    transform: rotate(-50deg);
-    transform-origin: center;
-    transition: transform 0.3s ease;
-}
-.hero-paws-3{
-    position: absolute;
-    bottom: 30vh;
-    left:23vw;
-    height: 20vh;
-    width: auto;
-    z-index: 3;
-    transform: rotate(30deg);
-    transform-origin: center;
-    transition: transform 0.3s ease;
-}
-
 .discount{
 
     transition: all 0.3s ease;
+}
+.logo-homka {
+    height: 100%;
+    width: auto;
+    transform: scale(2.0);
+}
+.nav-item{
+    font-family: Title,sans-serif;
+}
+
+.about-us {
+    /* Пример: плавный переход от зелёно-жёлтого */
+    background: linear-gradient(to bottom, #114F3C, #FCEAB4);
+    /* Или свой градиент */
+    /* padding-top, padding-bottom можно менять, но я поставил py-5 в HTML */
+}
+
+/* Основная картинка слева (Desktop) */
+.about-img {
+    width: auto;
+    max-width: 500px;
+    border-radius: 8px;
+    /* Наклон */
+    transform: rotate(-5deg);
+    /*box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);*/
+    transition: transform 0.3s ease;
+}
+.about-img:hover {
+    transform: rotate(-2deg) scale(1.02);
+}
+
+/* Позиционируем лапы внутри .col-md-6 (relative),
+   чтобы они "висели" над картинкой.
+*/
+.about-paws {
+    position: absolute;
+    width: auto; /* подбери размер лап */
+    height: 35%;
+    z-index: 2;
+}
+.about-paws-top {
+    top: -5%;
+    right: -10%;
+}
+.about-paws-bottom {
+    bottom: 0;
+    left: -10%;
+}
+
+/* Заголовок: "Почему выбирают нас" */
+.about-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff; /* или твой цвет */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    white-space: nowrap;
+}
+
+/* Абзацы c выделением */
+.about-highlight {
+    font-size: 1.3rem;
+    color: #eee;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+.highlight-text {
+    color: #f7ec5f; /* жёлтый акцент */
+    font-weight: 600;
+}
+
+/* Обычный текст */
+
+
+.about-us p {
+    color: #f0f0f0;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+/* Нижний заголовок */
+.about-subtitle {
+    color: #000000;
+    font-weight: 700;
+    margin-top: 2rem;
+    font-size: 3rem;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+}
+
+.banner-buy {
+    position: relative;
+    width: 100%;
+    min-height: 310px;  /* например, из макета Figma */
+    background: url("images/dog.jpg") no-repeat center center;
+    background-size: cover;
+    /* Если хочешь точно повторить размеры (1440x310), можешь задать height: 310px на десктопе */
+}
+
+/* Общие стили для текста */
+.banner-text {
+    position: absolute; /* или relative, если хочешь поточную модель */
+    top: 20%;
+    left: 5%;
+    width: 90%;
+    /* Ты можешь расположить его более точно, глядя на макет */
+}
+
+.banner-title {
+    font-family: 'Stylo', sans-serif;
+    font-weight: 700;
+    font-size: 60px; /* из макета figma */
+    line-height: 62px;
+    color: #EF7070;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    /* возможно, нужно: white-space: nowrap; или нет */
+}
+
+/* Сердечко + кнопки */
+.heart-container {
+    position: absolute;
+    top: 30%;   /* pick numbers from figma or taste */
+    left: 13%;  /* опять же, пример */
+    /* right: 65%; bottom: ...; можно через transform: translate() */
+    z-index: 10; /* над фоном */
+}
+
+.heart-svg {
+    display: block;
+    width: 200px;
+    height: auto;
+    border: 11px solid #000000; /* из макета, если нужно */
+    box-sizing: border-box;
+}
+
+/* Кнопки внутри сердца */
+.banner-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-family: 'Stylo', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: #EF7070;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.banner-btn:hover {
+    opacity: 0.9;
+}
+
+/* конкретно для кнопок, по макету у тебя:
+   left: 219px; top: 125px; etc.
+   но лучше делать через проценты, чтоб адаптивно
+*/
+.location-btn {
+    top: 15%;
+    left: 20%;
+    width: 125px;  /* или auto */
+    height: 34px;
+}
+.discount-btn {
+    top: 50%;
+    left: 25%;
+    width: 89px;
+    height: 34px;
+    color: #000; /* если хочешь чёрный шрифт */
 }
