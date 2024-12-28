@@ -10,16 +10,34 @@
     <link rel="stylesheet" href="owlcarousel/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="owlcarousel/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Title</title>
 </head>
 
 <body>
 
 <div class="wrapper">
     <div class="header-bottom sticky-top" id="header-nav">
-        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
+                <div class="d-block ">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <!-- Блок телефона -->
+                        <div class="d-flex align-items-center me-3">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            <a href="tel:89528291555" class="ms-2 text-decoration-none">8(952)829-15-55</a>
+                        </div>
+
+                        <!-- Блок соцсетей -->
+                        <ul class="social-icons d-flex m-0 p-0">
+                            <li class="mx-2">
+                                <a href="#" class="text-decoration-none">
+                                    <img src="icons/whatsapp.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -30,34 +48,16 @@
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Payment</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Delivery</a>
+                            <li class="nav-item Logoimg">
+                                <img src="images/Logo+titile.svg" alt="">
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-                                    Catalog
+                                    Каталог
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
-                                    <li>
-                                        <a class="dropdown-item" href="category.html">Shoes</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="category.html">Jeans</a>
-                                    </li>
                                     <li class="nav-item dropend">
-                                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Sportswear</a>
+                                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Собаки</a>
                                         <ul class="dropdown-menu dropdown-menu-end">
                                             <li>
                                                 <a class="dropdown-item" href="category.html">Men's Sportswear</a>
@@ -70,121 +70,111 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li>
-                                        <a class="dropdown-item" href="category.html">Coat</a>
+                                    <li class="nav-item dropend">
+                                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Кошки</a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a class="dropdown-item" href="category.html">Men's Sportswear</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="category.html">Women's Sportswear</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="category.html">Baby's Sportswear</a>
+                                            </li>
+                                        </ul>
                                     </li>
-                                    <li>
-                                        <a class="dropdown-item" href="category.html">Shirts</a>
+                                    <li class="nav-item dropend">
+                                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Грызуны</a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a class="dropdown-item" href="category.html">Men's Sportswear</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="category.html">Women's Sportswear</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="category.html">Baby's Sportswear</a>
+                                            </li>
+                                        </ul>
                                     </li>
+                                    <li class="nav-item dropend">
+                                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Птицы</a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a class="dropdown-item" href="category.html">Men's Sportswear</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="category.html">Women's Sportswear</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="category.html">Baby's Sportswear</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropend">
+                                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Рыбки</a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a class="dropdown-item" href="category.html">Men's Sportswear</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="category.html">Women's Sportswear</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="category.html">Baby's Sportswear</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropend">
+                                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Подворье</a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li>
+                                                <a class="dropdown-item" href="category.html">Men's Sportswear</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="category.html">Women's Sportswear</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="category.html">Baby's Sportswear</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+
+
                                 </ul>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Акции</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">О компании</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Частые вопросы</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Блог</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">КормПрофи</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Оставить отзыв</a>
+                            </li>
+
                         </ul>
                     </div>
                 </div>
 
-                <div class="d-block ">
-                    <div class="d-flex justify-content-center align-items-center">
-                        <!-- Блок телефона -->
-                        <div class="d-flex align-items-center me-3">
-                            <i class="fa-solid fa-mobile-screen"></i>
-                            <a href="tel:+1234567890" class="ms-2 text-decoration-none">123-456-7890</a>
-                        </div>
 
-                        <!-- Блок соцсетей -->
-                        <ul class="social-icons d-flex m-0 p-0">
-                            <li class="mx-2">
-                                <a href="#" class="text-decoration-none">
-                                    <i class="fa-brands fa-youtube"></i>
-                                </a>
-                            </li>
-                            <li class="mx-2">
-                                <a href="#" class="text-decoration-none">
-                                    <i class="fa-brands fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li class="mx-2">
-                                <a href="#" class="text-decoration-none">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
 
             </div>
         </nav>
     </div>
     <header class="header">
-        <div class="header-top py-1">
-            <div class="container-fluid">
-                <div class="row">
-<!--                    <div class="col-6 col-sm-4">-->
-<!--                        <div class="header-top-phone d-flex align-items-center h-100">-->
-<!--                            <i class="fa-solid fa-mobile-screen"></i>-->
-<!--                            <a href="tel:+1234567890" class="ms-2">123-456-7890</a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-
-<!--                    <div class="col-sm-4 d-none d-sm-block">-->
-<!--                        <ul class="social-icons d-flex justify-content-center">-->
-<!--                            <li>-->
-<!--                                <a href="#">-->
-<!--                                    <i class="fa-brands fa-youtube"></i>-->
-<!--                                </a>-->
-<!--                            </li>-->
-<!--                            <li>-->
-<!--                                <a href="#">-->
-<!--                                    <i class="fa-brands fa-facebook-f"></i>-->
-<!--                                </a>-->
-<!--                            </li>-->
-<!--                            <li>-->
-<!--                                <a href="#">-->
-<!--                                    <i class="fa-brands fa-instagram"></i>-->
-<!--                                </a>-->
-<!--                            </li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-                </div>
-            </div>
-        </div>
-        <!-- ./header-top -->
-
-        <div class="header-middle bg-white py-4">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-
-                    <div class="col-sm-6 col-lg-4">
-                        <a href="index.html" class="header-logo h1">E-Shop</a>
-                    </div>
-
-                    <div class="col-lg-4 order-md-2 cart-buttons text-end d-none d-lg-block">
-                        <a href="#" class="btn p-1">
-                            <i class="fa-solid fa-heart"></i>
-                            <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">3</span>
-                        </a>
-
-                        <button class="btn p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">5</span>
-                        </button>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-6  mt-2 mt-md-0">
-                        <form action="">
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="s" placeholder="Searching..." aria-label="Searching..." aria-describedby="button-search">
-                                <button class="btn btn-outline-warning" type="submit" id="button-search">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-        <!-- ./header-middle -->
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasCartLabel">Cart</h5>
@@ -273,65 +263,84 @@
             </div>
         </div>
     </header>
-
-
-    <!-- ./header-bottom -->
-
     <main class="main">
-        <div id="carousel" class="carousel slide carousel-fade">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <section class="hero container-fluid position-relative px-0 py-0">
+            <!-- Верхний жёлтый блок -->
+            <div class="row no-gutters">
+                <div class="col-12 hero-yellow"></div>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/slider/3.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h2>First slide label</h2>
-                        <p>Some representative placeholder content for the first slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/slider/1.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h2>Second slide label</h2>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/slider/2.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h2>Third slide label</h2>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/slider/4.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h2>Fourth slide label</h2>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/slider/5.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h2>Five slide label</h2>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                </div>
+
+            <!-- Текстовый контент -->
+            <div class="hero-text text-center position-absolute w-100">
+                <h1 class="display-4 fw-bold Logo-text">Хомка</h1>
+                <h2 class="logo-subtitle d-sm-block my-1">
+                    Ваши питомцы  <span class="text-primary">наша</span> забота
+                </h2>
+                <h3 class="h4 fw-normal discount my-4">
+                    Порадуйте своих хвостиков! Станьте нашим<br> покупателем  забирайте корм со скидкой
+                </h3>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+
+            <!-- Нижний зелёный блок -->
+            <div class="row no-gutters">
+                <div class="col-12 hero-green"></div>
+
+            </div>
+
+            <!-- Кот -->
+            <img
+                    src="images/hcat.png"
+                    alt="Котик"
+                    class="hero-cat"
+            />
+            <div class="hero-images">
+                <img src="images/pfood.png" alt="Изображение 1" class="hero-image">
+                <img src="images/pfood.png" alt="Изображение 2" class="hero-image">
+                <img src="images/fcat.png" alt="Изображение 3" class="hero-image to-hide" style="margin-bottom: -1%">
+                <img src="images/pfood.png" alt="Изображение 4" class="hero-image">
+                <img src="images/pfood.png" alt="Изображение 5" class="hero-image to-hide">
+            </div>
+<!--            <div class="row hero-images gx-0 gy-0 position-absolute end-1 align-items-center flex-nowrap col-md-6">-->
+<!--                <div class="col-12 col-md-2">-->
+<!--                    <img src="images/pfood.png" alt="Изображение 1" class="img-fluid hero-image">-->
+<!--                </div>-->
+<!--                <div class="col-12 col-md-2">-->
+<!--                    <img src="images/pfood.png" alt="Изображение 2" class="img-fluid hero-image">-->
+<!--                </div>-->
+<!--                <div class="col-12 col-md-2 d-none d-lg-block">-->
+<!--                    <img src="images/fcat.png" alt="Изображение 3" class="img-fluid hero-image">-->
+<!--                </div>-->
+<!--                <div class="col-12 col-md-2 d-none d-lg-block">-->
+<!--                    <img src="images/pfood.png" alt="Изображение 4" class="img-fluid hero-image">-->
+<!--                </div>-->
+<!--                <div class="col-12 col-md-2">-->
+<!--                    <img src="images/pfood.png" alt="Изображение 5" class="img-fluid hero-image">-->
+<!--                </div>-->
+<!--            </div>-->
+            <!-- Собака -->
+            <img
+                    src="images/hdog.png"
+                    alt="Пёсик"
+                    class="hero-dog position-absolute"
+            />
+
+            <!-- Лапы -->
+            <img
+                    src="images/paws4.svg"
+                    alt="paws"
+                    class="hero-paws  "
+            />
+            <img
+                    src="images/paws2.svg"
+                    alt="paws"
+                    class="hero-paws-2 d-none d-md-block"
+            />
+            <img
+                    src="images/paws2.svg"
+                    alt="paws"
+                    class="hero-paws-3 d-none d-md-block"
+            />
+        </section>
         <section class="advantages">
         <div class="container-fluid">
 <div class="row mb-5">
@@ -960,168 +969,13 @@
 </div>
 
     </div>
-
 </footer>
-        </main>
-</div>
 <button id="top"><i class="fa-solid fa-angles-up"></i> </button>
-   <!-- <h1>Хомка</h1>
-    <h2>Ваши Питомцы наша забота</h2>
-    <h3>Порадуйте Хвостиков !<br>
-    Станьте нашим покупателем и <br>
-        забирайте корм со кидкой
-    </h3>
-    <img src="/images/dog.svg">
-
-    <img src="/images/paws4.svg">-->
-
-
-<!--<section class="advertisment" id="advertisment"  >-->
-<!--    <img src="/images/cat.svg">-->
-<!--    <img src="/images/paws2.svg">-->
-<!--    <img src="/images/pet-food.png">-->
-
-<!--</section>-->
-
-<!--<section class="about-company"  id="about-company">-->
-<!--    <h1>Почему выбирают нас</h1>-->
-<!--    <p>-->
-<!--        Долгий опыт работы - с 2000 года мы помогаем заботиться о питомцах-->
-<!--        Широкий ассортимент — качественные, безопасные и проверенные-->
-<!--        товары для всех видов питомцев<br>-->
-<!--        Проффесиональные сотрудники - с глубокими знаниями и искренней-->
-<!--        любовью к животным<br>-->
-<!--        У нас представлены только ведущие бренды и проверенные производители.-->
-<!--        Мы постоянно расширяем ассортимент, чтобы удовлетворить потребности всех питомцев.<br>-->
-<!--        Мы гордимся тем, что обслужили тысячи счастливых к лиентов за 25 лет.-->
-<!--        Каждый наш магазин – это уголок комфорта и заботы о животных.-->
-<!--        Удобное расположение и график работы магазинов для максимального комфорта клиентов.-->
-<!--    </p>-->
-<!--    <h2>Доверие наших клиентов — наша главная награда.</h2>-->
-<!--    <img src="/images/girl.svg">-->
-<!--    <img src="/images/paws2.svg">-->
-<!--    <img src="/images/paws2.svg">-->
-<!--</section>-->
-
-<!--<section class="banner-dog">-->
-<!--    &lt;!&ndash;<h1> Покупайте в любом из наших магазинов</h1>-->
-<!--      <svg width="320" height="281" viewBox="0 0 320 281" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--          <path d="M290.547 29.7744C283.013 22.2372 274.068 16.2582 264.223 12.1789C254.378 8.09962 243.826 6 233.169 6C222.512 6 211.96 8.09962 202.115 12.1789C192.27 16.2582 183.325 22.2372 175.792 29.7744L160.157 45.4094L144.522 29.7744C129.304 14.557 108.665 6.00789 87.144 6.00789C65.6233 6.00789 44.984 14.557 29.7665 29.7744C14.5491 44.9919 6 65.6312 6 87.1519C6 108.673 14.5491 129.312 29.7665 144.529L45.4015 160.164L160.157 274.919L274.912 160.164L290.547 144.529C298.084 136.996 304.063 128.051 308.142 118.206C312.221 108.361 314.321 97.8086 314.321 87.1519C314.321 76.4952 312.221 65.943 308.142 56.0979C304.063 46.2529 298.084 37.3081 290.547 29.7744Z" stroke="black" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>-->
-<!--      </svg>-->
-<!--&ndash;&gt;-->
-<!--<img src="/images/BanerDog.svg">-->
-<!--  </section>-->
-<!--<section class="products" id="products">-->
-<!--    <img src="images/paws1.svg">-->
-<!--    <img src="images/paws1.svg">-->
-<!--    <img src="images/paws1.svg">-->
-<!--    <img src="images/paws1.svg">-->
-<!--    <h1> Продукция</h1>-->
-<!--        <div class="container">-->
-<!--            <div class="d-flex flex-nowrap overflow-auto">-->
-<!--                <div class="card text-center me-3" style="min-width: 200px;">-->
-<!--                    <img src="images/image1.jpg" class="card-img-top img-fluid" alt="Image 1">-->
-<!--                    <div class="card-body">-->
-<!--                        <h5 class="card-title">Подпись 1</h5>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="card text-center me-3" style="min-width: 200px;">-->
-<!--                    <img src="images/image2.jpg" class="card-img-top img-fluid" alt="Image 2">-->
-<!--                    <div class="card-body">-->
-<!--                        <h5 class="card-title">Подпись 2</h5>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="card text-center me-3" style="min-width: 200px;">-->
-<!--                    <img src="images/image3.jpg" class="card-img-top img-fluid" alt="Image 3">-->
-<!--                    <div class="card-body">-->
-<!--                        <h5 class="card-title">Подпись 3</h5>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="card text-center me-3" style="min-width: 200px;">-->
-<!--                    <img src="images/image4.jpg" class="card-img-top img-fluid" alt="Image 4">-->
-<!--                    <div class="card-body">-->
-<!--                        <h5 class="card-title">Подпись 4</h5>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="card text-center me-3" style="min-width: 200px;">-->
-<!--                    <img src="images/image5.jpg" class="card-img-top img-fluid" alt="Image 5">-->
-<!--                    <div class="card-body">-->
-<!--                        <h5 class="card-title">Подпись 5</h5>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="card text-center me-3" style="min-width: 200px;">-->
-<!--                    <img src="images/image6.jpg" class="card-img-top img-fluid" alt="Image 6">-->
-<!--                    <div class="card-body">-->
-<!--                        <h5 class="card-title">Подпись 6</h5>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="card text-center" style="min-width: 200px;">-->
-<!--                    <img src="images/image7.jpg" class="card-img-top img-fluid" alt="Image 7">-->
-<!--                    <div class="card-body">-->
-<!--                        <h5 class="card-title">Подпись 7</h5>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--</section>-->
-
-
-<!--<section class="Blog" id="Blog" >-->
-<!--      <h2>Blog</h2>-->
-<!--  </section>-->
-
-<!--<section class="Stores" id="Stores">-->
-<!--       <h2>STORES</h2>-->
-
-<!--  </section>-->
-
-
-
-
-
-
-
-<!--  <footer class="footer" id="footer">-->
-<!--      <ul class="socials">-->
-<!--          <li class="social-element"  >-->
-<!--              <a href="https://vk.com/smokemann" target="_blank" class="footer-link block-center">-->
-<!--                  <img src="icons/VK Logo.svg" alt="vk">-->
-<!--              </a>-->
-<!--          </li>-->
-<!--          <li class="social-element">-->
-<!--              <a href="https://www.instagram.com/homkapetland/" target="_blank" class="footer-link block-center">-->
-<!--                  <img src="icons/instagram .svg" alt="tg">-->
-<!--              </a>-->
-<!--          </li>-->
-<!--          <li class="social-element">-->
-<!--              <a href="https://ok.ru/group/70000033783946" target="_blank" class="footer-link block-center">-->
-<!--                  <img src="icons/odn.svg" alt="щл">-->
-<!--              </a>-->
-<!--          </li>-->
-<!--          <li class="social-element">-->
-<!--              <a href="https://yandex.ru/maps/-/CDt-EZ74" target="_blank" class="footer-link block-center">-->
-<!--                  <img src="icons/ya.svg" alt="tg">-->
-<!--              </a>-->
-<!--          </li>-->
-<!--          <li class="social-element">-->
-<!--              <a href="https://yandex.ru/maps/-/CDt-EZ74" target="_blank" class="footer-link block-center">-->
-<!--                  <img src="icons/whatsapp.svg" alt="tg">-->
-<!--              </a>-->
-<!--          </li>-->
-<!--      </ul>-->
-
-
-
-
-
-
-
-<!--  </footer>-->
+</main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="owlcarousel/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"> </script>
+    <script src="js/main.js"> </script>
 
 </body>
   </html>

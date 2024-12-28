@@ -1,6 +1,6 @@
 :root {
-    --bg-color-green:#114F3C;
-    --bg-color-nav: #98BC6D;
+    --bg-color-green: #114F3C;
+    --bg-color-nav: #d2d2d2;
     --bg-gradiend-hero: linear-gradient(to right, #F8A900, #FCEAB4);
     --bg-gradiend-about:linear-gradient(to bottom, #114F3C, #FCEAB4);
     --bg-gradiend-products:linear-gradient(to right, #FCEAB4, #F8A900);
@@ -17,9 +17,8 @@
     --gray-color: #ccc;
     --red-color: #ee6e73;
     --light-grey-color: #eee;
-
-
-
+    --base-height: 60vh;
+    --base-width: 80vw;
 }
 
 
@@ -32,17 +31,21 @@
     src: url('/fonts/Rosarium.ttf') format('truetype');
 }
 
-
-html,
-body {
+body,
+html {
     height: 100%;
+    margin: 0;
+    padding: 0;
+overflow-x:hidden;
 }
 
 body {
     min-width: 320px;
     font-family: 'Roboto', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+}
+
+h1,h2,h3 {
+    font-family: Title,sans-serif;
 }
 
 a {
@@ -61,11 +64,13 @@ img {
 
 .btn,
 .dropdown-menu,
-.form-control {
+.form-control,
+.form-select{
     border-radius: 0;
 }
 
-.form-control:focus {
+.form-control:focus,
+.form-select:focus {
     color: var(--text-color);
     border-color: var(--accent-color);
     box-shadow: none;
@@ -142,21 +147,11 @@ ul.social-icons a:hover {
     background-color: var(--contrast-color);
     color: var(--accent-color);
 }
-
-.header-top .btn {
-    background-color: #fff;
+.header-content {
+    z-index: 2; /* Повышаем z-index для текста, чтобы он был над изображением */
 }
 
-.header-logo {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: var(--accent-color);
-    transition: all .3s;
-}
 
-.header-logo:hover {
-    color: var(--contrast-color);
-}
 
 .cart-buttons .btn {
     color: var(--contrast-color);
@@ -191,13 +186,13 @@ ul.social-icons a:hover {
 }
 
 .header-bottom {
-    border-top: 3px solid var(--bg-color-green);
     box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
 }
 
+
 .header-bottom .navbar,
 .header-bottom .navbar .dropdown-menu {
-    background-color: var(--bg-color-nav) !important;
+    background-color: transparent !important;
 }
 
 .header-bottom .nav-item:first-child .nav-link {
@@ -205,7 +200,7 @@ ul.social-icons a:hover {
 }
 
 .header-bottom .navbar .nav-link {
-    color: #fff;
+    color: #000000;
     transition: .3s all;
     letter-spacing: .1rem;
 }
@@ -231,26 +226,9 @@ ul.social-icons a:hover {
 /* ============================= Header rules ============================ */
 
 
-@media only screen and (min-width : 992px) {
-    .header-bottom .navbar .dropdown-menu-end {
-        margin-left: 0;
-        border: 0;
-    }
 
-    .header-bottom .navbar .nav-link {
-        padding: 0.5rem;
-    }
-}
 
-@media only screen and (max-width : 992px) {
-    .header-bottom .navbar .dropdown-menu {
-        padding-left: 1rem;
-    }
-}
 
-.advertisment{
-    background-color: var(--bg-color-green);
-}
 .carousel-caption{
     text-shadow: 0 0 2px rgba(0, 0, 0, .9);
  }
@@ -614,4 +592,194 @@ max-width: 50px;
 
 textarea {
     resize: none;
+}
+.product-rating i{
+    color:grey;
+}
+.product-rating .active{
+    color: var(--accent-color);
+}
+.product-rating .count-reviews {
+    margin-left: 10px;
+
+}
+.product-review-header {
+    display: flex;
+    justify-content: space-between;
+}
+.product-review-header .review-date{
+    color: var(--gray-color)
+}
+
+
+.hero {
+    position: relative;
+    min-height: calc(60vh + 200px); /* Общая высота */
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Верхний жёлтый блок */
+.hero-yellow {
+    background: linear-gradient(to right, #F8A900, #FCEAB4);
+    height: 60vh;
+}
+
+/* Нижний зелёный блок */
+.hero-green {
+    background-color: var(--bg-color-green);
+    height: 200px;
+    position: relative;
+}
+
+/* Текстовые элементы */
+.hero-text {
+    top: 20%; /* Расположим текст ближе к верхней части секции */
+    z-index: 4; /* Выше картинок */
+    color: #333;
+}
+
+.hero-text h1 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Лёгкая тень */
+}
+
+.hero-text .text-primary {
+    color: #FF6347 !important; /* Яркий цвет для выделения слова */
+}
+
+.hero-text h2 {
+    max-width: 700px;
+    margin: 20px auto 0;
+    color: #444;
+}
+
+/* Кот */
+.hero-cat {
+    position: absolute;
+    left: 0;
+    bottom: -2rem;
+    height: 50%;
+    width: auto;
+    z-index: 2;
+}
+
+/* Собака */
+.hero-dog {
+    position: absolute;
+    right: 0;
+    top: -2.4rem;
+    bottom: 0;
+    width: auto;
+    height: 105%;
+    max-width: none;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Лапы */
+.hero-paws {
+    position: absolute;
+    bottom: 20rem;
+    left: 3rem;
+    height: 40vh;
+    width: auto;
+    z-index: 3;
+    transform: rotate(15deg);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+.Logo-text{
+    font-size: clamp(3rem, 10vw, 15rem); /* Размер шрифта заголовка */
+    line-height: 1.2; /* Межстрочный интервал */
+    color: #000000; /* Цвет текста */
+    margin-top: -10rem;
+}
+
+.logo-subtitle {
+    color: #ffffff !important; /* Например, ярко-красный */
+    font-size: clamp(1.5rem, 5vw, 5rem);
+    line-height: 1; /* Межстрочный интервал */
+    text-align: center;
+    /*white-space: nowrap;*/
+    /*margin-left: 25rem !important;*/
+    transition: all 0.3s ease; /* Плавность при адаптации */
+
+
+}
+
+
+/* Абсолютный контейнер, но теперь мы хотим его сместить влево и увеличить */
+.hero-images {
+    position: absolute;
+    bottom: 0;
+    /* Вместо right: 0; можно задать какое-то смещение, например right: 10%,
+       или вообще вовсе убрать, а задать ширину и left + right
+       - на твой вкус. */
+    right: 20%;
+    /* Можно и left: 0; width: 80%;
+       Тогда он будет «растянут» от левого края до 80% от ширины родителя
+       (или наоборот: left: 20%; width: 80%) */
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    gap: 5%;             /* Пример: процентное расстояние между элементами */
+    width: 80%;          /* Делай блок шире/уже, чтобы «увеличить» или «уменьшить» */
+    padding: 1rem;
+    box-sizing: border-box;
+
+    transition: all 0.3s ease;
+}
+
+/* Картинки внутри */
+.hero-image {
+    flex: 0 0 auto;
+    /* Можно задать max-width в процентах,
+       чтобы они реагировали на width контейнера */
+    max-width: 15%;       /* Например, каждая картинка занимает до 15%
+                           от ширины hero-images */
+    height: auto;
+    cursor: pointer;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.hero-image:hover {
+    transform: scale(1.05);
+}
+
+/* Прячем 4-ю и 5-ю на мобильном */
+.to-hide {
+    display: block;
+}
+
+
+.hero-paws-2 {
+    position: absolute;
+    bottom: 30vh;
+    right: 24vw;
+    height: 20vh;
+    width: auto;
+    z-index: 3;
+    transform: rotate(-50deg);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+.hero-paws-3{
+    position: absolute;
+    bottom: 30vh;
+    left:23vw;
+    height: 20vh;
+    width: auto;
+    z-index: 3;
+    transform: rotate(30deg);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.discount{
+
+    transition: all 0.3s ease;
 }

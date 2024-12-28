@@ -1,3 +1,4 @@
+
 (function () {
     const forms = document.querySelectorAll('.needs-validation');
 

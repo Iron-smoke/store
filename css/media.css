@@ -1,0 +1,162 @@
+@media (max-width: 576px) {
+    .hero {
+        /* Вместо 60vh + 200px можно сделать поменьше,
+           или оставить, но тогда собака может смотреться огромной */
+        min-height: calc(50vh + 150px);
+    }
+
+    .hero-yellow {
+        height: 50vh;
+    }
+
+    .hero-green {
+        height: 150px;
+    }
+
+    .hero-dog {
+        top: 0;       /* уберём сдвиг на сверхмалых экранах */
+        height: 100%; /* чуть уменьшим, чтобы не сильно вылазила */
+    }
+}
+
+/* На «средних» экранах (до 992px), например планшеты */
+@media (max-width: 992px) {
+    .hero {
+        box-sizing: border-box;
+        min-height: calc(55vh + 180px); /* условно чуть поменьше */
+    }
+
+    .hero-yellow {
+        height: 55vh;
+    }
+
+    .hero-green {
+        height: 150px;
+    }
+
+    .hero-dog {
+        top: 5.6%; /* уменьшим сдвиг */
+        height: 68%;
+        width: auto;
+    }
+/*}*/
+@media (max-width: 992px) {
+    .hero-cat {
+        display: none;
+    }
+}
+@media only screen and (min-width : 992px) {
+    .header-bottom .navbar .dropdown-menu-end {
+        margin-left: 0;
+        border: 0;
+    }
+
+    .header-bottom .navbar .nav-link {
+        padding: 0.5rem;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .header-bottom .navbar .dropdown-menu {
+        padding-left: 1rem;
+    }
+}
+@media (max-width: 576px) {
+    .hero-paws {
+        bottom: 22rem;       /* Сдвигаем лапы выше */
+        left: -1rem;         /* Ближе к краю */
+        height: 40%;       /* Уменьшаем размер */
+        transform: rotate(-30deg); /* Меньший наклон */
+    }
+}
+
+@media (max-width: 992px) { /* Для планшетов */
+    .Logo-text {
+        font-size: 10rem; /* Уменьшаем размер заголовка */
+        margin-top: -8rem; /* Меньший отступ сверху */
+    }
+
+    .logo-subtitle {
+        font-size: 1.5rem; /* Уменьшаем размер подзаголовка */
+        margin-left: 15rem !important; /* Меньший отступ влево */
+        margin-top: -0.5rem !important;
+    }
+}
+
+/* === Адаптивные стили для мобильных устройств === */
+@media (max-width: 576px) { /* Для телефонов */
+    .Logo-text {
+        font-size: 5rem; /* Ещё меньше размер текста */
+        margin-top: -9rem; /* Корректируем отступ сверху */
+    }
+
+    .logo-subtitle {
+        display: none;
+    }
+    .discount{
+        font-size: 1rem; /* Ещё меньше размер текста */
+        margin-top: 80% !important;
+        margin-left: -10%!important;
+        color: #ffffff;
+    }
+
+}
+}
+
+
+@media (max-width: 962px) {
+    .hero-paws-2 {
+        /* Уменьшаем саму лапу и оставляем rotate */
+        transform: rotate(-50deg) scale(0.6) ;
+
+    }
+    .hero-paws-3 {
+        transform: rotate(30deg) scale(0.6);
+    }
+}
+@media (max-width: 1168px) and (min-width: 769px) {
+    /* Планшетные стили */
+    .to-hide {
+        /* допустим, на планшете всё ещё показываем все 5 картинок
+           если ты хочешь "на планшете скрывать" — поставь display: none;
+           но в примере я сделаю так, что на планшете всё ещё видны */
+        display: block;
+    }
+
+    .hero-images {
+        right: 5%;
+        width: 90%;
+        gap: 1rem; /* или 1%, потестируй */
+    }
+
+    .hero-image {
+        max-width: 18%;
+    }
+}
+
+
+/* ============ МОБИЛЬНЫЙ: до 768px ============ */
+@media (max-width: 768px) {
+    /*
+       Здесь уже скрываем .to-hide (4-ю и 5-ю)
+       и делаем ещё более сильную адаптацию
+    */
+    .to-hide {
+        display: none;
+    }
+    .hero-images {
+        /* Например, растянем на 95% */
+        right: 3%;
+        width: 100%;
+        gap: 10%;
+        bottom: 2%;
+        z-index: 100;
+        /* Если хочется, можно чуть масштабировать весь блок */
+        /* transform: scale(0.9);
+           transform-origin: bottom right; */
+    }
+    .hero-image {
+        max-width: 25%;
+        /* Только 3 картинки останется, можно сделать их крупнее */
+    }
+}

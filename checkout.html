@@ -313,7 +313,7 @@
             </div>
         </div>
 <div class="container-fluid">
-    <form action="" class="needs-validation" novalidate>
+    <form action="" class="needs-validation" id="checkoutForm" novalidate >
 
         <div class="row">
             <div class="col-lg-8 mb-3">
@@ -336,15 +336,11 @@
                         </div>
                         <div class="col-md-6">
                             <label for="country" class="form-label">Country</label>
-                            <select id="country" name="country" class="form-select" aria-label="Country" required>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
+                            <select id="country" name="country" class="form-select" aria-label="Country" required></select>
                         </div>
                         <div class="col-md-6">
-                            <label for="city" class="form-label">city</label>
-                            <input type="text" id="city" name="city" class="form-control" placeholder="New York" aria-label="city" required>
+                            <label for="city" class="form-label">City</label>
+                            <select id="city" name="city" class="form-select" aria-label="City" required></select>
                         </div>
                         <div class="col-md-6">
                             <label for="address" class="form-label">address</label>
@@ -366,12 +362,69 @@
                 <div class="cart-summary p-3 bg-white ">
 
                     <h5 class="section-title">
-                        <span>Cart Summary</span>
+                        <span>Order total</span>
                     </h5>
-                    <div class="d-grid">
-                        <a href="" class="btn btn-warning">
+
+<div class="table-responsive">
+    <table class="table">
+<thead>
+<tr>
+    <th>Product</th>
+    <th class="text-end">Total</th>
+</tr>
+</thead>
+        <tbody>
+        <tr>
+            <td>
+                Lorem ipsum dolor sit amet 1
+                <small>($65) x 1</small>
+            </td>
+            <td class="text-end">$65</td>
+            </tr>
+        <tr>
+            <td>
+               Product 2
+                <small>($80) x 2</small>
+            </td>
+            <td class="text-end">$160</td>
+        </tr>
+        <tr>
+            <td>
+              Product 3
+                <small>($100) x 3</small>
+            </td>
+            <td class="text-end">$300</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2" class="text-end" >
+            $515
+            </td>
+        </tr>
+        </tfoot>
+
+    </table>
+</div>
+                    <div class="form-check">
+                        <input value="payment-method1" class="form-check-input" type="radio" name="payment-method" id="payment-method1" required>
+                        <label class="form-check-label" for="payment-method1">
+                            online payment
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input value="payment-method2" class="form-check-input" type="radio" name="payment-method" id="payment-method2" required>
+                        <label class="form-check-label" for="payment-method2">
+                            payment on delivery
+                        </label>
+                    </div>
+
+
+
+                    <div class="d-grid mt-3">
+                        <button type="submit" href="" class="btn btn-warning">
                             Checkout
-                        </a>
+                        </button>
                     </div>
 
 
@@ -439,6 +492,47 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="owlcarousel/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
+<script type="module">
+    // fetch('/js/countries.json')
+    //     .then((res) => res.json())
+    //     .then((json) => {
+    //         let html = '';
+    //         json['countries'].forEach((el) => {
+    //             html += `<option value="${el.code}">${el.name}</option>`;
+    //         });
+    //         document.getElementById('country').innerHTML = html;
+    //     });
+    // Загружаем список стран
+    // Загружаем список стран из countries.json
+    fetch('/js/countries.json')
+        .then((res) => res.json())
+        .then((json) => {
+            let html = '';
+            json['countries'].forEach((el) => {
+                html += `<option value="${el.name}">${el.name}</option>`;
+            });
+            document.getElementById('country').innerHTML = html;
+        });
+
+    // Обработчик события изменения страны
+    document.getElementById('country').addEventListener('change', function () {
+        const selectedCountry = this.value; // Получаем выбранную страну
+        fetch('/js/cities.json')
+            .then((res) => res.json())
+            .then((json) => {
+                const cities = json[selectedCountry]; // Достаём список городов по имени страны
+                if (cities) {
+                    let html = '';
+                    cities.forEach((city) => {
+                        html += `<option value="${city}">${city}</option>`;
+                    });
+                    document.getElementById('city').innerHTML = html;
+                } else {
+                    document.getElementById('city').innerHTML = '<option value="">No cities available</option>';
+                }
+            });
+    });
+</script>
 </body>
 
 </html>
