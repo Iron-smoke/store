@@ -240,9 +240,7 @@ ul.social-icons a:hover {
 .carousel-caption p{
     font-size: 1.5em;
  }
-section{
-    padding: 50px 0;
-}
+
 
 .section-title {
     position: relative;
@@ -852,84 +850,73 @@ textarea {
 .banner-buy {
     position: relative;
     width: 100%;
-    min-height: 310px;  /* например, из макета Figma */
-    background: url("images/dog.jpg") no-repeat center center;
-    background-size: cover;
-    /* Если хочешь точно повторить размеры (1440x310), можешь задать height: 310px на десктопе */
+    overflow: hidden; /* Чтобы обрезать выходящие за границы элементы */
 }
 
-/* Общие стили для текста */
+/* Изображение */
+.banner-image {
+    display: block;
+    width: 100%; /* Растягиваем по ширине */
+    height: auto; /* Сохраняем пропорции */
+}
+
+/* Текст поверх изображения */
 .banner-text {
-    position: absolute; /* или relative, если хочешь поточную модель */
-    top: 20%;
-    left: 5%;
-    width: 90%;
-    /* Ты можешь расположить его более точно, глядя на макет */
-}
-
-.banner-title {
     font-family: 'Stylo', sans-serif;
-    font-weight: 700;
-    font-size: 60px; /* из макета figma */
-    line-height: 62px;
+    position: absolute;
+    top: 15%; /* Позиция текста сверху */
+    right: 25%;
+    width: 90%; /* Чтобы текст не вылезал за границы */
+    text-align: center;
+    z-index: 10;
+    font-size: 5rem;
     color: #EF7070;
-    margin: 0;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    /* возможно, нужно: white-space: nowrap; или нет */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
 }
 
-/* Сердечко + кнопки */
+
+
 .heart-container {
     position: absolute;
-    top: 30%;   /* pick numbers from figma or taste */
-    left: 13%;  /* опять же, пример */
-    /* right: 65%; bottom: ...; можно через transform: translate() */
-    z-index: 10; /* над фоном */
+    top: 3%;
+    left: 20%;
+    width: 23%; /* Добавляем ширину контейнера */
+    text-align: center;
 }
 
 .heart-svg {
-    display: block;
-    width: 200px;
-    height: auto;
-    border: 11px solid #000000; /* из макета, если нужно */
-    box-sizing: border-box;
+    width: 100%; /* Динамический размер */
+    height: auto; /* Пропорции сохраняем */
 }
 
-/* Кнопки внутри сердца */
+/* Кнопки внутри сердечка */
 .banner-btn {
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4px 10px;
+    display: none; /* По умолчанию скрыты */
+    margin: 0 auto; /* Центрируем горизонтально */
+    padding: 0.5rem 1rem;
     border-radius: 20px;
     font-family: 'Stylo', sans-serif;
-    font-weight: 700;
-    font-size: 18px;
+    font-size: 14px;
+    color: #FFFFFF;
     background-color: #EF7070;
-    color: #fff;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 .banner-btn:hover {
     opacity: 0.9;
 }
 
-/* конкретно для кнопок, по макету у тебя:
-   left: 219px; top: 125px; etc.
-   но лучше делать через проценты, чтоб адаптивно
-*/
-.location-btn {
-    top: 15%;
-    left: 20%;
-    width: 125px;  /* или auto */
-    height: 34px;
+.banner-text a {
+    color: #ff4081; /* Цвет ссылки, можно заменить */
+    text-decoration: none;
+    font-weight: bold;
 }
-.discount-btn {
-    top: 50%;
-    left: 25%;
-    width: 89px;
-    height: 34px;
-    color: #000; /* если хочешь чёрный шрифт */
+
+/* Hover эффект для ссылки */
+.custom-col-7 {
+    flex: 0 0 14.28%;
+    max-width: 14.28%;
 }

@@ -223,60 +223,117 @@
     }
 }
 
-@media (min-width: 992px) {
-    .banner-title {
-        font-size: 60px;
-        line-height: 62px;
+@media (max-width: 1024px) {
+    /* Перемещаем текст в верхнюю часть и в одну строчку */
+    .banner-text {
+        top: 5%; /* Сдвигаем текст вверх */
+        right: 5%; /* Немного правее */
+        font-size: 3rem; /* Уменьшаем размер текста */
+        text-align: left; /* Текст в одну строчку */
     }
+
+
+
+    /* Уменьшаем размер сердечка */
     .heart-svg {
-        width: 200px; /* large heart */
-        border-width: 11px;
+        width: 70%; /* Уменьшаем размер сердечка на планшетах */
     }
+
+    /* Изменяем размер кнопок и их положение внутри сердечка */
+}
+
+@media (max-width: 480px) {
+    /* Перемещаем текст еще выше и уменьшаем его размер */
+    .banner-text {
+        top: 5%; /* Сдвигаем текст вверх */
+      left: 10%;
+        font-size: 1rem; /* Уменьшаем размер текста */
+        white-space: nowrap;
+    }
+
+    /* Изменяем позицию сердечка */
+    .heart-container {
+        top: 25%; /* Сдвигаем сердечко вверх */
+        left: 24%; /* Центрируем сердечко */
+        width: 30%;
+        transform: translateX(-50%); /* Центрируем по горизонтали */
+    }
+
+    /* Уменьшаем размер сердечка */
+
+    /* Уменьшаем размер кнопок и их положение */
     .banner-btn {
-        font-size: 18px;
-        border-radius: 20px;
+        display: block; /* Делаем кнопки видимыми */
+        font-size: 8px; /* Уменьшаем размер текста в кнопках */
+        width: 70%; /* Сужаем ширину кнопок */
+        padding: 0.3rem 0.5rem; /* Уменьшаем внутренние отступы */
+        border-radius: 15px; /* Более округлые углы */
+        position: relative; /* Для размещения внутри сердечка */
+        margin: 0.2rem auto; /* Отступы между кнопками */
+    }
+    .location-btn{
+        position: absolute;
+        top: 35%; /* Центрируем в верхней части сердечка */
+        left: 50%;
+        width: 60%;
+        transform: translate(-50%, -70%);
+
+    }
+
+    .discount-btn{
+        position: absolute;
+        top: 60%; /* Сдвигаем вниз внутри сердечка */
+        left: 50%;
+        width: 40%;
+        transform: translate(-50%, -50%); /* Центрируем горизонтально */
+
+    }
+}
+@media (max-width: 1200px) {
+    .custom-col-7 {
+        flex: 0 0 16.66%; /* 6 колонок */
+        max-width: 16.66%;
     }
 }
 
-/* Мобильная версия: до 576px */
-@media (max-width: 576px) {
-    .banner-buy {
-        min-height: 168px;
-        /* либо height: 168px, если фиксируешь */
-    }
-    .banner-title {
-        font-size: 18px;
-        line-height: 19px;
-        text-align: center;
-        /* из макета */
-        width: 100%; /* центрируем */
-        position: absolute;
-        top: 10px; left: 0;
-    }
-    .heart-container {
-        top: 40%;  /* или другое */
-        left: 8%;  /* как в макете */
-    }
-    .heart-svg {
-        width: 80px;
-        border-width: 5px;
-    }
-    .banner-btn {
-        font-size: 10px;
-        padding: 4px;
-        border-radius: 20px;
-    }
-    .location-btn {
-        top: 20px;
-        left: 15px;
-        width: 60px;
-        height: 20px;
-    }
-    .discount-btn {
-        top: 50px;
-        left: 20px;
-        width: 50px;
-        height: 22px;
-        color: #000;
+@media (max-width: 992px) {
+    .custom-col-7 {
+        flex: 0 0 20%; /* 5 колонок */
+        max-width: 20%;
     }
 }
+
+@media (max-width: 768px) {
+    .custom-col-7 {
+        flex: 0 0 25%; /* 4 колонок */
+        max-width: 25%;
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-col-7 {
+        flex: 0 0 13%; /* 3 колонок */
+        max-width: 13%;
+    }
+    .product-section .row{
+        padding-top: 0 !important;
+        --bs-gutter-x: 0 !important; /* Убираем горизонтальные отступы между колонками */
+        --bs-gutter-y: 0 !important; /* Убираем вертикальные отступы между строками */
+        gap: 0 !important; /* Полностью убираем gap */
+    }
+    .product-section h2 {
+        margin-bottom: 0 !important; /* Уменьшаем расстояние под заголовком */
+        margin-top: 0 !important;
+        --bs-gutter-y: 0 !important;
+        gap: 0 !important;
+        font-size: 1.2rem; /* Немного уменьшаем размер текста заголовка */
+    }
+    .card-title{
+        font-size: 0.45rem!important;
+    }
+
+
+}
+
+
+
