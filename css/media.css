@@ -316,10 +316,15 @@
         max-width: 13%;
     }
     .product-section .row{
-        padding-top: 0 !important;
-        --bs-gutter-x: 0 !important; /* Убираем горизонтальные отступы между колонками */
-        --bs-gutter-y: 0 !important; /* Убираем вертикальные отступы между строками */
-        gap: 0 !important; /* Полностью убираем gap */
+        /*padding-top: 0 !important;*/
+        /*--bs-gutter-x: 0 !important; !* Убираем горизонтальные отступы между колонками *!*/
+        /*--bs-gutter-y: 0 !important; !* Убираем вертикальные отступы между строками *!*/
+        /*gap: 0.364rem; !* Полностью убираем gap *!*/
+    }
+    .category-panel{
+        --bs-gutter-x: 0 !important;
+        --bs-gutter-y: 0 !important;
+
     }
     .product-section h2 {
         margin-bottom: 0 !important; /* Уменьшаем расстояние под заголовком */
@@ -331,9 +336,11 @@
     .card-title{
         font-size: 0.45rem!important;
     }
-
-
 }
+@media (max-width: 576px) {
+    .btn-sm {
 
-
-
+        font-size: 0.8rem; /* Уменьшаем текст кнопок */
+        padding: 0.3rem 0.6rem; /* Уменьшаем отступы */
+    }
+}
