@@ -24,11 +24,11 @@
 
 @font-face {
     font-family: 'Title';
-    src: url('/fonts/Stylo_Bold.ttf') format('truetype');
+    src: url('../fonts/Stylo_Bold.ttf') format('truetype');
 }
 @font-face {
     font-family: 'typography';
-    src: url('/fonts/Rosarium.ttf') format('truetype');
+    src: url('../fonts/Rosarium.ttf') format('truetype');
 }
 
 body,
@@ -42,6 +42,8 @@ overflow-x:hidden;
 body {
     min-width: 320px;
     font-family: 'Roboto', sans-serif;
+    font-family: 'Title',sans-serif;
+    font-family: 'typography',sans-serif;
 }
 
 h1,h2,h3 {
