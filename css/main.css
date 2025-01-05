@@ -709,6 +709,193 @@ color: var(--contrast-color);
 }
 
 .btn-row{
+    display: none;
     margin-top: -1%;
 }
+.btn-row.active {
+    display: flex; /* Показываем активные разделы */
+}
 
+.product-cards {
+    margin-top: 2rem; /* Отступ сверху для блока карточек */
+    justify-content: center; /* Центрируем карточки */
+}
+
+.card {
+    background-color: #f8f9fa; /* Цвет фона карточки */
+    border-radius: 10px; /* Скруглённые углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для карточки */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Лёгкое увеличение при наведении */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Усиление тени при наведении */
+}
+
+.product-image {
+    max-height: 150px; /* Ограничиваем высоту изображений */
+    object-fit: contain; /* Сохраняем пропорции */
+}
+
+.card-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    font-size: 0.8rem;
+    color: #555;
+}
+/*.product-slider {*/
+/*    position: relative;*/
+/*    overflow: hidden;*/
+/*    width: 100%;*/
+/*    margin-top: 2rem;*/
+/*}*/
+
+/*.slider-wrapper {*/
+/*    display: flex;*/
+/*    transition: transform 0.5s ease-in-out;*/
+/*    gap: 1rem;*/
+/*}*/
+
+.product-card {
+    flex: 0 0 calc(50% - 1rem); /* Каждая карточка занимает 50% ширины */
+    background: linear-gradient(180deg, #114F3C 0%, #E6DBA8 103.6%);
+    border: 1px solid #FFFFFF;
+    border-radius: 15px;
+    text-align: center;
+    padding: 0.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card-text p {
+    font-family: 'Rosarium', sans-serif;
+    font-size: 0.8rem;
+    color: #FFFFFF;
+}
+
+/* Кнопки управления */
+/*.slider-button {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    transform: translateY(-50%);*/
+/*    background-color: rgba(0, 0, 0, 0.5);*/
+/*    color: white;*/
+/*    border: none;*/
+/*    border-radius: 50%;*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    cursor: pointer;*/
+/*    z-index: 10;*/
+/*}*/
+
+/*.slider-button.prev {*/
+/*    left: 10px;*/
+/*}*/
+
+/*.slider-button.next {*/
+/*    right: 10px;*/
+/*}*/
+
+/* Desktop: скрываем слайдер */
+/*@media (min-width: 576px) {*/
+/*    .product-slider {*/
+/*        display: none;*/
+/*    }*/
+/*}*/
+
+.disabled {
+    display: none !important; /* Полностью скрывает элемент */
+}
+
+.category-panel .col.active {
+    border: 2px solid #007bff; /* Синяя рамка */
+    border-radius: 10px;
+    background-color: #e6f7ff; /* Лёгкий голубой фон */
+    transition: all 0.3s ease;
+}
+
+/* Для активной кнопки раздела */
+.btn-row button.active {
+    background-color: #007bff; /* Синий фон */
+    color: #fff; /* Белый текст */
+    border-color: #007bff; /* Синий цвет границы */
+}
+
+/* Основной стиль для слайдера */
+.product-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 1rem; /* Расстояние между карточками */
+    will-change: transform;
+}
+
+.slider-card {
+    flex: 0 0 50%; /* Каждая карточка занимает 50% ширины экрана */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slider-card img {
+    max-height: 150px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+/* Кнопки управления слайдером */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider-button.prev {
+    left: 10px;
+}
+
+.slider-button.next {
+    right: 10px;
+}
+
+/* Прячем оригинальные карточки на мобильной версии */
+@media (max-width: 767.98px) {
+    .product-cards {
+        display: none; /* Скрываем стандартные карточки */
+    }
+}

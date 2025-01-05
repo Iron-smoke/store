@@ -324,7 +324,7 @@
                 <h2 class="text-center mb-4">Каталог</h2>
                 <div class="row category-panel g-4  justify-content-center justify-content-lg-between">
                     <!-- Категория 1: Кошки -->
-                    <div class="col custom-col-7 ">
+                    <div class="col custom-col-7" data-category="cats">
                         <a href="#cats-subcategories" class="text-decoration-none text-dark">
                             <div class="card h-100 text-center border-0">
                                 <img src="images/animals/cat-products.png" class="card-img-top mx-auto d-block img-fluid category-image" alt="Кошки">
@@ -335,7 +335,7 @@
                         </a>
                     </div>
                     <!-- Категория 2: Собаки -->
-                    <div class="col custom-col-7">
+                    <div class="col custom-col-7" data-category="dogs">
                         <a href="#dogs-subcategories" class="text-decoration-none text-dark">
                             <div class="card h-100 text-center border-0">
                                 <img src="images/animals/puppy-products.png" class="card-img-top mx-auto d-block img-fluid category-image" alt="Собаки">
@@ -346,7 +346,7 @@
                         </a>
                     </div>
                     <!-- Категория 3: Грызуны -->
-                    <div class="col custom-col-7">
+                    <div class="col custom-col-7" data-category="hamster">
                         <a href="#rodents-subcategories" class="text-decoration-none text-dark">
                             <div class="card h-100 text-center border-0">
                                 <img src="images/animals/hamster.png" class="card-img-top mx-auto d-block img-fluid category-image" alt="Грызуны">
@@ -357,7 +357,7 @@
                         </a>
                     </div>
                     <!-- Категория 4: Рыбки -->
-                    <div class="col custom-col-7">
+                    <div class="col custom-col-7" data-category="fish">
                         <a href="#fish-subcategories" class="text-decoration-none text-dark">
                             <div class="card h-100 text-center border-0">
                                 <img src="images/animals/fish-products.png" class="card-img-top mx-auto d-block img-fluid category-image" alt="Рыбки">
@@ -368,7 +368,7 @@
                         </a>
                     </div>
                     <!-- Категория 5: Птицы -->
-                    <div class="col custom-col-7">
+                    <div class="col custom-col-7" data-category="birds">
                         <a href="#birds-subcategories" class="text-decoration-none text-dark">
                             <div class="card h-100 text-center border-0">
                                 <img src="images/animals/bird.png" class="card-img-top mx-auto d-block img-fluid category-image" alt="Птицы">
@@ -379,7 +379,7 @@
                         </a>
                     </div>
                     <!-- Категория 6: Подворье -->
-                    <div class="col custom-col-7">
+                    <div class="col custom-col-7" data-category="yard">
                         <a href="#homestead-subcategories" class="text-decoration-none text-dark">
                             <div class="card h-100 text-center border-0">
                                 <img src="images/animals/yard.png" class="card-img-top mx-auto d-block img-fluid category-image" alt="Подворье">
@@ -390,7 +390,7 @@
                         </a>
                     </div>
                     <!-- Категория 7: Акции -->
-                    <div class="col custom-col-7">
+                    <div class="col custom-col-7" data-category="discount">
                         <a href="#promotions-subcategories" class="text-decoration-none text-dark">
                             <div class="card h-100 text-center border-0">
                                 <img src="images/animals/sale.png" class="card-img-top mx-auto d-block img-fluid category-image" alt="Акции">
@@ -401,19 +401,19 @@
                         </a>
                     </div>
                 </div>
-                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3 btn-row">
+                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3 btn-row " data-category="cats">
                     <!-- Колонки для кнопок -->
                     <div class="col">
-                        <button class="btn btn-outline-primary btn-sm w-100" data-category="1">Раздел 1</button>
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="1" data-section="toys">Игрушки</button>
                     </div>
                     <div class="col">
-                        <button class="btn btn-outline-primary btn-sm w-100" data-category="2">Раздел 2</button>
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="2" data-section="food">Корм</button>
                     </div>
                     <div class="col">
-                        <button class="btn btn-outline-primary btn-sm w-100" data-category="3">Раздел 3</button>
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="3">Лакомства</button>
                     </div>
                     <div class="col">
-                        <button class="btn btn-outline-primary btn-sm w-100" data-category="4">Раздел 4</button>
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="4">1</button>
                     </div>
                     <div class="col">
                         <button class="btn btn-outline-primary btn-sm w-100" data-category="5">Раздел 5</button>
@@ -422,7 +422,311 @@
                         <button class="btn btn-outline-primary btn-sm w-100" data-category="6">Раздел 6</button>
                     </div>
                 </div>
+                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3 btn-row" data-category="dogs">
+                    <!-- Колонки для кнопок -->
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="1">Раздел 21</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="2">Раздел 22</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="3">Раздел 23</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="4">Раздел 24</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="5">Раздел 25</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="6">Раздел 26</button>
+                    </div>
+                </div>
+                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3 btn-row" data-category="birds">
+                    <!-- Колонки для кнопок -->
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="1">Раздел 10</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="2">Раздел 20</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="3">Раздел 30</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="4">Раздел 40</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="5">Раздел 50</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="6">Раздел 60</button>
+                    </div>
+                </div>
+                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3 btn-row" data-category="fish">
+                    <!-- Колонки для кнопок -->
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="1">Раздел 16</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="2">Раздел 26</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="3">Раздел 36</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="4">Раздел 46</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="5">Раздел 56</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="6">Раздел 66</button>
+                    </div>
+                </div>
+                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3 btn-row" data-category="hamster">
+                    <!-- Колонки для кнопок -->
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="1">Раздел 51</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="2">Раздел 52</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="3">Раздел 53</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="4">Раздел 54</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="5">Раздел 55</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="6">Раздел 56</button>
+                    </div>
+                </div>
+                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3 btn-row" data-category="yard">
+                    <!-- Колонки для кнопок -->
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="1">Раздел 41</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="2">Раздел 42</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="3">Раздел 43</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="4">Раздел 44</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="5">Раздел 45</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="6">Раздел 44</button>
+                    </div>
+                </div>
+                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3 btn-row" data-category="discount">
+                    <!-- Колонки для кнопок -->
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="1">Раздел 31</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="2">Раздел 32</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="3">Раздел 33</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="4">Раздел 34</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="5">Раздел 35</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-primary btn-sm w-100" data-category="6">Раздел 36</button>
+                    </div>
+                </div>
             </div>
+            <div class="row product-cards disabled d-md-flex" data-category="cats" data-section="toys">
+                <!-- Карточка 1 -->
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card h-100 text-center border-0">
+                        <img src="images/pfood.png" class="card-img-top mx-auto d-block img-fluid product-image" alt="Товар 1">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Сухой корм PRO PLAN</h6>
+                            <p class="card-text">DELICATE DIGESTION</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Карточка 2 -->
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card h-100 text-center border-0">
+                        <img src="images/pet-food.png" class="card-img-top mx-auto d-block img-fluid product-image" alt="Товар 2">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Сухой корм PRO PLAN</h6>
+                            <p class="card-text">DELICATE DIGESTION</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card h-100 text-center border-0">
+                        <img src="images/pfood.png" class="card-img-top mx-auto d-block img-fluid product-image" alt="Товар 2">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Сухой корм PRO PLAN</h6>
+                            <p class="card-text">DELICATE DIGESTION</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card h-100 text-center border-0">
+                        <img src="images/pfood.png" class="card-img-top mx-auto d-block img-fluid product-image" alt="Товар 2">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Сухой корм PRO PLAN</h6>
+                            <p class="card-text">DELICATE DIGESTION</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card h-100 text-center border-0">
+                        <img src="images/pfood.png" class="card-img-top mx-auto d-block img-fluid product-image" alt="Товар 2">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Сухой корм PRO PLAN</h6>
+                            <p class="card-text">DELICATE DIGESTION</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card h-100 text-center border-0">
+                        <img src="images/pfood.png" class="card-img-top mx-auto d-block img-fluid product-image" alt="Товар 2">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Сухой корм PRO PLAN</h6>
+                            <p class="card-text">DELICATE DIGESTION</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Добавь остальные карточки аналогично -->
+            </div>
+            <div class="row product-cards disabled d-md-flex" data-category="cats" data-section="food">
+                <!-- Карточка 1 -->
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card h-100 text-center border-0">
+                        <img src="images/hcat.png" class="card-img-top mx-auto d-block img-fluid product-image" alt="Товар 1">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Сухой корм PRO PLAN</h6>
+                            <p class="card-text">DELICATE DIGESTION</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Карточка 2 -->
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card h-100 text-center border-0">
+                        <img src="images/pet-food.png" class="card-img-top mx-auto d-block img-fluid product-image" alt="Товар 2">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Сухой корм PRO PLAN</h6>
+                            <p class="card-text">DELICATE DIGESTION</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card h-100 text-center border-0">
+                        <img src="images/pfood.png" class="card-img-top mx-auto d-block img-fluid product-image" alt="Товар 2">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Сухой корм PRO PLAN</h6>
+                            <p class="card-text">DELICATE DIGESTION</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card h-100 text-center border-0">
+                        <img src="images/pfood.png" class="card-img-top mx-auto d-block img-fluid product-image" alt="Товар 2">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Сухой корм PRO PLAN</h6>
+                            <p class="card-text">DELICATE DIGESTION</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card h-100 text-center border-0">
+                        <img src="images/pfood.png" class="card-img-top mx-auto d-block img-fluid product-image" alt="Товар 2">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Сухой корм PRO PLAN</h6>
+                            <p class="card-text">DELICATE DIGESTION</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="card h-100 text-center border-0">
+                        <img src="images/pfood.png" class="card-img-top mx-auto d-block img-fluid product-image" alt="Товар 2">
+                        <div class="card-body p-2">
+                            <h6 class="card-title">Сухой корм PRO PLAN</h6>
+                            <p class="card-text">DELICATE DIGESTION</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Добавь остальные карточки аналогично -->
+            </div>
+<!--            <div class="product-slider d-block d-md-none">-->
+<!--                <button class="slider-button prev">←</button>-->
+<!--                <div class="slider-wrapper">-->
+<!--                    &lt;!&ndash; Карточка 1 &ndash;&gt;-->
+<!--                    <div class="product-card">-->
+<!--                        <img src="images/pet-food.png" class="product-image" alt="Товар 1">-->
+<!--                        <div class="card-text">-->
+<!--                            <p>Сухой корм PRO PLAN</p>-->
+<!--                            <p>DELICATE DIGESTION</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; Карточка 2 &ndash;&gt;-->
+<!--                    <div class="product-card">-->
+<!--                        <img src="images/pfood.png" class="product-image" alt="Товар 2">-->
+<!--                        <div class="card-text">-->
+<!--                            <p>Сухой корм PRO PLAN</p>-->
+<!--                            <p>DELICATE DIGESTION</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; Карточка 3 &ndash;&gt;-->
+<!--                    <div class="product-card">-->
+<!--                        <img src="images/pfood.png" class="product-image" alt="Товар 3">-->
+<!--                        <div class="card-text">-->
+<!--                            <p>Сухой корм PRO PLAN</p>-->
+<!--                            <p>DELICATE DIGESTION</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; Карточка 4 &ndash;&gt;-->
+<!--                    <div class="product-card">-->
+<!--                        <img src="images/pfood.png" class="product-image" alt="Товар 4">-->
+<!--                        <div class="card-text">-->
+<!--                            <p>Сухой корм PRO PLAN</p>-->
+<!--                            <p>DELICATE DIGESTION</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; Карточка 5 &ndash;&gt;-->
+<!--                    <div class="product-card">-->
+<!--                        <img src="images/pfood.png" class="product-image" alt="Товар 5">-->
+<!--                        <div class="card-text">-->
+<!--                            <p>Сухой корм PRO PLAN</p>-->
+<!--                            <p>DELICATE DIGESTION</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; Карточка 6 &ndash;&gt;-->
+<!--                    <div class="product-card">-->
+<!--                        <img src="images/pfood.png" class="product-image" alt="Товар 6">-->
+<!--                        <div class="card-text">-->
+<!--                            <p>Сухой корм PRO PLAN</p>-->
+<!--                            <p>DELICATE DIGESTION</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <button class="slider-button next">→</button>-->
+<!--            </div>-->
+            <div class="product-slider d-block d-md-none">
+                <button class="slider-button prev">←</button>
+                <div class="slider-wrapper"></div>
+                <button class="slider-button next">→</button>
+            </div>
+
         </section>
 
         <footer style="background-color:grey" id="footer" class="footer">

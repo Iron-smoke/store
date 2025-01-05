@@ -338,9 +338,57 @@
     }
 }
 @media (max-width: 576px) {
-    .btn-sm {
+    .btn-row {
+        display: none; /* Скрываем все кнопки по умолчанию */
+    }
 
-        font-size: 0.8rem; /* Уменьшаем текст кнопок */
-        padding: 0.3rem 0.6rem; /* Уменьшаем отступы */
+    .btn-row.active {
+        display: flex; /* Показываем только активные кнопки */
+        flex-wrap: nowrap; /* Не переносим кнопки */
+        overflow-x: auto; /* Горизонтальный скролл, если кнопки не помещаются */
+        gap: 0.5rem; /* Добавляем расстояние между кнопками */
+        position: relative;
+        z-index: 10;
+        margin-top: -30px;
+    }
+
+    .btn-row .col {
+        flex: 0 0 auto; /* Отключаем авторастяжение колонок */
+        width: auto; /* Ширина кнопок зависит от содержимого */
+    }
+
+    .btn-row .btn-sm {
+        flex-shrink: 0; /* Не позволяем кнопкам сжиматься */
+        white-space: nowrap; /* Запрещаем перенос текста */
+        font-size: 0.6rem; /* Ещё немного уменьшаем размер текста */
+        padding: 0.2rem 0.4rem; /* Уменьшаем внутренние отступы */
+    }
+
+    .category-panel {
+        margin-bottom: 1rem; /* Отступ для категории, чтобы кнопки не наслаивались */
+    }
+
+    .category-link {
+        text-align: center; /* Центрируем категории */
+    }
+}
+
+@media (max-width: 576px) {
+    .product-cards .card {
+        margin-bottom: 1rem; /* Увеличиваем отступы между карточками */
+    }
+
+    .product-image {
+        max-height: 120px; /* Уменьшаем высоту изображений на маленьких экранах */
+    }
+
+    .card-title, .card-text {
+        font-size: 0.8rem; /* Уменьшаем текст */
+    }
+}
+
+@media (max-width: 767.98px) {
+    .product-cards {
+        display: none; /* Скрываем стандартные карточки */
     }
 }
