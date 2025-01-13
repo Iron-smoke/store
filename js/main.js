@@ -347,7 +347,7 @@ const restartButton = document.getElementById("restart-button"); // Кнопка
 // Загружаем данные из JSON
 async function loadQuizData() {
     try {
-        const response = await fetch('./js/quiz-data.json'); // Указываем путь к JSON-файлу
+        const response = await fetch('./quiz-data.json'); // Указываем путь к JSON-файлу
         quizData = await response.json();
         loadQuestion(currentStep); // Загружаем первый вопрос
     } catch (error) {

@@ -1,0 +1,123 @@
+[
+  {
+    "id": "start",
+    "question": "Выберите тип вашей кошки",
+    "options": ["Домашняя", "Уличная", "Смешанного типа"],
+    "values": ["indoor", "outdoor", "mixed"],
+    "next": ["weight-indoor", "weight-outdoor", "weight-mixed"]
+  },
+  {
+    "id": "weight-indoor",
+    "question": "Вес вашей домашней кошки",
+    "options": ["Меньше 5 кг", "5-10 кг", "Больше 10 кг"],
+    "values": ["<5", "5-10", ">10"],
+    "next": ["age-indoor-small", "age-indoor-medium", "age-indoor-large"]
+  },
+  {
+    "id": "age-indoor-small",
+    "question": "Возраст вашей домашней кошки (до 5 кг)",
+    "options": ["Меньше 1 года", "1-7 лет", "Больше 7 лет"],
+    "values": ["<1", "1-7", ">7"],
+    "next": ["activity-level-kitten", "activity-level-adult", "activity-level-senior"]
+  },
+  {
+    "id": "activity-level-kitten",
+    "question": "Какой уровень активности у вашей кошки?",
+    "options": ["Очень активная", "Средняя активность", "Спокойная"],
+    "values": ["high", "medium", "low"],
+    "next": ["health-condition-kitten-high", "health-condition-kitten-medium", "health-condition-kitten-low"]
+  },
+  {
+    "id": "health-condition-kitten-high",
+    "question": "Есть ли у кошки проблемы со здоровьем?",
+    "options": ["Нет", "Есть аллергии", "Проблемы с пищеварением"],
+    "values": ["no", "allergy", "digestive"],
+    "next": ["result-kitten-healthy", "result-kitten-allergy", "result-kitten-digestive"]
+  },
+  {
+    "id": "result-kitten-healthy",
+    "title": "Корм для здоровых котят",
+    "description": "Рекомендуем корм для здоровых котят, богатый витаминами и минералами. Идеально подходит для активного роста и укрепления иммунитета.",
+    "image": "images/pfood.png",
+    "relatedImage": "images/pfood.png",
+    "relatedImage2": "images/pfood.png",
+    "relatedImage3": "images/pfood.png",
+    "descriptionrec1": "Товар 1",
+    "descriptionrec2": "Товар 2",
+    "descriptionrec3": "Товар 3"
+  },
+  {
+    "id": "result-kitten-allergy",
+    "title": "Корм для котят с аллергией",
+    "description": "Гипоаллергенный корм для котят с чувствительным здоровьем. Содержит легкоусвояемые белки и минимальное количество аллергенов.",
+    "image": "images/pfood.png",
+    "relatedImage": "images/pfood.png",
+    "relatedImage2": "images/pfood.png",
+    "relatedImage3": "images/pfood.png",
+    "descriptionrec1": "Товар 1",
+    "descriptionrec2": "Товар 2",
+    "descriptionrec3": "Товар 3"
+  },
+  {
+    "id": "result-kitten-digestive",
+    "title": "Корм для котят с чувствительным пищеварением",
+    "description": "Корм для котят, поддерживающий здоровье пищеварительной системы. Обогащен пребиотиками и клетчаткой.",
+    "image": "images/pfood.png",
+    "relatedImage": "images/pfood.png",
+    "relatedImage2": "images/pfood.png",
+    "relatedImage3": "images/pfood.png",
+    "descriptionrec1": "Товар 1",
+    "descriptionrec2": "Товар 2",
+    "descriptionrec3": "Товар 3"
+  },
+  {
+    "id": "activity-level-adult",
+    "question": "Какой уровень активности у вашей взрослой кошки?",
+    "options": ["Очень активная", "Средняя активность", "Спокойная"],
+    "values": ["high", "medium", "low"],
+    "next": ["health-condition-adult-high", "health-condition-adult-medium", "health-condition-adult-low"]
+  },
+  {
+    "id": "health-condition-adult-high",
+    "question": "Есть ли у кошки проблемы со здоровьем?",
+    "options": ["Нет", "Избыточный вес", "Чувствительное пищеварение"],
+    "values": ["no", "overweight", "digestive"],
+    "next": ["result-adult-healthy", "result-adult-overweight", "result-adult-digestive"]
+  },
+  {
+    "id": "result-adult-healthy",
+    "title": "Корм для здоровых взрослых кошек",
+    "description": "Сбалансированный корм для активных взрослых кошек. Поддерживает здоровье суставов и иммунитет.",
+    "image": "images/pfood.png",
+    "relatedImage": "images/pfood.png",
+    "relatedImage2": "images/pfood.png",
+    "relatedImage3": "images/pfood.png",
+    "descriptionrec1": "Товар 1",
+    "descriptionrec2": "Товар 2",
+    "descriptionrec3": "Товар 3"
+  },
+  {
+    "id": "result-adult-overweight",
+    "title": "Корм для кошек с избыточным весом",
+    "description": "Корм с низким содержанием жиров и повышенным уровнем белка для контроля веса.",
+    "image": "images/pfood.png",
+    "relatedImage": "images/pfood.png",
+    "relatedImage2": "images/pfood.png",
+    "relatedImage3": "images/pfood.png",
+    "descriptionrec1": "Товар 1",
+    "descriptionrec2": "Товар 2",
+    "descriptionrec3": "Товар 3"
+  },
+  {
+    "id": "result-adult-digestive",
+    "title": "Корм для кошек с чувствительным пищеварением",
+    "description": "Идеально подходит для кошек с проблемами пищеварения. Обогащен натуральными пребиотиками.",
+    "image": "images/pfood.png",
+    "relatedImage": "images/pfood.png",
+    "relatedImage2": "images/pfood.png",
+    "relatedImage3": "images/pfood.png",
+    "descriptionrec1": "Товар 1",
+    "descriptionrec2": "Товар 2",
+    "descriptionrec3": "Товар 3"
+  }
+]
