@@ -89,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// мобильный слайдер
 
 document.addEventListener("DOMContentLoaded", function () {
     const sliderWrapper = document.querySelector(".slider-wrapper");
@@ -162,11 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updateSlider(initialCategory, initialSection);
 });
 
-
-
-
-
-
+//логика Категория --> раздел
 
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".btn-row button");
@@ -238,3 +235,279 @@ document.addEventListener("DOMContentLoaded", function () {
         updateSlider();
     });
 });
+
+// логика раздела вопросы
+
+document.querySelectorAll('.toggle-answer').forEach(button => {
+    button.addEventListener('click', function () {
+        const answer = this.closest('.faq-block').querySelector('.faq-answer');
+        const icon = this.querySelector('i');
+        if (answer.style.display === 'none' || !answer.style.display) {
+            answer.style.display = 'block';
+            icon.classList.replace('bi-arrow-down-circle', 'bi-arrow-up-circle');
+        } else {
+            answer.style.display = 'none';
+            icon.classList.replace('bi-arrow-up-circle', 'bi-arrow-down-circle');
+        }
+    });
+});
+
+
+// раздел вопросов
+
+document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('active');
+        });
+    });
+});
+
+// раздел блога
+
+
+document.querySelectorAll('.toggle-icon').forEach(button => {
+    button.addEventListener('click', function () {
+        const card = this.closest('.blog-card');
+        const isActive = card.classList.contains('active');
+
+        // Закрываем все карточки
+        document.querySelectorAll('.blog-card').forEach(otherCard => {
+            otherCard.classList.remove('active');
+            otherCard.querySelector('.blog-extra').style.display = 'none';
+        });
+
+        // Открываем текущую карточку
+        if (!isActive) {
+            card.classList.add('active');
+            card.querySelector('.blog-extra').style.display = 'block';
+        }
+    });
+});
+
+// раздел наши магазины
+document.querySelectorAll('.btn-location').forEach((button) => {
+    button.addEventListener('click', () => {
+        // Убираем активный класс со всех кнопок
+        document.querySelectorAll('.btn-location').forEach((btn) => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // Скрываем все экраны и показываем нужный
+        document.querySelectorAll('.screen').forEach((screen) => screen.classList.remove('active'));
+        const screenId = button.getAttribute('data-screen');
+        document.getElementById(screenId).classList.add('active');
+    });
+});
+
+// Логика слайдера
+document.querySelectorAll('.slider').forEach(slider => {
+    const images = slider.querySelectorAll('.slider-images img');
+    let currentIndex = 0;
+
+    const showImage = (index) => {
+        images.forEach((img, i) => {
+            img.classList.toggle('active', i === index); // Показываем только активное изображение
+        });
+    };
+
+    slider.querySelector('.left-arrow').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    });
+
+    slider.querySelector('.right-arrow').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    });
+
+    // Инициализация
+    showImage(currentIndex);
+});
+
+
+
+// логика работы квиза
+
+let quizData = [];
+let currentStep = 0;
+let progress = 0;
+const stepHistory = []; // Для хранения истории шагов
+const userAnswers = {};
+
+const questionElement = document.getElementById("quiz-question");
+const optionsElement = document.getElementById("quiz-options");
+const progressBar = document.querySelector(".progress");
+const backButton = document.getElementById("back-button");
+const resultSection = document.querySelector(".quiz-result");
+const resultCard = document.getElementById("result-card");
+const restartButton = document.getElementById("restart-button"); // Кнопка "Заново"
+
+// Загружаем данные из JSON
+async function loadQuizData() {
+    try {
+        const response = await fetch('./js/quiz-data.json'); // Указываем путь к JSON-файлу
+        quizData = await response.json();
+        loadQuestion(currentStep); // Загружаем первый вопрос
+    } catch (error) {
+        console.error("Ошибка загрузки данных квиза:", error);
+    }
+}
+
+// Загружаем вопрос
+function loadQuestion(step) {
+    const currentData = quizData[step];
+
+    if (!currentData) {
+        console.error(`Данные для шага ${step} не найдены.`);
+        return;
+    }
+
+    // Проверяем, является ли текущий шаг результатом
+    if (currentData.id.startsWith("result")) {
+        showResult(currentData.id);
+        // Скрываем прогресс-бар и вопрос
+        progressBar.parentElement.style.display = "none";
+        questionElement.style.display = "none";
+        return;
+    }
+
+    // Если это не результат, отображаем прогресс-бар и вопрос
+    progressBar.parentElement.style.display = "block";
+    questionElement.style.display = "block";
+
+    questionElement.innerText = currentData.question || "Вопрос не задан";
+    optionsElement.innerHTML = "";
+
+    if (currentData.options && currentData.options.length > 0) {
+        currentData.options.forEach((option, index) => {
+            const button = document.createElement("button");
+            button.className = "quiz-option";
+            button.innerText = option;
+            button.dataset.value = currentData.values[index];
+            button.addEventListener("click", () => handleAnswer(currentData, button.dataset.value));
+            optionsElement.appendChild(button);
+        });
+    }
+
+    updateProgress();
+    updateBackButton();
+}
+
+// Обрабатываем ответ пользователя
+function handleAnswer(currentData, answer) {
+    userAnswers[currentData.id] = answer;
+    stepHistory.push(currentStep); // Сохраняем текущий шаг в историю
+
+    const nextStepId = currentData.next[currentData.values.indexOf(answer)];
+    const nextStepIndex = quizData.findIndex(q => q.id === nextStepId);
+
+    if (nextStepIndex !== -1) {
+        currentStep = nextStepIndex;
+        loadQuestion(currentStep);
+    } else {
+        console.error(`Следующий шаг с ID ${nextStepId} не найден.`);
+    }
+}
+
+// Обновляем прогресс
+function updateProgress() {
+    const totalSteps = quizData.filter(q => !q.id.startsWith("result")).length;
+    progress = ((stepHistory.length + 1) / totalSteps) * 100;
+    progressBar.style.width = `${progress}%`;
+}
+
+// Обновляем видимость кнопки "Назад"
+function updateBackButton() {
+    backButton.classList.toggle("d-none", stepHistory.length === 0);
+}
+
+// Возврат к предыдущему вопросу
+function handleBack() {
+    if (stepHistory.length > 0) {
+        currentStep = stepHistory.pop(); // Возвращаемся к предыдущему шагу
+        loadQuestion(currentStep);
+    }
+}
+
+// Показываем результат
+function showResult(resultId) {
+    const resultData = quizData.find(result => result.id === resultId);
+
+    if (resultData) {
+        optionsElement.innerHTML = "";
+        resultSection.classList.remove("d-none");
+        resultCard.innerHTML = `
+            <div class="card">
+                <h3>${resultData.title}</h3>
+                <p>${resultData.description}</p>
+                <img src="${resultData.image}" alt="${resultData.title}" class="card-img">
+                <p>С этим товаром выбирают:</p>
+                <div class="related-cards">
+                    <div class="related-card">
+                        <p>${resultData.descriptionrec1}</p>
+                        <img src="${resultData.relatedImage}" alt="Рекомендуемый товар 1" class="related-img">
+                    </div>
+                    <div class="related-icon">
+                        <span>+</span>
+                    </div>
+                    <div class="related-card">
+                        <p>${resultData.descriptionrec2}</p>
+                        <img src="${resultData.relatedImage2}" alt="Рекомендуемый товар 2" class="related-img related-img-2">
+                    </div>
+                    <div class="related-icon">
+                        <span>+</span>
+                    </div>
+                    <div class="related-card">
+                        <p>${resultData.descriptionrec3}</p>
+                        <img src="${resultData.relatedImage2}" alt="Рекомендуемый товар 2" class="related-img related-img-3">
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Удаляем кнопку "Назад"
+        backButton.classList.add("d-none");
+
+        // Показываем кнопку "Заново"
+        restartButton.classList.remove("d-none");
+        restartButton.style.display = "inline-block"; // Делаем видимой
+    } else {
+        console.error("Результат с таким ID не найден:", resultId);
+    }
+}
+
+// Сбрасываем квиз в начальное состояние
+function restartQuiz() {
+    currentStep = 0;
+    progress = 0;
+    stepHistory.length = 0;
+    resultSection.classList.add("d-none");
+    loadQuestion(currentStep);
+    updateProgress();
+
+    // Скрываем кнопку "Заново"
+    restartButton.classList.add("d-none");
+    restartButton.style.display = "none";
+}
+
+// Добавляем обработчик на кнопку "Заново"
+restartButton.addEventListener("click", restartQuiz);
+
+// Событие для кнопки "Назад"
+backButton.addEventListener("click", handleBack);
+
+// Инициализация
+loadQuizData(); // Загружаем данные и начинаем квиз
+
+
+
+
+
+
+
+
+
+
+

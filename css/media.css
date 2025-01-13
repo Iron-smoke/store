@@ -258,9 +258,6 @@
         width: 30%;
         transform: translateX(-50%); /* Центрируем по горизонтали */
     }
-
-    /* Уменьшаем размер сердечка */
-
     /* Уменьшаем размер кнопок и их положение */
     .banner-btn {
         display: block; /* Делаем кнопки видимыми */
@@ -392,3 +389,194 @@
         display: none; /* Скрываем стандартные карточки */
     }
 }
+@media (max-width: 576px) {
+    .faq-desktop {
+        display: none;
+    }
+}
+
+@media (max-width: 430px) {
+    .faq-mobile {
+        display: block; /* Отображать от 430px и выше */
+    }
+}
+
+/*@media (max-width: 480px) { !* Настройки для мобильных экранов *!*/
+/*    .heart-container-cat {*/
+/*        top: 60%; !* Смещаем ниже *!*/
+/*        width: 50%; !* Увеличиваем размер контейнера для мобильных *!*/
+/*    }*/
+
+/*    .heart-svg-cat {*/
+/*        width: 30%; !* Уменьшаем размер изображения *!*/
+/*        bottom: -5rem; !* Корректируем отступ *!*/
+/*        right: 5rem; !* Уменьшаем смещение вправо *!*/
+/*    }*/
+
+/*    .round-btn {*/
+/*        bottom: -8.35rem; !* Исправляем положение кнопки *!*/
+/*        right: 7.7rem; !* Уменьшаем отступ *!*/
+/*        width: 3.3rem; !* Уменьшаем размер кнопки *!*/
+/*        height: 5rem; !* Аналогично ширине *!*/
+/*        font-size: 0.8rem; !* Уменьшаем шрифт *!*/
+/*    }*/
+
+/*    .banner-text-cat {*/
+/*        top: 5%; !* Корректируем текстовое поле *!*/
+/*        right: 10%; !* Увеличиваем ширину для центровки *!*/
+/*        width: 90%; !* Сохраняем текст внутри экрана *!*/
+/*        font-size: 0; !* Уменьшаем размер шрифта *!*/
+
+/*    }*/
+/*    .text-inside-heart {*/
+/*        position: absolute;*/
+/*        top: 50%; !* Центрируем по вертикали *!*/
+/*        left: 50%; !* Центрируем по горизонтали *!*/
+/*        transform: translate(-50%, -50%);*/
+/*        width: 80%; !* Ширина текста относительно сердечка *!*/
+/*        text-align: center;*/
+/*        color: #EF7070;*/
+/*        font-size: 1.5rem; !* Подбери подходящий размер *!*/
+/*        font-family: 'Stylo', sans-serif;*/
+/*        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);*/
+/*        z-index: 10; !* Текст сверху *!*/
+/*    }*/
+
+/*    .highlighted-text {*/
+/*        color: #C990E7; !* Можно задать другой цвет, если хочешь *!*/
+/*    }*/
+
+/*    .round-btn-img {*/
+/*        object-fit: contain; !* Изображение внутри кнопки *!*/
+/*    }*/
+
+/*    .heart-container-cat-mobile {*/
+/*        display: block; !* Показываем только на мобильных *!*/
+/*    }*/
+/*}*/
+
+@media (max-width: 768px) {
+    /* Баннер */
+    .cat-banner {
+        height: 11rem; /* Уменьшаем высоту баннера */
+    }
+
+    /* Текст в баннере */
+    .banner-text-cat {
+        display: none;
+    }
+    /* Сердечко */
+    .heart-container-cat {
+        bottom: -10%; /* Расположение ближе к нижней части баннера */
+        left: 30%; /* Центрируем сердечко */
+        transform: translateX(-50%);
+        width: 12rem; /* Уменьшаем размер сердечка */
+    }
+
+    .heart-svg-cat {
+        width: 80%; /* Сердечко заполняет контейнер */
+        filter: brightness(0) invert(1);
+
+    }
+
+    .round-btn-img {
+        width: 2.3rem; /* Размер круга */
+        height: 2.3rem;
+        border-radius: 50%; /* Делаем круглым */
+        top: 6%;
+        left: 14%;
+        position: absolute;
+        cursor: pointer; /* Указываем, что это кликабельно */
+        object-fit: cover; /* Сохраняем пропорции изображения */
+    }
+
+    /* Мобильное сердечко (если включено) */
+    .heart-container-cat-mobile {
+        display: block; /* Показываем мобильное сердечко */
+        top: 60%;
+        left: 26%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 12%; /* Уменьшаем мобильное сердечко */
+    }
+
+    .heart-svg-cat-mobile {
+        width: 100%; /* Мобильное сердечко заполняет контейнер */
+        height: auto;
+    }
+    .highlighted-text{
+        color: #000;
+    }
+
+    .text-inside-heart {
+        white-space: nowrap;
+        position: absolute;
+        text-align: center;
+        bottom: 70% !important; /* Смещаем текст вниз внутри сердечка */
+        left: -160% !important;
+        z-index: 2; /* Убедимся, что текст выше сердечка */
+        color: #EF7070;
+        font-size: 1.1rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+
+    }
+    /* Изображение баннера */
+    .banner-image-cat {
+        object-fit: cover; /* Сохраняем пропорции */
+        object-position: center; /* Центрируем изображение */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Слайдер сверху, карта снизу */
+        align-items: center;
+        gap: 2rem;
+        padding: 0 1rem; /* Добавляем отступы по бокам */
+    }
+
+    .slider-container,
+    .map-container {
+        max-width: 100%;
+        height: auto; /* Высота подстраивается под содержимое */
+    }
+
+    .slider-container {
+        height: 250px; /* Уменьшенная высота для мобильных */
+    }
+
+    .map-container {
+        width: 100%; /* Карта занимает всю ширину */
+        padding: 0 1rem; /* Отступы по бокам */
+    }
+
+    .map-container iframe {
+        height: 200px; /* Уменьшенная высота для мобильных */
+        width: 100%; /* Подстройка под ширину */
+        border-radius: 10px; /* Сглаженные края карты */
+    }
+
+    .button-container {
+        justify-content: center;
+        gap: 1rem; /* Расстояние между кнопками */
+    }
+}
+
+@media (max-width: 768px) {
+
+    .map-selector {
+        width: 100%; /* Карта будет растягиваться на всю ширину */
+        display: flex;
+        justify-content: center; /* Центрируем содержимое */
+        margin: 0 auto; /* Центрирование с учетом внешних отступов */
+        padding: 0 1rem; /* Добавляем отступы по бокам */
+    }
+    .map-selector iframe {
+        height: 250px; /* Уменьшенная высота карты на мобильных */
+    }
+
+
+}
+

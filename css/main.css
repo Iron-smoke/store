@@ -637,6 +637,7 @@ color: var(--contrast-color);
     display: block;
     width: 100%; /* Растягиваем по ширине */
     height: auto; /* Сохраняем пропорции */
+
 }
 
 /* Текст поверх изображения */
@@ -868,34 +869,1007 @@ color: var(--contrast-color);
 }
 
 /* Кнопки управления слайдером */
-.slider-button {
+.brand-cats {
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+    overflow: hidden; /* Прячем излишки слайдера */
+    position: relative;
+}
+
+.brand-cats__title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Слайдер */
+.brand-cats__slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.brand-cats__track {
+    display: flex;
+    animation: scroll 15s linear infinite; /* Анимация бесконечной прокрутки */
+    will-change: transform; /* Оптимизация анимации */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Прокрутка на ширину одной "партии" брендов */
+    }
+}
+
+/* Бренды внутри слайдера */
+.brand-cats__item {
+    flex: 0 0 auto; /* Отключаем автоматическое сжатие */
+    width: 15%; /* Ширина каждого элемента (можно менять под нужное количество) */
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.brand-cats__item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .brand-cats__item {
+        width: 30%; /* Увеличиваем ширину элементов */
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%); /* Прокручиваем меньше контента */
+        }
+    }
+}/* Стили для секции брендов */
+.partner-brands {
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+    overflow: hidden; /* Прячем излишки слайдера */
+    position: relative;
+}
+
+.partner-brands__title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Слайдер */
+.partner-brands__slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.partner-brands__track {
+    display: flex;
+    animation: partner-scroll 20s linear infinite; /* Анимация бесконечной прокрутки */
+    will-change: transform; /* Оптимизация анимации */
+}
+
+@keyframes partner-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Бренды внутри слайдера */
+.partner-brands__item {
+    flex: 0 0 auto; /* Отключаем автоматическое сжатие */
+    width: 14%; /* Ширина элемента */
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.partner-brands__item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .partner-brands__item {
+        width: 30%; /* Больше места для брендов */
+    }
+
+    @keyframes partner-scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.faq-block {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    height: 100%; /* Чтобы блоки были одинаковой высоты */
+    width: 20vw;
+}
+
+.faq-block:hover {
+    transform: translateY(-5px);
+}
+
+.faq-block img {
+    width: 100%; /* Изображение занимает всю ширину */
+    max-height: 15rem; /* Ограничение по высоте изображения */
+    object-fit: cover; /* Сохраняет пропорции изображения */
+}
+
+.faq-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0;
+}
+
+.toggle-answer {
+    border: none;
+    background: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.toggle-answer:hover {
+    color: #007bff;
+}
+
+.faq-answer {
+    display: none;
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.custom-row {
+    margin-left: 2rem; /* Убираем отрицательные отступы */
+    margin-right: -2rem !important;
+}
+
+.faq-mobile {
+    background: linear-gradient(180deg, #FFEDB3, #FFB74D);
+    border-radius: 12px;
+    display: none;
+}
+
+.faq-mobile h2 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #000;
+}
+
+.faq-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    background: #fff;
+    position: relative;
+    margin-top: 1rem;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.faq-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0;
+}
+
+.toggle-icon {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-content {
+    display: none;
+    padding: 16px;
+    font-size: 14px;
+    color: #555;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.faq-item.active .faq-content {
+    display: block;
+}
+
+.cat-banner {
+    position: relative;
+    width: 100%;
+    height: 25rem; /* Высота баннера */
+    background-color: #f0f0f0; /* Фон для тестирования */
+    overflow: hidden;
+}
+
+/* Сердечко */
+.banner-text-cat {
+    position: absolute;
+    top: 10%; /* Позиция текста сверху */
+    left: 23%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    font-family: 'Stylo', sans-serif;
+    font-size: 4rem;
+    color: #EF7070;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+    z-index: 100;
+}
+
+.highlighted-text {
+    color: #DDB3F9;
+}
+
+/* Контейнер сердечка */
+.heart-container-cat {
+    position: absolute;
+    bottom: 15%; /* Расположение от нижнего края баннера */
+    left: 15%; /* Расположение от левого края баннера */
+    width: 20rem;
+    height: auto;
+    z-index: 2;
+}
+
+/* Сердечко */
+.heart-svg-cat {
+    width: 100%; /* Заполняет весь контейнер */
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+
+.round-btn-img {
+    width: 80%;
+    height: auto;
+}
+
+/* Мобильное сердечко */
+.heart-container-cat-mobile {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    z-index: 3;
+}
+
+.heart-svg-cat-mobile {
+    width: 100%;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+.banner-image-cat {
+    width: 100%; /* Растягиваем изображение по ширине контейнера */
+    height: 100%; /* Заполняем высоту контейнера */
+    object-fit: cover; /* Сохраняем пропорции и обрезаем лишнее */
+    object-position: center; /* Центрируем изображение внутри контейнера */
+}
+
+@media (max-width: 768px) {
+    /* Баннер */
+    .cat-banner {
+        height: 11rem; /* Уменьшаем высоту баннера */
+    }
+
+    /* Сердечко */
+    .heart-container-cat {
+        bottom: 15% !important; /* Расположение ближе к нижней части баннера */
+        left: 50%; /* Центрируем сердечко */
+        transform: translateX(-50%);
+        width: 10rem; /* Уменьшаем размер сердечка */
+    }
+
+    .heart-svg-cat {
+        width: 100%; /* Сердечко заполняет контейнер */
+    }
+
+    /* Кнопка внутри сердечка */
+
+
+    .round-btn-img {
+        width: 70%; /* Пропорционально уменьшаем изображение кнопки */
+    }
+
+    /* Мобильное сердечко (если включено) */
+    .heart-container-cat-mobile {
+        display: block; /* Показываем мобильное сердечко */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10%; /* Уменьшаем мобильное сердечко */
+    }
+
+    .heart-svg-cat-mobile {
+        width: 100%; /* Мобильное сердечко заполняет контейнер */
+        height: auto;
+    }
+
+    /* Изображение баннера */
+    .banner-image-cat {
+        object-fit: cover; /* Сохраняем пропорции */
+        object-position: center; /* Центрируем изображение */
+    }
+}
+
+/*.blog-card {*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 8px;*/
+/*    overflow: hidden;*/
+/*    position: relative;*/
+/*    transition: height 0.3s ease;*/
+/*    height: 300px;*/
+/*}*/
+
+/*.blog-card img.blog-image {*/
+/*    width: 100%; !* Изображение занимает всю ширину своей колонки *!*/
+/*    height: 100%;*/
+/*    object-fit: cover;*/
+/*}*/
+
+/*.blog-content {*/
+/*    padding: 1rem;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: flex-start;*/
+/*    height: 100%;*/
+/*}*/
+
+/*.toggle-icon {*/
+/*    margin: 0 auto;*/
+/*    font-size: 1.5rem;*/
+/*    cursor: pointer;*/
+/*    transition: transform 0.3s ease;*/
+/*}*/
+
+/*.blog-extra {*/
+/*    display: none;*/
+/*    padding: 1rem;*/
+/*    background-color: #f9f9f9;*/
+/*}*/
+
+/*.blog-card.active .blog-extra {*/
+/*    display: block;*/
+/*}*/
+
+/*.blog-card.active .toggle-icon {*/
+/*    transform: rotate(180deg);*/
+/*}*/
+
+/*.icon-img {*/
+/*    width: 24px;*/
+/*    height: 24px;*/
+/*}*/
+
+.blog-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto; /* Блок автоматически подстраивается под содержимое */
+}
+
+.card-inner {
+    display: flex;
+    height: 300px; /* Фиксированная высота для основного содержимого */
+}
+
+.card-left {
+    width: 50%;
+}
+
+.card-left img.blog-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.card-right {
+    width: 50%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog-content {
+    flex: 1; /* Описание занимает свободное пространство */
+    overflow: hidden; /* Убираем переполнение текста */
+}
+
+.blog-extra {
+    display: none; /* По умолчанию скрыто */
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+    animation: fadeIn 0.3s ease; /* Добавим плавность */
+}
+
+.blog-card.active .blog-extra {
+    display: block; /* Показываем содержимое */
+}
+
+.toggle-icon {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.blog-card.active .toggle-icon {
+    transform: rotate(180deg); /* Поворачиваем стрелку */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.card-red .card-right {
+    background-color: #ffcccc; /* Красный фон */
+}
+
+/* секция location */
+
+/*.btn-location {*/
+/*    background-color: #004d40;*/
+/*    color: #fff;*/
+/*    border: none;*/
+/*    padding: 10px 20px;*/
+/*    margin: 5px auto;*/
+/*    border-radius: 5px;*/
+/*    cursor: pointer;*/
+/*    transition: background-color 0.3s ease;*/
+/*}*/
+
+/*.btn-location.active {*/
+/*    background-color: #00796b;*/
+/*    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*.screen {*/
+/*    padding: 20px;*/
+/*    background-color: #f9f9f9;*/
+/*    border: 1px solid #ddd;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+/*!* Общий стиль для слайдера *!*/
+/*.slider {*/
+/*    position: relative;*/
+/*    width: 100%;*/
+/*    max-width: 600px;*/
+/*    margin: 0 auto;*/
+/*    overflow: hidden;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*!* Слайды *!*/
+/*.slider-images {*/
+/*    display: flex;*/
+/*    transition: transform 0.3s ease-in-out;*/
+/*}*/
+
+/*.slider-images img {*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    flex-shrink: 0;*/
+/*    object-fit: cover;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*!* Стрелки *!*/
+/*.slider-arrow {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    transform: translateY(-50%);*/
+/*    background-color: rgba(0, 0, 0, 0.5);*/
+/*    color: #fff;*/
+/*    border: none;*/
+/*    padding: 10px;*/
+/*    cursor: pointer;*/
+/*    z-index: 10;*/
+/*    border-radius: 50%;*/
+/*    font-size: 1.5rem;*/
+/*}*/
+
+/*.left-arrow {*/
+/*    left: 5%;*/
+/*}*/
+
+/*.right-arrow {*/
+/*    right: 5%;*/
+/*}*/
+
+/*.slider-arrow:hover {*/
+/*    background-color: rgba(0, 0, 0, 0.7);*/
+/*}*/
+
+/*!* Адаптация для мобильных *!*/
+/*@media (max-width: 768px) {*/
+/*    .slider {*/
+/*        max-width: 100%;*/
+/*    }*/
+/*}*/
+
+
+
+/*.slider-container,*/
+/*.map-container {*/
+/*    height: 400px; !* Фиксированная высота *!*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*!* Карта *!*/
+/*.map-container {*/
+/*    height: 400px; !* Высота, синхронизированная со слайдером *!*/
+/*    padding: 10px;*/
+/*}*/
+
+/*.map-container iframe {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    border: 0;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*!* Адаптация для мобильных *!*/
+/*@media (max-width: 768px) {*/
+/*    .screen {*/
+/*        flex-direction: column; !* Слайдер сверху, карта снизу *!*/
+/*    }*/
+
+/*    .slider-container, .map-container {*/
+/*        height: auto; !* Высота регулируется содержимым *!*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/
+
+.location-section {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn-location {
+    background-color: #004d40;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-location.active {
+    background-color: #00796b;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Контейнер экранов */
+.screen-container {
+    position: relative;
+}
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Контент внутри экрана */
+.content {
+    display: flex;
+    gap: 20rem;
+    align-items: center;
+}
+
+/* Слайдер */
+.slider-container {
+    flex: 1;
+    max-width: 60%;
+    height: 550px;
+
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.slider-images {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.slider-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20%;
+    position: absolute; /* Абсолютное позиционирование */
+    top: 0;
+    left: 0;
+    opacity: 0; /* Невидимое изображение по умолчанию */
+    transition: opacity 0.5s ease-in-out; /* Плавный переход */
+}
+
+.slider-images img.active {
+    opacity: 1; /* Активное изображение становится видимым */
+}
+
+
+
+.slider-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    color: white;
     border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 10px;
     cursor: pointer;
     z-index: 10;
+    border-radius: 50%;
+    font-size: 1.5rem;
 }
 
-.slider-button.prev {
+.left-arrow {
     left: 10px;
 }
 
-.slider-button.next {
+.right-arrow {
     right: 10px;
 }
 
-/* Прячем оригинальные карточки на мобильной версии */
-@media (max-width: 767.98px) {
-    .product-cards {
-        display: none; /* Скрываем стандартные карточки */
-    }
+/* Карта */
+.map-container {
+    flex: 1;
+    max-width: 50%;
+    height: 35rem;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+/* квиз */
+
+.quiz-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background-color: #00796b;
+    transition: width 0.3s ease;
+}
+
+.quiz-question h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.quiz-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.quiz-option {
+    background-color: #004d40;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quiz-option:hover {
+    background-color: #00796b;
+}
+
+.back-button {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.back-button:hover {
+    background-color: #ddd;
+}
+
+/* Результат: стили для карточки */
+.quiz-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px; /* Уменьшаем внутренние отступы */
+    margin: 0 auto; /* Центрируем */
+    max-width: 30rem ; /* Устанавливаем максимальную ширину */
+}
+
+
+
+
+.quiz-result .card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: -10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.quiz-result .related-cards {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.quiz-result .related-card {
+    align-items: center;
+    gap: 5px;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5px; /* Уменьшаем верхний отступ */
+
+}
+
+.quiz-result .related-img {
+    max-width: 80%;
+    height: auto;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.quiz-result .related-img-2 {
+    max-width: 80%;
+    height: auto;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.quiz-result .related-img-3 {
+    max-width: 80%;
+    height: auto;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+
+.quiz-result h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.quiz-result p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px;
+}
+
+.related-icon {
+    font-size: 24px;
+    color: #555;
+    margin: 5px 0;
+    text-align: center;
+}
+.quiz-result .card-img {
+    width: 35%; /* Уменьшаем ширину до 70% от родительского блока */
+    height: auto; /* Сохраняем пропорции */
+    object-fit: contain; /* Обеспечиваем корректное отображение содержимого */
+    border-bottom: 1px solid #ddd;
+    margin: 0 auto ; /* Центрируем изображение внутри карточки */
+    display: block; /* Гарантируем, что изображение является блочным */
+}
+
+#restart-button {
+    margin: 0 auto; /* Центрируем её */
+    display: none; /* Скрываем кнопку изначально */
+}
+
+.modal-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#restart-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.btn-close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    z-index: 2;
+}
+
+/* Отступы между рядами */
+/* Настройки для карточек */
+.discount-card {
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+.discount-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.discount-card-img {
+    width: 100%;
+    height: 300px; /* Стандартная высота */
+    object-fit: contain; /* Обрезка изображения */
+}
+
+.discount-label {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.discount-card-body {
+    text-align: center;
+}
+
+.discount-card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.discount-card-text {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.row.g-5{
+    row-gap: 30px; /* Вертикальные отступы между рядами */
+}
+
+.d-text{
+    position: relative; /* Убираем абсолютное позиционирование */
+    margin-bottom: 2rem; /* Отступ снизу для разделения с карточками */
+    z-index: 10; /* Убедимся, что он выше остальных элементов */
+}
+.d-text h1 {
+    font-size:7rem; /* Размер текста */
+    font-weight: bold; /* Жирный шрифт */
+    color: #000; /* Цвет текста */
 }
