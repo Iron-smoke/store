@@ -1,53 +1,251 @@
-@media (max-width: 576px) {
+
+
+/* hero-section */
+
+@media (max-width: 567px) {
+    /* Основная секция hero */
     .hero {
-        /* Вместо 60vh + 200px можно сделать поменьше,
-           или оставить, но тогда собака может смотреться огромной */
-        min-height: calc(50vh + 150px);
-        /*clip-path: polygon(0 0, 55% 0, 100% 0, 100% 93%, 50% 100%, 0 92%);*/
-        /*padding-top: 2rem !important;*/
-        /*padding-bottom: 0 !important;*/
+        min-height: calc(20vh + 10px); /* Уменьшаем общую высоту */
     }
 
+    /* Верхний жёлтый блок */
     .hero-yellow {
-        height: 50vh;
+        height: 50vh !important; /* Уменьшаем высоту */
     }
 
+    /* Нижний зелёный блок */
     .hero-green {
-        height: 180px !important;
+        height: 17vh !important; /* Уменьшаем высоту */
     }
 
-    .hero-dog {
-        top: 0;       /* уберём сдвиг на сверхмалых экранах */
-        height: 100%; /* чуть уменьшим, чтобы не сильно вылазила */
-    }
-}
-
-/* На «средних» экранах (до 992px), например планшеты */
-@media (max-width: 992px) {
-    .hero {
-        box-sizing: border-box;
-        min-height: calc(55vh + 180px); /* условно чуть поменьше */
+    /* Текстовые элементы */
+    .hero-text {
+        top: 40%; /* Сдвигаем текст вверх */
+        padding: 0 1rem; /* Добавляем отступы */
     }
 
-    .hero-yellow {
-        height: 55vh;
+    .hero-text h1 {
+        font-size: 5rem; /* Уменьшаем размер заголовка */
+       margin-top:-63% !important;
+        text-shadow: -1px -1px 0 white, /* Тень сверху слева */ 1px -1px 0 white, /* Тень сверху справа */ -1px 1px 0 white, /* Тень снизу слева */ 1px 1px 0 white; /* Тень снизу справа */
     }
 
-    .hero-green {
-        height: 150px;
-    }
-
-    .hero-dog {
-        top: 5.6%; /* уменьшим сдвиг */
-        height: 68%;
-        width: auto;
-    }
-/*}*/
-@media (max-width: 992px) {
-    .hero-cat {
+    .hero-text h2 {
         display: none;
     }
+
+    .hero-text h3 {
+        display: flex !important;
+        font-size: 1rem; /* Уменьшаем текст скидки */
+        margin-top: 75% !important;
+        margin-right: 23% !important;
+        font-weight: bold;
+        white-space: nowrap;
+        text-shadow: -1px -1px 0 white, /* Тень сверху слева */ 1px -1px 0 white, /* Тень сверху справа */ -1px 1px 0 white, /* Тень снизу слева */ 1px 1px 0 white; /* Тень снизу справа */
+    }
+
+    /* Изображения */
+    .hero-images {
+        bottom: 1%;
+        width: 100%; /* Растягиваем контейнер для изображений */
+        justify-content: center; /* Центрируем изображения */
+        gap: 6%; /* Уменьшаем расстояние между изображениями */
+    }
+
+    .hero-image {
+        max-width: 22% !important; /* Увеличиваем ширину изображений */
+        height: auto;
+    }
+
+
+    /* Собака */
+    .hero-dog-wrapper {
+        right: -6.8rem !important; /* Сдвигаем ближе */
+        top: 0;
+        margin-top: 14% !important;
+        box-shadow: none; /* Тень вокруг круга */
+        width: 430px !important; /* Уменьшаем размер круга */
+        height: 430px !important; /* Уменьшаем размер круга */
+
+    }
+
+    .hero-dog-mask {
+        clip-path: circle(70% at 50% 50%) !important; /* Уменьшаем круг маски */
+    }
+
+    /* Кот */
+    .hero-cat-wrapper {
+        display: none;
+    }
+
+    /* Подзаголовок */
+    .logo-subtitle {
+        font-size: 0.8rem; /* Уменьшаем шрифт */
+        margin-top: 0.5rem;
+    }
+
+    /* Текст скидки */
+    .discount {
+        font-size: 0.7rem;
+    }
+
+    /* Прочие элементы */
+    .hero-cat-shower-wrapper {
+        max-width: 24% !important; /* Увеличиваем ширину изображений */
+        height: auto;
+        margin-bottom: 12% !important;
+        display: none;
+    }
+
+    .hero-cat-mask,
+    .hero-dog-mask {
+        clip-path: circle(35% at 50% 50%); /* Уменьшаем круг маски */
+    }
+
+    .mobile-links {
+        /*margin:10%;*/
+    }
+
+    .mobile-links {
+        justify-content: center; /* Центрируем содержимое по горизонтали */
+        text-align: center; /* Центрируем текст */
+        width: 100%; /* Растягиваем контейнер на всю ширину */
+    }
+
+    /* Центрируем WhatsApp и ссылки в одном ряду */
+    .social-icons {
+        margin-right: auto; /* Прижимаем WhatsApp к левому краю */
+    }
+
+    .d-flex.align-items-center.justify-content-between {
+        justify-content: center !important; /* Центрируем весь контейнер */
+    }
+
+
+    .image-mobile-wrapper {
+        position: absolute; /* Для позиционирования внутренних элементов */
+        width: 40vw; /* Размер круга зависит от ширины экрана */
+        height: 40vw; /* Высота равна ширине для сохранения пропорций */
+        border-radius: 50%; /* Делаем круг */
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.9); /* Тень вокруг круга */
+        overflow: hidden; /* Скрываем части изображения за пределами круга */
+        display: flex;
+        align-items: center; /* Центрируем содержимое */
+        justify-content: center;
+
+        top: 14%;
+        z-index: 1; /* Уровень слоя */
+
+
+    }
+
+    /* Изображение внутри */
+    .image-mobile-wrapper img {
+        width: 95%; /* Изображение растягивается по кругу */
+        height: 100%; /* Заполняет круг полностью */
+        object-fit: cover; /* Адаптация изображения внутри круга */
+        border-radius: 50%; /* Повторяем круг, чтобы избежать артефактов */
+    }
+
+
+    /* Убираем лапы на мобильных */
 }
+/* hero-section-end */
+
+/* about-us-mobile section */
+
+
+
+
+@media (max-width: 568px) {
+    .about-us  {
+        display: none;
+
+    }
+@media (max-width: 568px) {
+    /* Секция */
+
+
+    #about-us-mobile{
+        display: block;
+    }
+
+    .about-us-mobile {
+        display: block; /* Гарантируем, что секция ведёт себя как блочный элемент */
+        width: 100%; /* Растягиваем на всю ширину экрана */
+        padding: 1rem; /* Добавляем отступы по бокам */
+        background: linear-gradient(to bottom, #114F3C, #c6b58a); /* Фон секции */
+        box-sizing: border-box; /* Учитываем отступы в ширине */
+    }
+
+    /* Контейнер для изображения */
+    .about-img-container-mobile {
+        width: 100%; /* Растягиваем контейнер на всю ширину */
+        display: flex;
+        justify-content: center; /* Центрируем изображение */
+        margin-bottom: 2rem; /* Отступ снизу */
+    }
+
+    /* Изображение */
+    .about-img-mobile {
+        width: 80%; /* Задаём ширину изображения относительно контейнера */
+        height: auto; /* Сохраняем пропорции */
+        border-radius: 8px; /* Скругляем углы */
+    }
+
+    /* Контейнер для текста */
+    .about-text-container-mobile {
+        width: 100%; /* Растягиваем контейнер на всю ширину */
+        text-align: justify; /* Выравниваем текст по ширине */
+    }
+
+    /* Заголовок */
+    .about-title-mobile {
+        font-size: 1.8rem; /* Размер заголовка */
+        font-weight: 700; /* Жирный шрифт */
+        color: #fff; /* Цвет текста */
+        text-align: center; /* Центрируем заголовок */
+        margin-bottom: 1rem; /* Отступ снизу */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Тень */
+    }
+
+    /* Абзацы текста */
+    .about-text-mobile {
+        font-size: 1rem; /* Размер текста */
+        line-height: 1.2; /* Межстрочный интервал */
+        color: #eee; /* Цвет текста */
+        margin-bottom: 1rem; /* Отступ между абзацами */
+    }
+
+    /* Подзаголовок */
+    .about-subtitle-mobile {
+        font-size: 1.2rem; /* Размер подзаголовка */
+        font-weight: 700; /* Жирный шрифт */
+        color: #000; /* Цвет текста */
+        text-align: center; /* Центрируем текст */
+        margin-top: 2rem; /* Отступ сверху */
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
+    }
+
+    .nav-link.desktop{
+        display: none;
+    }
+
+    .nav-link.mobile{
+        display: block;
+    }
+
+
+
+
+}
+
+
+    /* about-us-mobile section end */
+
+
+
+
 @media only screen and (min-width : 992px) {
     .header-bottom .navbar .dropdown-menu-end {
         margin-left: 0;
@@ -64,105 +262,7 @@
         padding-left: 1rem;
     }
 }
-@media (max-width: 576px) {
-    .hero-paws {
-        bottom: 22rem;       /* Сдвигаем лапы выше */
-        left: -1rem;         /* Ближе к краю */
-        height: 40%;       /* Уменьшаем размер */
-        transform: rotate(-30deg); /* Меньший наклон */
-    }
-}
 
-@media (max-width: 992px) { /* Для планшетов */
-    .Logo-text {
-        font-size: 10rem; /* Уменьшаем размер заголовка */
-        margin-top: -8rem; /* Меньший отступ сверху */
-    }
-
-    .logo-subtitle {
-        font-size: 1.5rem; /* Уменьшаем размер подзаголовка */
-        margin-left: 15rem !important; /* Меньший отступ влево */
-        margin-top: -0.5rem !important;
-    }
-}
-
-/* === Адаптивные стили для мобильных устройств === */
-@media (max-width: 576px) { /* Для телефонов */
-    .Logo-text {
-        font-size: 5rem; /* Ещё меньше размер текста */
-        margin-top: -9rem; /* Корректируем отступ сверху */
-    }
-
-    .logo-subtitle {
-        display: none;
-    }
-    .discount{
-        font-size: 1rem; /* Ещё меньше размер текста */
-        margin-top: 80% !important;
-        margin-left: -10%!important;
-        color: #ffffff;
-    }
-
-}
-}
-
-
-@media (max-width: 962px) {
-    .hero-paws-2 {
-        /* Уменьшаем саму лапу и оставляем rotate */
-        transform: rotate(-50deg) scale(0.6) ;
-
-    }
-    .hero-paws-3 {
-        transform: rotate(30deg) scale(0.6);
-    }
-}
-@media (max-width: 1168px) and (min-width: 769px) {
-    /* Планшетные стили */
-    .to-hide {
-        /* допустим, на планшете всё ещё показываем все 5 картинок
-           если ты хочешь "на планшете скрывать" — поставь display: none;
-           но в примере я сделаю так, что на планшете всё ещё видны */
-        display: block;
-    }
-
-    .hero-images {
-        right: 5%;
-        width: 90%;
-        gap: 1rem; /* или 1%, потестируй */
-    }
-
-    .hero-image {
-        max-width: 18%;
-    }
-}
-
-
-/* ============ МОБИЛЬНЫЙ: до 768px ============ */
-@media (max-width: 768px) {
-    /*
-       Здесь уже скрываем .to-hide (4-ю и 5-ю)
-       и делаем ещё более сильную адаптацию
-    */
-    .to-hide {
-        display: none;
-    }
-    .hero-images {
-        /* Например, растянем на 95% */
-        right: 3%;
-        width: 100%;
-        gap: 10%;
-        bottom: 2%;
-        z-index: 100;
-        /* Если хочется, можно чуть масштабировать весь блок */
-        /* transform: scale(0.9);
-           transform-origin: bottom right; */
-    }
-    .hero-image {
-        max-width: 25%;
-        /* Только 3 картинки останется, можно сделать их крупнее */
-    }
-}
 @media (min-width: 992px) {
     .navbar-nav {
         /* Когда открыто в обычном виде, а не в оффканвасе */
@@ -175,53 +275,13 @@
         text-align: center;
     }
 }
-@media (max-width: 576px) {
-    .logo-homka {
-        margin-left: 13%;
-        max-height: 60px;
-    }
-}
-@media (max-width: 768px) {
-    /* Поменяем порядок:
-       col-md-6 => col-12,
-       а ещё можно поменять порядок с помощью flex-column-reverse,
-       но проще пусть идёт картинка потом текст
-    */
-    .about-us{
-        top:10%;
-    }
-    .about-us .row {
-        flex-direction: column;
-    }
 
-    .about-img {
-        margin-bottom: 1.5rem;
-        transform: rotate(0deg); /* уберём наклон на мобилке */
-        width: 90%; /* чтоб занимала почти всю ширину */
-        max-width: none;
-    }
 
-    /* Уменьшим лапы или спрячем */
-    .about-paws-top, .about-paws-bottom {
-        display: none;
-    }
 
-    .about-title {
-        font-size: 1.8rem;
-        text-align: center;
-    }
 
-    .about-highlight {
-        font-size: 1rem;
-    }
-    .highlight-text {
-        color: #ffd700; /* можно чуть другой акцент */
-    }
-    .about-subtitle {
-        font-size: 1.2rem;
-        text-align: center;
-    }
-}
+
+
+
 
 @media (max-width: 1024px) {
     /* Перемещаем текст в верхнюю часть и в одну строчку */
@@ -401,60 +461,6 @@
     }
 }
 
-/*@media (max-width: 480px) { !* Настройки для мобильных экранов *!*/
-/*    .heart-container-cat {*/
-/*        top: 60%; !* Смещаем ниже *!*/
-/*        width: 50%; !* Увеличиваем размер контейнера для мобильных *!*/
-/*    }*/
-
-/*    .heart-svg-cat {*/
-/*        width: 30%; !* Уменьшаем размер изображения *!*/
-/*        bottom: -5rem; !* Корректируем отступ *!*/
-/*        right: 5rem; !* Уменьшаем смещение вправо *!*/
-/*    }*/
-
-/*    .round-btn {*/
-/*        bottom: -8.35rem; !* Исправляем положение кнопки *!*/
-/*        right: 7.7rem; !* Уменьшаем отступ *!*/
-/*        width: 3.3rem; !* Уменьшаем размер кнопки *!*/
-/*        height: 5rem; !* Аналогично ширине *!*/
-/*        font-size: 0.8rem; !* Уменьшаем шрифт *!*/
-/*    }*/
-
-/*    .banner-text-cat {*/
-/*        top: 5%; !* Корректируем текстовое поле *!*/
-/*        right: 10%; !* Увеличиваем ширину для центровки *!*/
-/*        width: 90%; !* Сохраняем текст внутри экрана *!*/
-/*        font-size: 0; !* Уменьшаем размер шрифта *!*/
-
-/*    }*/
-/*    .text-inside-heart {*/
-/*        position: absolute;*/
-/*        top: 50%; !* Центрируем по вертикали *!*/
-/*        left: 50%; !* Центрируем по горизонтали *!*/
-/*        transform: translate(-50%, -50%);*/
-/*        width: 80%; !* Ширина текста относительно сердечка *!*/
-/*        text-align: center;*/
-/*        color: #EF7070;*/
-/*        font-size: 1.5rem; !* Подбери подходящий размер *!*/
-/*        font-family: 'Stylo', sans-serif;*/
-/*        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);*/
-/*        z-index: 10; !* Текст сверху *!*/
-/*    }*/
-
-/*    .highlighted-text {*/
-/*        color: #C990E7; !* Можно задать другой цвет, если хочешь *!*/
-/*    }*/
-
-/*    .round-btn-img {*/
-/*        object-fit: contain; !* Изображение внутри кнопки *!*/
-/*    }*/
-
-/*    .heart-container-cat-mobile {*/
-/*        display: block; !* Показываем только на мобильных *!*/
-/*    }*/
-/*}*/
-
 @media (max-width: 768px) {
     /* Баннер */
     .cat-banner {
@@ -573,10 +579,18 @@
         margin: 0 auto; /* Центрирование с учетом внешних отступов */
         padding: 0 1rem; /* Добавляем отступы по бокам */
     }
+
     .map-selector iframe {
         height: 250px; /* Уменьшенная высота карты на мобильных */
     }
 
+}
+}
 
+@media only screen and (max-width : 500px) {
+    .product-content-details .nav-tabs .nav-link{
+        padding-left: 8px;
+        padding-right: 8px;
+    }
 }
 

@@ -37,6 +37,7 @@ html {
     margin: 0;
     padding: 0;
 overflow-x:hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -129,26 +130,22 @@ ul.social-icons {
     padding: 0;
 }
 
-ul.social-icons li {
-    margin-right: 10px;
+
+
+.social-icons {
+    margin-right: 20px; /* Отступ справа для иконки */
 }
 
-ul.social-icons a {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
+.social-icons a {
+    display: inline-block;
     width: 30px;
     height: 30px;
-    line-height: 30px;
     border-radius: 50%;
-    float: left;
     text-align: center;
-    transition: all .3s;
+    line-height: 30px;
 }
 
-ul.social-icons a:hover {
-    background-color: var(--contrast-color);
-    color: var(--accent-color);
-}
+
 .header-content {
     z-index: 2; /* Повышаем z-index для текста, чтобы он был над изображением */
 }
@@ -212,13 +209,7 @@ ul.social-icons a:hover {
     letter-spacing: .1rem;
 }
 
-.header-bottom .navbar .nav-link:hover {
-    color: var(--accent-color);
-}
 
-.header-bottom .navbar .nav-link.active {
-    color: var(--accent-color);
-}
 
 .header-bottom .navbar .dropdown-menu {
     margin-top: 7px;
@@ -230,81 +221,7 @@ ul.social-icons a:hover {
 
 }
 
-/* ============================= Header rules ============================ */
 
-
-
-
-
-.carousel-caption{
-    text-shadow: 0 0 2px rgba(0, 0, 0, .9);
- }
-.carousel-caption p{
-    font-size: 1.5em;
- }
-
-
-.section-title {
-    position: relative;
-    text-transform: uppercase;
-    color:var(--contrast-color) ;
-    font-weight: 700;
-}
-.section-title span{
-    background-color: var(--bg-color);
-    padding-right: 1rem;
-    position: relative;
-    z-index: 1;
-}
-
-.section-title::after{
-    position: absolute;
-    content: "";
-    width: 100%;
-    top: 50%;
-    left: 0;
-    border-top: 1px dashed var(--text-color);
-}
-
-.advantages  .item{
-    background-color: #ffffff;
-    text-align: center;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    transition: all .3s;
-
-}
-.advantages .item:hover{
-    box-shadow: 0 15px 30px -20px rgba(0,0,0,1);
-
-}
-
-.advantages i{
-    font-size: 70px;
-    color: var(--accent-color);
-}
-
-.product-card {
-    transition: all .3s;
-    border: 1px solid var(--gray-color);
-    background-color: #ffffff;
-    position: relative;
-}
-.product-card:hover{
-box-shadow: 0 10px 20px -15px rgba(0,0,0, 0.75);
-}
-
-
-
-
-.section-title span,
-.sidebar .section-title span,
-.bg-white .section-title span
-{
-    background-color: #FFFFFF;
-}
 footer {
     background-color: var(--contrast-color);
     padding: 50px 0;
@@ -328,27 +245,7 @@ footer a:hover{
     gap:20px;
     padding: 0;
 }
-#top{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: var(--accent-color);
-    opacity: .5;
-    color: #FFFFFF;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border:0;
-    font-size: 25px;
-    transition: all .3s;
-    z-index: 10;
-    display: none;
-}
-#top:hover{
-    opacity: 1;
-}
 
-/*================ Category Page*/
 
 .page-link:hover{
     color: #FFFFFF;
@@ -370,12 +267,7 @@ color: var(--contrast-color);
     padding-top: 20px;
 }
 
-@media only screen and (max-width : 500px) {
-    .product-content-details .nav-tabs .nav-link{
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-}
+
 .product-rating .active{
     color: var(--accent-color);
 }
@@ -392,11 +284,14 @@ color: var(--contrast-color);
 }
 
 
+/* hero-section */
+
 .hero {
     position: relative;
     min-height: calc(60vh + 200px); /* Общая высота */
     width: 100%;
     margin: 0 auto;
+    z-index: 0;
 }
 
 /* Верхний жёлтый блок */
@@ -408,7 +303,7 @@ color: var(--contrast-color);
 /* Нижний зелёный блок */
 .hero-green {
     background-color: var(--bg-color-green);
-    height: 200px;
+    height: 315px;
     position: relative;
 }
 
@@ -420,7 +315,11 @@ color: var(--contrast-color);
 }
 
 .hero-text h1 {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Лёгкая тень */
+    text-shadow:
+            -1px -1px 0 white, /* Тень сверху слева */
+            1px -1px 0 white,  /* Тень сверху справа */
+            -1px 1px 0 white,  /* Тень снизу слева */
+            1px 1px 0 white;   /* Тень снизу справа */
 }
 
 .hero-text .text-primary {
@@ -432,47 +331,92 @@ color: var(--contrast-color);
     margin: 20px auto 0;
     color: #444;
 }
-
-/* Кот */
-.hero-cat {
+    /* Собака */
+/* Внешний круг с обводкой */
+.hero-dog-wrapper {
     position: absolute;
-    left: 0;
-    bottom: -2rem;
-    height: 50%;
-    width: auto;
-    z-index: 2;
-}
-
-/* Собака */
-.hero-dog {
-    position: absolute;
-    right: 0;
+    right: -12rem;
     top: -2.4rem;
-    bottom: 0;
-    width: auto;
-    height: 105%;
-    max-width: none;
-    object-fit: cover;
-    z-index: 1;
+    width: 750px; /* Размер круга */
+    height: 750px; /* Размер круга */
+    /*border: 5px solid #ffffff; !* Обводка *!*/
+    border-radius: 50%; /* Делаем круг */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Тень вокруг круга */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent; /* Цвет внутри круга */
+    overflow: hidden; /* Важно для маски */
+    z-index: 0;
 }
 
-/* Лапы */
-.hero-paws {
-    position: absolute;
-    bottom: 35%;
-    left: 5%;
-    height: 65%;
-    width: auto;
-    z-index: 3;
-    transform: rotate(25deg);
-    transform-origin: center;
-    transition: transform 0.3s ease;
+/* Маска для изображения */
+.hero-dog-mask {
+    width: 100%;
+    height: 100%;
+    clip-path: circle(50% at 50% 50%); /* Обрезаем по кругу */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+/* Само изображение */
+.hero-dog {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Заполняет круг без искажений */
+}
+
+
+.hero-cat-wrapper {
+    position: absolute;
+    left: -12rem;
+    top: -1.4rem;
+    width: 750px; /* Размер круга */
+    height: 750px; /* Размер круга */
+    /*border: 5px solid #ffffff; !* Обводка *!*/
+    border-radius: 50%; /* Делаем круг */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Тень вокруг круга */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent; /* Цвет внутри круга */
+    overflow: hidden; /* Важно для маски */
+    z-index: 0;
+}
+
+/* Маска для изображения */
+.hero-cat-mask {
+    width: 100%;
+    height: 100%;
+    clip-path: circle(50% at 50% 50%); /* Обрезаем по кругу */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Само изображение */
+.hero-cat {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Заполняет круг без искажений */
+}
+
+
+
+
+
 .Logo-text{
     font-size: clamp(3rem, 10vw, 15rem); /* Размер шрифта заголовка */
     line-height: 1.2; /* Межстрочный интервал */
     color: #000000; /* Цвет текста */
     margin-top: -10rem;
+    text-shadow:
+            -10px -1px 0 white, /* Тень сверху слева */
+            -10px -1px 0 white,  /* Тень сверху справа */
+            -10px 1px 0 white,  /* Тень снизу слева */
+            -10px 1px 0 white;   /* Тень снизу справа */
+
 }
 
 .logo-subtitle {
@@ -480,8 +424,6 @@ color: var(--contrast-color);
     font-size: clamp(1.5rem, 5vw, 5rem);
     line-height: 1; /* Межстрочный интервал */
     text-align: center;
-    /*white-space: nowrap;*/
-    /*margin-left: 25rem !important;*/
     transition: all 0.3s ease; /* Плавность при адаптации */
 
 
@@ -491,39 +433,29 @@ color: var(--contrast-color);
 /* Абсолютный контейнер, но теперь мы хотим его сместить влево и увеличить */
 .hero-images {
     position: absolute;
-    bottom: 0;
-    /* Вместо right: 0; можно задать какое-то смещение, например right: 10%,
-       или вообще вовсе убрать, а задать ширину и left + right
-       - на твой вкус. */
+    bottom: 6%;
     right: 20%;
-    /* Можно и left: 0; width: 80%;
-       Тогда он будет «растянут» от левого края до 80% от ширины родителя
-       (или наоборот: left: 20%; width: 80%) */
-
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
     align-items: flex-end;
-
     gap: 5%;             /* Пример: процентное расстояние между элементами */
-    width: 80%;          /* Делай блок шире/уже, чтобы «увеличить» или «уменьшить» */
+    width: 90%;          /* Делай блок шире/уже, чтобы «увеличить» или «уменьшить» */
     padding: 1rem;
     box-sizing: border-box;
-
+z-index: 1;
     transition: all 0.3s ease;
 }
 
 /* Картинки внутри */
 .hero-image {
     flex: 0 0 auto;
-    /* Можно задать max-width в процентах,
-       чтобы они реагировали на width контейнера */
     max-width: 15%;       /* Например, каждая картинка занимает до 15%
                            от ширины hero-images */
     height: auto;
     cursor: pointer;
-
+z-index: 1;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .hero-image:hover {
@@ -536,21 +468,56 @@ color: var(--contrast-color);
 }
 
 .discount{
-
     transition: all 0.3s ease;
 }
 .logo-homka {
     height: 100%;
     width: auto;
-    transform: scale(2.0);
+    transform: scale(2);
 }
 .nav-item{
     font-family: Title,sans-serif;
 }
 
+/* end of hero-section */
+
+
+
+.about-us .container {
+    display: flex; /* Используем Flexbox для выравнивания */
+    justify-content: space-between; /* Разводим изображение и текст по сторонам */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    gap: 10rem; /* Добавляем расстояние между колонками */
+
+}
+
+/* Левая колонка: картинка */
+.about-us .col-md-6:first-child {
+    flex: 1; /* Задаём гибкость для левой колонки */
+    padding-right: 0; /* Убираем внутренний отступ справа */
+    display: flex;
+    margin-left: -2rem;
+    justify-content: flex-start; /* Прижимаем картинку к левому краю */
+}
+
+/* Правая колонка: текст */
+.about-us .col-md-6:last-child {
+    flex: 1.5; /* Задаём больше места для текста */
+    padding-left: 0; /* Убираем внутренний отступ слева */
+    display: flex;
+    margin-right: -2rem;
+    flex-direction: column;
+    justify-content: flex-start; /* Выравниваем текст */
+}
+
+
+
+
+
+
 .about-us {
     /* Пример: плавный переход от зелёно-жёлтого */
-    background: linear-gradient(to bottom, #114F3C, #FCEAB4);
+    background: linear-gradient(to bottom, #114F3C, #c6b58a);
     /* Или свой градиент */
     /* padding-top, padding-bottom можно менять, но я поставил py-5 в HTML */
 }
@@ -560,35 +527,22 @@ color: var(--contrast-color);
     width: auto;
     max-width: 500px;
     border-radius: 8px;
-    /* Наклон */
     transform: rotate(-5deg);
-    /*box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);*/
+    height: auto; /* Сохраняет пропорции */
+    margin-left: 0; /* Убираем отступы слева */
+    padding-left: 0; /* Убираем внутренние отступы */
     transition: transform 0.3s ease;
 }
 .about-img:hover {
     transform: rotate(-2deg) scale(1.02);
 }
 
-/* Позиционируем лапы внутри .col-md-6 (relative),
-   чтобы они "висели" над картинкой.
-*/
-.about-paws {
-    position: absolute;
-    width: auto; /* подбери размер лап */
-    height: 35%;
-    z-index: 2;
-}
-.about-paws-top {
-    top: -3%;
-    right: -10%;
-}
-.about-paws-bottom {
-    bottom: 0;
-    left: -10%;
-}
 
-/* Заголовок: "Почему выбирают нас" */
-.about-title {
+/* end about-us section */
+
+
+
+ .about-title {
     font-size: 4rem;
     font-weight: 700;
     color: #fff; /* или твой цвет */
@@ -598,14 +552,28 @@ color: var(--contrast-color);
 
 /* Абзацы c выделением */
 .about-highlight {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: #eee;
     line-height: 1.4;
     margin-bottom: 1rem;
+    text-shadow:
+            -1px -1px 0 #000, /* Верхний левый */
+            1px -1px 0 #000,  /* Верхний правый */
+            -1px 1px 0 #000,  /* Нижний левый */
+            1px 1px 0 #000;   /* Нижний правый */
 }
 .highlight-text {
     color: #f7ec5f; /* жёлтый акцент */
     font-weight: 600;
+    line-height: 2;
+    font-size: 1.5rem;
+    text-align: justify;
+    letter-spacing: 3px;
+    text-shadow:
+            -1px -1px 0 #000, /* Верхний левый */
+            1px -1px 0 #000,  /* Верхний правый */
+            -1px 1px 0 #000,  /* Нижний левый */
+            1px 1px 0 #000;   /* Нижний правый */
 }
 
 /* Обычный текст */
@@ -614,7 +582,15 @@ color: var(--contrast-color);
 .about-us p {
     color: #f0f0f0;
     font-style: italic;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    line-height: 1.6; /* Добавляем больше межстрочного интервала для читабельности */
+    text-align: justify; /* Растягиваем текст по ширине */
+    letter-spacing: 2px;
+    /*text-shadow:*/
+            /*-0.5px -0.5px 0 #000, !* Верхний левый *!*/
+            /*0.5px -0.5px 0 #000,  !* Верхний правый *!*/
+            /*-0.5px 0.5px 0 #000,  !* Нижний левый *!*/
+            /*0.5px 0.5px 0 #000;*/
 }
 
 /* Нижний заголовок */
@@ -624,7 +600,14 @@ color: var(--contrast-color);
     margin-top: 2rem;
     font-size: 3rem;
     text-shadow: 1px 1px 2px rgb(255, 255, 255);
+    white-space: nowrap;
 }
+
+
+/* end about-us section */
+
+
+/* start-banner-dog section */
 
 .banner-buy {
     position: relative;
@@ -664,6 +647,13 @@ color: var(--contrast-color);
     text-align: center;
 }
 
+.nav-link.mobile{
+    display: none;
+}
+
+
+
+
 .heart-svg {
     width: 100%; /* Динамический размер */
     height: auto; /* Пропорции сохраняем */
@@ -694,6 +684,10 @@ color: var(--contrast-color);
     text-decoration: none;
     font-weight: bold;
 }
+
+
+
+
 
 /* Hover эффект для ссылки */
 .custom-col-7 {
@@ -749,18 +743,10 @@ color: var(--contrast-color);
     font-size: 0.8rem;
     color: #555;
 }
-/*.product-slider {*/
-/*    position: relative;*/
-/*    overflow: hidden;*/
-/*    width: 100%;*/
-/*    margin-top: 2rem;*/
-/*}*/
 
-/*.slider-wrapper {*/
-/*    display: flex;*/
-/*    transition: transform 0.5s ease-in-out;*/
-/*    gap: 1rem;*/
-/*}*/
+#about-us-mobile{
+    display: none;
+}
 
 .product-card {
     flex: 0 0 calc(50% - 1rem); /* Каждая карточка занимает 50% ширины */
@@ -784,38 +770,6 @@ color: var(--contrast-color);
     color: #FFFFFF;
 }
 
-/* Кнопки управления */
-/*.slider-button {*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    transform: translateY(-50%);*/
-/*    background-color: rgba(0, 0, 0, 0.5);*/
-/*    color: white;*/
-/*    border: none;*/
-/*    border-radius: 50%;*/
-/*    width: 40px;*/
-/*    height: 40px;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    cursor: pointer;*/
-/*    z-index: 10;*/
-/*}*/
-
-/*.slider-button.prev {*/
-/*    left: 10px;*/
-/*}*/
-
-/*.slider-button.next {*/
-/*    right: 10px;*/
-/*}*/
-
-/* Desktop: скрываем слайдер */
-/*@media (min-width: 576px) {*/
-/*    .product-slider {*/
-/*        display: none;*/
-/*    }*/
-/*}*/
 
 .disabled {
     display: none !important; /* Полностью скрывает элемент */
@@ -1762,6 +1716,10 @@ color: var(--contrast-color);
     margin-bottom: 10px;
 }
 
+.image-mobile-wrapper{
+    display: none;
+}
+
 
 .quiz-result h3 {
     font-size: 1.5rem;
@@ -1872,4 +1830,41 @@ color: var(--contrast-color);
     font-size:7rem; /* Размер текста */
     font-weight: bold; /* Жирный шрифт */
     color: #000; /* Цвет текста */
+
+}
+
+
+.custom-dropdown .dropdown-menu {
+    display: none; /* Скрываем меню по умолчанию */
+}
+
+.custom-dropdown .dropdown-menu.show {
+    display: block; /* Показываем меню, если добавлен класс .show */
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    color: white; /* Цвет стрелки */
+    border: none;
+    border-radius: 50%; /* Делаем кнопку круглой */
+    text-align: center;
+    line-height: 50px; /* Центрируем стрелку */
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.5; /* Изначально скрыта */
+    /*visibility: hidden; !* Чтобы не занимала место *!*/
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Анимация появления */
+}
+
+.scroll-to-top:hover {
+    background-color: rgba(0, 0, 0, 1); /* Немного темнее при наведении */
+}
+
+.scroll-to-top.show {
+    opacity: 1;
 }

@@ -1,0 +1,212 @@
+@media (max-width: 1024px) {
+    /* Уменьшаем размер шрифта навигации */
+
+    /* navigation */
+
+
+    .header-bottom .navbar .nav-link {
+        font-size: 0.98rem ; ; /* Уменьшаем шрифт для планшетов */
+    }
+
+    .header-bottom .navbar {
+        justify-content: flex-start; /* Прижимаем весь контент влево */
+    }
+    /* Убираем лишние отступы у навигации */
+    .header-bottom .navbar-nav {
+        padding: 0;
+        justify-content: flex-start;
+        margin-left: 0;
+    }
+
+    .header-bottom .nav-link.dropdown-toggle {
+        font-size: 0.98rem !important;
+    }
+
+    /* Уменьшаем высоту и ширину меню для экономии места */
+    .navbar-nav .nav-item {
+        margin: 0 5px;
+    }
+
+    /* Увеличиваем межбуквенное расстояние, чтобы текст оставался читаемым */
+    .header-bottom .navbar .nav-link {
+        letter-spacing: 0.05rem;
+
+    }
+
+    /* Логотип тоже можно уменьшить, если нужно */
+    .logo-homka {
+        display: none;
+    }
+    .header-bottom .social-icons {
+        margin-right: -20px; /* Ещё сильнее уменьшаем отступ */
+    }
+
+/* end of navigation */
+
+    /* hero-section */
+    .hero {
+        min-height: calc(50vh + 150px); /* Уменьшаем высоту */
+    }
+
+    /* Верхний жёлтый блок */
+    .hero-yellow {
+        height: 70vh; /* Уменьшаем высоту */
+    }
+
+    /* Нижний зелёный блок */
+    .hero-green {
+        height: 150px; /* Уменьшаем высоту */
+    }
+
+    /* Текстовые элементы */
+    .hero-text {
+        top: 30%; /* Сдвигаем текст чуть выше */
+        padding: 0 1rem; /* Добавляем отступы для уменьшения ширины текста */
+    }
+
+    .hero-text h1 {
+        font-size: 5.5rem; /* Уменьшаем размер заголовка */
+    }
+
+    .hero-text h2 {
+        margin-top: 4% !important;
+        margin-right: 11rem !important;
+        font-size: 2.8rem; /* Уменьшаем подзаголовок */
+    }
+
+    .hero-text h3 {
+        /*margin-top: 12% !important;*/
+        /*font-size: 1rem; !* Уменьшаем текст скидки *!*/
+        display: none;
+
+    }
+
+    /* Изображения */
+    .hero-images {
+        width: 100%; /* Растягиваем контейнер для изображений */
+        justify-content: center; /* Центрируем изображения */
+        gap: 2%; /* Уменьшаем расстояние между изображениями */
+        right: 1%;
+    }
+
+    .hero-image {
+        max-width: 11%; /* Увеличиваем ширину изображений */
+        height: auto;
+    }
+
+
+    /* Собака */
+    .hero-dog-wrapper {
+        right: -7rem; /* Сдвигаем ближе */
+        top: 1rem; /* Смещаем ниже */
+        width: 450px; /* Уменьшаем размер круга */
+        height: 450px; /* Уменьшаем размер круга */
+    }
+
+    /* Кот */
+    .hero-cat-wrapper {
+        left: -8rem; /* Сдвигаем ближе */
+        top: 1rem; /* Смещаем ниже */
+        width: 450px; /* Уменьшаем размер круга */
+        height: 450px; /* Уменьшаем размер круга */
+    }
+
+    /* Подзаголовок */
+    .logo-subtitle {
+        font-size: 1rem; /* Уменьшаем шрифт */
+        margin-top: 0.5rem;
+    }
+
+    /* Текст скидки */
+    .discount {
+        font-size: 0.9rem;
+    }
+.hero-cat-shower-wrapper{
+    clip-path: circle(70% at 85% 50%) !important;
+}
+    /* Прочие элементы */
+
+    .hero-cat-mask,
+    .hero-dog-mask {
+        clip-path: circle(60% at 50% 50%); /* Уменьшаем круг маски */
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-us .container {
+        flex-direction: row; /* Оставляем элементы в строку */
+        justify-content: space-between; /* Разводим изображение и текст по сторонам */
+        align-items: center; /* Центрируем элементы по вертикали */
+        gap: 2rem; /* Уменьшаем расстояние между колонками */
+        padding: 1.5rem;
+    }
+
+    .about-us .col-md-6:first-child {
+        flex: 1; /* Оставляем колонку с изображением гибкой */
+        max-width: 40%; /* Уменьшаем ширину изображения */
+    }
+
+    .about-us .col-md-6:last-child {
+        flex: 1; /* Увеличиваем гибкость текстовой колонки */
+        max-width: 60%; /* Увеличиваем ширину текста */
+        padding-left: 1rem; /* Добавляем небольшой отступ слева */
+    }
+
+    .about-img {
+        max-width: 100%; /* Изображение адаптируется */
+        height: auto; /* Сохраняем пропорции */
+        transform: rotate(-3deg); /* Лёгкий наклон */
+    }
+
+    .about-title {
+        font-size: 2rem; /* Уменьшаем размер заголовка */
+        line-height: 0.1;
+    }
+
+    .about-highlight {
+        font-size: 1.5rem !important; /* Уменьшаем размер выделенного текста */
+
+    }
+.highlight-text{
+    font-size: 1.5rem;
+    line-height: 1.3 ;
+}
+    .about-us p {
+        font-size: 1rem; /* Уменьшаем размер текста */
+        line-height: 1.3;
+    }
+
+    .about-subtitle {
+        font-size: 1.5rem; /* Уменьшаем размер подзаголовка */
+        white-space: nowrap; /* Не разрешаем перенос текста */
+    }
+}
+
+/* banner-dog */
+
+
+    .banner-text {
+        font-size: 3rem; /* Ещё уменьшаем шрифт */
+        top: 15%; /* Смещаем текст чуть ниже */
+        right: 30%; /* Уменьшаем отступ справа */
+        width: 90%; /* Увеличиваем ширину текста */
+    }
+
+    .heart-container {
+        top: 8%; /* Смещаем контейнер ниже */
+        left: 15%; /* Корректируем отступ слева */
+        width: 25%; /* Немного увеличиваем ширину */
+    }
+
+    .banner-btn {
+        font-size: 10px; /* Уменьшаем размер кнопок */
+        padding: 0.4rem 0.8rem; /* Адаптируем отступы */
+    }
+
+.heart-container {
+    position: absolute;
+    top: 3%;
+    left: 10%;
+    width: 23%; /* Добавляем ширину контейнера */
+    text-align: center;
+}
