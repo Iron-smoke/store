@@ -5,17 +5,17 @@
 @media (max-width: 567px) {
     /* Основная секция hero */
     .hero {
-        min-height: calc(20vh + 10px); /* Уменьшаем общую высоту */
+        min-height: 150px; /* Уменьшаем общую высоту */
     }
 
     /* Верхний жёлтый блок */
     .hero-yellow {
-        height: 50vh !important; /* Уменьшаем высоту */
+        height: 470px !important; /* Уменьшаем высоту */
     }
 
     /* Нижний зелёный блок */
     .hero-green {
-        height: 17vh !important; /* Уменьшаем высоту */
+       height: 136px !important; /* Уменьшаем высоту */
     }
 
     /* Текстовые элементы */
@@ -60,9 +60,9 @@
 
     /* Собака */
     .hero-dog-wrapper {
-        right: -6.8rem !important; /* Сдвигаем ближе */
+        right: -6.9rem !important; /* Сдвигаем ближе */
         top: 0;
-        margin-top: 14% !important;
+        margin-top: 16% !important;
         box-shadow: none; /* Тень вокруг круга */
         width: 430px !important; /* Уменьшаем размер круга */
         height: 430px !important; /* Уменьшаем размер круга */
