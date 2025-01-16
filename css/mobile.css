@@ -27,7 +27,10 @@
     .hero-text h1 {
         font-size: 5rem; /* Уменьшаем размер заголовка */
        margin-top:-63% !important;
-        text-shadow: -1px -1px 0 white, /* Тень сверху слева */ 1px -1px 0 white, /* Тень сверху справа */ -1px 1px 0 white, /* Тень снизу слева */ 1px 1px 0 white; /* Тень снизу справа */
+        text-shadow: -1px -1px 0 white, /* Тень сверху слева */
+        1px -1px 0 white, /* Тень сверху справа */
+        -1px 1px 0 white, /* Тень снизу слева */
+        1px 1px 0 white; /* Тень снизу справа */
     }
 
     .hero-text h2 {
@@ -102,9 +105,6 @@
         clip-path: circle(35% at 50% 50%); /* Уменьшаем круг маски */
     }
 
-    .mobile-links {
-        /*margin:10%;*/
-    }
 
     .mobile-links {
         justify-content: center; /* Центрируем содержимое по горизонтали */
@@ -124,15 +124,14 @@
 
     .image-mobile-wrapper {
         position: absolute; /* Для позиционирования внутренних элементов */
-        width: 40vw; /* Размер круга зависит от ширины экрана */
-        height: 40vw; /* Высота равна ширине для сохранения пропорций */
+        width: 160px; /* Фиксированная ширина в пикселях */
+        height: 160px; /* Высота равна ширине для сохранения пропорций */
         border-radius: 50%; /* Делаем круг */
         box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.9); /* Тень вокруг круга */
         overflow: hidden; /* Скрываем части изображения за пределами круга */
         display: flex;
         align-items: center; /* Центрируем содержимое */
         justify-content: center;
-
         top: 14%;
         z-index: 1; /* Уровень слоя */
 
@@ -148,7 +147,6 @@
     }
 
 
-    /* Убираем лапы на мобильных */
 }
 /* hero-section-end */
 
