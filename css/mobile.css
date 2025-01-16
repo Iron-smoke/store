@@ -10,27 +10,34 @@
 
     /* Верхний жёлтый блок */
     .hero-yellow {
-        height: 470px !important; /* Уменьшаем высоту */
+        height: 470px ; /* Уменьшаем высоту */
     }
 
     /* Нижний зелёный блок */
     .hero-green {
-       height: 136px !important; /* Уменьшаем высоту */
+       height: 136px ; /* Уменьшаем высоту */
     }
 
     /* Текстовые элементы */
     .hero-text {
-        top: 40%; /* Сдвигаем текст вверх */
-        padding: 0 1rem; /* Добавляем отступы */
+        display: flex; /* Включаем Flexbox */
+        flex-direction: column; /* Располагаем элементы вертикально */
+        align-items: center; /* Центрируем элементы по горизонтали */
+        justify-content: flex-start; /* Начинаем элементы сверху */
+        gap: 1rem; /* Разделяем элементы равномерно */
+        position: relative; /* Для возможности смещения дочерних элементов */
+        top: 40%; /* Настраиваем общую позицию блока */
     }
 
     .hero-text h1 {
         font-size: 5rem; /* Уменьшаем размер заголовка */
-       margin-top:-63% !important;
         text-shadow: -1px -1px 0 white, /* Тень сверху слева */
         1px -1px 0 white, /* Тень сверху справа */
         -1px 1px 0 white, /* Тень снизу слева */
         1px 1px 0 white; /* Тень снизу справа */
+        /*transform: translate(5%, -85%);*/
+        margin-top: -15rem;
+    ;
     }
 
     .hero-text h2 {
@@ -38,12 +45,11 @@
     }
 
     .hero-text h3 {
-        display: flex !important;
+        display: block;
         font-size: 1rem; /* Уменьшаем текст скидки */
-        margin-top: 75% !important;
-        margin-right: 23% !important;
         font-weight: bold;
         white-space: nowrap;
+        transform: translate(-10%, 650%);
         text-shadow: -1px -1px 0 white, /* Тень сверху слева */ 1px -1px 0 white, /* Тень сверху справа */ -1px 1px 0 white, /* Тень снизу слева */ 1px 1px 0 white; /* Тень снизу справа */
     }
 
@@ -56,19 +62,19 @@
     }
 
     .hero-image {
-        max-width: 22% !important; /* Увеличиваем ширину изображений */
+        max-width: 22% ; /* Увеличиваем ширину изображений */
         height: auto;
     }
 
 
     /* Собака */
     .hero-dog-wrapper {
-        right: -6.9rem !important; /* Сдвигаем ближе */
+        right: -6.9rem ; /* Сдвигаем ближе */
         top: 0;
-        margin-top: 16% !important;
+        transform: translate(5%, 15%);
         box-shadow: none; /* Тень вокруг круга */
-        width: 430px !important; /* Уменьшаем размер круга */
-        height: 430px !important; /* Уменьшаем размер круга */
+        width: 430px ; /* Уменьшаем размер круга */
+        height: 430px; /* Уменьшаем размер круга */
 
     }
 
@@ -94,9 +100,9 @@
 
     /* Прочие элементы */
     .hero-cat-shower-wrapper {
-        max-width: 24% !important; /* Увеличиваем ширину изображений */
+        max-width: 24% ; /* Увеличиваем ширину изображений */
         height: auto;
-        margin-bottom: 12% !important;
+        margin-bottom: 12% ;
         display: none;
     }
 
@@ -118,7 +124,7 @@
     }
 
     .d-flex.align-items-center.justify-content-between {
-        justify-content: center !important; /* Центрируем весь контейнер */
+        justify-content: space-between; /* Центрируем весь контейнер */
     }
 
 
