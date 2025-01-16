@@ -20,13 +20,8 @@
 
     /* Текстовые элементы */
     .hero-text {
-        display: flex; /* Включаем Flexbox */
-        flex-direction: column; /* Располагаем элементы вертикально */
-        align-items: center; /* Центрируем элементы по горизонтали */
-        justify-content: flex-start; /* Начинаем элементы сверху */
-        gap: 1rem; /* Разделяем элементы равномерно */
-        position: relative; /* Для возможности смещения дочерних элементов */
-        top: 40%; /* Настраиваем общую позицию блока */
+        top: 40%; /* Сдвигаем текст вверх */
+        padding: 0 1rem; /* Добавляем отступы */
     }
 
     .hero-text h1 {
@@ -47,7 +42,7 @@
         font-size: 1rem; /* Уменьшаем текст скидки */
         font-weight: bold;
         top: auto; /* Убрать фиксированную позицию, использовать flex или grid */
-        transform: translateY(450%);
+        transform: translateY(60%);
         white-space: nowrap;
         text-shadow: -1px -1px 0 white, /* Тень сверху слева */ 1px -1px 0 white, /* Тень сверху справа */ -1px 1px 0 white, /* Тень снизу слева */ 1px 1px 0 white; /* Тень снизу справа */
     }
