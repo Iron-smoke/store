@@ -35,9 +35,7 @@
         1px -1px 0 white, /* Тень сверху справа */
         -1px 1px 0 white, /* Тень снизу слева */
         1px 1px 0 white; /* Тень снизу справа */
-        /*transform: translate(5%, -85%);*/
-        margin-top: -15rem;
-    ;
+        transform: translate(5%, -85%);
     }
 
     .hero-text h2 {
@@ -45,11 +43,12 @@
     }
 
     .hero-text h3 {
-        display: block;
+        display: flex;
         font-size: 1rem; /* Уменьшаем текст скидки */
         font-weight: bold;
+        top: auto; /* Убрать фиксированную позицию, использовать flex или grid */
+        transform: translateY(450%);
         white-space: nowrap;
-        transform: translate(0%, 650%);
         text-shadow: -1px -1px 0 white, /* Тень сверху слева */ 1px -1px 0 white, /* Тень сверху справа */ -1px 1px 0 white, /* Тень снизу слева */ 1px 1px 0 white; /* Тень снизу справа */
     }
 
@@ -123,9 +122,9 @@
         margin-right: auto; /* Прижимаем WhatsApp к левому краю */
     }
 
-    /*.d-flex.align-items-center.justify-content-between {*/
-    /*    justify-content: space-between; !* Центрируем весь контейнер *!*/
-    /*}*/
+    .d-flex.align-items-center.justify-content-between {
+        justify-content: space-between; /* Центрируем весь контейнер */
+    }
 
 
     .image-mobile-wrapper {
