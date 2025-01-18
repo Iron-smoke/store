@@ -124,6 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
         showSlide(0);
     }
 
+
     // Логика переключения слайдов
     let currentSlide = 0;
 
@@ -134,10 +135,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (totalSlides === 0) return; // Если нет карточек, ничего не делать
 
         // Ограничиваем индекс для зацикливания
-        currentSlide = (index + totalSlides) % totalSlides;
+        currentSlide = Math.min(Math.max(index, 0), totalSlides - 2);
 
         // Смещаем слайдер
-        sliderWrapper.style.transform = `translateX(-${currentSlide * 50}%)`;
+        sliderWrapper.style.transform = `translateX(-${currentSlide * 48.5}%)`;
     }
 
     // Обработчики для кнопок слайдера
@@ -162,6 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
     hideOriginalCards(); // Скрываем оригинальные карточки
     updateSlider(initialCategory, initialSection);
 });
+
 
 //логика Категория --> раздел
 
@@ -238,30 +240,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // логика раздела вопросы
 
+
 document.querySelectorAll('.toggle-answer').forEach(button => {
     button.addEventListener('click', function () {
-        const answer = this.closest('.faq-block').querySelector('.faq-answer');
-        const icon = this.querySelector('i');
-        if (answer.style.display === 'none' || !answer.style.display) {
-            answer.style.display = 'block';
-            icon.classList.replace('bi-arrow-down-circle', 'bi-arrow-up-circle');
-        } else {
-            answer.style.display = 'none';
-            icon.classList.replace('bi-arrow-up-circle', 'bi-arrow-down-circle');
-        }
+        const faqBlock = this.closest('.faq-block');
+        faqBlock.classList.toggle('active');
     });
 });
 
 
-// раздел вопросов
 
-document.addEventListener('DOMContentLoaded', () => {
-    const faqItems = document.querySelectorAll('.faq-item');
 
-    faqItems.forEach(item => {
-        item.addEventListener('click', () => {
-            item.classList.toggle('active');
-        });
+document.querySelectorAll('.faq-mobile .faq-header').forEach(header => {
+    header.addEventListener('click', function () {
+        const faqItem = this.closest('.faq-item'); // Находим родительский блок
+        const faqContent = faqItem.querySelector('.faq-content'); // Текст ответа
+        const icon = this.querySelector('svg'); // Иконка
+
+        if (faqItem.classList.contains('active')) {
+            // Закрытие
+            faqContent.style.height = `${faqContent.scrollHeight}px`; // Устанавливаем текущую высоту
+            window.getComputedStyle(faqContent).height; // Триггер перерисовки
+            faqContent.style.height = '0'; // Уменьшаем высоту до 0
+            faqItem.classList.remove('active');
+            icon.style.transform = 'rotate(0deg)'; // Возвращаем иконку в исходное положение
+        } else {
+            // Открытие
+            faqContent.style.height = `${faqContent.scrollHeight}px`; // Высота по содержимому
+            faqItem.classList.add('active'); // Активный класс
+            icon.style.transform = 'rotate(180deg)'; // Поворот иконки вниз
+
+            // Сбрасываем height на auto после завершения анимации
+            faqContent.addEventListener('transitionend', function setAutoHeight() {
+                if (faqItem.classList.contains('active')) {
+                    faqContent.style.height = 'auto';
+                }
+                faqContent.removeEventListener('transitionend', setAutoHeight);
+            });
+        }
     });
 });
 
@@ -503,22 +519,73 @@ loadQuizData(); // Загружаем данные и начинаем квиз
 
 // прокрутка
 
-document.querySelectorAll('a.nav-link[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
+document.addEventListener("DOMContentLoaded", () => {
+    const scrollToTopButton = document.querySelector(".scroll-to-top");
 
+    scrollToTopButton.addEventListener("click", () => {
+        // Прокрутка к якорю с ID "dog-hero"
+        const targetElement = document.getElementById("dog-hero");
         if (targetElement) {
             targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+                behavior: "smooth",
+                block: "start"
             });
         }
     });
 });
-
 // кнопка наверх
+
+/**
+ * Реализация бесконечного слайдера с плавной прокруткой на JavaScript.
+ */
+
+/**
+ * Реализация бесконечного слайдера с равномерной прокруткой на JavaScript.
+ */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector(".partner-brands__track");
+    const items = Array.from(track.children);
+    const itemWidth = items[0].offsetWidth; // Ширина одного элемента
+    const gap = parseInt(window.getComputedStyle(track).gap) || 0; // Расстояние между элементами
+
+    // Дублируем элементы для бесконечности
+    items.forEach(item => {
+        const clone = item.cloneNode(true);
+        track.appendChild(clone);
+    });
+
+    // Устанавливаем начальные параметры
+    let currentPosition = 0;
+    const totalWidth = (itemWidth + gap) * items.length; // Полная ширина оригинальных элементов
+
+    // Настраиваем скорость (в пикселях за шаг)
+    const speed = 2; // Скорость прокрутки: 2px за шаг
+    const intervalTime = 20; // Частота обновления: каждые 20 мс
+
+    const updateSliderPosition = () => {
+        currentPosition -= speed; // Равномерное смещение
+
+        // Если прокрутка достигла конца, возвращаемся к началу
+        if (Math.abs(currentPosition) >= totalWidth) {
+            currentPosition = 0;
+        }
+
+        track.style.transform = `translateX(${currentPosition}px)`;
+    };
+
+    // Запускаем слайдер
+    let sliderInterval = setInterval(updateSliderPosition, intervalTime);
+
+    // Остановка анимации при наведении мыши
+    track.addEventListener("mouseover", () => {
+        clearInterval(sliderInterval);
+    });
+
+    track.addEventListener("mouseout", () => {
+        sliderInterval = setInterval(updateSliderPosition, intervalTime);
+    });
+});
 
 
 

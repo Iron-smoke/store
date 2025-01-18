@@ -361,90 +361,83 @@
     }
 }
 
+    @media (max-width: 576px){
+        .card-category{
+            padding: 0 0 0 0;
+            margin: 0.1rem 0 0 0;
+
+
+        }
+
+        .category-panel-wrapper{
+            padding-top: 1rem;
+        }
+
+        .card-category img{
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 0.5rem;
+            margin-top:0;
+        }
+        .card-category h5{
+            margin: 0 0 0 0;
+            padding: 0;
+            font-size: 0.1rem !important;
+        }
+        .card-category .card-title {
+             /* Меньший размер текста для мобилок */
+            font-size: 0.1rem !important;
+        }
+
+        .slider-wrapper .card{
+            padding: 0.2rem !important;
+        }
+
+        .slider-wrapper .card-title {
+            font-size: 0.85rem !important;
+
+        }
+        .slider-wrapper .card-text {
+            font-size: 0.7rem !important;
+        }
+
+
+        .btn-row {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:-6%;
+        }
+        .btn-row .col {
+            flex: 0 0 30%; /* Каждая кнопка занимает 30% ширины */
+            max-width: 30%; /* Ограничиваем ширину кнопки */
+            margin-bottom: -3%;
+            margin-top: 1%;
+
+        }
+        .btn-outline-primary {
+            padding: 0.3rem 0.1rem; /* Уменьшаем отступы */
+            font-size: 0.9rem; /* Уменьшаем шрифт */
+        }
+
+    }
+
+
+
 @media (max-width: 768px) {
     .custom-col-7 {
         flex: 0 0 25%; /* 4 колонок */
         max-width: 25%;
     }
+    .partner-brands__item {
+        padding: 0 0.5rem;
+    }
+    .partner-brands__slider {
+        height: 90px;
+    }
+
+
+
 }
-
-@media (max-width: 576px) {
-    .custom-col-7 {
-        flex: 0 0 13%; /* 3 колонок */
-        max-width: 13%;
-    }
-    .product-section .row{
-        /*padding-top: 0 !important;*/
-        /*--bs-gutter-x: 0 !important; !* Убираем горизонтальные отступы между колонками *!*/
-        /*--bs-gutter-y: 0 !important; !* Убираем вертикальные отступы между строками *!*/
-        /*gap: 0.364rem; !* Полностью убираем gap *!*/
-    }
-    .category-panel{
-        --bs-gutter-x: 0 !important;
-        --bs-gutter-y: 0 !important;
-
-    }
-    .product-section h2 {
-        margin-bottom: 0 !important; /* Уменьшаем расстояние под заголовком */
-        margin-top: 0 !important;
-        --bs-gutter-y: 0 !important;
-        gap: 0 !important;
-        font-size: 1.2rem; /* Немного уменьшаем размер текста заголовка */
-    }
-    .card-title{
-        font-size: 0.45rem!important;
-    }
-}
-@media (max-width: 576px) {
-    .btn-row {
-        display: none; /* Скрываем все кнопки по умолчанию */
-    }
-
-    .btn-row.active {
-        display: flex; /* Показываем только активные кнопки */
-        flex-wrap: nowrap; /* Не переносим кнопки */
-        overflow-x: auto; /* Горизонтальный скролл, если кнопки не помещаются */
-        gap: 0.5rem; /* Добавляем расстояние между кнопками */
-        position: relative;
-        z-index: 10;
-        margin-top: -30px;
-    }
-
-    .btn-row .col {
-        flex: 0 0 auto; /* Отключаем авторастяжение колонок */
-        width: auto; /* Ширина кнопок зависит от содержимого */
-    }
-
-    .btn-row .btn-sm {
-        flex-shrink: 0; /* Не позволяем кнопкам сжиматься */
-        white-space: nowrap; /* Запрещаем перенос текста */
-        font-size: 0.6rem; /* Ещё немного уменьшаем размер текста */
-        padding: 0.2rem 0.4rem; /* Уменьшаем внутренние отступы */
-    }
-
-    .category-panel {
-        margin-bottom: 1rem; /* Отступ для категории, чтобы кнопки не наслаивались */
-    }
-
-    .category-link {
-        text-align: center; /* Центрируем категории */
-    }
-}
-
-@media (max-width: 576px) {
-    .product-cards .card {
-        margin-bottom: 1rem; /* Увеличиваем отступы между карточками */
-    }
-
-    .product-image {
-        max-height: 120px; /* Уменьшаем высоту изображений на маленьких экранах */
-    }
-
-    .card-title, .card-text {
-        font-size: 0.8rem; /* Уменьшаем текст */
-    }
-}
-
 @media (max-width: 767.98px) {
     .product-cards {
         display: none; /* Скрываем стандартные карточки */

@@ -210,3 +210,82 @@
     width: 23%; /* Добавляем ширину контейнера */
     text-align: center;
 }
+
+@media (max-width: 1024px)
+
+{
+
+    .category-panel-wrapper{
+        padding-top: 0;
+        padding-bottom:1rem;
+        margin-top: -1rem;
+    }
+
+    /* Секция */
+    .product-section {
+        padding: 1.5rem 0; /* Уменьшенные внешние отступы */
+    }
+
+    /* Карточки продуктов */
+    .product-cards {
+        padding: 0; /* Уменьшенные внутренние отступы секции */
+        gap: 0; /* Расстояние между карточками */
+    }
+
+    .product-cards .card {
+        padding: 0.1rem; /* Уменьшение внутреннего отступа внутри карточек */
+        border-radius: 8px; /* Уменьшенные скругленные углы */
+    }
+
+    /* Заголовки внутри карточек */
+    .product-cards .card-title {
+        font-size: 0.9rem; /* Уменьшение шрифта заголовков */
+        margin: 0.3rem 0; /* Уменьшенные отступы заголовка */
+    }
+
+    /* Описание карточек */
+    .product-cards .card-text {
+        font-size: 0.75rem; /* Уменьшение шрифта описания */
+        margin-top: 0.3rem; /* Уменьшенный отступ сверху */
+    }
+
+    /* Изображения */
+    .product-cards .card-img-top {
+        max-width: 65%; /* Уменьшение ширины изображений */
+        margin-top: 0.5rem; /* Сохранённый верхний отступ */
+        margin-bottom: 0.3rem; /* Уменьшение нижнего отступа */
+    }
+
+    /* Панель с кнопками */
+    .btn-row {
+        padding-bottom: 0;
+        padding-top: 0;
+        margin-bottom: 0.8rem; /* Уменьшение нижнего отступа панели */
+        border-radius: 6px; /* Более скромное скругление углов */
+    }
+
+    .btn-outline-primary {
+        padding: 0.3rem 0.6rem; /* Уменьшение отступов внутри кнопок */
+        font-size: 0.85rem; /* Уменьшение размера шрифта кнопок */
+    }
+
+    .btn-outline-primary:hover {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Уменьшенная тень на ховере */
+    }
+
+    /* Карточки категорий */
+    .card-category {
+        padding: 0.7rem; /* Уменьшение отступов внутри карточки */
+        border-radius: 10px; /* Уменьшенные скругления углов */
+        /*margin: 0.5rem; !* Отступы между карточками *!*/
+    }
+
+    .card-category h5 {
+        font-size: 1rem; /* Уменьшенный размер шрифта заголовков */
+    }
+
+    .card-category img {
+        max-width: 70%; /* Уменьшение ширины изображения */
+        height: auto; /* Поддержка пропорций */
+    }
+}

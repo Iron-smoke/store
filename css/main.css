@@ -268,20 +268,20 @@ color: var(--contrast-color);
 }
 
 
-.product-rating .active{
-    color: var(--accent-color);
-}
-.product-rating .count-reviews {
-    margin-left: 10px;
+/*.product-rating .active{*/
+/*    color: var(--accent-color);*/
+/*}*/
+/*.product-rating .count-reviews {*/
+/*    margin-left: 10px;*/
 
-}
-.product-review-header {
-    display: flex;
-    justify-content: space-between;
-}
-.product-review-header .review-date{
-    color: var(--gray-color)
-}
+/*}*/
+/*.product-review-header {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*}*/
+/*.product-review-header .review-date{*/
+/*    color: var(--gray-color)*/
+/*}*/
 
 
 /* hero-section */
@@ -687,128 +687,309 @@ z-index: 1;
 
 
 
+/* category-product section */
+
+
+.product-section {
+    background: linear-gradient(90deg, #FCEAB4 0%, #F8A900 100%);
+    padding: 2rem 0;
+}
+
+
+
+.product-cards {
+    background: linear-gradient(135deg, #F8A900, #FCEAB4); /* Градиент фона для всей секции */
+    border-radius: 20px; /* Скругленные углы */
+    padding: 2rem; /* Внутренние отступы */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Глубокая тень */
+    margin: 0; /* Внешние отступы */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0; /* Расстояние между карточками */
+    justify-content: center;
+}
+
+/* Стили для каждой карточки */
+.product-cards .card {
+    background: #FCEAB4; /* Градиент внутри карточки */
+    border-radius: 15px; /* Скругленные углы */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    overflow: hidden; /* Убираем всё, что выходит за пределы карточки */
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Эффект наведения на карточку */
+.product-cards .card:hover {
+    transform: scale(1.05); /* Увеличение карточки */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Усиление тени */
+    background: linear-gradient(135deg, #E6DBA8, #FFFFFF); /* Изменение градиента */
+}
+
+/* Анимация подсветки при наведении */
+.product-cards .card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: scale(0.9);
+    border-radius: inherit;
+    z-index: 0;
+}
+
+.product-cards .card:hover::after {
+    opacity: 1;
+    transform: scale(1.2); /* Расширение подсветки */
+}
+
+/* Заголовки внутри карточек */
+.product-cards .card-title {
+    font-family: 'Stylo', sans-serif;
+    font-size: 1.2rem; /* Размер заголовка */
+    color: #114F3C; /* Основной зелёный цвет */
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Лёгкая тень текста */
+    margin: 0.5rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Текст описания карточек */
+.product-cards .card-text {
+    font-family: 'Rosarium', sans-serif;
+    font-size: 0.9rem; /* Размер текста */
+    color: #333; /* Тёмно-серый */
+    margin-top: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Изображения в карточках */
+.product-cards .card-img-top {
+    max-width: 80%;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.product-cards .card:hover .card-img-top {
+    transform: rotate(-2deg) scale(1.1); /* Лёгкое вращение и увеличение */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Более яркая тень изображения */
+}
+
+/* Анимация для активных карточек */
+.product-cards .card.active {
+    background: linear-gradient(135deg, #98BC6D, #114F3C); /* Зелёный градиент */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.08); /* Лёгкое увеличение */
+    border: 2px solid #FCEAB4; /* Рамка */
+}
+
+.product-cards .card.active::after {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, transparent 80%);
+    opacity: 1;
+    transform: scale(1.3); /* Расширенная подсветка */
+}
 
 
 /* Hover эффект для ссылки */
 .custom-col-7 {
     flex: 0 0 14.28%;
     max-width: 14.28%;
+    /*color: transparent !important;*/
 }
 .btn-outline-primary {
-    transition: all 0.3s ease;
+    border-radius: 10px;
+    border: 2px solid #114F3C; /* Тёмно-зелёная граница */
+    color: #114F3C; /* Тёмно-зелёный текст */
+    background: transparent; /* Прозрачный фон */
+    font-weight: bold; /* Жирный текст */
+    transition: all 0.3s ease; /* Плавные эффекты */
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+}
+.btn-outline-primary:hover {
+    background: linear-gradient(135deg, #FCEAB4, #F8A900); /* Градиент при наведении */
+    color: #FFFFFF; /* Белый текст */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Усиление тени */
+    transform: scale(1.05); /* Лёгкое увеличение */
 }
 
-.btn-outline-primary:hover {
-    background-color: #007bff;
-    color: #fff;
+.btn-outline-primary:active {
+    background: #114F3C; /* Тёмно-зелёный фон при клике */
+    color: #FFFFFF; /* Белый текст */
+    border-color: #F8A900; /* Жёлтая граница */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Тень уменьшается */
+    transform: scale(0.95); /* Лёгкое сжатие */
+}
+
+.btn.active {
+    background: linear-gradient(135deg, #114F3C, #fd7e14); /* Градиент для активного состояния */
+    color: #FFF3CD; /* Светло-жёлтый текст */
+    border: 2px solid #F8A900; /* Яркая жёлтая граница */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Более глубокая тень */
+    transition: all 0.3s ease;
 }
 
 .btn-row{
     display: none;
-    margin-top: -1%;
+    border-radius: 10px ;
+    /*border-top: 1rem;*/
+    /*margin-top: 1rem; !* Убирает внешние отступы *!*/
+    margin-bottom: 1rem;
+    padding: 0.1rem; /* Убирает внутренние отступы */
+    background: linear-gradient(to right,#FCEAB4,#F8A900);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Тень для эффекта объёма */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Полупрозрачная граница */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Эффект при наведении */
 }
 .btn-row.active {
     display: flex; /* Показываем активные разделы */
+
+
 }
 
-.product-cards {
-    margin-top: 2rem; /* Отступ сверху для блока карточек */
-    justify-content: center; /* Центрируем карточки */
+
+.category-panel-wrapper {
+    background: linear-gradient(135deg, #F8A900, #FCEAB4); /* Фон панели */
+    border-radius: 20px; /* Скругленные углы */
+    border: 3px solid rgba(17, 79, 60, 0.8); /* Зелёная полупрозрачная рамка */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Глубокая тень */
+    padding: 2rem; /* Простор внутри панели */
+    margin: 2rem 0; /* Отступ панели от других элементов */
+    overflow: hidden;
+    position: relative;
 }
 
-.card {
-    background-color: #f8f9fa; /* Цвет фона карточки */
-    border-radius: 10px; /* Скруглённые углы */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для карточки */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Сами карточки */
+.card-category {
+    background: linear-gradient(135deg, #FFFFFF, #E6DBA8); /* Лёгкий градиент */
+    border-radius: 15px; /* Скругленные углы */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Тень для карточек */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
+    overflow: hidden;
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.card:hover {
-    transform: scale(1.05); /* Лёгкое увеличение при наведении */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Усиление тени при наведении */
+/* Ховер-эффекты для карточек */
+.card-category:hover {
+    transform: scale(1.1); /* Увеличение карточки */
+    background: linear-gradient(135deg, #E6DBA8, #FFFFFF); /* Обратный градиент */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Более яркая тень */
 }
 
-.product-image {
-    max-height: 150px; /* Ограничиваем высоту изображений */
-    object-fit: contain; /* Сохраняем пропорции */
+/* Анимация подсветки на карточке */
+.card-category::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.4s ease;
+    transform: scale(0.8);
+    border-radius: inherit;
+    z-index: 0;
 }
 
-.card-title {
-    font-size: 0.9rem;
+.card-category:hover::after {
+    opacity: 1;
+    transform: scale(1.2); /* Расширение подсветки */
+}
+
+/* Заголовки внутри карточек */
+.card-category .card-title {
+    font-family: 'Stylo', sans-serif; /* Основной шрифт */
+    font-size: 1.2rem;; /* Размер текста */
+    color: #114F3C; /* Основной зелёный цвет */
     font-weight: bold;
-    color: #333;
+    margin: 0.5rem 0;
+    position: relative;
+    z-index: 1; /* Поверх подсветки */
 }
 
-.card-text {
-    font-size: 0.8rem;
-    color: #555;
+/* Изображения в карточках */
+.card-category img {
+    max-width: 80%; /* Изображение занимает 80% ширины */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1; /* Поверх подсветки */
 }
+
+.card-category:hover img {
+    transform: rotate(3deg) scale(1.15); /* Лёгкое вращение и увеличение */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Активная карточка */
+.card-category.active {
+    background: linear-gradient(135deg, #98BC6D, #114F3C); /* Зелёный градиент */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.08); /* Лёгкое увеличение */
+    border: 2px solid #FCEAB4; /* Яркая рамка */
+}
+
+/* Анимация на активной карточке */
+.card-category.active::after {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 0%, transparent 80%);
+    opacity: 1;
+    transform: scale(1.3); /* Расширенная подсветка */
+}
+
+
 
 #about-us-mobile{
     display: none;
 }
 
-.product-card {
-    flex: 0 0 calc(50% - 1rem); /* Каждая карточка занимает 50% ширины */
-    background: linear-gradient(180deg, #114F3C 0%, #E6DBA8 103.6%);
-    border: 1px solid #FFFFFF;
-    border-radius: 15px;
-    text-align: center;
-    padding: 0.5rem;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.product-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.card-text p {
-    font-family: 'Rosarium', sans-serif;
-    font-size: 0.8rem;
-    color: #FFFFFF;
-}
-
-
 .disabled {
     display: none !important; /* Полностью скрывает элемент */
 }
 
-.category-panel .col.active {
-    border: 2px solid #007bff; /* Синяя рамка */
-    border-radius: 10px;
-    background-color: #e6f7ff; /* Лёгкий голубой фон */
-    transition: all 0.3s ease;
-}
 
-/* Для активной кнопки раздела */
-.btn-row button.active {
-    background-color: #007bff; /* Синий фон */
-    color: #fff; /* Белый текст */
-    border-color: #007bff; /* Синий цвет границы */
-}
+
 
 /* Основной стиль для слайдера */
 .product-slider {
     position: relative;
     overflow: hidden;
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .slider-wrapper {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    gap: 1rem; /* Расстояние между карточками */
+    /*gap: 1rem; !* Расстояние между карточками *!*/
     will-change: transform;
 }
 
+
+
 .slider-card {
-    flex: 0 0 50%; /* Каждая карточка занимает 50% ширины экрана */
+    flex: 0 0 43%; /* Уменьшаем ширину до 45% */
+    margin: 0 3%; /* Добавляем отступы */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #FCEAB4;
     padding: 1rem;
     text-align: center;
     display: flex;
@@ -822,34 +1003,48 @@ z-index: 1;
     margin-bottom: 1rem;
 }
 
-/* Кнопки управления слайдером */
-.brand-cats {
-    padding: 2rem 0;
-    background-color: #f9f9f9;
-    overflow: hidden; /* Прячем излишки слайдера */
-    position: relative;
-}
-
-.brand-cats__title {
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-/* Слайдер */
-.brand-cats__slider {
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
     display: flex;
-    overflow: hidden;
-    position: relative;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5; /* Полупрозрачность по умолчанию */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Плавный переход для эффектов */
+}
+
+.slider-button:hover {
+    opacity: 1; /* Полная видимость при наведении */
+    transform: translateY(-50%) scale(1.1); /* Лёгкое увеличение */
+}
+
+.slider-button:active {
+    opacity: 1; /* Полная видимость при клике */
+    transform: translateY(-50%) scale(0.95); /* Лёгкое сжатие при клике */
+}
+
+.slider-button img {
     width: 100%;
+    height: auto;
 }
 
-.brand-cats__track {
-    display: flex;
-    animation: scroll 15s linear infinite; /* Анимация бесконечной прокрутки */
-    will-change: transform; /* Оптимизация анимации */
+.slider-button.prev {
+    left: -2px; /* Расположение слева */
 }
+
+.slider-button.next {
+    right: -2px; /* Расположение справа */
+}
+
+
+/* Кнопки управления слайдером */
 
 @keyframes scroll {
     0% {
@@ -861,35 +1056,18 @@ z-index: 1;
 }
 
 /* Бренды внутри слайдера */
-.brand-cats__item {
-    flex: 0 0 auto; /* Отключаем автоматическое сжатие */
-    width: 15%; /* Ширина каждого элемента (можно менять под нужное количество) */
-    padding: 0 1rem;
+.partner-brands__item {
+    flex: 0 0 auto; /* Каждый бренд занимает фиксированное место */
+    width: calc(100% / 7); /* Например, 5 элементов на экране */
+    padding: 0;
     text-align: center;
 }
 
-.brand-cats__item img {
-    max-width: 100%;
-    height: auto;
-}
-
 /* Адаптация для мобильных устройств */
-@media (max-width: 768px) {
-    .brand-cats__item {
-        width: 30%; /* Увеличиваем ширину элементов */
-    }
-
-    @keyframes scroll {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%); /* Прокручиваем меньше контента */
-        }
-    }
-}/* Стили для секции брендов */
+/* Стили для секции брендов */
 .partner-brands {
-    padding: 2rem 0;
+
+    padding: 1rem 0;
     background-color: #f9f9f9;
     overflow: hidden; /* Прячем излишки слайдера */
     position: relative;
@@ -907,77 +1085,75 @@ z-index: 1;
     display: flex;
     overflow: hidden;
     width: 100%;
+    height: 120px;
+}
+
+.partner-brands__item img {
+    max-height: 100%; /* Изображения подстраиваются под высоту слайдера */
+    object-fit: contain; /* Сохраняем пропорции изображений */
 }
 
 .partner-brands__track {
     display: flex;
-    animation: partner-scroll 20s linear infinite; /* Анимация бесконечной прокрутки */
-    will-change: transform; /* Оптимизация анимации */
+    gap: 0 !important;
+/*    animation: partner-scroll 5s linear infinite; !* 40 секунд на полный цикл *!*/
+/*    will-change: transform;*/
 }
 
-@keyframes partner-scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+
+
+
+/* faq-section */
+
+.faq-section{
+    background:linear-gradient(to bottom, #F6DEAE, #F48D09 50%, #F7DFAF); ;
 }
 
-/* Бренды внутри слайдера */
-.partner-brands__item {
-    flex: 0 0 auto; /* Отключаем автоматическое сжатие */
-    width: 14%; /* Ширина элемента */
-    padding: 0 1rem;
-    text-align: center;
-}
-
-.partner-brands__item img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Мобильная адаптация */
-@media (max-width: 768px) {
-    .partner-brands__item {
-        width: 30%; /* Больше места для брендов */
-    }
-
-    @keyframes partner-scroll {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
-    }
+.custom-row {
+    margin-left: 2rem; /* Убираем отрицательные отступы */
+    margin-right: -2rem !important;
 }
 
 .faq-block {
+    background: #FFFFFF;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%; /* Чтобы блоки были одинаковой высоты */
     width: 20vw;
 }
 
 .faq-block:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .faq-block img {
-    width: 100%; /* Изображение занимает всю ширину */
-    max-height: 15rem; /* Ограничение по высоте изображения */
-    object-fit: cover; /* Сохраняет пропорции изображения */
+    width: 100%;
+    max-height: 15rem;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    transition: transform 0.3s ease;
 }
 
+.faq-block:hover img {
+    transform: scale(1.05);
+}
+
+
 .faq-title {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
-    color: #333;
+    color: #000000 !important;
     margin-bottom: 0;
+    padding: 1rem;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+.faq-title:hover {
+    color: #F48D09;
 }
 
 .toggle-answer {
@@ -986,7 +1162,8 @@ z-index: 1;
     font-size: 20px;
     color: #333;
     cursor: pointer;
-    transition: color 0.2s ease-in-out;
+    transition: color 0.3s ease, transform 0.3s ease; /* Добавляем анимацию поворота */
+    margin-right: 1rem;
 }
 
 .toggle-answer:hover {
@@ -994,48 +1171,92 @@ z-index: 1;
 }
 
 .faq-answer {
-    display: none;
-    font-size: 14px;
-    color: #666;
-    margin-top: 10px;
-    line-height: 1.5;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: max-height 1.2s ease, opacity 1.2s ease, transform 1.2s ease;
 }
 
-.custom-row {
-    margin-left: 2rem; /* Убираем отрицательные отступы */
-    margin-right: -2rem !important;
+.faq-block {
+    transition: box-shadow 1s ease, background-color 1s ease;
 }
+
+.toggle-answer svg {
+    transition: transform 1s ease, fill 1s ease;
+}
+
+.faq-block.active {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+}
+
+.faq-block.active .faq-answer {
+    max-height: 1000px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.faq-answer p {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.faq-block.active .faq-answer p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.faq-block.active .toggle-answer svg {
+    transform: rotate(180deg);
+    fill: #007bff;
+
+}
+
+
+
+
+
+/* end-faq-section */
+
 
 .faq-mobile {
     background: linear-gradient(180deg, #FFEDB3, #FFB74D);
     border-radius: 12px;
-    display: none;
+    padding: 20px;
 }
 
 .faq-mobile h2 {
     font-family: 'Arial', sans-serif;
     font-weight: bold;
     color: #000;
+    margin-bottom: 16px;
 }
 
-.faq-blocks {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
+/* Блоки вопросов */
 .faq-item {
-    background: #fff;
-    position: relative;
-    margin-top: 1rem;
-    border-radius: 20px;
+    background: #fff; /* Белый фон для блока */
+    border-radius: 12px; /* Закругление углов */
     overflow: hidden;
-    transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.faq-item:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.faq-item img {
+    width: 100%;
+    height: auto; /* Убираем растягивание */
+    object-fit: cover; /* Сохраняем пропорции */
+    display: block;
+}
+
+
+.faq-mobile{
+display: none;
+}
+
+.faq-item.active {
+    background-color: #fff5e6; /* Подсветка активного блока */
 }
 
 .faq-header {
@@ -1044,37 +1265,76 @@ z-index: 1;
     align-items: center;
     padding: 16px;
     cursor: pointer;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
 }
 
-.faq-title {
+.faq-title-mobile {
     font-size: 16px;
     font-weight: 500;
-    color: #ffffff;
+    color: #333;
     margin: 0;
+    transition: color 0.3s ease;
 }
 
-.toggle-icon {
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.faq-item.active .faq-title {
+    color: #FFB74D; /* Цвет активного вопроса */
 }
 
+/* Контент ответа */
 .faq-content {
-    display: none;
-    padding: 16px;
-    font-size: 14px;
-    color: #555;
-    background: rgba(255, 255, 255, 0.9);
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: height 0.8s ease, opacity 0.8s ease, transform 0.8s ease; /* Увеличено время анимации */
+    padding: 0 16px;
+    background: #fff; /* Белый фон для текста */
 }
 
 .faq-item.active .faq-content {
-    display: block;
+    height: auto;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 16px; /* Восстанавливаем отступы */
 }
+
+/* Иконка */
+
+.faq-item.active .toggle-answer svg {
+    transform: rotate(180deg); /* Поворот стрелки */
+    fill: #FFB74D; /* Цвет стрелки */
+}
+
+.toggle-icon {
+    margin-right:10px !important; /* Отодвигаем кнопку к правому краю */
+    display: flex; /* Гарантируем центрирование содержимого */
+    align-items: center; /* Центрируем иконку по вертикали */
+    justify-content: right; /* Центрируем иконку внутри кнопки */
+    padding: 0; /* Убираем отступы */
+    background: none; /* Убираем фон */
+    border: none; /* Убираем границы */
+    cursor: pointer; /* Указатель при наведении */
+}
+
+.toggle-icon svg {
+    width: 24px; /* Размер иконки */
+    height: 24px;
+    transition: transform 1s ease, fill 1s ease; /* Анимация для вращения */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .cat-banner {
     position: relative;
