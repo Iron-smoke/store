@@ -2,7 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 г.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Широкий выбор кормов для собак и кошек в станице Брюховецкая  и станице Каневская.Доступные цены и высокое качество. Заходите сейчас!">
+    <meta property="og:title" content="Зоомагазин Хомка" />
+    <meta property="og:description" content="Сеть Зоомагазинов Хомка в Станице Брюховецкая и Станице Каневская" />
+    <meta property="og:image" content="https://homka.shop/images/logo12.png" />
+    <meta property="og:url" content="https://homka.shop/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
     <title>Зоомагазин Хомка брюховецкая- Зоомагазин Хомка
         Каневская</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
@@ -11,6 +18,70 @@
     <link rel="stylesheet" href="css/tablet.css">
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "PetStore",
+            "name": "Зоомагазин Хомка",
+            "url": "https://homka.shop/",
+            "description": "Сеть Зоомагазинов Хомка в Брюховецкой, Каневской. Широкий выбор кормов, игрушек и аксессуаров для ваших питомцев.",
+            "address": [
+                {
+                    "@type": "PostalAddress",
+                    "streetAddress": "ул. Ленина, 40",
+                    "addressLocality": "станица Брюховецкая",
+                    "addressRegion": "Краснодарский край",
+                    "postalCode": "352750",
+                    "addressCountry": "RU"
+                },
+                {
+                    "@type": "PostalAddress",
+                    "streetAddress": "ул. Ленина, 19",
+                    "addressLocality": "станица Каневская",
+                    "addressRegion": "Краснодарский край",
+                    "postalCode": "353740",
+                    "addressCountry": "RU"
+                },
+                {
+                    "@type": "PostalAddress",
+                    "streetAddress": "ул. Кирова, 164",
+                    "addressLocality": "станица Брюховецкая>",
+                    "addressRegion": "Краснодарский край",
+                    "postalCode": "353740",
+                    "addressCountry": "RU"
+                }
+            ],
+            "contactPoint": [
+                {
+                    "@type": "ContactPoint",
+                    "telephone": "+7-988-888-53-15",
+                    "contactType": "Обслуживание клиентов"
+                },
+                {
+                    "@type": "ContactPoint",
+                    "telephone": "+7-988-888-53-15",
+                    "contactType": "WhatsApp",
+                    "url": "https://wa.me/79888885315"
+                }
+            ],
+            "additionalProperty": [
+                {
+                    "@type": "PropertyValue",
+                    "name": "Акции и скидки",
+                    "value": "Скидки как для новых так и для постоянных покупателей"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "Помощь в подборе корма",
+                    "value": "Бесплатная консультация по выбору корма для ваших питомцев с учётом возраста, породы и здоровья."
+                }
+            ]
+        }
+    </script>
+
+
+
 
 </head>
 
@@ -1618,7 +1689,6 @@
         </section>
         <section class="location-section" id="stores">
             <h1 class="section-title">Наши Магазины</h1>
-
             <!-- Кнопки переключения -->
             <div class="button-container">
                 <button class="btn-location active" data-screen="screen1">Магазин 1</button>
@@ -1627,77 +1697,118 @@
             </div>
 
             <!-- Экраны магазинов -->
-            <div class="screen-container">
-                <!-- Экран магазина 1 -->
-                <div class="screen active" id="screen1">
-                    <div class="content">
-                        <div class="slider-container">
-                            <div class="slider">
-                                <button class="slider-arrow left-arrow">←</button>
-                                <div class="slider-images">
-                                    <img src="images/stores/1/enter.jpg" alt="Магазин 1">
-                                    <img src="images/stores/1/enter-1.jpg" alt="Магазин 1">
-                                    <img src="images/stores/1/enter-3.jpg" alt="Магазин 1">
+            <div class="location-section container-fluid">
+                <div class="screen-container">
+                    <!-- Экран магазина 1 -->
+                    <div class="screen active" id="screen1">
+                        <div class="row align-items-start gx-5" >
+                            <!-- Слайдер -->
+                            <div class="col-lg-4 slider-container">
+                                <div class="slider">
+                                    <button class="slider-arrow left-arrow"><img src="images/left.png" alt=""></button>
+                                    <div class="slider-images">
+                                        <img src="images/stores/1/enter.jpg" alt="Магазин 1" class="active">
+                                        <img src="images/stores/1/enter-1.jpg" alt="Магазин 1">
+                                        <img src="images/stores/1/enter-3.jpg" alt="Магазин 1">
+                                    </div>
+                                    <button class="slider-arrow right-arrow"><img src="images/right.png" alt=""></button>
                                 </div>
-                                <button class="slider-arrow right-arrow">→</button>
                             </div>
-                        </div>
-                        <div class="map-selector">
-                        <div style="position:relative;overflow:hidden;">
-                            <a href="https://yandex.ru/maps/org/khomka/58436474911/?utm_medium=mapframe&utm_source=maps"
-                               style="color:#eee;font-size:12px;position:absolute;top:0px;">Хомка</a>
-                            <a href="https://yandex.ru/maps/10995/krasnodar-krai/category/pet_shop/184107222/?utm_medium=mapframe&utm_source=maps"
-                               style="color:#eee;font-size:12px;position:absolute;top:14px;">Зоомагазин в Краснодарском крае</a>
-                            <iframe src="https://yandex.ru/map-widget/v1/org/khomka/58436474911/?ll=39.004077%2C45.804598&z=17"
-                                    width="560" height="550" frameborder="1" allowfullscreen="true" style="position:relative;">
-                            </iframe>
-                        </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Экран магазина 2 -->
-                <div class="screen" id="screen2">
-                    <div class="content">
-                        <div class="slider-container">
-                            <div class="slider">
-                                <button class="slider-arrow left-arrow">←</button>
-                                <div class="slider-images">
-                                    <img src="images/stores/2/enter.jpg" alt="Магазин 2">
-                                    <img src="images/stores/2/enter1.jpg" alt="Магазин 2">
-                                    <img src="images/stores/2/enter2.jpg" alt="Магазин 2">
-                                </div>
-                                <button class="slider-arrow right-arrow">→</button>
+                            <!-- Карта -->
+                            <div class="col-lg-4 map-container">
+                                <iframe src="https://yandex.ru/map-widget/v1/org/khomka/58436474911/?ll=39.004077%2C45.804598&z=17"
+                                        frameborder="1" allowfullscreen="true" style="width: 100%; height: 600px; border-radius: 10px;"></iframe>
                             </div>
-                        </div>
-                        <div class="map-selector">
-                        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/khomka/58436474911/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Хомка</a><a href="https://yandex.ru/maps/10995/krasnodar-krai/category/pet_shop/184107222/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Зоомагазин в Краснодарском крае</a><iframe src="https://yandex.ru/map-widget/v1/org/khomka/58436474911/?ll=39.004077%2C45.804598&z=17" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
-                    </div>
-                    </div>
-                </div>
 
-                <!-- Экран магазина 3 -->
-                <div class="screen" id="screen3">
-                    <div class="content">
-                        <div class="slider-container">
-                            <div class="slider">
-                                <button class="slider-arrow left-arrow">←</button>
-                                <div class="slider-images">
-                                    <img src="images/stores/3/enter3.jpg" alt="Магазин 3">
-                                    <img src="images/stores/3/enter1.jpg" alt="Магазин 3">
-                                    <img src="images/stores/3/enter2.jpg" alt="Магазин 3">
-                                    <img src="images/stores/3/enter.jpg" alt="Магазин 3">
+                            <!-- Отзывы -->
+                            <div class="col-lg-4 reviews-container">
+                                <div style="width:100%; height: 600px; overflow:hidden; position:relative;">
+                                    <iframe style="width:100%; height:100%; border:1px solid #e6e6e6; border-radius:8px; box-sizing:border-box"
+                                            src="https://yandex.ru/maps-reviews-widget/120539940761?comments"></iframe>
+                                    <a href="https://yandex.ru/maps/org/khomka/120539940761/" target="_blank"
+                                       style="box-sizing:border-box; text-decoration:none; color:#b3b3b3; font-size:10px; font-family:YS Text,sans-serif; padding:0 20px; position:absolute; bottom:8px; width:100%; text-align:center; left:0; overflow:hidden; text-overflow:ellipsis; display:block; max-height:14px; white-space:nowrap;">
+                                        Хомка на карте Краснодарского края &mdash; Яндекс&nbsp;Карты
+                                    </a>
                                 </div>
-                                <button class="slider-arrow right-arrow">→</button>
                             </div>
                         </div>
-                        <div class="map-selector">
-                        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/khomka/58436474911/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Хомка</a><a href="https://yandex.ru/maps/10995/krasnodar-krai/category/pet_shop/184107222/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Зоомагазин в Краснодарском крае</a><iframe src="https://yandex.ru/map-widget/v1/org/khomka/58436474911/?ll=39.004077%2C45.804598&z=17" width="560" height="600" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
                     </div>
+
+                    <!-- Экран магазина 2 -->
+                    <div class="screen" id="screen2">
+                        <div class="row align-items-start">
+                            <!-- Слайдер -->
+                            <div class="col-lg-4 slider-container">
+                                <div class="slider">
+                                    <button class="slider-arrow left-arrow">&larr;</button>
+                                    <div class="slider-images">
+                                        <img src="images/stores/2/enter.jpg" alt="Магазин 2" class="active">
+                                        <img src="images/stores/2/enter1.jpg" alt="Магазин 2">
+                                        <img src="images/stores/2/enter2.jpg" alt="Магазин 2">
+                                    </div>
+                                    <button class="slider-arrow right-arrow">&rarr;</button>
+                                </div>
+                            </div>
+
+                            <!-- Карта -->
+                            <div class="col-lg-4 map-container">
+                                <iframe src="https://yandex.ru/map-widget/v1/org/khomka/58436474911/?ll=39.004077%2C45.804598&z=17"
+                                        frameborder="1" allowfullscreen="true" style="width: 100%; height: 400px; border-radius: 10px;"></iframe>
+                            </div>
+
+                            <!-- Отзывы -->
+                            <div class="col-lg-4 reviews-container">
+                                <div style="width:100%; height: 400px; overflow:hidden; position:relative;">
+                                    <iframe style="width:100%; height:100%; border:1px solid #e6e6e6; border-radius:8px; box-sizing:border-box"
+                                            src="https://yandex.ru/maps-reviews-widget/120539940761?comments"></iframe>
+                                    <a href="https://yandex.ru/maps/org/khomka/120539940761/" target="_blank"
+                                       style="box-sizing:border-box; text-decoration:none; color:#b3b3b3; font-size:10px; font-family:YS Text,sans-serif; padding:0 20px; position:absolute; bottom:8px; width:100%; text-align:center; left:0; overflow:hidden; text-overflow:ellipsis; display:block; max-height:14px; white-space:nowrap;">
+                                        Хомка на карте Краснодарского края &mdash; Яндекс&nbsp;Карты
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Экран магазина 3 -->
+                    <div class="screen" id="screen3">
+                        <div class="row align-items-start">
+                            <!-- Слайдер -->
+                            <div class="col-lg-4 slider-container">
+                                <div class="slider">
+                                    <button class="slider-arrow left-arrow">&larr;</button>
+                                    <div class="slider-images">
+                                        <img src="images/stores/3/enter3.jpg" alt="Магазин 3" class="active">
+                                        <img src="images/stores/3/enter1.jpg" alt="Магазин 3">
+                                        <img src="images/stores/3/enter2.jpg" alt="Магазин 3">
+                                    </div>
+                                    <button class="slider-arrow right-arrow">&rarr;</button>
+                                </div>
+                            </div>
+
+                            <!-- Карта -->
+                            <div class="col-lg-4 map-container">
+                                <iframe src="https://yandex.ru/map-widget/v1/org/khomka/58436474911/?ll=39.004077%2C45.804598&z=17"
+                                        frameborder="1" allowfullscreen="true" style="width: 100%; height: 400px; border-radius: 10px;"></iframe>
+                            </div>
+
+                            <!-- Отзывы -->
+                            <div class="col-lg-4 reviews-container">
+                                <div style="width:100%; height: 400px; overflow:hidden; position:relative;">
+                                    <iframe style="width:100%; height:100%; border:1px solid #e6e6e6; border-radius:8px; box-sizing:border-box"
+                                            src="https://yandex.ru/maps-reviews-widget/120539940761?comments"></iframe>
+                                    <a href="https://yandex.ru/maps/org/khomka/120539940761/" target="_blank"
+                                       style="box-sizing:border-box; text-decoration:none; color:#b3b3b3; font-size:10px; font-family:YS Text,sans-serif; padding:0 20px; position:absolute; bottom:8px; width:100%; text-align:center; left:0; overflow:hidden; text-overflow:ellipsis; display:block; max-height:14px; white-space:nowrap;">
+                                        Хомка на карте Краснодарского края &mdash; Яндекс&nbsp;Карты
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+            </section>
         <div class="modal fade" id="quizModal" tabindex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
@@ -1789,7 +1900,6 @@
     </footer>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="owlcarousel/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"> </script>
 <button class="scroll-to-top" aria-label="Прокрутить вверх">
