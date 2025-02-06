@@ -164,7 +164,7 @@
     }
 
     .about-highlight {
-        font-size: 1.5rem !important; /* Уменьшаем размер выделенного текста */
+        font-size: 1.5rem ; /* Уменьшаем размер выделенного текста */
 
     }
 .highlight-text{
@@ -181,6 +181,8 @@
         white-space: nowrap; /* Не разрешаем перенос текста */
     }
 }
+
+
 
 /* banner-dog */
 
@@ -288,4 +290,94 @@
         max-width: 70%; /* Уменьшение ширины изображения */
         height: auto; /* Поддержка пропорций */
     }
+    .banner-text-cat{
+        left:30%;
+    }
+
+    .faq-title{
+    font-size: 16px;
 }
+
+    .faq-answer{
+        font-size: 14px;
+    }
+    .toggle-answer svg {
+        height: 30px;
+        width: 30px;
+    }
+.blog-content h2{
+    font-size: 16px;
+}
+.blog-content p{
+    display: none;
+}
+.blog-extra p{
+    font-size: 15px;
+}
+.map-container iframe{
+    height: 400px !important;
+}
+    .location-section{
+        height: 600px;
+    }
+
+
+    .slider-arrow{
+        top:14rem;
+    }
+
+.slider-images{
+    padding: 0;
+    margin: 0;
+    height: 400px !important;
+}
+
+    .slider-images img{
+        height: 400px !important;
+    }
+    .reviews1{
+        height: 400px ;
+        width: auto ;
+    }
+
+
+    .quiz-result .card-img {
+        width: 200px ; /* Ширина для всех изображений */
+        height: 200px ;
+    }
+
+    .quiz-section{
+        max-width: 550px;
+        /*padding: 0;*/
+    }
+    .modal-lg{
+        --bs-modal-width: 600px;
+    }
+    .modal{
+        /*--bs-modal-margin: 0;*/
+        /*--bs-modal-padding: 0;*/
+    }
+    .quiz-result .related-img{
+        height: 130px;
+    }
+    .description-text{
+        display: none;
+    }
+    p.related-card{
+        font-size: 0.5em;
+        margin-top: 1rem;
+    }
+    .quiz-result .related-card{
+        width: 150px; /* Уменьшаем ширину на 15% */
+        height: 160px; /* Уменьшаем высоту на 15% */
+        padding: 0; /* Пропорционально уменьшаем отступы */
+        margin: 15px; /* Уменьшаем отступы между карточками */
+    }
+    .quiz-result .related-img {
+        height: 110px; /* Уменьшаем высоту изображения на 15% */
+    }
+
+
+}
+
+

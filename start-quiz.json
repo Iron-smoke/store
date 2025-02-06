@@ -1,0 +1,10 @@
+[
+  {
+    "id": "start",
+    "number": 1,
+    "question": "Выберите вид животного",
+    "options": ["Кошка", "Собака", "Грызун", "Птица", "Рыбка"],
+    "values": ["cat", "dog", "rodent", "bird", "fish"],
+    "next": ["cat-quiz.json", "dog-quiz.json", "rodent-quiz.json", "bird-quiz.json", "fish-quiz.json"]
+  }
+]

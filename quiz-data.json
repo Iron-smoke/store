@@ -1,123 +1,2318 @@
 [
   {
     "id": "start",
-    "question": "Выберите тип вашей кошки",
-    "options": ["Домашняя", "Уличная", "Смешанного типа"],
-    "values": ["indoor", "outdoor", "mixed"],
-    "next": ["weight-indoor", "weight-outdoor", "weight-mixed"]
+    "question": "Выберите вид животного",
+    "options": ["Кошка", "Собака", "Грызун","Птица","Рыба"],
+    "values": ["cat", "dog", "hamster","bird","fish"],
+    "next": ["cat", "dog", "hamster","bird","fish"]
   },
   {
-    "id": "weight-indoor",
-    "question": "Вес вашей домашней кошки",
-    "options": ["Меньше 5 кг", "5-10 кг", "Больше 10 кг"],
-    "values": ["<5", "5-10", ">10"],
-    "next": ["age-indoor-small", "age-indoor-medium", "age-indoor-large"]
+    "id": "bird",
+    "question": "выберите вид",
+    "options": ["Попугай","Канарейка","Лесная птица"],
+    "values": ["bird-parrot","bird-canary","bird-forest"],
+    "next": ["bird-parrot","bird-canary","bird-forest"]
   },
   {
-    "id": "age-indoor-small",
-    "question": "Возраст вашей домашней кошки (до 5 кг)",
-    "options": ["Меньше 1 года", "1-7 лет", "Больше 7 лет"],
-    "values": ["<1", "1-7", ">7"],
-    "next": ["activity-level-kitten", "activity-level-adult", "activity-level-senior"]
+    "id": "bird-forest",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум"],
+    "values": ["result-bird-forest-budget","result-bird-forest-premium","resultbird-forest-superpremium"],
+    "next": ["result-bird-forest-budget","result-bird-forest-premium","result-bird-forest-superpremium"]
   },
   {
-    "id": "activity-level-kitten",
-    "question": "Какой уровень активности у вашей кошки?",
-    "options": ["Очень активная", "Средняя активность", "Спокойная"],
-    "values": ["high", "medium", "low"],
-    "next": ["health-condition-kitten-high", "health-condition-kitten-medium", "health-condition-kitten-low"]
+    "id": "result-bird-forest-budget",
+    "title": "Травел для канареек",
+    "description": "Для ежедневного кормления щеглов, чижей и других видов лесных птиц",
+    "image": "images/quiz-result/food/bird/parrot/food/travel/Травел для канареек1.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/help+/микор.webp",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/help+/Минеральный камень Фламинго в клетке.jpg",
+    "descriptionrec1": "Микор",
+    "descriptionrec2": "Мелок"
   },
   {
-    "id": "health-condition-kitten-high",
-    "question": "Есть ли у кошки проблемы со здоровьем?",
-    "options": ["Нет", "Есть аллергии", "Проблемы с пищеварением"],
-    "values": ["no", "allergy", "digestive"],
-    "next": ["result-kitten-healthy", "result-kitten-allergy", "result-kitten-digestive"]
+    "id": "result-bird-forest-premium",
+    "title": "Султан для канареек",
+    "description": "Для ежедневного кормления щеглов, чижей и других видов лесных птиц",
+    "image": "images/quiz-result/food/bird/parrot/food/Sultan/Султан для канареек.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/help+/Минеральный камень Фламинго в клетке.jpg",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/RIO/Рио добавка для стимулирования пения птиц.png",
+    "descriptionrec1": "Мелок",
+    "descriptionrec2": "Рио для пения"
   },
   {
-    "id": "result-kitten-healthy",
-    "title": "Корм для здоровых котят",
-    "description": "Рекомендуем корм для здоровых котят, богатый витаминами и минералами. Идеально подходит для активного роста и укрепления иммунитета.",
-    "image": "images/pfood.png",
-    "relatedImage": "images/pfood.png",
-    "relatedImage2": "images/pfood.png",
-    "relatedImage3": "images/pfood.png",
-    "descriptionrec1": "Товар 1",
-    "descriptionrec2": "Товар 2",
-    "descriptionrec3": "Товар 3"
+    "id": "result-bird-forest-superpremium",
+    "title": "Рио для лесных птиц",
+    "description": "Для ежедневного кормления щеглов, чижей и других видов лесных птиц",
+    "image": "images/quiz-result/food/bird/parrot/food/RIO/Рио для лесных птиц.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/RIO/Рио минеральная смесь.png",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/RIO/Рио добавка для стимулирования пения птиц.png",
+    "descriptionrec1": "Рио минерал смесь",
+    "descriptionrec2": "Рио для пения"
   },
   {
-    "id": "result-kitten-allergy",
-    "title": "Корм для котят с аллергией",
-    "description": "Гипоаллергенный корм для котят с чувствительным здоровьем. Содержит легкоусвояемые белки и минимальное количество аллергенов.",
-    "image": "images/pfood.png",
-    "relatedImage": "images/pfood.png",
-    "relatedImage2": "images/pfood.png",
-    "relatedImage3": "images/pfood.png",
-    "descriptionrec1": "Товар 1",
-    "descriptionrec2": "Товар 2",
-    "descriptionrec3": "Товар 3"
+    "id": "bird-canary",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум"],
+    "values": ["result-bird-canary-budget","result-bird-canary-premium","bird-canary-superpremium"],
+    "next": ["result-bird-canary-budget","result-bird-canary-premium","bird-canary-superpremium"]
   },
   {
-    "id": "result-kitten-digestive",
-    "title": "Корм для котят с чувствительным пищеварением",
-    "description": "Корм для котят, поддерживающий здоровье пищеварительной системы. Обогащен пребиотиками и клетчаткой.",
-    "image": "images/pfood.png",
-    "relatedImage": "images/pfood.png",
-    "relatedImage2": "images/pfood.png",
-    "relatedImage3": "images/pfood.png",
-    "descriptionrec1": "Товар 1",
-    "descriptionrec2": "Товар 2",
-    "descriptionrec3": "Товар 3"
+    "id": "bird-canary-superpremium",
+    "question": "выберите вариант",
+    "options": ["Основной","Линька+"],
+    "values": ["result-bird-canary-superpremium-linka","result-bird-canary-superpremium-main"],
+    "next": ["result-bird-canary-superpremium-linka","result-bird-canary-superpremium-main"]
   },
   {
-    "id": "activity-level-adult",
-    "question": "Какой уровень активности у вашей взрослой кошки?",
-    "options": ["Очень активная", "Средняя активность", "Спокойная"],
-    "values": ["high", "medium", "low"],
-    "next": ["health-condition-adult-high", "health-condition-adult-medium", "health-condition-adult-low"]
+    "id": "result-bird-canary-superpremium-main",
+    "title": "Рио в период линьки для канареек",
+    "description": "Обогащённый натуральными фруктами, для поддержания здоровья, активности и яркого оперения птиц",
+    "image": "images/quiz-result/food/bird/parrot/food/RIO/Рио основной рацион для канареек .png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/RIO/Рио палочки для канареек.webp",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/RIO/Рио добавка для стимулирования пения птиц.png",
+    "descriptionrec1": "Рио палочка",
+    "descriptionrec2": "Рио для пения"
   },
   {
-    "id": "health-condition-adult-high",
-    "question": "Есть ли у кошки проблемы со здоровьем?",
-    "options": ["Нет", "Избыточный вес", "Чувствительное пищеварение"],
-    "values": ["no", "overweight", "digestive"],
-    "next": ["result-adult-healthy", "result-adult-overweight", "result-adult-digestive"]
+    "id": "result-bird-canary-superpremium-linka",
+    "title": "Рио в период линьки для канареек",
+    "description": "Обогащённый натуральными фруктами, для поддержания здоровья, активности и яркого оперения птиц",
+    "image": "images/quiz-result/food/bird/parrot/food/RIO/Рио в период линьки для канареек.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/RIO/Рио минеральная палочка.webp",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/RIO/Рио добавка для стимулирования пения птиц.png",
+    "descriptionrec1": "Рио палочка",
+    "descriptionrec2": "Рио для пения"
+  },
+
+  {
+    "id": "result-bird-canary-premium",
+    "title": "Sultan для канареек",
+    "description": "Обогащённый натуральными фруктами, для поддержания здоровья, активности и яркого оперения птиц",
+    "image": "images/quiz-result/food/bird/parrot/food/Sultan/Султан для канареек.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/Vernie_Druziya/Верные друзья палочки для канареек.png",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/RIO/Рио добавка для стимулирования пения птиц.png",
+    "descriptionrec1": "Палочки",
+    "descriptionrec2": "Рио для пения"
   },
   {
-    "id": "result-adult-healthy",
-    "title": "Корм для здоровых взрослых кошек",
-    "description": "Сбалансированный корм для активных взрослых кошек. Поддерживает здоровье суставов и иммунитет.",
-    "image": "images/pfood.png",
-    "relatedImage": "images/pfood.png",
-    "relatedImage2": "images/pfood.png",
-    "relatedImage3": "images/pfood.png",
-    "descriptionrec1": "Товар 1",
-    "descriptionrec2": "Товар 2",
-    "descriptionrec3": "Товар 3"
+    "id": "result-bird-canary-budget",
+    "title": "ТреВел корм для канареек Фрукты",
+    "description": "Обогащённый натуральными фруктами, для поддержания здоровья, активности и яркого оперения птиц",
+    "image": "images/quiz-result/food/bird/parrot/food/travel/Травел для канареек1.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/help+/микор.webp",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/help+/Минеральный камень Фламинго в клетке.jpg",
+    "descriptionrec1": "Микор",
+    "descriptionrec2": "Мелок"
   },
   {
-    "id": "result-adult-overweight",
-    "title": "Корм для кошек с избыточным весом",
+    "id": "bird-parrot",
+    "question": "выберите размер",
+    "options": ["Маленький","Средний","Большой"],
+    "values": ["bird-parrot-small","bird-parrot-middle","bird-parrot-big"],
+    "next": ["bird-parrot-small","bird-parrot-middle","bird-parrot-big"]
+  },
+  {
+    "id": "bird-parrot-big",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум"],
+    "values": ["result-bird-parrot-big-budget","result-bird-parrot-big-premium","result-bird-parrot-big-superpremium"],
+    "next": ["result-bird-parrot-big-budget","result-bird-parrot-big-premium","result-bird-parrot-big-superpremium"]
+  },
+  {
+    "id": "result-bird-parrot-big-superpremium",
+    "title": "Sultan для крупных поп экзотические фрукты",
+    "description": "Разработанный для удовлетворения потребностей крупных попугаев, обеспечивая их полноценным питанием, витаминами и минералами",
+    "image": "images/quiz-result/food/bird/parrot/food/RIO/Рио для крупных поп основной рацион.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/RIO/Рио палочки с фруктами для крупных поп.jpg",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/RIO/Рио фруктово-ореховая смесь для крупных поп.png",
+    "descriptionrec1": "Рио палочки",
+    "descriptionrec2": "Рио смесь"
+  },
+  {
+    "id": "result-bird-parrot-big-premium",
+    "title": "Sultan для крупных поп экзотические фрукты",
+    "description": "Разработанный для удовлетворения потребностей крупных попугаев, обеспечивая их полноценным питанием, витаминами и минералами",
+    "image": "images/quiz-result/food/bird/parrot/food/Sultan/Султан для крупных поп экзотические фрукты.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/baka/Вака Минеральная добавка для попугаев Люкс1.png",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/help+/Минеральный камень  Точило.png",
+    "descriptionrec1": "Вака минерал",
+    "descriptionrec2": "Минерал Точило"
+  },
+  {
+    "id": "result-bird-parrot-big-budget",
+    "title": "Вака для крупных попугаев люкс",
+    "description": "Разработанный для удовлетворения потребностей крупных попугаев, обеспечивая их полноценным питанием, витаминами и минералами",
+    "image": "images/quiz-result/food/bird/parrot/food/BAKA/Вака для крупных попугаев люкс-Photoroom.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/baka/Вака Минеральная добавка для попугаев Люкс1.png",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/help+/Минеральный камень  Точило.png",
+    "descriptionrec1": "Вака минерал",
+    "descriptionrec2": "Минерал Точило"
+  },
+  {
+    "id": "bird-parrot-small",
+    "question": "выберите вариант",
+    "options": ["Основной","Линька+"],
+    "values": ["bird-parrot-small-main","bird-parrot-small-linka"],
+    "next": ["bird-parrot-small-main","bird-parrot-small-linka"]
+  },
+  {
+    "id": "bird-parrot-middle",
+    "question": "выберите вариант",
+    "options": ["Основной","Линька+"],
+    "values": ["bird-parrot-middle-main","bird-parrot-middle-linka"],
+    "next": ["bird-parrot-middle-main","bird-parrot-middle-linka"]
+  },
+
+  {
+    "id": "bird-parrot-middle-main",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум"],
+    "values": ["result-bird-parrot-middle-main-budget","result-bird-parrot-middle-main-premium","result-bird-parrot-middle-main-superpremium"],
+    "next": ["result-bird-parrot-middle-main-budget","result-bird-parrot-middle-main-premium","result-bird-parrot-middle-main-superpremium"]
+  },
+  {
+    "id": "result-bird-parrot-middle-main-superpremium",
+    "title": "Корм RIO для средних попугаев, основной рацион",
+    "description": "Cбалансированный корм, обогащённый витаминами для укрепления иммунитета, яркого оперения и активной жизни вашей птицы",
+    "image": "images/quiz-result/food/bird/parrot/food/RIO/korm-rio-dlya-volnistykh-popugaev-500gr_2020-06-29_16-12-41-Photoroom.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/RIO/Рио бисквиты лесные ягоды.png",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/RIO/Рио палочки фрукты.png",
+    "descriptionrec1": "Рио Бисквиты",
+    "descriptionrec2": "Рио палочки"
+  },
+  {
+    "id": "result-bird-parrot-middle-main-premium",
+    "title": "Верные друзья для карел и неразлучников c фруктами",
+    "description": "Cбалансированный корм, обогащённый витаминами для укрепления иммунитета, яркого оперения и активной жизни вашей птицы",
+    "image": "images/quiz-result/food/bird/parrot/food/VERNIE-FRIENDS/Верные друзья для карел и неразлучников фрукты.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/Vernie_Druziya/Верные друзья палочки ракушка яйцо .jpg",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/help+/микор.webp",
+    "descriptionrec1": "Палочки",
+    "descriptionrec2": "Микор"
+  },
+  {
+    "id": "result-bird-parrot-middle-main-budget",
+    "title": "Любимчик с витаминами для волнистых попугаев",
+    "description": "Cбалансированный корм, обогащённый витаминами для укрепления иммунитета, яркого оперения и активной жизни вашей птицы",
+    "image": "images/quiz-result/food/bird/parrot/food/Lubimchik/Любимчик витамины.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/lubimchik/Любимчик палочки с яйцом и медом.png",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/help+/микор.webp",
+    "descriptionrec1": "Любимчик палочки",
+    "descriptionrec2": "Микор"
+  },
+  {
+    "id": "bird-parrot-middle-linka",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум"],
+    "values": ["result-bird-parrot-middle-linka-budget","result-bird-parrot-middle-linka-premium","result-bird-parrot-middle-linka-superpremium"],
+    "next": ["result-bird-parrot-middle-linka-budget","result-bird-parrot-middle-linka-premium","result-bird-parrot-middle-linka-superpremium"]
+  },
+  {
+    "id": "result-bird-parrot-middle-linka-superpremium",
+    "title": "Рио для средних поп в период линьки",
+    "description": "Обогащённый минералами корм для попугаев, который способствует укреплению здоровья, улучшению оперения и поддержанию жизненного тонуса",
+    "image": "images/quiz-result/food/bird/parrot/food/RIO/Рио для средних поп в период линьки.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/RIO/Рио минеральная смесь.png",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/help+/Панцырь каракатицы Рио.png",
+    "descriptionrec1": "Рио минерал смесь",
+    "descriptionrec2": "Рио панцырь"
+  },
+  {
+    "id": "result-bird-parrot-middle-linka-premium",
+    "title": "Любимчик корм для попугаев минерал",
+    "description": "Обогащённый минералами корм для попугаев, который способствует укреплению здоровья, улучшению оперения и поддержанию жизненного тонуса",
+    "image": "images/quiz-result/food/bird/parrot/food/VERNIE-FRIENDS/Верные друзья для средних поп в период линьки.jpg",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/RIO/Рио минеральная смесь.png",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/help+/Минеральный камень  Точило.png",
+    "descriptionrec1": "Рио минерал смесь",
+    "descriptionrec2": "Мелок"
+  },
+  {
+    "id": "result-bird-parrot-middle-linka-budget",
+    "title": "Любимчик корм для попугаев минерал",
+    "description": "Обогащённый минералами корм для попугаев, который способствует укреплению здоровья, улучшению оперения и поддержанию жизненного тонуса",
+    "image": "images/quiz-result/food/bird/parrot/food/Lubimchik/lyubimchik_dvoln._pop._mineraly_500_g.1.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/baka/Вака Минеральная добавка для попугаев Люкс1.png",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/help+/Минеральный камень Фламинго в клетке.jpg",
+    "descriptionrec1": "Вака Минерал",
+    "descriptionrec2": "Мелок"
+  },
+  {
+    "id": "bird-parrot-small-main",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум"],
+    "values": ["result-bird-parrot-small-main-budget","result-bird-parrot-small-main-premium","result-bird-parrot-small-main-superpremium"],
+    "next": ["result-bird-parrot-small-main-budget","result-bird-parrot-small-main-premium","result-bird-parrot-small-main-superpremium"]
+  },
+  {
+    "id": "result-bird-parrot-small-main-superpremium",
+    "title": "Рио для волнистых попугаев основной рацион",
+    "description": "Питательный и сбалансированный корм, обеспечивающий попугаев всеми необходимыми витаминами и минералами для здоровья и активной жизни",
+    "image": "images/quiz-result/food/bird/parrot/food/RIO/korm-rio-dlya-volnistykh-popugaev-500gr_2020-06-29_16-12-41-Photoroom.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/RIO/Рио Синегальское просо.png",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/RIO/Рио палочки фрукты.png",
+    "descriptionrec1": "Рио просо",
+    "descriptionrec2": "Рио палочки"
+  },
+  {
+    "id": "result-bird-parrot-small-main-premium",
+    "title": "Верные друзья для волнистых поп с фруктами",
+    "description": "Питательный и сбалансированный корм, обеспечивающий попугаев всеми необходимыми витаминами и минералами для здоровья и активной жизни",
+    "image": "images/quiz-result/food/bird/parrot/food/VERNIE-FRIENDS/Верные друзья для волнистых поп с фруктами.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/Vernie_Druziya/Верные друзья палочки мед.png",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/help+/Минеральный камень  Точило.png",
+    "descriptionrec1": "Верные друзья",
+    "descriptionrec2": "Минерал Точило"
+  },
+  {
+    "id": "result-bird-parrot-small-main-budget",
+    "title": "Вака + для мелких попугаев",
+    "description": "Питательный и сбалансированный корм, обеспечивающий попугаев всеми необходимыми витаминами и минералами для здоровья и активной жизни",
+    "image": "images/quiz-result/food/bird/parrot/food/BAKA/Вака + для мелких попугаев.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/lubimchik/Любимчик палочки для поп с яйцом.png",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/help+/микор.webp",
+    "descriptionrec1": "Любимчик палочки",
+    "descriptionrec2": "Микор"
+  },
+  {
+    "id": "bird-parrot-small-linka",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум"],
+    "values": ["result-bird-parrot-small-linka-budget","result-bird-parrot-small-linka-premium","result-bird-parrot-small-linka-superpremium"],
+    "next": ["result-bird-parrot-small-linka-budget","result-bird-parrot-small-linka-premium","result-bird-parrot-small-linka-superpremium"]
+  },
+  {
+    "id": "result-bird-parrot-small-linka-superpremium",
+    "title": "Рио для волнистых попугаев в период линьки",
+    "description": "Помогает укрепить здоровье и поддержать рост нового оперения в сложный период линьки",
+    "image": "images/quiz-result/food/bird/parrot/food/RIO/Рио для волнистых попугаев в период линьки.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/RIO/Рио минеральная смесь.png",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/help+/Панцырь каракатицы Рио.png",
+    "descriptionrec1": "Рио смесь минералов",
+    "descriptionrec2": "Панцырь каракатицы"
+  },
+  {
+    "id": "result-bird-parrot-small-linka-premium",
+    "title": "Любимчик с минералами для волнистых попугаев",
+    "description": "Помогает укрепить здоровье и поддержать рост нового оперения в сложный период линьки",
+    "image": "images/quiz-result/food/bird/parrot/food/VERNIE-FRIENDS/Верные Друзья для волнистых попугаев в период линьки.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/RIO/Рио минеральная смесь.png",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/help+/Минеральный камень  Точило.png",
+    "descriptionrec1": "Рио смесь минералов",
+    "descriptionrec2": "Камень Точило"
+  },
+  {
+    "id": "result-bird-parrot-small-linka-budget",
+    "title": "Любимчик с минералами для волнистых попугаев",
+    "description": "Cбалансированный корм, обогащённый минералами для поддержания здоровья, крепкого оперения и активности птицы",
+    "image": "images/quiz-result/food/bird/parrot/food/Lubimchik/Lubimchik-small-main-budget.png",
+    "relatedImage": "images/quiz-result/recomended/bird/bads/baka/Вака Минеральная добавка для попугаев Люкс1.png",
+    "relatedImage2": "images/quiz-result/recomended/bird/bads/help+/Минеральный камень Фламинго в клетке.jpg",
+    "descriptionrec1": "Вака Люкс добавка",
+    "descriptionrec2": "Мелок"
+  },
+  {
+    "id": "fish",
+    "question": "выберите тип",
+    "options": ["Мирные","Донные","Циклиды","Прудовые","Черепахи"],
+    "values": ["fish-peachefull","fish-down","fish-ciklid","fish-prud","fish-turtle"],
+    "next": ["fish-peachefull","fish-down","fish-ciklid","fish-prud","fish-turtle"]
+  },
+  {
+    "id": "fish-down",
+    "question": "выберите размер",
+    "options": ["Мелкие","Средние","Крупные"],
+    "values": ["result-fish-down-small","result-fish-down-middle","result-fish-down-big"],
+    "next": ["result-fish-down-small","fish-down-middle","result-fish-down-big"]
+  },
+  {
+    "id": "fish-down-middle",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум"],
+    "values": ["result-fish-down-middle-budget","result-fish-down-middle-premium"],
+    "next": ["result-fish-down-middle-budget","result-fish-down-middle-premium"]
+  },
+  {
+    "id": "result-fish-down-big",
+    "title": "Tetra Wafer Mix",
+    "description": "Натуральный корм обеспечивает здоровье и активность ваших рыбок, не содержащий химических добавок и консервантов.",
+    "image": "images/quiz-result/food/haster/fish/Tetra Pleco Spirulina Wafers .png",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/big/stars.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/aqua_light+2.jpg",
+    "descriptionrec1": "Звезды",
+    "descriptionrec2": "Растения светящиеся"
+  },
+  {
+    "id": "result-fish-down-middle-premium",
+    "title": "Tetra Wafer Mix",
+    "description": "Натуральный корм обеспечивает здоровье и активность ваших рыбок, не содержащий химических добавок и консервантов.",
+    "image": "images/quiz-result/food/haster/fish/Tetra Wafer Mix.png",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/big/stars.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/aqua_light+2.jpg",
+    "descriptionrec1": "Звезды",
+    "descriptionrec2": "Растения светящиеся"
+  },
+  {
+    "id": "result-fish-down-middle-budget",
+    "title": "Крупка",
+    "description": "Натуральный корм обеспечивает здоровье и активность ваших рыбок, не содержащий химических добавок и консервантов.",
+    "image": "images/quiz-result/food/haster/fish/крупка.png",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/plants/aqua_light_3.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/aqua_plants6.jpg",
+    "descriptionrec1": "Водоросли светящиеся",
+    "descriptionrec2": "Растения"
+  },
+  {
+    "id": "result-fish-down-small",
+    "title": "Крупка",
+    "description": "Натуральный корм обеспечивает здоровье и активность ваших рыбок, не содержащий химических добавок и консервантов.",
+    "image": "images/quiz-result/food/haster/fish/крупка.png",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/plants/aqua_light_3.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/aqua_plants6.jpg",
+    "descriptionrec1": "Водоросли светящиеся",
+    "descriptionrec2": "Растения"
+  },
+  {
+    "id": "fish-turtle",
+    "question": "выберите тип",
+    "options": ["Гранулы","Натуральный"],
+    "values": ["fish-turtle-granuls","fish-turtle-natural"],
+    "next": ["fish-turtle-granuls","fish-turtle-natural"]
+  },
+  {
+    "id": "fish-turtle-natural",
+    "question": "выберите тип",
+    "options": ["Гамарус","Анчоус","Креветка"],
+    "values": ["result-fish-turtle-natural-gamarus","result-fish-turtle-natural-anhous","result-fish-turtle-natural-krevetka"],
+    "next": ["result-fish-turtle-natural-gamarus","result-fish-turtle-natural-anhous","result-fish-turtle-natural-krevetka"]
+  },
+  {
+    "id": "result-fish-turtle-natural-krevetka",
+    "title": "Креветки",
+    "description": "Натуральный корм для черепах, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/krevetki.jpeg",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/big/бревно1.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/aqua_plants6.jpg",
+    "descriptionrec1": "Бревно",
+    "descriptionrec2": "Растения"
+  },
+  {
+    "id": "result-fish-turtle-natural-anhous",
+    "title": "Анчоус",
+    "description": "Натуральный корм для черепах, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/анчоус.jpg",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/big/бревно1.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/aqua_plants6.jpg",
+    "descriptionrec1": "Бревно",
+    "descriptionrec2": "Растения"
+  },
+  {
+    "id": "result-fish-turtle-natural-gamarus",
+    "title": "Гамарус",
+    "description": "Натуральный корм для черепах, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/Gamarus.png",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/big/paleno.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/big/палено.jpg",
+    "descriptionrec1": "Бревно",
+    "descriptionrec2": "Палено"
+  },
+  {
+    "id": "fish-turtle-granuls",
+    "question": "выберите тип",
+    "options": ["Кальций+","Комплексные","мясные"],
+    "values": ["result-fish-turtle-granuls-сalcium","result-fish-turtle-granuls-сomplex","result-fish-turtle-granuls-meat"],
+    "next": ["result-fish-turtle-granuls-сalcium","result-fish-turtle-granuls-сomplex","result-fish-turtle-granuls-meat"]
+  },
+  {
+    "id": "result-fish-turtle-granuls-meat",
+    "title": "Tetra Cichlid Sticks",
+    "description": "Натуральный корм для черепах, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/Tetra Cichlid Sticks.png",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/big/ship1.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/aqua_light_3.jpg",
+    "descriptionrec1": "Корабль",
+    "descriptionrec2": "Растения светящиеся"
+  },
+  {
+    "id": "result-fish-turtle-granuls-сomplex",
+    "title": "Tetra ReptoMin Sticks",
+    "description": "Натуральный корм для черепах, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/Tetra ReptoMin Sticks.jpg",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/big/stars.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/aqua_light_3.jpg",
+    "descriptionrec1": "Звезды",
+    "descriptionrec2": "Растения светящиеся"
+  },
+  {
+    "id": "result-fish-turtle-granuls-сalcium",
+    "title": "ТОРТИЛА М Крепкий панцирь",
+    "description": "Натуральный корм для черепах, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/ТОРТИЛА М Крепкий панцирь .jpg",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/grunt/grunt_light+2.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/aqua_light+2.jpg",
+    "descriptionrec1": "Галька светящаяся",
+    "descriptionrec2": "Растения светящиеся"
+  },
+  {
+    "id": "fish-prud",
+    "question": "выберите тип",
+    "options": ["Гранулы","Натуральный"],
+    "values": ["fish-prud-granuls","result-fish-prud-natural"],
+    "next": ["fish-prud-granuls","result-fish-prud-natural"]
+  },
+  {
+    "id": "fish-prud-granuls",
+    "question": "выберите тип",
+    "options": ["Растительные","Мясные"],
+    "values": ["result-fish-prud-rastitel","result-fish-prud-meat"],
+    "next": ["result-fish-prud-rastitel","result-fish-prud-meat"]
+  },
+  {
+    "id": "result-fish-prud-meat",
+    "title": "Tetra Cichlid Sticks",
+    "description": "Натуральный корм для аквариумных рыбок, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/Tetra Cichlid Sticks.png",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/grunt/grunt_light+.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/aqua_plats_light+1.jpg",
+    "descriptionrec1": "Галька светящаяся",
+    "descriptionrec2": "Растения светящиеся"
+  },
+  {
+    "id": "result-fish-prud-rastitel",
+    "title": "Tetra Pond Sticks",
+    "description": "Натуральный корм для аквариумных рыбок, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/tetra Pond Sticks .webp",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/grunt/grunt_light+.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/aqua_plats_light+1.jpg",
+    "descriptionrec1": "Галька светящаяся",
+    "descriptionrec2": "Растения светящиеся"
+  },
+
+  {
+    "id": "result-fish-prud-natural",
+    "title": "Гамарус",
+    "description": "Натуральный корм для аквариумных рыбок, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/Gamarus.png",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/grunt/grunt_blue_red_white.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/aqua_plants_light+.jpg",
+    "descriptionrec1": "Галька",
+    "descriptionrec2": "Растения светящиеся"
+  },
+
+
+  {
+    "id": "fish-ciklid",
+    "question": "выберите размер",
+    "options": ["Мелкий","Средний","Крупный"],
+    "values": ["fish-ciklid-small","fish-ciklid-midl","fish-ciklid-big"],
+    "next": ["fish-ciklid-small","fish-ciklid-midl","fish-ciklid-big"]
+  },
+  {
+    "id": "fish-ciklid-big",
+    "question": "выберите тип",
+    "options": ["Шарики","Палочки"],
+    "values": ["result-fish-ciklid-big-balls","result-fish-ciklid-big-sticks"],
+    "next": ["result-fish-ciklid-big-balls","result-fish-ciklid-big-sticks"]
+  },
+  {
+    "id": "result-fish-ciklid-big-sticks",
+    "title": "Tetra Cichlid Sticks палочки",
+    "description": "Натуральный корм для аквариумных рыбок, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/Tetra Cichlid Sticks.png",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/grunt/гаплька желто-зеленая.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/plants_light+.jpg",
+    "descriptionrec1": "Галька",
+    "descriptionrec2": "Растения светящиеся"
+  },
+  {
+    "id": "result-fish-ciklid-big-balls",
+    "title": "Tetra Cichlid Colour Mini шарики",
+    "description": "Натуральный корм для аквариумных рыбок, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/Tetra Cichlid Colour Mini.png",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/grunt/галька.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/big/маяк.jpg",
+    "descriptionrec1": "Галька светящаяся",
+    "descriptionrec2": "Маяк"
+  },
+  {
+    "id": "fish-ciklid-midl",
+    "question": "выберите тип",
+    "options": ["Крупа","Чипсы"],
+    "values": ["result-fish-ciklid-midl-crup","result-fish-ciklid-midl-chips"],
+    "next": ["result-fish-ciklid-midl-crup","result-fish-ciklid-midl-chips"]
+  },
+  {
+    "id": "result-fish-ciklid-midl-chips",
+    "title": "Tetra PRO Algae Multi-Crisps чипсы",
+    "description": "Натуральный корм для аквариумных рыбок, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/Tetra PRO Algae Multi-Crisps.webp",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/grunt/brown+white_grunt.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/aqua_plants_6.jpg",
+    "descriptionrec1": "Грунт",
+    "descriptionrec2": "Водоросли"
+  },
+  {
+    "id": "result-fish-ciklid-midl-crup",
+    "title": "Tetra Discus Granules крупа",
+    "description": "Натуральный корм для аквариумных рыбок, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/Tetra Discus Granules.png",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/grunt/purple_grunt.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/grunt/g1.jpg",
+    "descriptionrec1": "Грунт",
+    "descriptionrec2": "Грунт светящийся"
+  },
+  {
+    "id": "fish-ciklid-small",
+    "question": "выберите тип",
+    "options": ["Крупа","Чипсы"],
+    "values": ["result-fish-ciklid-small-crup","result-fish-ciklid-small-chips"],
+    "next": ["result-fish-ciklid-small-crup","result-fish-ciklid-small-chips"]
+  },
+  {
+    "id": "result-fish-ciklid-small-chips",
+    "title": "Tetra PRO Algae Multi-Crisps чипсы",
+    "description": "Натуральный корм для аквариумных рыбок, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/Tetra PRO Algae Multi-Crisps  чипсы.png",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/grunt/blue_grunt.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/big/ship.jpg",
+    "descriptionrec1": "Грунт",
+    "descriptionrec2": "Корабль"
+  },
+  {
+    "id": "result-fish-ciklid-small-crup",
+    "title": "Tetra Discus Granules крупа",
+    "description": "Натуральный корм для аквариумных рыбок, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/Tetra Discus Granules крупа.png",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/grunt/green+white_grunt.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/аква_растение5.jpg",
+    "descriptionrec1": "Грунт",
+    "descriptionrec2": "Растение"
+  },
+
+  {
+    "id": "fish-peachefull",
+    "question": "выберите вид корма",
+    "options": ["Для окраса","Натуральный","Питательный"],
+    "values": ["fish-peachefull-color","fish-peachefull-natural","fish-peachefull-pitat"],
+    "next": ["fish-peachefull-color","fish-peachefull-natural","fish-peachefull-pitat"]
+  },
+  {
+    "id": "fish-peachefull-pitat",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум"],
+    "values": ["result-fish-peachefull-pitat-budget","result-fish-peachefull-pitat-premium"],
+    "next": ["result-fish-peachefull-pitat-budget","result-fish-peachefull-pitat-premium"]
+  },
+  {
+    "id": "result-fish-peachefull-pitat-premium",
+    "title": "TetraMin flakes",
+    "description": "Натуральный корм для аквариумных рыбок, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/TetraMin Flakes.png",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/grunt/grunt_red+white.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/аква_растение4.jpg",
+    "descriptionrec1": "Грунт",
+    "descriptionrec2": "Растение"
+  },
+  {
+    "id": "result-fish-peachefull-pitat-budget",
+    "title": "Аква меню универсал",
+    "description": "Натуральный корм для аквариумных рыбок, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/aqua-menu-universal.png",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/grunt/grunt_red+white.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/аква_растение4.jpg",
+    "descriptionrec1": "Грунт",
+    "descriptionrec2": "Растение"
+  },
+
+  {
+    "id": "fish-peachefull-natural",
+    "question": "выберите размер",
+    "options": ["Мелкий","Средний","Крупный"],
+    "values": ["result-fish-peachefull-natural-small","result-fish-peachefull-natural-medium","result-fish-peachefull-natural-large"],
+    "next": ["result-fish-peachefull-natural-small","result-fish-peachefull-natural-medium","fish-peachefull-natural-large"]
+  },
+  {
+    "id": "fish-peachefull-natural-large",
+    "question": "выберите тип",
+    "options": ["Бюджетный","Премиум"],
+    "values": ["result-fish-peachefull-natural-large-anchous","result-fish-peachefull-natural-large-krevetki"],
+    "next": ["result-fish-peachefull-natural-large-anchous","result-fish-peachefull-natural-large-krevetki"]
+  },
+  {
+    "id": "result-fish-peachefull-natural-large-krevetki",
+    "title": "Креветки",
+    "description": "Натуральный корм для аквариумных рыбок, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/krevetki.jpeg",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/grunt/black_grunt.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/aqua_plants4.jpg",
+    "descriptionrec1": "Грунт",
+    "descriptionrec2": "Растение"
+  },
+  {
+    "id": "result-fish-peachefull-natural-large-anchous",
+    "title": "Анчоус",
+    "description": "Натуральный корм для аквариумных рыбок, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/анчоус.jpg",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/plants/aqua_plants1.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/aqua_plants.png",
+    "descriptionrec1": "Водоросли",
+    "descriptionrec2": "Растение"
+  },
+  {
+    "id": "result-fish-peachefull-natural-medium",
+    "title": "Гамарус",
+    "description": "Натуральный корм для аквариумных рыбок, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/Gamarus.png",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/plants/аква_растение3.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/plants/аква_растение2.jpg",
+    "descriptionrec1": "Растения",
+    "descriptionrec2": "Водоросли"
+  },
+  {
+    "id": "result-fish-peachefull-natural-small",
+    "title": "Дафния",
+    "description": "Натуральный корм для аквариумных рыбок, богатый белками и полезными жирами",
+    "image": "images/quiz-result/food/haster/fish/дафния.webp",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/big/aqua-castle.jpeg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/rakushki/ракушки.jpg",
+    "descriptionrec1": "Замок",
+    "descriptionrec2": "Ракушки"
+  },
+  {
+    "id": "fish-peachefull-color",
+    "question": "выберите тип",
+    "options": ["Бюджетный","Премиум"],
+    "values": ["result-fish-peachefull-color-budget","result-fish-peachefull-color-premium"],
+    "next": ["result-fish-peachefull-color-budget","result-fish-peachefull-color-premium"]
+  },
+  {
+    "id": "result-fish-peachefull-color-premium",
+    "title": "TetraPRO Colour Multi-Crisps",
+    "description": "Специально разработанный для средних декоративных рыб, который усиливает яркость их естественной окраски",
+    "image": "images/quiz-result/food/haster/fish/TetraPRO Colour Multi-Crisps.png",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/rakushki/ракушки (2).jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/big/meduza.jpg",
+    "descriptionrec1": "Ракушки",
+    "descriptionrec2": "Медуза"
+  },
+  {
+    "id": "result-fish-peachefull-color-budget",
+    "title": "АКВА МЕНЮ Радуга-2 гранулы для усиления окраса рыб средних размеров",
+    "description": "Специально разработанный для средних декоративных рыб, который усиливает яркость их естественной окраски",
+    "image": "images/quiz-result/food/haster/fish/Kорм экструдированный АКВА МЕНЮ Радуга-2 25г, гранулы для усиления окраса рыб средних размеров.png",
+    "relatedImage": "images/quiz-result/recomended/fish/decoration/rakushki/ракушки3.jpg",
+    "relatedImage2": "images/quiz-result/recomended/fish/decoration/grunt/white_grunt.jpg",
+    "descriptionrec1": "Ракушки",
+    "descriptionrec2": "Грунт"
+  },
+
+  {
+    "id": "fish-peachefull",
+    "question": "выберите тип",
+    "options": ["Мирные","Донные","Циклиды","Прудовые","Черепахи"],
+    "values": ["fish-peachefull","fish-down","fish-ciklid","fish-prud","fish-turtle"],
+    "next": ["fish-peachefull","fish-down","fish-ciklid","fish-prud","fish-turtle"]
+  },
+  {
+    "id": "hamster",
+    "question": "выберите вид",
+    "options": ["Крыса","Дегу","Хомяки","Морская свинка","Кролик","Шиншила","Песчанка"],
+    "values": ["hamster-rat", "result-hamster-degu", "hamster-hamster","hamster-swimpig","hamster-rabbit","hamster-shin","result-hamster-pescha"],
+    "next": ["hamster-rat", "result-hamster-degu", "hamster-hamster","hamster-swimpig","hamster-rabbit","hamster-shin","result-hamster-pescha"]
+  },
+  {
+    "id": "result-hamster-pescha",
+    "title": "Little One для песчанки",
+    "description": "С каждой гранулой питомец получает полный баланс всех питательных веществ",
+    "image": "images/quiz-result/food/haster/Little_one_pechanka.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/LITTLE-ONE/Little_one_tunnel.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/LITTLE-ONE/Литл ван корзинка из луговых травa.png",
+    "descriptionrec1": "Little One тунель",
+    "descriptionrec2": "Little One корзинка"
+  },
+
+  {
+    "id": "hamster-shin",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум"],
+    "values": ["result-hamster-shin-budget","result-hamster-shin-premium","result-hamster-shin-superpremium"],
+    "next":  ["result-hamster-shin-budget","result-hamster-shin-premium","result-hamster-shin-superpremium"]
+  },
+  {
+    "id": "result-hamster-shin-superpremium",
+    "title": "Little One для шиншил",
+    "description": "С каждой гранулой питомец получает полный баланс всех питательных веществ",
+    "image": "images/quiz-result/food/haster/shin/Little_one_shin.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/LITTLE-ONE/little-one-palochki-travami.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/LITTLE-ONE/Литл ван корзинка из луговых травa.png",
+    "descriptionrec1": "Little One палочки",
+    "descriptionrec2": "Little One корзинка"
+  },
+  {
+    "id": "result-hamster-shin-premium",
+    "title": "Sultan Green Chinchilla",
+    "description": "С каждой гранулой питомец получает полный баланс всех питательных веществ",
+    "image": "images/quiz-result/food/haster/shin/SULTAN_GREEN_shinshilla_Chinchill.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/HELP+/Минеральный камень.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/HELP+/seno-zvere-moe-dlya-gryzunov.png",
+    "descriptionrec1": "Минерал камень",
+    "descriptionrec2": "Зверье мое сено"
+  },
+  {
+    "id": "result-hamster-shin-budget",
+    "title": "Вака высокое качество для кроликов и шиншил",
+    "description": "Обогащен витаминами и минералами, обеспечивает отличное здоровье и активность",
+    "image": "images/quiz-result/food/haster/rabbit/Вака высокое качество для кроликов и шиншил.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/HELP+/Минеральный камень.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/HELP+/seno-zvere-moe-dlya-gryzunov.png",
+    "descriptionrec1": "Минерал камень",
+    "descriptionrec2": "Зверье мое сено"
+  },
+  {
+    "id": "hamster-rabbit",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум"],
+    "values": ["result-hamster-rabbit-budget","hamster-rabbit-premium","hamster-rabbit-superpremium"],
+    "next":  ["result-hamster-rabbit-budget","hamster-rabbit-premium","hamster-rabbit-superpremium"]
+  },
+  {
+    "id": "hamster-rabbit-superpremium",
+    "question": "выберите возраст",
+    "options": ["Молодой (до 8 месяцев)","Взрослый"],
+    "values": ["result-hamster-rabbit-superpremium-young","result-hamster-rabbit-superpremium-old"],
+    "next": ["result-hamster-rabbit-superpremium-young","result-hamster-rabbit-superpremium-old"]
+  },
+  {
+    "id": "result-hamster-rabbit-superpremium-old",
+    "title": "Little One для взрослых кроликов",
+    "description": "Обогащен витаминами и минералами, обеспечивает отличное здоровье и активность",
+    "image": "images/quiz-result/food/haster/rabbit/Little_one_old_rabbits.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/LITTLE-ONE/Литл ван корзинка из луговых травa.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/LITTLE-ONE/Little-One-Litl-Van-Palochki-dlya-morskih-svinok-krolikov-degu-i-shinshill-s-travami-i-cvetami-.png",
+    "descriptionrec1": "Little One корзинка",
+    "descriptionrec2": "Little one палочки"
+  },
+  {
+    "id": "result-hamster-rabbit-superpremium-young",
+    "title": "Little One для молодых кроликов",
+    "description": "Обогащен витаминами и минералами, обеспечивает отличное здоровье и активность",
+    "image": "images/quiz-result/food/haster/rabbit/LITTLE-ONE-dlya-young-rabbits.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/LITTLE-ONE/Литл ван корзинка из луговых травa.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/LITTLE-ONE/Little-One-Litl-Van-Palochki-dlya-morskih-svinok-krolikov-degu-i-shinshill-s-travami-i-cvetami-.png",
+    "descriptionrec1": "Little One корзинка",
+    "descriptionrec2": "Little one палочки"
+  },
+  {
+    "id": "hamster-rabbit-premium",
+    "question": "выберите возраст",
+    "options": ["Молодой (до 8 месяцев)","Взрослый"],
+    "values": ["result-hamster-rabbit-premium-young","result-hamster-rabbit-premium-old"],
+    "next": ["result-hamster-rabbit-premium-young","result-hamster-rabbit-premium-old"]
+  },
+  {
+    "id": "result-hamster-rabbit-premium-old",
+    "title": "Sultan для кроликов",
+    "description": "Обогащен витаминами и минералами, обеспечивает отличное здоровье и активность",
+    "image": "images/quiz-result/food/haster/rabbit/Султан премиум для кроликов.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/HELP+/seno-zvere-moe-dlya-gryzunov.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/HELP+/Минеральный камень.png",
+    "descriptionrec1": "Зверье мое сено",
+    "descriptionrec2": "Минерал камень"
+  },
+  {
+    "id": "result-hamster-rabbit-premium-young",
+    "title": "Sultan для молодых кроликов",
+    "description": "Обогащен витаминами и минералами, обеспечивает отличное здоровье и активность",
+    "image": "images/quiz-result/food/haster/rabbit/Султан для молодых кроликов1.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/HELP+/seno-zvere-moe-dlya-gryzunov.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/HELP+/Минеральный камень.png",
+    "descriptionrec1": "Зверье мое сено",
+    "descriptionrec2": "Минерал камень"
+  },
+  {
+    "id": "result-hamster-rabbit-budget",
+    "title": "Вака высокое качество для кроликов",
+    "description": "Обогащен витаминами и минералами, обеспечивает отличное здоровье и активность",
+    "image": "images/quiz-result/food/haster/rabbit/Вака высокое качество для кроликов и шиншил.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/HELP+/seno-zvere-moe-dlya-gryzunov.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/HELP+/Минеральный камень.png",
+    "descriptionrec1": "Зверье мое сено",
+    "descriptionrec2": "Минерал камень"
+  },
+  {
+    "id": "hamster-swimpig",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум"],
+    "values": ["result-hamster-swimpig-budget","result-hamster-swimpig-premium","result-hamster-swimpig-superpremium"],
+    "next": ["result-hamster-swimpig-budget","result-hamster-swimpig-premium","result-hamster-swimpig-superpremium"]
+  },
+  {
+    "id": "result-hamster-swimpig-superpremium",
+    "title": "little one корм для морских свинок",
+    "description": "Сбалансированный и питательный, обеспечивает здоровье и энергию ваших питомцев",
+    "image": "images/quiz-result/food/haster/swimpig/little one корм для морских свинок.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/LITTLE-ONE/Литл ван корзинка из луговых травa.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/LITTLE-ONE/Little_one_swimpig.png",
+    "descriptionrec1": "Little one корзинка",
+    "descriptionrec2": "Little One"
+  },
+  {
+    "id": "result-hamster-swimpig-premium",
+    "title": "Sultan Premium",
+    "description": "Сбалансированный и питательный, обеспечивает здоровье и энергию ваших питомцев",
+    "image": "images/quiz-result/food/haster/swimpig/Султан Premium Корм для морских свинок.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/HELP+/trebleron-seno.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/LITTLE-ONE/Little_one_swimpig.png",
+    "descriptionrec1": "Таблерон сено",
+    "descriptionrec2": "Little One"
+  },
+  {
+    "id": "result-hamster-swimpig-budget",
+    "title": "Любимчик для морских свинок",
+    "description": "Сбалансированный и питательный, обеспечивает здоровье и энергию ваших питомцев",
+    "image": "images/quiz-result/food/haster/swimpig/Lubimchik-dlya-swimpig.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/HELP+/seno-zvere-moe-dlya-gryzunov.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/travel/traver-sticks-hamster.png",
+    "descriptionrec1": "Зверье мое сено",
+    "descriptionrec2": "Травел палочки"
+  },
+  {
+    "id": "hamster-hamster",
+    "question": "выберите размер",
+    "options": ["Обычный","Карликовый"],
+    "values": ["hamster-hamster-normal","result-hamster-hamster-mini"],
+    "next": ["hamster-hamster-normal","result-hamster-hamster-mini"]
+  },
+  {
+    "id": "hamster-hamster-normal",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум"],
+    "values": ["result-hamster-hamster-normal-budget","result-hamster-hamster-normal-premium","result-hamster-hamster-normal-superpremium"],
+    "next": ["result-hamster-hamster-normal-budget","result-hamster-hamster-normal-premium","result-hamster-hamster-normal-superpremium"]
+  },
+  {
+    "id": "result-hamster-hamster-normal-superpremium",
+    "title": "Little one для хомяков",
+    "description": "Созданный из натуральных ингредиентов, обеспечивающий сбалансированное питание и поддержку здоровья ваших пушистых питомцев",
+    "image": "images/quiz-result/food/haster/hamster/Little_one_hamster.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/LITTLE-ONE/Little_one_stickes.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/LITTLE-ONE/Little One Бисквиты с морковью и шпинатом для всеядных грызунов.png",
+    "descriptionrec1": "Little One палочки",
+    "descriptionrec2": "Little One бисквиты"
+  },
+  {
+    "id": "result-hamster-hamster-normal-premium",
+    "title": "Sultan Bio Appetite Premium",
+    "description": "Созданный из натуральных ингредиентов, обеспечивающий сбалансированное питание и поддержку здоровья ваших пушистых питомцев",
+    "image": "images/quiz-result/food/haster/hamster/sultan-for-hamstes.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/BEST FRIENDS/верные друзья палочки фрукты для грызунов.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/HELP+/solonec2.png",
+    "descriptionrec1": "палочки",
+    "descriptionrec2": "Солонец зефир"
+  },
+  {
+    "id": "result-hamster-hamster-normal-budget",
+    "title": "BAKA корм для хомяков",
+    "description": "Созданный из натуральных ингредиентов, обеспечивающий сбалансированное питание и поддержку здоровья ваших пушистых питомцев",
+    "image": "images/quiz-result/food/haster/hamster/BAKA корм для хомяков.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/travel/traver-sticks-hamster.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/HELP+/solonec2.png",
+    "descriptionrec1": "Travel палочки",
+    "descriptionrec2": "Солонец зефир"
+  },
+  {
+    "id": "result-hamster-hamster-mini",
+    "title": "Little One корм для карликовых хомячков",
+    "description": "Специально для карликовых хомячков, обеспечивающий их всеми необходимыми питательными веществами для здоровья и активности",
+    "image": "images/quiz-result/food/haster/hamster/Little One корм для карликовых хомячков.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/LITTLE-ONE/Little_one_degy_sticks.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/LITTLE-ONE/little-one-palochki-travami.png",
+    "descriptionrec1": "Little One палочки",
+    "descriptionrec2": "Little One палочки"
+  },
+  {
+    "id": "result-hamster-degu",
+    "title": "Little One Дэгу",
+    "description": "Обогащен витаминно-минеральным комплексом и отличается высоким содержанием клетчатки, необходимой для правильного пищеварения дегу",
+    "image": "images/quiz-result/food/haster/LITTLE_ONE_Degus-.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/LITTLE-ONE/Little_one_degy_sticks.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/LITTLE-ONE/little-one-palochki-travami.png",
+    "descriptionrec1": "Little One палочки",
+    "descriptionrec2": "Little One палочки"
+  },
+  {
+    "id": "hamster-rat",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Средний","Премиум"],
+    "values": ["result-hamster-rat-budget","result-hamster-rat-midl","result-hamster-rat-premium"],
+    "next": ["result-hamster-rat-budget","result-hamster-rat-midl","result-hamster-rat-premium"]
+  },
+  {
+    "id": "result-hamster-rat-premium",
+    "title": "Little One Корм для крыс",
+    "description": "Для поддержания здоровья, активности и хорошего самочувствия питомца благодаря оптимальному сочетанию зерновых, витаминов и минералов",
+    "image": "images/quiz-result/food/haster/rat/литл ван для крыс.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/LITTLE-ONE/Little One. Палочки для хомяков, крыс.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/LITTLE-ONE/Little One Бисквиты с морковью и шпинатом для всеядных грызунов.png",
+    "descriptionrec1": "Little One для крыс",
+    "descriptionrec2": "Little One бисквиты"
+  },
+  {
+    "id": "result-hamster-rat-midl",
+    "title": "ВАКА высокое качество для грызунов",
+    "description": "Для поддержания здоровья, активности и хорошего самочувствия питомца благодаря оптимальному сочетанию зерновых, витаминов и минералов",
+    "image": "images/quiz-result/food/haster/rat/ВАКА ВЫСОКОЕ КАЧЕСТВО корм для грызунов.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/HELP+/fitominy-dlya-gryzunov-1-Photoroom.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/BEST FRIENDS/верные друзья палочки фрукты для грызунов.png",
+    "descriptionrec1": "VEDA витамины",
+    "descriptionrec2": "Верные друзья"
+  },
+  {
+    "id": "result-hamster-rat-budget",
+    "title": "Любимчик для крыс",
+    "description": "Для поддержания здоровья, активности и хорошего самочувствия питомца благодаря оптимальному сочетанию зерновых, витаминов и минералов",
+    "image": "images/quiz-result/food/haster/rat/Любимчик для крыс.png",
+    "relatedImage": "images/quiz-result/recomended/hamster/FAVORITE/Любимчик палочки для грызунов.png",
+    "relatedImage2": "images/quiz-result/recomended/hamster/HELP+/mineralnyy_kamen_dlya_gryzunov_zefir_myshild_korobka_1_sht_12_gr_3093910_1-Photoroom.png",
+    "descriptionrec1": "Любимчик палочки",
+    "descriptionrec2": "Минерал камень"
+  },
+  {
+    "id": "dog",
+    "question": "выберите возраст",
+    "options": ["от 1 до 4 месяцев","от 2 до 12 месяцев","от 1 года до 7 лет"],
+    "values": ["1-4 month-dog", "2-12 month-dog", "1-7 year-dog"],
+    "next": ["1-4 month-dog", "2-12 month-dog", "1-7 year-dog"]
+  },
+  {
+    "id": "1-7 year-dog",
+    "question": "выберите размер",
+    "options": ["Маленький (до 10кг)","Средний (до 20кг)","Крупный (от 30кг)"],
+    "values": ["1-7 year-dog-mini","1-7 year-dog-medium","1-7 year-dog-big"],
+    "next": ["1-7 year-dog-mini","1-7 year-dog-medium","1-7 year-dog-big"]
+  },
+  {
+    "id": "1-7 year-dog-big",
+    "question": "выберите вариант",
+    "options": ["Классический","Гиппоаллергенный","для чувствительного пищеварения"],
+    "values": ["1-7 year-dog-big-classic","1-7 year-dog-big-hypoalergic","1-7 year-dog-big-JKT"],
+    "next": ["1-7 year-dog-big-classic","1-7 year-dog-big-hypoalergic","1-7 year-dog-big-JKT"]
+  },
+  {
+    "id": "1-7 year-dog-big-JKT",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум"],
+    "values": ["result-1-7 year-dog-big-JKT-budget","result-1-7 year-dog-big-JKT-premium"],
+    "next": ["result-1-7 year-dog-big-JKT-budget","result-1-7 year-dog-big-JKT-premium"]
+  },
+  {
+    "id": "result-1-7 year-dog-big-JKT-premium",
+    "title": "Delicana для чувствительного пищеварения крупных пород",
+    "description": "Обеспечивает здоровую кожу и блестящую шерсть благодаря тщательно подобранному составу",
+    "image": "images/quiz-result/food/dogs/delicana/Delicana для чувствительного пищеварения.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Immuno.png",
+    "descriptionrec1": "Unitabs Prebiotic",
+    "descriptionrec2": "Unitabs Immuno"
+  },
+  {
+    "id": "result-1-7 year-dog-big-JKT-budget",
+    "title": "Для самых преданных с чувствительным пищеварением для всех пород",
+    "description": "Обеспечивает здоровую кожу и блестящую шерсть благодаря тщательно подобранному составу",
+    "image": "images/quiz-result/food/dogs/DLAY-SAMIH-PREDANNIX/Для Самых Преданных корм для собак телятина индейка для чувствительного пищеварения.png",
+    "relatedImage": "images/quiz-result/recomended/HELP+/Фитокальцевит_для_взрослых_собак.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Immuno.png",
+    "descriptionrec1": "Фито кальцевит",
+    "descriptionrec2": "Unitabs Immuno"
+  },
+  {
+    "id": "1-7 year-dog-big-hypoalergic",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум"],
+    "values": ["result-1-7 year-dog-big-hypoalergic-budget","result-1-7 year-dog-big-hypoalergic-premium"],
+    "next": ["result-1-7 year-dog-big-hypoalergic-budget","result-1-7 year-dog-big-hypoalergic-premium"]
+  },
+  {
+    "id": "result-1-7 year-dog-big-hypoalergic-premium",
+    "title": "KARMY Сухой корм Гипоаллергенный Medium и Maxi",
+    "description": "Обеспечивает здоровую кожу и блестящую шерсть благодаря тщательно подобранному составу",
+    "image": "images/quiz-result/food/dogs/Karmy/KARMY Сухой корм Гипоаллергенный Medium и Maxi.png",
+    "relatedImage": "images/quiz-result/recomended/HELP+/Фитокальцевит_для_взрослых_собак.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Immuno.png",
+    "descriptionrec1": "Фито кальцевит",
+    "descriptionrec2": "Unitabs Immuno"
+  },
+  {
+    "id": "result-1-7 year-dog-big-hypoalergic-budget",
+    "title": "Наша марка для всех пород гипоалергенный ягненок",
+    "description": "Обеспечивает здоровую кожу и блестящую шерсть благодаря тщательно подобранному составу",
+    "image": "images/quiz-result/food/dogs/NAWA-MARKA/Наша марка для всех пород гипоалергенный ягненок.png",
+    "relatedImage": "images/quiz-result/recomended/HELP+/Фитокальцевит_для_взрослых_собак.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Immuno.png",
+    "descriptionrec1": "Фито кальцевит",
+    "descriptionrec2": "Unitabs Immuno"
+  },
+  {
+    "id": "1-7 year-dog-big-classic",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум"],
+    "values": ["result-1-7 year-dog-big-classic-budget","result-1-7 year-dog-big-classic-premium"],
+    "next": ["result-1-7 year-dog-big-classic-budget","result-1-7 year-dog-big-classic-premium"]
+  },
+  {
+    "id": "result-1-7 year-dog-big-classic-premium",
+    "title": "Delicana корм для собак крупных пород",
+    "description": "Обеспечивает необходимыми питательными веществами, поддерживая здоровье суставов, крепость костей и общую активность",
+    "image": "images/quiz-result/food/dogs/delicana/Delicana корм для собак крупных пород.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Immuno.png",
+    "relatedImage2": "images/quiz-result/recomended/TOYS/toy-dog-ball1.png",
+    "descriptionrec1": "Unitabs Immuno",
+    "descriptionrec2": "Игрушка мячик"
+  },
+  {
+    "id": "result-1-7 year-dog-big-classic-budget",
+    "title": "Наша марка для крупных пород",
+    "description": "Обеспечивает необходимыми питательными веществами, поддерживая здоровье суставов, крепость костей и общую активность",
+    "image": "images/quiz-result/food/dogs/NAWA-MARKA/Наша марка для крупных пород.png",
+    "relatedImage": "images/quiz-result/recomended/HELP+/Фитокальцевит_для_взрослых_собак.png",
+    "relatedImage2": "images/quiz-result/recomended/TOYS/toy-dog-ball1.png",
+    "descriptionrec1": "Фито кальцевит",
+    "descriptionrec2": "Игрушка мячик"
+  },
+  {
+    "id": "1-7 year-dog-medium",
+    "question": "выберите вариант",
+    "options": ["Классический","Гиппоаллергенный","Для чувствительного пищеварения",
+      "Для Кожи и Шерсти","Для беременных и кормящих","Восстанавливающий","Для суставов"],
+    "values": ["1-7 year-dog-medium-classic","1-7 year-dog-medium-hyppoalergic","1-7 year-dog-medium-JKT","1-7 year-dog-medium-Koja",
+      "1-7 year-dog-medium-pregnant","result-1-7 year-dog-medium-heal","1-7 year-dog-medium-sustav"],
+    "next": ["1-7 year-dog-medium-classic","1-7 year-dog-medium-hyppoalergic","1-7 year-dog-medium-JKT","1-7 year-dog-medium-Koja",
+      "1-7 year-dog-medium-pregnant","result-1-7 year-dog-dog-medium-heal","result-1-7 year-dog-medium-sustav"]
+  },
+  {
+    "id": "result-1-7 year-dog-medium-sustav",
+    "title": "Best dinner mobility",
+    "description": "Поддержание здоровья суставов и улучшение подвижности благодаря сбалансированному составу и натуральным ингредиентам",
+    "image": "images/quiz-result/recomended/FOOD/BEST DINNER/b-d-mobility.png",
+    "relatedImage": "images/quiz-result/recomended/FOOD/BEST DINNER/best-dinner-dogs.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/BEST DINNER/Best-dinner-dogs (2)3.png",
+    "descriptionrec1": "Best Dinner",
+    "descriptionrec2": "Best Dinner"
+  },
+  {
+    "id": "result-1-7 year-dog-dog-medium-heal",
+    "title": "Best dinner recovery",
+    "description": "Легкоусвояемый корм повышенной калорийности и питательности для собак при истощении, выздоровлении и послеоперационном восстановлении",
+    "image": "images/quiz-result/recomended/FOOD/BEST DINNER/Best dinner recovery.png",
+    "relatedImage": "images/quiz-result/recomended/FOOD/BEST DINNER/best-dinner-dogs.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/BEST DINNER/Best-dinner-dogs (2)3.png",
+    "descriptionrec1": "Best Dinner",
+    "descriptionrec2": "Best Dinner"
+  },
+  {
+    "id": "1-7 year-dog-medium-pregnant",
+    "question": "выберите вариант",
+    "options": ["Премиум","Суперпремиум"],
+    "values": ["result-1-7 year-dog-medium-pregnant-premium",
+      "result-1-7 year-dog-medium-pregnant-superpremium"],
+    "next": ["result-1-7 year-dog-pregnant-Koja-premium",
+      "result-1-7 year-dog-medium-pregnant-superpremium"]
+  },
+  {
+    "id": "result-1-7 year-dog-medium-pregnant-superpremium",
+    "title": "Royal Canin Medium Starter Mother & babydog",
+    "description": "Полнорационный сухой корм для собак в период беременности и лактации",
+    "image": "images/quiz-result/food/dogs/ROYAL CANIN/15034_royal-kanin-medium-starter-mother--baby.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs МамаCare.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/dogs/PROBALANCE/ProBalance Puppy.png",
+    "descriptionrec1": "Unitabs МамаCare",
+    "descriptionrec2": "ProBalance Puppy"
+  },
+  {
+    "id": "result-1-7 year-dog-medium-pregnant-premium",
+    "title": "KARMY Starter",
+    "description": "Обеспечивает кормящих собак всем необходимым для поддержки организма в важный период жизни",
+    "image": "images/quiz-result/food/dogs/Karmy/KARMY Starter.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/NEO/Омега Neo+ Крепкое здоровье для соба.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/dogs/PROBALANCE/ProBalance Puppy.png",
+    "descriptionrec1": "Омега Neo+",
+    "descriptionrec2": "ProBalance Puppy"
+  },
+  {
+    "id": "1-7 year-dog-medium-Koja",
+    "question": "выберите вариант",
+    "options": ["Премиум","Суперпремиум"],
+    "values": ["result-1-7 year-dog-medium-Koja-premium",
+      "result-1-7 year-dog-medium-Koja-superpremium"],
+    "next": ["result-1-7 year-dog-medium-Koja-premium",
+      "result-1-7 year-dog-medium-Koja-superpremium"]
+  },
+  {
+    "id": "result-1-7 year-dog-medium-Koja-superpremium",
+    "title": "PRO PLAN для взрослых собак средних пород",
+    "description": "Улучшает состояние кожи и делает шерсть блестящей и здоровой благодаря сбалансированным питательным веществам",
+    "image": "images/quiz-result/food/dogs/PROPLAN/Сухой корм PRO PLAN для взрослых собак средних пород с чувствительным пищеварением.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Brewers.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/BEST DINNER/best-dinner-dogs.png",
+    "descriptionrec1": "Unitabs Brewers",
+    "descriptionrec2": "Best Dinner"
+  },
+  {
+    "id": "result-1-7 year-dog-medium-Koja-premium",
+    "title": "Karmy Sensitive Medium & Maxi",
+    "description": "Улучшает состояние кожи и делает шерсть блестящей и здоровой благодаря сбалансированным питательным веществам",
+    "image": "images/quiz-result/food/dogs/Karmy/Karmy Sensitive Medium & Maxi сухой корм для взрослых собак средних и крупных пород с чувствительным пищеварением.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Brewers.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/NEO/Омега Neo+ Блестящая шерсть для собак.png",
+    "descriptionrec1": "Unitabs Brewers",
+    "descriptionrec2": "Омега Neo+"
+  },
+  {
+    "id": "1-7 year-dog-medium-JKT",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум"],
+    "values": ["result-1-7 year-dog-medium-JKT-budget","result-1-7 year-dog-medium-JKT-premium",
+      "result-1-7 year-dog-medium-JKT-superpremium"],
+    "next": ["result-1-7 year-dog-medium-JKT-budget","result-1-7 year-dog-medium-JKT-premium",
+      "result-1-7 year-dog-medium-JKT-superpremium"]
+  },
+  {
+    "id": "result-1-7 year-dog-medium-JKT-superpremium",
+    "title": "PRO PLAN для взрослых собак средних пород",
+    "description": "Разработан с учетом потребностей животных с деликатной системой пищеварения, способствует улучшению работы кишечника",
+    "image": "images/quiz-result/food/dogs/PROPLAN/Сухой корм PRO PLAN для взрослых собак средних пород с чувствительным пищеварением.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/FOOD LAKOMSTVA/Уши_кроличьи_с_ягнёнком_для_мини-собак_55_г_Деревенские_Лакомств.png",
+    "descriptionrec1": "Unitabs Prebiotic",
+    "descriptionrec2": "Кроличьи Уши"
+  },
+  {
+    "id": "result-1-7 year-dog-medium-JKT-premium",
+    "title": "Karmy Sensitive Medium & Maxi",
+    "description": "Разработан с учетом потребностей животных с деликатной системой пищеварения, способствует улучшению работы кишечника",
+    "image": "images/quiz-result/food/dogs/Karmy/Karmy Sensitive Medium & Maxi сухой корм для взрослых собак средних и крупных пород с чувствительным пищеварением.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/FOOD LAKOMSTVA/Уши_кроличьи_с_ягнёнком_для_мини-собак_55_г_Деревенские_Лакомств.png",
+    "descriptionrec1": "Unitabs Prebiotic",
+    "descriptionrec2": "Кроличьи Уши"
+  },
+  {
+    "id": "result-1-7 year-dog-medium-JKT-budget",
+    "title": "Для самых преданных™ корм для собак всех пород",
+    "description": "Разработан с учетом потребностей животных с деликатной системой пищеварения, способствует улучшению работы кишечника",
+    "image": "images/quiz-result/food/dogs/DLAY-SAMIH-PREDANNIX/для-самых-преданных.png",
+    "relatedImage": "images/quiz-result/recomended/HELP+/Фитокальцевит_для_взрослых_собак.png",
+    "relatedImage2": "images/quiz-result/recomended/TOYS/toy-ball-dog.png",
+    "descriptionrec1": "Фито кальцевит",
+    "descriptionrec2": "Игрушка мячик"
+  },
+  {
+    "id": "1-7 year-dog-medium-hyppoalergic",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум"],
+    "values": ["result-1-7 year-dog-medium-hyppoalergic-budget","result-1-7 year-dog-medium-hyppoalergic-premium",
+      "result-1-7 year-dog-medium-hyppoalergic-superpremium"],
+    "next": ["result-1-7 year-dog-medium-hyppoalergic-budget","result-1-7 year-dog-medium-hyppoalergic-premium",
+      "result-1-7 year-dog-medium-hyppoalergic-superpremium"]
+  },
+  {
+    "id": "result-1-7 year-dog-medium-hyppoalergic-superpremium",
+    "title": "PRO PLAN для взрослых собак средних пород с чувствительным пищеварением",
+    "description": "Для взрослых собак средних и крупных пород в возрасте старше 1 года, склонных к пищевой аллергии",
+    "image": "images/quiz-result/food/dogs/PROPLAN/Сухой корм PRO PLAN для взрослых собак средних пород с чувствительным пищеварением.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/FOOD LAKOMSTVA/food-lakomstva-palochki.png",
+    "descriptionrec1": "Unitabs Prebiotic",
+    "descriptionrec2": "Деревенские Лакомства"
+  },
+  {
+    "id": "result-1-7 year-dog-medium-hyppoalergic-premium",
+    "title": "KARMY HYPOALLERGENIC MEDIUM & MAXI гипоаллергенный",
+    "description": "Для взрослых собак средних и крупных пород в возрасте старше 1 года, склонных к пищевой аллергии",
+    "image": "images/quiz-result/food/dogs/Karmy/Karmy hyppo alrgic.png",
+    "relatedImage": "images/quiz-result/recomended/HELP+/Фитокальцевит_для_взрослых_собак.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/NEO/Omega neo dog biotin.png",
+    "descriptionrec1": "Фито кальцевит",
+    "descriptionrec2": "Омега Нео биотин"
+  },
+  {
+    "id": "result-1-7 year-dog-medium-hyppoalergic-budget",
+    "title": "Наша марка для всех пород гипоалергенный",
+    "description": "Для взрослых собак средних и крупных пород в возрасте старше 1 года, склонных к пищевой аллергии",
+    "image": "images/quiz-result/food/dogs/NAWA-MARKA/Наша марка для всех пород гипоалергенный ягненок.png",
+    "relatedImage": "images/quiz-result/recomended/HELP+/Фитокальцевит_для_взрослых_собак.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/NEO/Omega neo dog biotin.png",
+    "descriptionrec1": "Фито кальцевит",
+    "descriptionrec2": "Омега Нео биотин"
+  },
+  {
+    "id": "1-7 year-dog-medium-classic",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум"],
+    "values": ["result-1-7 year-dog-medium-classic-budget","result-1-7 year-dog-medium-classic-premium",
+      "result-1-7 year-dog-medium-classic-superpremium"],
+    "next": ["result-1-7 year-dog-medium-classic-budget","result-1-7 year-dog-medium-classic-premium",
+      "result-1-7 year-dog-medium-classic-superpremium"]
+  },
+  {
+    "id": "result-1-7 year-dog-medium-classic-superpremium",
+    "title": "Premier для собак средних пород",
+    "description": "Повседневный корм для активных собак",
+    "image": "images/quiz-result/food/dogs/PREMIER/Premier-dogs-all-breeds.png",
+    "relatedImage": "images/quiz-result/recomended/FOOD/FOOD LAKOMSTVA/Уши_кроличьи_с_ягнёнком_для_мини-собак_55_г_Деревенские_Лакомств.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Immuno.png",
+    "descriptionrec1": "Уши кроличьи",
+    "descriptionrec2": "Unitabs Immuno"
+  },
+  {
+    "id": "result-1-7 year-dog-medium-classic-premium",
+    "title": "DELICANA для собак средних пород",
+    "description": "Повседневный корм для активных собак",
+    "image": "images/quiz-result/food/dogs/delicana/DELICANA для собак средних пород.png",
+    "relatedImage": "images/quiz-result/recomended/HELP+/Фитокальцевит_для_взрослых_собак.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/NEO/Омега Neo+ Крепкое здоровье для соба.png",
+    "descriptionrec1": "Фито кальцевит",
+    "descriptionrec2": "Омега Neo+"
+  },
+  {
+    "id": "result-1-7 year-dog-medium-classic-budget",
+    "title": "НАША МАРКА для взрослых собак средних пород",
+    "description": "Повседневный корм для активных собак",
+    "image": "images/quiz-result/food/dogs/NAWA-MARKA/NASHA_MARKA_ADULT_MEDIUM_BREED_CHICKEN_VEGETABLES1.png",
+    "relatedImage": "images/quiz-result/recomended/HELP+/Фитокальцевит_для_взрослых_собак.png",
+    "relatedImage2": "images/quiz-result/recomended/TOYS/dogs/hamburger.png",
+    "descriptionrec1": "Фито кальцевит",
+    "descriptionrec2": "Игрушка бургер"
+  },
+
+  {
+    "id": "1-7 year-dog-mini",
+    "question": "выберите вариант",
+    "options": ["Классический","Порода","Гиппоаллергенный","Для чувствительного пищеварения",
+      "Для Кожи и Шерсти","Для беременных и кормящих","Восстанавливающий","Для суставов"],
+    "values": ["1-7 year-dog-mini-classic","1-7 year-dog-mini-breed","1-7 year-dog-mini-hyppoalergic","1-7 year-dog-mini-JKT","1-7 year-dog-mini-Koja",
+      "1-7 year-dog-mini-pregnant","result-1-7 year-dog-mini-heal","1-7 year-dog-mini-sustav"],
+    "next": ["1-7 year-dog-mini-classic","1-7 year-dog-mini-breed","1-7 year-dog-mini-hyppoalergic","1-7 year-dog-mini-JKT","1-7 year-dog-mini-Koja",
+      "1-7 year-dog-mini-pregnant","result-1-7 year-dog-mini-heal","result-1-7 year-dog-mini-sustav"]
+  },
+  {
+    "id": "1-7 year-dog-mini-classic",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум","Холистик"],
+    "values": ["result-1-7 year-dog-mini-classic-budget","result-1-7 year-dog-mini-classic-premium",
+      "result-1-7 year-dog-mini-classic-superpremium","result-1-7 year-dog-mini-classic-holistik"],
+    "next": ["result-1-7 year-dog-mini-classic-budget","result-1-7 year-dog-mini-classic-premium",
+      "result-1-7 year-dog-mini-classic-superpremium","result-1-7 year-dog-mini-classic-holistik"]
+  },
+  {
+    "id": "result-1-7 year-dog-mini-classic-holistik",
+    "title": "Деревенские лакомства Холистик для собак мелких пород",
+    "description": "Повседневный корм для активных собак",
+    "image": "images/quiz-result/food/dogs/FOOD-LAKOMSTVA/Деревенские лакомства Холистик для собак мелких пород.png",
+    "relatedImage": "images/quiz-result/recomended/TOYS/toy-dog-ball1.png",
+    "relatedImage2": "images/quiz-result/recomended/TOYS/toy-dog-wheel.png",
+    "descriptionrec1": "Игрушка мячик",
+    "descriptionrec2": "Игрушка колесо"
+  },
+  {
+    "id": "result-1-7 year-dog-mini-classic-superpremium",
+    "title": "Premier Dog Adult Mini",
+    "description": "Повседневный корм для активных собак",
+    "image": "images/quiz-result/food/dogs/PREMIER/Premier Dog Adult Mini.png",
+    "relatedImage": "images/quiz-result/recomended/TOYS/toy-dog-ball1.png",
+    "relatedImage2": "images/quiz-result/recomended/TOYS/toy-dog-wheel.png",
+    "descriptionrec1": "Игрушка мячик",
+    "descriptionrec2": "Игрушка колесо"
+  },
+  {
+    "id": "result-1-7 year-dog-mini-classic-premium",
+    "title": "Karmy mini adult",
+    "description": "Повседневный корм для активных собак",
+    "image": "images/quiz-result/food/dogs/Karmy/Karmy Мини Эдалт Телятина.png",
+    "relatedImage": "images/quiz-result/recomended/TOYS/toy-dog-rope.png",
+    "relatedImage2": "images/quiz-result/recomended/TOYS/toy-dog-wheel.png",
+    "descriptionrec1": "Игрушка веревка",
+    "descriptionrec2": "Игрушка колесо"
+  },
+  {
+    "id": "result-1-7 year-dog-mini-classic-budget",
+    "title": "Наша марка для мелких пород",
+    "description": "Повседневный корм для активных собак",
+    "image": "images/quiz-result/food/dogs/NAWA-MARKA/Наша марка для мелких пород .png",
+    "relatedImage": "images/quiz-result/recomended/TOYS/toy-circle-dogs.png",
+    "relatedImage2": "images/quiz-result/recomended/TOYS/toy-ball-dog.png",
+    "descriptionrec1": "Игрушка кольцо",
+    "descriptionrec2": "Игрушка мячик"
+  },
+  {
+    "id": "result-1-7 year-dog-mini-sustav",
+    "title": "Best Dinner Vet Profi Mobility",
+    "description": "Корм с учетом физиологических особенностей собак, склонных к заболеваниям опорно-двигательного аппарата.",
+    "image": "images/quiz-result/food/dogs/BEST-DINNER/Best Dinner Exclusive Vet Profi Mobility.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs ArthroАctive-.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "descriptionrec1": "Unitabs Arthro",
+    "descriptionrec2": "Unitabs Prebiotic"
+  },
+  {
+    "id": "result-1-7 year-dog-mini-heal",
+    "title": "Best Dinner Vet Profi Recovery",
+    "description": "корм повышенной калорийности и питательности для кошек и собак при истощении, выздоровлении и послеоперационном восстановлении.",
+    "image": "images/quiz-result/food/dogs/BEST-DINNER/Best Dinner Vet Profi Recovery1.png",
+    "relatedImage": "images/quiz-result/recomended/TOYS/toy-dog-rope.png",
+    "relatedImage2": "images/quiz-result/recomended/TOYS/toy-dog-rope.png",
+    "descriptionrec1": "Игрушка мячик",
+    "descriptionrec2": "Игрушка веревка"
+  },
+
+
+  {
+    "id": "1-7 year-dog-mini-pregnant",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум","Холистик"],
+    "values": ["result-1-7 year-dog-mini-pregnant-budget","result-1-7 year-dog-mini-pregnant-premium",
+      "result-1-7 year-dog-mini-pregnant-superpremium","result-1-7 year-dog-mini-pregnant-holistik"],
+    "next": ["result-1-7 year-dog-mini-pregnant-budget","result-1-7 year-dog-mini-pregnant-premium",
+      "result-1-7 year-dog-mini-pregnant-superpremium","result-1-7 year-dog-mini-pregnant-holistik"]
+  },
+  {
+    "id": "result-1-7 year-dog-mini-pregnant-holistik",
+    "title": "Корм Деревенские лакомства Холистик Премьер для щенков",
+    "description": "Специально для собак мелких пород в конце беременности и в период лактации",
+    "image": "images/quiz-result/food/dogs/FOOD-LAKOMSTVA/Корм Деревенские лакомства Холистик Премьер для щенков.png",
+    "relatedImage": "images/quiz-result/recomended/HELP+/Фитокальцевит для щенков.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs МамаCare.png",
+    "descriptionrec1": "Фито кальцевит",
+    "descriptionrec2": "Unitabs МамаCare"
+  },
+  {
+    "id": "result-1-7 year-dog-mini-pregnant-superpremium",
+    "title": "Royal Canin Mini Starter",
+    "description": "Специально для собак мелких пород в конце беременности и в период лактации",
+    "image": "images/quiz-result/food/dogs/ROYAL CANIN/Royal Canin Mini Starter.png",
+    "relatedImage": "images/quiz-result/recomended/HELP+/Фитокальцевит для щенков.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs МамаCare.png",
+    "descriptionrec1": "Фито кальцевит",
+    "descriptionrec2": "Unitabs МамаCare"
+  },
+  {
+    "id": "result-1-7 year-dog-mini-pregnant-premium",
+    "title": "KARMY Starter",
+    "description": "Правильное сочетание ингредиентов способствует лучшему усвоению питательных веществ",
+    "image": "images/quiz-result/food/dogs/Karmy/KARMY Starter.png",
+    "relatedImage": "images/quiz-result/recomended/HELP+/Фитокальцевит для щенков.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs МамаCare.png",
+    "descriptionrec1": "Фито кальцевит",
+    "descriptionrec2": "Unitabs МамаCare"
+  },
+  {
+    "id": "result-1-7 year-dog-mini-pregnant-budget",
+    "title": "Наша марка для щенков всех пород",
+    "description": "Правильное сочетание ингредиентов способствует лучшему усвоению питательных веществ",
+    "image": "images/quiz-result/food/dogs/NAWA-MARKA/Наша марка для щенков всех пород с ягненком.png",
+    "relatedImage": "images/quiz-result/recomended/HELP+/Фитокальцевит для щенков.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs МамаCare.png",
+    "descriptionrec1": "Фито кальцевит",
+    "descriptionrec2": "Unitabs МамаCare"
+  },
+
+
+  {
+    "id": "1-7 year-dog-mini-Koja",
+    "question": "выберите вариант",
+    "options": ["Премиум","Суперпремиум"],
+    "values": ["result-1-7 year-dog-mini-Koja-premium","result-1-7 year-dog-mini-Koja-superpremium"],
+    "next": ["result-1-7 year-dog-mini-Koja-premium","result-1-7 year-dog-mini-Koja-superpremium"]
+  },
+  {
+    "id": "result-1-7 year-dog-mini-Koja-superpremium",
+    "title": "PRO PLAN® SENSITIVE DIGESTION",
+    "description": "Разработанный для поддержания здоровья кожи и шерсти собаки",
+    "image": "images/quiz-result/food/dogs/PROPLAN/PRO PLAN® SENSITIVE DIGESTION для взрослых собак мелких и карликовых пород.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/NEO/Омега Neo+ Блестящая шерсть для собак.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Brewers.png",
+    "descriptionrec1": "Омега Neo+",
+    "descriptionrec2": "Unitabs Brewers"
+  },
+  {
+    "id": "result-1-7 year-dog-mini-Koja-premium",
+    "title": "Karmy Sensitive Mini Adult",
+    "description": "Разработанный для поддержания здоровья кожи и шерсти собаки",
+    "image": "images/quiz-result/food/dogs/Karmy/Karmy Sensitive Mini Adult.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/NEO/Омега Neo+ Блестящая шерсть для собак.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Brewers.png",
+    "descriptionrec1": "Омега Neo+",
+    "descriptionrec2": "Unitabs Brewers"
+  },
+
+  {
+    "id": "1-7 year-dog-mini-JKT",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум","Холистик","Лечебный"],
+    "values": ["result-1-7 year-dog-mini-JKT-budget","result-1-7 year-dog-mini-JKT-premium",
+      "result-1-7 year-dog-mini-JKT-Superpremium","result-1-7 year-dog-mini-JKT-Holistik","result-1-7 year-dog-mini-JKT-heal"],
+    "next": ["result-1-7 year-dog-mini-JKT-budget","result-1-7 year-dog-mini-JKT-premium",
+      "result-1-7 year-dog-mini-JKT-Superpremium","result-1-7 year-dog-mini-JKT-Holistik","result-1-7 year-dog-mini-JKT-heal"]
+  },
+
+  {
+    "id": "result-1-7 year-dog-mini-JKT-heal",
+    "title": "Best Dinner Gastrointestina",
+    "description": "лечебный корм, разработанный для поддержания здоровья пищеварительной системы и облегчения работы желудка.",
+    "image": "images/quiz-result/food/dogs/BEST-DINNER/Best Dinner Gastrointestinal (2).png",
+    "relatedImage": "images/quiz-result/recomended/FOOD/BEST DINNER/best-dinner-dogs.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "descriptionrec1": "Best Dinner",
+    "descriptionrec2": "Unitabs Prebiotic"
+  },
+  {
+    "id": "result-1-7 year-dog-mini-JKT-Holistik",
+    "title": "Деревенские Лакомства ХОЛИСТИК ПРЕМЬЕР сухой корм для собак мелких пород",
+    "description": "Улучшает работу желудочно-кишечного тракта благодаря легкоусвояемым ингредиентам, пробиотикам и клетчатке",
+    "image": "images/quiz-result/food/dogs/FOOD-LAKOMSTVA/Деревенские Лакомства ХОЛИСТИК ПРЕМЬЕР сухой корм для собак мелких пород.png",
+    "relatedImage": "images/quiz-result/recomended/FOOD/BEST DINNER/best-dinner-dogs.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "descriptionrec1": "Best Dinner",
+    "descriptionrec2": "Unitabs Prebiotic"
+  },
+  {
+    "id": "result-1-7 year-dog-mini-JKT-Superpremium",
+    "title": "PRO PLAN® SENSITIVE DIGESTION",
+    "description": "Улучшает работу желудочно-кишечного тракта благодаря легкоусвояемым ингредиентам, пробиотикам и клетчатке",
+    "image": "images/quiz-result/food/dogs/PROPLAN/PRO PLAN® SENSITIVE DIGESTION для взрослых собак мелких и карликовых пород.png",
+    "relatedImage": "images/quiz-result/recomended/FOOD/PROBALANCE/probalance-dog-sensitive.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "descriptionrec1": "Probalance",
+    "descriptionrec2": "Unitabs Prebiotic"
+  },
+  {
+    "id": "result-1-7 year-dog-mini-JKT-premium",
+    "title": "Karmy Sensitive Mini Adult",
+    "description": "Улучшает работу желудочно-кишечного тракта благодаря легкоусвояемым ингредиентам, пробиотикам и клетчатке",
+    "image": "images/quiz-result/food/dogs/Karmy/Karmy Sensitive Mini Adult.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/NEO/Омега Neo+ Крепкое здоровье для соба.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "descriptionrec1": "Омега Neo+",
+    "descriptionrec2": "Unitabs Prebiotic"
+  },
+  {
+    "id": "result-1-7 year-dog-mini-JKT-budget",
+    "title": "Для самых преданных™ корм для собак",
+    "description": "Улучшает работу желудочно-кишечного тракта благодаря легкоусвояемым ингредиентам, пробиотикам и клетчатке",
+    "image": "images/quiz-result/food/dogs/DLAY-SAMIH-PREDANNIX/для-самых-преданных.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/NEO/Омега Neo+ Крепкое здоровье для соба.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "descriptionrec1": "Омега Neo+",
+    "descriptionrec2": "Unitabs Prebiotic"
+  },
+
+  {
+    "id": "1-7 year-dog-mini-hyppoalergic",
+    "question": "выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум","Холистик","Лечебный"],
+    "values": ["result-1-7 year-dog-mini-hyppoalergic-budget","result-1-7 year-dog-mini-hyppoalergic-premium",
+      "result-1-7 year-dog-mini-hyppoalergic-Superpremium","result-1-7 year-dog-mini-hyppoalergic-Holistik","result-1-7 year-dog-mini-hyppoalergic-heal"],
+    "next": ["result-1-7 year-dog-mini-hyppoalergic-budget","result-1-7 year-dog-mini-hyppoalergic-premium",
+      "result-1-7 year-dog-mini-hyppoalergic-Superpremium","result-1-7 year-dog-mini-hyppoalergic-Holistik","result-1-7 year-dog-mini-hyppoalergic-heal"]
+  },
+  {
+    "id": "result-1-7 year-dog-mini-hyppoalergic-heal",
+    "title": "BEST DINNER EXCLUSIVE VET PROFI HYPOALLERGENIC",
+    "description": "рубленое мясо, приготовленное по рецепту, разработанному с учетом физиологических особенностей собак, склонных к возникновению пищевой аллергии.",
+    "image": "images/quiz-result/food/dogs/BEST-DINNER/BEST DINNER EXCLUSIVE VET PROFI HYPOALLERGENIC.png",
+    "relatedImage": "images/quiz-result/food/dogs/FOOD-LAKOMSTVA/Деревенские лакомства Холистик для собак мелких пород.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "descriptionrec1": "Омега Neo+",
+    "descriptionrec2": "Unitabs Prebiotic"
+  },
+  {
+    "id": "result-1-7 year-dog-mini-hyppoalergic-Holistik",
+    "title": "Деревенские лакомства Холистик для собак мелких пород",
+    "description": "Формула разработана с учетом индивидуальных потребностей собак мелких пород",
+    "image": "images/quiz-result/food/dogs/FOOD-LAKOMSTVA/Деревенские Лакомства ХОЛИСТИК ПРЕМЬЕР сухой корм для собак мелких пород.png",
+    "relatedImage": "images/quiz-result/food/dogs/FOOD-LAKOMSTVA/Деревенские лакомства Холистик для собак мелких пород.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "descriptionrec1": "Омега Neo+",
+    "descriptionrec2": "Unitabs Prebiotic"
+  },
+  {
+    "id": "result-1-7 year-dog-mini-hyppoalergic-Superpremium",
+    "title": "Premier Dog Adult Mini",
+    "description": "Формула разработана с учетом индивидуальных потребностей собак мелких пород",
+    "image": "images/quiz-result/food/dogs/PREMIER/Premier Dog Adult Mini.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/NEO/Омега Neo+ Крепкое здоровье для соба.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "descriptionrec1": "Омега Neo+",
+    "descriptionrec2": "Unitabs Prebiotic"
+  },
+  {
+    "id": "result-1-7 year-dog-mini-hyppoalergic-premium",
+    "title": "Karmy Hypoallergenic Mini Adult",
+    "description": "Формула разработана с учетом индивидуальных потребностей собак мелких пород",
+    "image": "images/quiz-result/food/dogs/Karmy/Karmy Hypoallergenic Mini Adult.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/NEO/Омега Neo+ Крепкое здоровье для соба.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "descriptionrec1": "Омега Neo+",
+    "descriptionrec2": "Unitabs Prebiotic"
+  },
+  {
+    "id": "result-1-7 year-dog-mini-hyppoalergic-budget",
+    "title": "Наша марка гиппоалергенный корм для мелких пород",
+    "description": "Разработан с учетом всех потребностей породы",
+    "image": "images/quiz-result/food/dogs/NAWA-MARKA/Наша марка гиппоалергенный корм с ягненком для мелких пород соб.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/NEO/Омега Neo+ Крепкое здоровье для соба.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "descriptionrec1": "Омега Neo+",
+    "descriptionrec2": "Unitabs Prebiotic"
+  },
+  {
+    "id": "1-7 year-dog-mini-breed",
+    "question": "выберите породу",
+    "options": ["Йоркширский терьер","Померанский шпиц","Мопс"],
+    "values": ["result-1-7 year-dog-mini-breed-york","result-1-7 year-dog-mini-breed-spiz","result-1-7 year-dog-mini-breed-mops"],
+    "next": ["result-1-7 year-dog-mini-breed-york","result-1-7 year-dog-mini-breed-spiz","result-1-7 year-dog-mini-breed-mops"]
+  },
+  {
+    "id": "result-1-7 year-dog-mini-breed-mops",
+    "title": "ROYAL CANIN корм для Мопса",
+    "description": "Разработан с учетом всех потребностей породы",
+    "image": "images/quiz-result/food/dogs/ROYAL CANIN/Royal Canin Mops (2).png",
+    "relatedImage": "images/quiz-result/recomended/FOOD/dogs/FOOD-LAKOMSTVA/Деревенский-лакомства-мини.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Immuno.png",
+    "descriptionrec1": "Деревенские лакомства",
+    "descriptionrec2": "Unitabs Immuno"
+  },
+  {
+    "id": "result-1-7 year-dog-mini-breed-spiz",
+    "title": "ROYAL CANIN корм для Померанского шпица",
+    "description": "Разработан с учетом всех потребностей породы",
+    "image": "images/quiz-result/food/dogs/ROYAL CANIN/Pomeranian.png",
+    "relatedImage": "images/quiz-result/recomended/FOOD/dogs/FOOD-LAKOMSTVA/Деревенский-лакомства-мини.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Immuno.png",
+    "descriptionrec1": "Деревенские лакомства",
+    "descriptionrec2": "Unitabs Immuno"
+  },
+  {
+    "id": "result-1-7 year-dog-mini-breed-york",
+    "title": "ROYAL CANIN корм для собак Yorkshire Terrier",
+    "description": "Разработан с учетом всех потребностей породы",
+    "image": "images/quiz-result/food/dogs/ROYAL CANIN/ROYAL CANIN корм для собак Yorkshire Terrier.png",
+    "relatedImage": "images/quiz-result/recomended/FOOD/dogs/FOOD-LAKOMSTVA/Деревенский-лакомства-мини.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Immuno.png",
+    "descriptionrec1": "Деревенские лакомства",
+    "descriptionrec2": "Unitabs Immuno"
+  },
+  {
+    "id": "2-12 month-dog",
+    "question": "выберите вариант",
+    "options": ["Эконом","Премиум","Суперпремиум","Холистик"],
+    "values": ["2-12 month-dog-econom","2-12 month-dog-premium",
+      "2-12 month-dog-Superpremium","result-2-12 month-dog-Holistic"],
+    "next": ["2-12 month-dog-econom","2-12 month-dog-premium",
+      "2-12 month-dog-Superpremium","result-2-12 month-dog-Holistic"]
+  },
+  {
+    "id": "result-2-12 month-dog-Holistic",
+    "title": "Корм Деревенские лакомства Холистик Премьер для щенков",
+    "description": "Разработан с учетом всех потребностей растущего организма",
+    "image": "images/quiz-result/food/dogs/FOOD-LAKOMSTVA/Корм Деревенские лакомства Холистик Премьер для щенков.png",
+    "relatedImage": "images/quiz-result/recomended/FOOD/dogs/FOOD-LAKOMSTVA/Деревенские лакомства.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Junior Complex.png",
+    "descriptionrec1": "Деревенские лакомства",
+    "descriptionrec2": "Unitabs Junior"
+  },
+  {
+    "id": "2-12 month-dog-Superpremium",
+    "question": "выберите вариант",
+    "options": ["Классический","Чувствительное пищеварение"],
+    "values": ["result-2-12 month-dog-Superpremium-classic", "result-2-12 month-dog-Superpremium-JKT"],
+    "next": ["result-2-12 month-dog-Superpremium-classic", "result-2-12 month-dog-Superpremium-JKT"]
+  },
+  {
+    "id": "result-2-12 month-dog-Superpremium-JKT",
+    "title": "Premier для щенков всех пород",
+    "description": "Полнорационный сухой корм для щенков всех пород в возрасте до 1 года",
+    "image": "images/quiz-result/food/dogs/PREMIER/Premier для щенков всех пород.png",
+    "relatedImage": "images/quiz-result/recomended/FOOD/dogs/FOOD-LAKOMSTVA/Деревенские лакомства.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Junior Complex.png",
+    "descriptionrec1": "Деревенские лакомства",
+    "descriptionrec2": "Unitabs Junior"
+  },
+  {
+    "id": "result-2-12 month-dog-Superpremium-classic",
+    "title": "PRO PLAN® HEALTHY START",
+    "description": "Полнорационный сухой корм для щенков мелких пород в возрасте до 1 года",
+    "image": "images/quiz-result/food/dogs/PROPLAN/PRO PLAN® HEALTHY START.png",
+    "relatedImage": "images/quiz-result/recomended/FOOD/dogs/FOOD-LAKOMSTVA/Деревенские лакомства.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Junior Complex.png",
+    "descriptionrec1": "Деревенские лакомства",
+    "descriptionrec2": "Unitabs Junior"
+  },
+  {
+    "id": "2-12 month-dog-premium",
+    "question": "выберите вариант",
+    "options": ["Классический","Гиппоаллергенный"],
+    "values": ["result-2-12 month-dog-premium-classic", "result-2-12 month-dog-premium-hyppoallergic"],
+    "next": ["result-2-12 month-dog-premium-classic", "result-2-12 month-dog-premium-hyppoallergic"]
+  },
+  {
+    "id": "result-2-12 month-dog-premium-hyppoallergic",
+    "title": "DELICANA для щенков средних пород",
+    "description": "Полнорационный сухой корм для щенков мелких пород в возрасте до 1 года",
+    "image": "images/quiz-result/food/dogs/delicana/DELICANA для щенков средних пород.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/NEO/Омега Neo для щенков.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Junior Complex.png",
+    "descriptionrec1": "Омега Neo для щенков",
+    "descriptionrec2": "Unitabs Junior"
+  },
+  {
+    "id": "result-2-12 month-dog-premium-classic",
+    "title": "KARMY Медиум Юниор",
+    "description": "Полнорационный сухой корм для щенков мелких пород в возрасте до 1 года",
+    "image": "images/quiz-result/food/dogs/Karmy/KARMY Медиум Юниор.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/NEO/Омега Neo для щенков.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Junior Complex.png",
+    "descriptionrec1": "Омега Neo",
+    "descriptionrec2": "Unitabs Junior"
+  },
+  {
+    "id": "2-12 month-dog-econom",
+    "question": "выберите вариант",
+    "options": ["Классический","Гиппоаллергенный"],
+    "values": ["result-2-12 month-dog-сlassic-econom", "result-2-12 month-dog-huppoalergic-econom"],
+    "next": ["result-2-12 month-dog-сlassic-econom", "result-2-12 month-dog-huppoalergic-econom"]
+  },
+
+  {
+    "id": "result-2-12 month-dog-huppoalergic-econom",
+    "title": "Наша Марка гипоаллергенный",
+    "description": "для щенков всех пород с момента отъема до 4-х месяцев, беременных и кормящик сук",
+    "image": "images/quiz-result/food/dogs/NAWA-MARKA/Наша Марка гипоаллергенный.png",
+    "relatedImage": "images/quiz-result/recomended/HELP+/Фитокальцевит для щенков.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Junior Complex.png",
+    "descriptionrec1": "Фито кальцевит",
+    "descriptionrec2": "Unitabs Junior"
+  },
+  {
+    "id": "result-2-12 month-dog-сlassic-econom",
+    "title": "Наша марка для щенков мелких и средних пород",
+    "description": "для щенков всех пород с момента отъема до 4-х месяцев, беременных и кормящик сук",
+    "image": "images/quiz-result/food/dogs/NAWA-MARKA/наша марка для щенков мел и сред пород кцыпленок.png",
+    "relatedImage": "images/quiz-result/recomended/HELP+/Фитокальцевит для щенков.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/nawa_marka/наша марка для щенков влажник.png",
+    "descriptionrec1": "Фито кальцевит",
+    "descriptionrec2": "Наша марка"
+  },
+  {
+    "id": "1-4 month-dog",
+    "question": "выберите вариант",
+    "options": ["Премиум","Суперпремиум"],
+    "values": ["result-1-4 month-dog-premium", "result-1-4 month-dog-Superpremium"],
+    "next": ["result-1-4 month-dog-premium", "result-1-4 month-dog-Superpremium"]
+  },
+  {
+    "id": "result-1-4 month-dog-Superpremium",
+    "title": "PRO PLAN OPTI START",
+    "description": "для щенков всех пород с момента отъема до 4-х месяцев, беременных и кормящик сук",
+    "image": "images/quiz-result/food/dogs/PROPLAN/PRO-PLAN-OPTI START1.png",
+    "relatedImage": "images/quiz-result/recomended/FOOD/BEST DINNER/best-dinner-super-premium-yagnenok-s-yagodami-konservy-dlya-schenkov-vsekh-porodT-500x500-Photoroom.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Junior Complex.png",
+    "descriptionrec1": "Best Dinner",
+    "descriptionrec2": "Unitabs Junior"
+  },
+  {
+    "id": "result-1-4 month-dog-premium",
+    "title": "KARMY Starter",
+    "description": "для щенков всех пород с момента отъема до 4-х месяцев, беременных и кормящик сук",
+    "image": "images/quiz-result/food/dogs/Karmy/KARMY Starter.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/NEO/Омега Neo для щенков.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/dogs/PROBALANCE/ProBalance Puppy.png",
+    "descriptionrec1": "Омега Neo для щенков",
+    "descriptionrec2": "ProBalance Puppy"
+  },
+  {
+    "id": "cat",
+    "question": "Выберите возраст",
+    "options": ["от 1 до 4 месяцев","от 2 до 12 месяцев","от 1 года до 7 лет", "от 7 лет"],
+    "values": ["1-4 month-cat", "2-12 month-cat", "1-7 year-cat","7+year-cat"],
+    "next": ["result-1-4 month-cat", "2-12 month-cat", "1-7 year-cat","7+year-cat"]
+  },
+  {
+    "id": "1-7 year-cat",
+    "question": "Выберите вариант",
+    "options": ["Классический","Стерилизованный","Для чувствительного пищеварения", "Для кожи и шерсти",
+      "Для выведения комков шерсти","Для живущих в помещении","Для иммунитета","Для привередливых",
+    "Порода","Для беременных и кормящих","Восстанавливающий","Гипоаллергенный"],
+    "values": ["classic1-7year-cat", "Sterilized1-7year-cat", "JKT-7year-cat","dlya-koji-shersti-7year-cat",
+      "dlya-vivedeniya-komkov-7year-cat","result-inhouse-7year-cat","immune-7year-cat","result-Gurman-7year-cat",
+    "Breed-7year-cat","Pregnant-7year-cat","result-Heal-7year-cat","Hyppoalergic-7year-cat"],
+    "next": ["classic1-7year-cat", "Sterilized1-7year-cat", "JKT-7year-cat","dlya-koji-shersti-7year-cat",
+      "dlya-vivedeniya-komkov-7year-cat","result-inhouse-7year-cat","immune-7year-cat","result-Gurman-7year-cat",
+      "Breed-7year-cat","Pregnant-7year-cat","result-Heal-7year-cat","Hyppoalergic-7year-cat"]
+  },
+  {
+    "id": "Hyppoalergic-7year-cat",
+    "question": "Выберите вариант",
+    "options": ["Эконом","Премиум","Суперпремиум","Холистик"],
+    "values": ["result-Hyppoalergic-7year-cat-econom-7year-cat","result-Hyppoalergic-7year-cat-premium-7year-cat",
+      "result-Hyppoalergic-7year-cat-Superpremium-7year-cat","result-Hyppoalergic-7year-cat-Holistic-7year-cat"],
+    "next": ["result-Hyppoalergic-7year-cat-econom-7year-cat","result-Hyppoalergic-7year-cat-premium-7year-cat",
+      "result-Hyppoalergic-7year-cat-Superpremium-7year-cat","result-Hyppoalergic-7year-cat-Holistic-7year-cat"]
+  },
+  {
+    "id": "result-Hyppoalergic-7year-cat-Holistic-7year-cat",
+    "title": "Best Dinner Holistic Hypoallergenic Adult",
+    "description": "Низкозерновая рецептура для кошек Best Dinner с телятиной и орегано, изготовлена с учетом физиологических потребностей кошек",
+    "image": "images/quiz-result/food/cats/BEST DINNER/Best Dinner Holistic Hypoallergenic Adult.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/BEST DINNER/best-dinner-exclusive-konservy.png",
+    "descriptionrec1": "Unitabs Prebiotic",
+    "descriptionrec2": "Best Dinner"
+  },
+  {
+    "id": "result-Hyppoalergic-7year-cat-econom-7year-cat",
+    "title": "НАША МАРКА Сухой корм для кошек гипоаллергенный",
+    "description": "Полнорационный сухой корм для кошек с чувствительным пищеварением",
+    "image": "images/quiz-result/food/cats/NAWA-MARKA/НАША МАРКА Сухой корм для кошек гипоаллергенный.png",
+    "relatedImage": "images/quiz-result/recomended/HELP+/Фитокальцевит для кошек.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/NEO/Омега Neo+ Крепкое здоровье.png",
+    "descriptionrec1": "Фито кальцевит",
+    "descriptionrec2": "Омега Neo+"
+  },
+  {
+    "id": "result-Hyppoalergic-7year-cat-Superpremium-7year-cat",
+    "title": "Premier Cat Lamb & Turkey Adult",
+    "description": "Полнорационный сухой корм для кошек с чувствительным пищеварением",
+    "image": "images/quiz-result/food/cats/PREMIER/Premier Cat Lamb & Turkey Adult.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/BEST DINNER/Best Dinner Нежный паштет с индейкой и сливками.png",
+    "descriptionrec1": "Unitabs Prebiotic",
+    "descriptionrec2": "Best Dinner"
+  },
+  {
+    "id": "result-Hyppoalergic-7year-cat-premium-7year-cat",
+    "title": "Karmy Hypoallergenic",
+    "description": "Полнорационный сухой корм для кошек склонных к пищевой аллергии",
+    "image": "images/quiz-result/food/cats/Karmy/Karmy Hypoallergenic.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/PROBALANCE/Probalance Sensitive.png",
+    "descriptionrec1": "Unitabs Prebiotic",
+    "descriptionrec2": "Probalance"
+  },
+  {
+    "id": "result-Heal-7year-cat",
+    "title": "Best dinner recovery",
+    "description": "для кошек и собак при истощении, выздоровлении и послеоперационном восстановлении",
+    "image": "images/quiz-result/recomended/FOOD/BEST DINNER/Best dinner recovery.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Тотал с Q10 жидкие витамины.png",
+    "descriptionrec1": "Unitabs Prebiotic",
+    "descriptionrec2": "Unitabs Тотал"
+  },
+
+  {
+    "id": "Pregnant-7year-cat",
+    "question": "Выберите вариант",
+    "options": ["Премиум","Суперпремиум","Холистик"],
+    "values": ["result-Pregnant-7year-cat-premium-7year-cat","result-Pregnant-7year-cat-Superpremium-7year-cat","result-Pregnant-7year-cat-Holistik-7year-cat"],
+    "next": ["result-Pregnant-7year-cat-premium-7year-cat","result-Pregnant-7year-cat-Superpremium-7year-cat","result-Pregnant-7year-cat-Holistik-7year-cat"]
+  },
+  {
+    "id": "result-Pregnant-7year-cat-Holistik-7year-cat",
+    "title": "Elato Holistic для котят, беременных и кормящих кошек",
+    "description": "Специально для кошек в конце беременности и в период лактации",
+    "image": "images/quiz-result/food/cats/elato/Elato Holistic для котят, беременных и кормящих кошек.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/UNITABS_MAMA_KITTY_B9_66780_1-Photoroom.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/PRO PLAN/Pro Plan Adult 7+.png",
+    "descriptionrec1": "Unitabs Mama Kitty",
+    "descriptionrec2": "Pro Plan"
+  },
+  {
+    "id": "result-Pregnant-7year-cat-Superpremium-7year-cat",
+    "title": "Royal Canin Mother & Babycat",
+    "description": "Специально для кошек в конце беременности и в период лактации",
+    "image": "images/quiz-result/food/cats/ROYAL CANIN/Royal Canin Mother & Babycat (3).png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/UNITABS_MAMA_KITTY_B9_66780_1-Photoroom.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/PRO PLAN/Pro Plan Adult 7+.png",
+    "descriptionrec1": "Unitabs Mama Kitty",
+    "descriptionrec2": "Pro Plan"
+  },
+  {
+    "id": "result-Pregnant-7year-cat-premium-7year-cat",
+    "title": "Probalance 1`st Diet Kitten",
+    "description": "Компоненты корма полностью натуральные и не содержат Е-консервантов.",
+    "image": "images/quiz-result/food/cats/PROBALANCE/probalance first diet kitten.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/UNITABS_MAMA_KITTY_B9_66780_1-Photoroom.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/PROBALANCE/ProBalance Immuno Protection.png",
+    "descriptionrec1": "Unitabs Mama Kitty",
+    "descriptionrec2": "Pro Balance"
+  },
+  {
+    "id": "Breed-7year-cat",
+    "question": "Выберите вариант",
+    "options": ["Мейн-кун","Британец","Сфинкс"],
+    "values": ["result-Breed-Mein-Kun-7year-cat","result-Breed-British-7year-cat","result-Breed-Sfinks-7year-cat"],
+    "next": ["result-Breed-Mein-Kun-7year-cat","result-Breed-British-7year-cat","result-Breed-Sfinks-7year-cat"]
+  },
+  {
+    "id": "result-Breed-Sfinks-7year-cat",
+    "title": "Royal Canin Sphynx Adult",
+    "description": "Специально для взрослых сфинсков ",
+    "image": "images/quiz-result/food/cats/ROYAL CANIN/Royal Canin Sphynx Adult.png",
+    "relatedImage": "images/quiz-result/recomended/TOYS/matabi.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Тотал с Q10 жидкие витамины.png",
+    "descriptionrec1": "Палочки Мататаби",
+    "descriptionrec2": "Unitabs Тотал"
+  },
+  {
+    "id": "result-Breed-British-7year-cat",
+    "title": "Royal Canin British Shorthair Adult",
+    "description": "Специально для взрослых кошек британской породы",
+    "image": "images/quiz-result/food/cats/ROYAL CANIN/Royal Canin British Shorthair Adult.png",
+    "relatedImage": "images/quiz-result/recomended/TOYS/Когтеточка-картонная-с-мятой.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs BiotinPlus.png",
+    "descriptionrec1": "Когтеточка с мятой",
+    "descriptionrec2": "Unitabs BiotinPlus"
+  },
+  {
+    "id": "result-Breed-Mein-Kun-7year-cat",
+    "title": "Royal Canin maine coon adult",
+    "description": "Специально для взрослых кошек породы мейн-кун в возрасте от 15 месяцев и старше",
+    "image": "images/quiz-result/food/cats/ROYAL CANIN/Royal Canin maine coon adult.png",
+    "relatedImage": "images/quiz-result/recomended/TOYS/Трехуровневая интеллектуальная игрушка для кошек с шариками.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs BiotinPlus.png",
+    "descriptionrec1": "Игрушка с шариками",
+    "descriptionrec2": "Unitabs BiotinPlus"
+  },
+
+
+
+  {
+    "id": "result-premium-immune-7year-cat",
+    "title": "ProBalance Immuno",
+    "description": "Полнорационный натуральный сухой корм премиум класса для кошек, избирательных в еде.",
+    "image": "images/quiz-result/food/cats/PROBALANCE/ProBalance Immuno Salmon.png",
+    "relatedImage": "images/quiz-result/recomended/TOYS/Трехуровневая интеллектуальная игрушка для кошек с шариками.png",
+    "relatedImage2": "images/quiz-result/recomended/TOYS/игрушки-дразнилки.png",
+    "descriptionrec1": "Игрушка с шариками",
+    "descriptionrec2": "Игрушка дразнилки"
+  },
+  {
+    "id": "result-Gurman-7year-cat",
+    "title": "Probalance Gourmet Diet",
+    "description": "Полнорационный натуральный сухой корм премиум класса для кошек, избирательных в еде.",
+    "image": "images/quiz-result/food/cats/PROBALANCE/Сухой корм ProBalance Gourmet Diet для взрослых кошек с говядиной и кроликом.png",
+    "relatedImage": "images/quiz-result/recomended/TOYS/Трехуровневая интеллектуальная игрушка для кошек с шариками.png",
+    "relatedImage2": "images/quiz-result/recomended/TOYS/игрушки-дразнилки.png",
+    "descriptionrec1": "Игрушка с шариками",
+    "descriptionrec2": "Игрушка дразнилки"
+  },
+  {
+    "id": "immune-7year-cat",
+    "question": "Выберите вариант",
+    "options": ["Премиум","Холистик"],
+    "values": ["result-premium-immune-7year-cat","result-holistic-immune-7year-cat"],
+    "next": ["result-premium-immune-7year-cat","result-holistic-immune-7year-cat"]
+  },
+  {
+    "id": "result-holistic-immune-7year-cat",
+    "title": "Деревенские лакомства Холистик Премьер",
+    "description": "Идеально подойдёт для кошек",
+    "image": "images/quiz-result/food/cats/WOOD-LAKOMSTVA/Деревенские лакомства Холистик Премьер иммунитет.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/UNITABS-IMMUNOCAT1.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/PRO PLAN/Pro Plan Adult 7+.png",
+    "descriptionrec1": "Unitabs ImmunoCat",
+    "descriptionrec2": "Pro plan"
+  },
+  {
+    "id": "result-premium-immune-7year-cat",
+    "title": "ProBalance Immuno Salmon",
+    "description": "Полнорационный сбалансированный сухой корм премиум класса для взрослых кошек всех пород",
+    "image": "images/quiz-result/food/cats/PROBALANCE/ProBalance Immuno Salmon.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/UNITABS-IMMUNOCAT1.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/PROBALANCE/ProBalance Immuno Protection.png",
+    "descriptionrec1": "Unitabs ImmunoCat",
+    "descriptionrec2": "ProBalance Immuno"
+  },
+  {
+    "id": "result-inhouse-7year-cat",
+    "title": "Meat Garden Indoor sensetive",
+    "description": "Профилактическая линейка кормов разработана для заботы о здоровье питомцев и профилактики серьёзных заболеваний.",
+    "image": "images/quiz-result/food/cats/MEAT-GARDEN/MEAT_GARDEN_mockup_S.png",
+    "relatedImage": "images/quiz-result/recomended/FOOD/PRO PLAN/Влажный корм Pro Plan Housecat.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Тотал с Q10 жидкие витамины.png",
+    "descriptionrec1": "Pro Plan Housecat",
+    "descriptionrec2": "Unitabs total"
+  },
+  {
+    "id": "dlya-vivedeniya-komkov-7year-cat",
+    "question": "Выберите вариант",
+    "options": ["Премиум","Суперпремиум"],
+    "values": ["result-dlya-vivedeniya-komkov-premium-7year-cat","result-dlya-vivedeniya-komkov-superpremium-7year-cat"],
+    "next": ["result-dlya-vivedeniya-komkov-premium-7year-cat","result-dlya-vivedeniya-komkov-superpremium-7year-cat"]
+  },
+  {
+    "id": "result-dlya-vivedeniya-komkov-superpremium-7year-cat",
+    "title": "PRO PLAN Derma Care",
+    "description": "Помогает естественным путем выводить шерсть",
+    "image": "images/quiz-result/recomended/FOOD/PRO PLAN/PRO PLAN Derma Care.png",
+    "relatedImage": "images/quiz-result/recomended/HELP+/Клини паста для вывода шерсти.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/PRO PLAN/PRO PLAN Derma Care.png",
+    "descriptionrec1": "Клини паста",
+    "descriptionrec2": "PRO PLAN"
+  },
+  {
+    "id": "result-dlya-vivedeniya-komkov-premium-7year-cat",
+    "title": "ProBalance Adult Hairball",
+    "description": "Помогает естественным путем выводить шерсть",
+    "image": "images/quiz-result/food/cats/PROBALANCE/PROBALANCE_CAT_ADULT_HAILBALL.png",
+    "relatedImage": "images/quiz-result/recomended/HELP+/Клини паста для вывода шерсти.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/NEO/Omega-NEO-sherst.png",
+    "descriptionrec1": "Клини паста",
+    "descriptionrec2": "Омега Нео+"
+  },
+
+
+  {
+    "id": "dlya-koji-shersti-7year-cat",
+    "question": "Выберите вариант",
+    "options": ["Премиум","Суперпремиум"],
+    "values": ["result-dlya-koji-shersti-premium-7year-cat","result-dlya-koji-shersti-Superpremium-7year-cat"],
+    "next": ["result-dlya-koji-shersti-premium-7year-cat","result-dlya-koji-shersti-Superpremium-7year-cat"]
+  },
+  {
+    "id": "result-dlya-koji-shersti-Superpremium-7year-cat",
+    "title": "PRO PLAN Derma Care",
+    "description": "подойдет выставочным питомцам в период подготовки к соревнованиям",
+    "image": "images/quiz-result/recomended/FOOD/PRO PLAN/PRO PLAN Derma Care.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs BiotinPlus.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/ABZ/АВЗ Сера кормовая добавка.png",
+    "descriptionrec1": "Unitabs BiotinPlus",
+    "descriptionrec2": "АВЗ Сера"
+  },
+  {
+    "id": "result-dlya-koji-shersti-premium-7year-cat",
+    "title": "ProBalance Hair&Beauty для кошек",
+    "description": "подойдет выставочным питомцам в период подготовки к соревнованиям",
+    "image": "images/quiz-result/food/cats/PROBALANCE/Сухой корм ProBalance Hair&Beauty для кошек.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs BiotinPlus.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/ABZ/АВЗ Сера кормовая добавка.png",
+    "descriptionrec1": "Unitabs BiotinPlus",
+    "descriptionrec2": "АВЗ Сера"
+  },
+  {
+    "id": "JKT-7year-cat",
+    "question": "Выберите вариант",
+    "options": ["Лечебный","Проффилактический"],
+    "values": ["result-JKTHealt1-7year-cat", "JKTprofilactic-7year-cat"],
+    "next": ["result-JKTHealt1-7year-cat", "JKTprofilactic-7year-cat"]
+  },
+  {
+    "id": "JKTprofilactic-7year-cat",
+    "question": "Выберите вариант",
+    "options": ["Премиум","Суперпремиум","Холистик"],
+    "values": ["result-JKTPremium1-7year-cat", "JKTSuperpremium-7year-cat", "JKTHolistik-7year-cat"],
+    "next": ["result-JKTPremium1-7year-cat", "result-JKTSuperpremium-7year-cat", "result-JKTHolistik-7year-cat"]
+  },
+  {
+    "id": "result-JKTHolistik-7year-cat",
+    "title": "Деревенские лакомства холистик для чувствительного пищеварения",
+    "description": "Элитный корм для самых привередливых питомцев",
+    "image": "images/quiz-result/food/cats/WOOD-LAKOMSTVA/Деревенские лакомства холистик для чувствительного пищеварения индейка.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/BEST DINNER/best-dinner-exclusive-konservy.png",
+    "descriptionrec1": "Unitabs Prebiotic",
+    "descriptionrec2": "Best Dinner"
+  },
+  {
+    "id": "result-JKTSuperpremium-7year-cat",
+    "title": "PRO PLAN® DELICATE DIGESTION",
+    "description": " Подходит даже для самых привередливых питомцев",
+    "image": "images/quiz-result/food/cats/PROPLAN/PRO PLAN® DELICATE DIGESTION.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/PRO PLAN/Pro Plan Delicate.png",
+    "descriptionrec1": "Unitabs Prebiotic",
+    "descriptionrec2": "Pro Plan"
+  },
+  {
+    "id": "result-JKTPremium1-7year-cat",
+    "title": "СУХОЙ КОРМ ДЛЯ КОШЕК PROBALANCE SENSITIVE",
+    "description": "специальный премиальный рацион для кошек с чувствительным пищеварением и склонных к аллергии.",
+    "image": "images/quiz-result/food/cats/PROBALANCE/СУХОЙ КОРМ ДЛЯ КОШЕК PROBALANCE SENSITIVE.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/PROBALANCE/Probalance Sensitive.png",
+    "descriptionrec1": "Unitabs Prebiotic",
+    "descriptionrec2": "Probalance Sensitive"
+  },
+  {
+    "id": "result-JKTHealt1-7year-cat",
+    "title": "Royal Canin GASTROINTESTINAL FIBRE RESPONSE",
+    "description": "Для поддержания пищеварительной системы при расстройствах желудочно-кишечного тракта.",
+    "image": "images/quiz-result/food/cats/ROYAL CANIN/royal-canin-gastrointestinal-fibre-response-.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Prebiotic.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/BEST DINNER/Бест Динер гастроинтестинал.png",
+    "descriptionrec1": "Unitabs Prebiotic",
+    "descriptionrec2": "Best dinner "
+  },
+  {
+    "id": "Sterilized1-7year-cat",
+    "question": "Выберите вариант",
+    "options": ["Лечебный","Проффилактический"],
+    "values": ["result-Healt1-7year-cat", "profilactic-7year-cat"],
+    "next": ["result-Healt1-7year-cat", "profilactic-7year-cat"]
+  },
+  {
+    "id": "profilactic-7year-cat",
+    "question": "Выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум","Холистик"],
+    "values": ["result-Profi-budget-7year-cat","result-Profi-premium-7year-cat",
+      "result-Profi-superpremium-7year-cat","result-Profi-Holistic-7year-cat" ],
+    "next": ["result-Profi-budget-7year-cat","result-Profi-premium-7year-cat",
+      "result-Profi-superpremium-7year-cat","result-Profi-Holistic-7year-cat" ]
+  },
+  {
+    "id": "result-Profi-Holistic-7year-cat",
+    "title": "ДЕРЕВЕНСКИЕ ЛАКОМСТВА для взрослых кастрированных котов",
+    "description": "Здоровье и долголетие – основные принципы в рецептуре кормов «Холистик Премьер»",
+    "image": "images/quiz-result/food/cats/WOOD-LAKOMSTVA/DEREVENSKIE_LAKOMSTVA_HOLISTIC_PREMIER_STERILISED.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs SterilCat .png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/BEST DINNER/Best Dinner суфле.png",
+    "descriptionrec1": "Unitabs SterilCat",
+    "descriptionrec2": "Best Dinner суфле"
+  },
+  {
+    "id": "result-Profi-superpremium-7year-cat",
+    "title": "Proplan Sterilized",
+    "description": "помогает поддерживать здоровье у стерилизованных кошек",
+    "image": "images/quiz-result/food/cats/PROPLAN/Проплан для стерилизованных кошек.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs SterilCat .png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/BEST DINNER/BEST_DINNER_MEET_DELIKATES_STERILISED_SUFLE_TU.png",
+    "descriptionrec1": "Unitabs SterilCat",
+    "descriptionrec2": "Best Dinner суфле"
+  },
+  {
+    "id": "result-Profi-premium-7year-cat",
+    "title": "ProBalance Sterilized",
+    "description": "помогает поддерживать здоровье у стерилизованных кошек",
+    "image": "images/quiz-result/food/cats/PROBALANCE/Корм ProBalance Sterilized.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs SterilCat .png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/PROBALANCE/Влажный корм ProBalance Sterilized.png",
+    "descriptionrec1": "Unitabs SterilCat",
+    "descriptionrec2": "ProBalance"
+  },
+  {
+    "id": "result-Profi-budget-7year-cat",
+    "title": "ALL CATS корм сухой для кошек ",
+    "description": "помогает поддерживать здоровье у домашних животных",
+    "image": "images/quiz-result/food/cats/ALLCATS/ALL CATS корм сухой для кошек с говядиной и овощами.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/NEO/Омега Нео для стерилизованных котов.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/CAT MENU/Cat`s Menu влажный корм для взрослых стерилизованных кошек.png",
+    "descriptionrec1": "Омега Нео",
+    "descriptionrec2": "Cat`s Menu"
+  },
+
+
+  {
+    "id": "result-Healt1-7year-cat",
+    "title": "Royal Canin Urinary",
+    "description": "помогает поддерживать здоровье мочевыводящих путей у домашних животных",
+    "image": "images/quiz-result/food/cats/ROYAL CANIN/Роял канин уринари.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs SterilCat .png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/BEST DINNER/Бест Динер уринари паштет.png",
+    "descriptionrec1": "Unitabs SterilCat",
+    "descriptionrec2": "Best dinner"
+  },
+
+
+  {
+    "id": "classic1-7year-cat",
+    "question": "Выберите вариант",
+    "options": ["Бюджетный","Премиум","Суперпремиум","Холистик"],
+    "values": ["result-budget1-7year-cat", "result-premium1-7year-cat", "result-Superpremium1-7year-cat", "result-Holistic1-7year-cat"],
+    "next": ["result-budget1-7year-cat", "result-premium1-7year-cat", "result-Superpremium1-7year-cat", "result-Holistic1-7year-cat"]
+  },
+  {
+    "id": "result-Holistic1-7year-cat",
+    "title": "Деревенские лакомства Холистик  для кошек",
+    "description": "Полноценное питание для поддержания активности",
+    "image": "images/quiz-result/food/cats/WOOD-LAKOMSTVA/Деревенские лакомства Холистик  для кошек.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Тотал с Q10 жидкие витамины.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/BEST DINNER/Best Dinner Нежный паштет с индейкой и сливками.png",
+    "descriptionrec1": "Unitabs Тотал",
+    "descriptionrec2": "Best dinner"
+  },
+  {
+    "id": "result-budget1-7year-cat",
+    "title": "Наша марка для взрослых кошек",
+    "description": "Полноценное питание для поддержания активности",
+    "image": "images/quiz-result/food/cats/NAWA-MARKA/Наша марка.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/NEO/OMEGA_NEO_CAT_KRASIVAY_SHERST_MORSKIE_VODOROSL.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/PUFFINS/Пуффинс влажный корм говядина.png",
+    "descriptionrec1": "Омега Нео здоровье",
+    "descriptionrec2": "Пуффинс  говядина"
+  },
+  {
+    "id": "result-Superpremium1-7year-cat",
+    "title": "Premier Adult Fresh Turkey",
+    "description": "Полноценное питание для поддержания активности",
+    "image": "images/quiz-result/food/cats/PREMIER/Сухой корм Premier Adult Fresh Turkey .png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/Unitabs Тотал с Q10 жидкие витамины.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/BEST DINNER/Best Dinner Нежный паштет с индейкой и сливками.png",
+    "descriptionrec1": "Unitabs Тотал",
+    "descriptionrec2": "Best dinner"
+  },
+  {
+    "id": "result-premium1-7year-cat",
+    "title": "DELICANA корм для кошек ",
+    "description": "Полноценное питание для поддержания активности",
+    "image": "images/quiz-result/food/cats/DELICANA/DELICANA корм для кошек .png",
+    "relatedImage": "images/quiz-result/recomended/HELP+/KHelavit_S_dlya_sobak_i_koshek_fl_70_ml.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/PROBALANCE/ProBalance Adult корм для кошек Кролик в соусе.png",
+    "descriptionrec1": "Хелавит С",
+    "descriptionrec2": "ProBalance Adult"
+  },
+
+
+  {
+    "id": "7+year-cat",
+    "question": "Выберите вариант",
+    "options": ["Классический","Стерилизованный"],
+    "values": ["result-Classic-cat-7+", "result-Sterilized-cat-7+"],
+    "next": ["result-Classic-cat-7+", "result-Sterilized-cat-7+"]
+  },
+  {
+    "id": "result-Sterilized-cat-7+",
+    "title": "Proplan для стерилизованных кошек старше 7 лет",
+    "description": "Полноценное питание для поддержания активности, здоровья суставов и иммунитета кошек",
+    "image": "images/quiz-result/food/cats/PROPLAN/434041176-purina-pro-plan-longevis-sterilised-suhoj-korm-purina-dlya-kastrirovannyh-kotov-i-sterilizovannyh-koshek-starshe-7-let-indejka-1000x1000.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/UNITABS-IMMUNOCAT1.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/PRO PLAN/Pro Plan NutriSavour Adult.png",
+    "descriptionrec1": "Unitabs imunocats",
+    "descriptionrec2": "Pro Plan NutriSavour"
+  },
+  {
+    "id": "result-Classic-cat-7+",
+    "title": "Proplan для кошек старше 7 лет",
+    "description": "Полноценное питание для поддержания активности, здоровья суставов и иммунитета кошек",
+    "image": "images/quiz-result/food/cats/PROPLAN/Proplan для кошек старше 7 лет.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/UNITABS-IMMUNOCAT1.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/PRO PLAN/Pro Plan NutriSavour Adult.png",
+    "descriptionrec1": "Unitabs Imune",
+    "descriptionrec2": "Pro Plan NutriSavour"
+  },
+  {
+    "id": "result-1-4 month-cat",
+    "title": "Royal Canin Mother & Babycat",
     "description": "Корм с низким содержанием жиров и повышенным уровнем белка для контроля веса.",
-    "image": "images/pfood.png",
-    "relatedImage": "images/pfood.png",
-    "relatedImage2": "images/pfood.png",
-    "relatedImage3": "images/pfood.png",
-    "descriptionrec1": "Товар 1",
-    "descriptionrec2": "Товар 2",
-    "descriptionrec3": "Товар 3"
+    "image": "images/quiz-result/food/cats/ROYAL CANIN/Royal Canin Mother & Babycat (2).png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/UNITABS_MAMA_KITTY_B9_66780_1-Photoroom.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/PRO PLAN/proplan-dlya-kotyati.png",
+    "descriptionrec1": "Unitabs Mama+Kitty",
+    "descriptionrec2": "Pro Plan"
   },
   {
-    "id": "result-adult-digestive",
-    "title": "Корм для кошек с чувствительным пищеварением",
-    "description": "Идеально подходит для кошек с проблемами пищеварения. Обогащен натуральными пребиотиками.",
-    "image": "images/pfood.png",
-    "relatedImage": "images/pfood.png",
-    "relatedImage2": "images/pfood.png",
-    "relatedImage3": "images/pfood.png",
-    "descriptionrec1": "Товар 1",
-    "descriptionrec2": "Товар 2",
-    "descriptionrec3": "Товар 3"
+    "id": "2-12 month-cat",
+    "question": "Выберите вариант",
+    "options": ["Порода","Стерилизованный","Классический"],
+    "values": ["breed-cat-2-12", "sterilized-cat-2-12", "classic-cat-2-12"],
+    "next": ["breed-cat-2-12", "result-sterilized-cat-2-12", "classic-cat-2-12"]
+  },
+  {
+    "id": "classic-cat-2-12",
+    "question": "Выберите категорию корма",
+    "options": ["Бюджетный", "Премиум", "Суперпремиум", "Холистик"],
+    "values": ["result-budget-cat-2-12", "result-premium-cat-2-12", "result-superpremium-cat-2-12", "result-holistic-cat2-12"],
+    "next": ["result-cat-budget-2-12", "result-cat-premium-2-12", "result-cat-superpremium-2-12", "result-cat-holistic-2-12"]
+  },
+  {
+    "id": "result-cat-budget-2-12",
+    "title": "Наша марка для котят",
+    "description": "Сбалансированное питание для здоровья и роста котят",
+    "image": "images/quiz-result/food/cats/NAWA-MARKA/наша марка для котят1.png",
+    "relatedImage": "images/quiz-result/recomended/FOOD/PROHVOST/prohvost-dlya-kotyat1.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/NEO/omega-neo-for-kittenjpg1.png",
+    "descriptionrec1": "Прохвост для котят  ",
+    "descriptionrec2": "Омега Нео для котят"
+  },
+  {
+    "id": "result-cat-premium-2-12",
+    "title": "Probalance для котят",
+    "description": "Улучшенная формула для оптимального роста и здоровья котят",
+    "image": "images/quiz-result/food/cats/PROBALANCE/Probalance-kittens.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/UNITABS_MAMA_KITTY_B9_66780_1-Photoroom.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/PROBALANCE/Probalance-kittens1.png",
+    "relatedImage3": "images/quiz-result/recomended/TOYS/igrushki-dlya-kotenka11.png",
+    "descriptionrec1": "Unitabs Mama+Kitty",
+    "descriptionrec2": " ProBalance Kitten"
+  },
+  {
+    "id": "result-cat-superpremium-2-12",
+    "title": "Premier для котят",
+    "description": "Оптимальное питание для здоровья и гармоничного развития котят",
+    "image": "images/quiz-result/food/cats/PREMIER/Premier-kittens.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/UNITABS_MAMA_KITTY_B9_66780_1-Photoroom.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/PRO PLAN/proplan-dlya-kotyati.png",
+    "descriptionrec1": "Unitabs Mama+Kitty",
+    "descriptionrec2": "Proplan"
+  },
+  {
+    "id": "result-cat-holistic-2-12",
+    "title": " Деревенские лакомства Холистик Премьер для котят",
+    "description": "Премиальное питание для здоровья, энергии и гармоничного роста котят",
+    "image": "images/quiz-result/food/cats/WOOD-LAKOMSTVA/Сухой корм Деревенские лакомства Холистик Премьер для котят.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/UNITABS_MAMA_KITTY_B9_66780_1-Photoroom.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/BEST DINNER/Best Dinner Нежный паштет с индейкой и сливками.png",
+    "descriptionrec1": "Unitabs Mama+Kitty",
+    "descriptionrec2": "Best Dinner"
+  },
+  {
+    "id": "result-sterilized-cat-2-12",
+    "title": "Royal Canin kitten sterilised",
+    "description": "Питание для поддержания здоровья, оптимального веса и развития",
+    "image": "images/quiz-result/food/cats/ROYAL CANIN/royal-canin-kitten-.png",
+    "relatedImage": "images/quiz-result/recomended/FOOD/BEST DINNER/Best Dinner Нежный паштет с индейкой и сливками.png",
+    "relatedImage2": "images/quiz-result/recomended/BADS/UNITABS/UNITABS_MAMA_KITTY_B9_66780_1-Photoroom.png",
+    "descriptionrec1": "Best dinner",
+    "descriptionrec2": "Unitabs Mama+Kitty"
+  },
+  {
+    "id": "breed-cat-2-12",
+    "question": "Выберите вариант",
+    "options": ["британец", "сфинкс", "универсальный"],
+    "values": ["result-british-2-12", "result-sfinks-2-12", "result-univerl-2-12"],
+    "next": ["result-british-2-12", "result-sfinks-2-12", "result-univerl-2-12"]
+  },
+  {
+    "id": "result-sfinks-2-12",
+    "title": "Royal Canin sphynx kitten",
+    "description": "Сбалансированное питание для поддержания энергии, здоровья кожи котят сфинксов",
+    "image": "images/quiz-result/food/cats/ROYAL CANIN/royal_canin_sphynx_kitten1.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/UNITABS_MAMA_KITTY_B9_66780_1-Photoroom.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/BEST DINNER/Best Dinner Нежный паштет с индейкой и сливками.png",
+    "descriptionrec1": "Unitabs Mama+Kitty",
+    "descriptionrec2": "Best Dinner"
+  },
+  {
+    "id": "result-british-2-12",
+    "title": "Royal Canin british kitten",
+    "description": "Сбалансированное питание для поддержания энергии, здоровья кожи котят британцев",
+    "image": "images/quiz-result/food/cats/ROYAL CANIN/Роял канин для британских котят1.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/UNITABS_MAMA_KITTY_B9_66780_1-Photoroom.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/BEST DINNER/Best Dinner Нежный паштет с индейкой и сливками.png",
+    "descriptionrec1": "Unitabs Mama+Kitty",
+    "descriptionrec2": "Best Dinner"
+  },
+  {
+    "id": "result-univerl-2-12",
+    "title": "Royal Canin kitten",
+    "description": "Сбалансированное питание для поддержания энергии, здоровья кожи котят",
+    "image": "images/quiz-result/food/cats/ROYAL CANIN/Роял канин киттен.png",
+    "relatedImage": "images/quiz-result/recomended/BADS/UNITABS/UNITABS_MAMA_KITTY_B9_66780_1-Photoroom.png",
+    "relatedImage2": "images/quiz-result/recomended/FOOD/BEST DINNER/Best Dinner Нежный паштет с индейкой и сливками.png",
+    "descriptionrec1": "Unitabs Mama+Kitty",
+    "descriptionrec2": "Best Dinner"
   }
+
+
 ]

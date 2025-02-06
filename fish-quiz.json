@@ -1,0 +1,16 @@
+[
+  {
+    "id": "fish-start",
+    "question": "Выберите тип вашей рыбки",
+    "options": ["Домашняя", "Уличная", "Смешанного типа"],
+    "values": ["indoor", "outdoor", "mixed"],
+    "next": ["cat-indoor", "cat-outdoor", "cat-mixed"]
+  },
+  {
+    "id": "cat-indoor",
+    "question": "Выберите возраст вашей кошки",
+    "options": ["До 1 года", "1-7 лет"],
+    "values": ["<1", "1-7"],
+    "next": ["cat-indoor-young", "cat-indoor-adult"]
+  }
+]

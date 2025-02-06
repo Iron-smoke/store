@@ -1,0 +1,34 @@
+{
+  "categories": [
+    {
+      "name": "cats",
+      "sections": [
+        {
+          "name": "toys",
+          "products": [
+            {
+              "image": "images/pfood.png",
+              "title": "Сухой корм PRO PLAN",
+              "description": "DELICATE DIGESTION"
+            },
+            {
+              "image": "images/pet-food.png",
+              "title": "Сухой корм PRO PLAN",
+              "description": "DELICATE DIGESTION"
+            }
+          ]
+        },
+        {
+          "name": "food",
+          "products": [
+            {
+              "image": "images/hcat.png",
+              "title": "Сухой корм PRO PLAN",
+              "description": "DELICATE DIGESTION"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

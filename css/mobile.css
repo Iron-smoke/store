@@ -10,12 +10,13 @@
 
     /* Верхний жёлтый блок */
     .hero-yellow {
-        height: 470px ; /* Уменьшаем высоту */
+        height: 470px; /* Уменьшаем высоту */
     }
 
     /* Нижний зелёный блок */
     .hero-green {
-       height: 136px ; /* Уменьшаем высоту */
+        height: 136px; /* Уменьшаем высоту */
+        background-color: #0f5132;
     }
 
     /* Текстовые элементы */
@@ -26,19 +27,22 @@
 
     .hero-text h1 {
         font-size: 5rem; /* Уменьшаем размер заголовка */
-        text-shadow: -1px -1px 0 white, /* Тень сверху слева */
-        1px -1px 0 white, /* Тень сверху справа */
-        -1px 1px 0 white, /* Тень снизу слева */
-        1px 1px 0 white; /* Тень снизу справа */
+        text-shadow: -1px -1px 0 white, /* Тень сверху слева */ 1px -1px 0 white, /* Тень сверху справа */ -1px 1px 0 white, /* Тень снизу слева */ 1px 1px 0 white; /* Тень снизу справа */
         transform: translate(5%, -85%);
     }
 
-    .hero-text h2 {
-        display: none;
-    }
 
+    .hero-text h2 {
+        font-size: 1.6rem; /* Уменьшаем размер шрифта */
+        line-height: 1.4; /* Увеличиваем межстрочный интервал для читаемости */
+        position: absolute; /* Позиционируем элемент */
+        top: 130px;
+        left: 20px; /* Отступ слева */
+        width: 100%; /* Занимает всю доступную ширину */
+        text-align: left; /* Текст слева */
+    }
     .hero-text h3 {
-        display: flex;
+        display: none;
         font-size: 1rem; /* Уменьшаем текст скидки */
         font-weight: bold;
         top: auto; /* Убрать фиксированную позицию, использовать flex или grid */
@@ -56,18 +60,23 @@
     }
 
     .hero-image {
-        max-width: 22% ; /* Увеличиваем ширину изображений */
+        max-width: 22%; /* Увеличиваем ширину изображений */
         height: auto;
     }
 
+    .Logo-text {
+
+        margin-top: -15rem;
+
+    }
 
     /* Собака */
     .hero-dog-wrapper {
-        right: -6.9rem ; /* Сдвигаем ближе */
-        top: 0;
+        right: -7.2rem; /* Сдвигаем ближе */
+        top: 4rem;
         transform: translate(5%, 15%);
         box-shadow: none; /* Тень вокруг круга */
-        width: 430px ; /* Уменьшаем размер круга */
+        width: 430px; /* Уменьшаем размер круга */
         height: 430px; /* Уменьшаем размер круга */
 
     }
@@ -80,13 +89,6 @@
     .hero-cat-wrapper {
         display: none;
     }
-
-    /* Подзаголовок */
-    .logo-subtitle {
-        font-size: 0.8rem; /* Уменьшаем шрифт */
-        margin-top: 0.5rem;
-    }
-
     /* Текст скидки */
     .discount {
         font-size: 0.7rem;
@@ -94,9 +96,9 @@
 
     /* Прочие элементы */
     .hero-cat-shower-wrapper {
-        max-width: 24% ; /* Увеличиваем ширину изображений */
+        max-width: 24%; /* Увеличиваем ширину изображений */
         height: auto;
-        margin-bottom: 12% ;
+        margin-bottom: 12%;
         display: none;
     }
 
@@ -116,8 +118,8 @@
     }
 
     /* Центрируем WhatsApp и ссылки в одном ряду */
-    .social-icons {
-        margin-right: auto; /* Прижимаем WhatsApp к левому краю */
+    .header-bottom .social-icons {
+        margin-right: 10px;
     }
 
     .d-flex.align-items-center.justify-content-between {
@@ -136,277 +138,388 @@
         align-items: center; /* Центрируем содержимое */
         justify-content: center;
         top: 14%;
+        background: linear-gradient(to right, #FCEAB4, #F8A900);
         z-index: 1; /* Уровень слоя */
+        animation: slideInHerocat 3s ease-out forwards;
+    }
+
+
+        .image-mobile-wrapper img {
+            width: 95%; /* Изображение растягивается по кругу */
+            height: 100%; /* Заполняет круг полностью */
+            object-fit: cover; /* Адаптация изображения внутри круга */
+            border-radius: 50%; /* Повторяем круг, чтобы избежать артефактов */
+        }
 
 
     }
 
-    /* Изображение внутри */
-    .image-mobile-wrapper img {
-        width: 95%; /* Изображение растягивается по кругу */
-        height: 100%; /* Заполняет круг полностью */
-        object-fit: cover; /* Адаптация изображения внутри круга */
-        border-radius: 50%; /* Повторяем круг, чтобы избежать артефактов */
+    /* hero-section-end */
+    /* about-us-mobile section */
+    @media (max-width: 568px) {
+        .about-us {
+            display: none;
+
+        }
+
+        @media (max-width: 568px) {
+            /* Секция */
+            #about-us-mobile {
+                display: block;
+            }
+
+            .about-us-mobile {
+                display: block; /* Гарантируем, что секция ведёт себя как блочный элемент */
+                width: 100%; /* Растягиваем на всю ширину экрана */
+                padding: 1rem; /* Добавляем отступы по бокам */
+                background: linear-gradient(to bottom, #114F3C, #c6b58a); /* Фон секции */
+                box-sizing: border-box; /* Учитываем отступы в ширине */
+            }
+
+            /* Контейнер для изображения */
+            .about-img-container-mobile {
+                width: 100%; /* Растягиваем контейнер на всю ширину */
+                display: flex;
+                justify-content: center; /* Центрируем изображение */
+                margin-bottom: 2rem; /* Отступ снизу */
+            }
+
+            /* Изображение */
+            .about-img-mobile {
+                width: 80%; /* Задаём ширину изображения относительно контейнера */
+                height: auto; /* Сохраняем пропорции */
+                border-radius: 8px; /* Скругляем углы */
+            }
+
+            /* Контейнер для текста */
+            .about-text-container-mobile {
+                width: 100%; /* Растягиваем контейнер на всю ширину */
+                text-align: justify; /* Выравниваем текст по ширине */
+            }
+
+            /* Заголовок */
+            .about-title-mobile {
+                font-size: 1.8rem; /* Размер заголовка */
+                font-weight: 700; /* Жирный шрифт */
+                color: #fff; /* Цвет текста */
+                text-align: center; /* Центрируем заголовок */
+                margin-bottom: 1rem; /* Отступ снизу */
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Тень */
+            }
+
+            /* Абзацы текста */
+            .about-text-mobile {
+                font-size: 1rem; /* Размер текста */
+                line-height: 1.2; /* Межстрочный интервал */
+                color: #eee; /* Цвет текста */
+                margin-bottom: 1rem; /* Отступ между абзацами */
+            }
+
+            .highlight-text {
+                font-size: 1rem;
+            }
+
+            .about-highlight{
+                font-size: 1.2rem;
+                padding-top: 1rem;
+            }
+
+
+            .about-subtitle {
+                top: 10px;
+                font-size: 2rem;
+            }
+
+            /* Подзаголовок */
+            .about-subtitle-mobile {
+                font-size: 1.4rem; /* Размер подзаголовка */
+                font-weight: 700; /* Жирный шрифт */
+                color: #000; /* Цвет текста */
+                text-align: center; /* Центрируем текст */
+                margin-top: 2rem; /* Отступ сверху */
+                text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
+            }
+
+            .about-us-mobile {
+                text-align: left;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .about-content {
+
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+                padding: 0 10px;
+                border-radius: 5px;
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            .about-content.open {
+                max-height: 500px;
+                padding: 5px;
+            }
+
+            .about-toggle-button  {
+                padding: 10px 33px;
+                font-size: 16px;
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+                background-color: #114F3C; /* Темно-зеленый */
+                color: white;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                transition:
+                        background-color 0.3s ease, /* Плавное изменение фона */
+                        box-shadow 0.3s ease, /* Плавное изменение тени */
+                        transform 0.3s ease; /* Плавное изменение размера или поворота */
+                position: relative; /* Для создания градиента */
+                left:10px;
+            }
+            .about-toggle-button:hover{
+                background-color: #4e947c; /* Более светлый зеленый */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавляем тень */
+                transform: scale(1.05); /* Немного увеличиваем размер */
+            }
+
+            .about-toggle-button::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(135deg, #6ec2a8, #33bb96); /* Плавный градиент */
+                border-radius: 5px;
+                z-index: -1; /* Чтобы градиент был под текстом */
+                opacity: 0.8; /* Сlightly прозрачный */
+                transition: opacity 0.5s ease; /* Плавное появление градиента */
+
+            }
+
+
+
+            .about-toggle-button:hover::before {
+                opacity: 1; /* Полная видимость градиента */
+            }
+
+            /* SVG-иконка */
+            .about-toggle-button svg {
+                transition: transform 0.3s ease, stroke 0.3s ease; /* Плавный поворот и изменение цвета */
+                transform-origin: center center; /* Центр поворота */
+            }
+
+            /* Активный класс для стрелки */
+            .about-toggle-button.rotated svg {
+                transform: rotate(180deg); /* Поворот на 180 градусов */
+            }
+
+            /* Пульсирующий эффект для кнопки */
+            .about-toggle-button {
+                animation: pulse 3s infinite; /* Пульсация каждые 3 секунды */
+            }
+
+            /* Анимация пульсации */
+            @keyframes pulse {
+                0%, 100% {
+                    box-shadow:
+                            inset 0 0 10px rgb(0, 0, 0), /* Внутренний свет */
+                            0 0 0 0 #2c98a6; /* Расширяющаяся тень */
+                }
+                50% {
+                    box-shadow:
+                            inset 0 0 20px #ffffff, /* Яркий внутренний свет */
+                            0 0 0 10px rgb(255, 255, 255); /* Расширяющаяся зеленая тень */
+                }
+            }
+
+            .about-hide-button{
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+                background-color: var(--bg-color-green);
+                color: white;
+                align-items: center;
+                gap: 10px;
+                display:block;
+                right: 10%;
+                margin: 0   auto;
+
+            }
+
+            .about-toggle-button svg {
+                transition: transform 0.3s ease;
+                transform-origin: center center;
+            }
+
+            .about-toggle-button.rotated svg {
+                transform: rotate(180deg);
+            }
+
+            .about-toggle-button h2{
+              color: #ffffff;
+          }
+
+
+           .about-hide-button:hover {
+                background-color: #4e947c;
+
+        }
+
+
+        /* about-us-mobile section end */
+        @media (max-width: 1024px) {
+            /* Перемещаем текст в верхнюю часть и в одну строчку */
+            .banner-text {
+                top: 5%; /* Сдвигаем текст вверх */
+                right: 5%; /* Немного правее */
+                font-size: 1rem !important; /* Уменьшаем размер текста */
+                text-align: left; /* Текст в одну строчку */
+
+            }
+
+
+            /* Уменьшаем размер сердечка */
+            .heart-svg {
+                width: 70%; /* Уменьшаем размер сердечка на планшетах */
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            /* Перемещаем текст еще выше и уменьшаем его размер */
+            .banner-text {
+                top: 5%; /* Сдвигаем текст вверх */
+                left: 10%;
+                font-size: 1rem; /* Уменьшаем размер текста */
+                white-space: nowrap;
+            }
+
+            .footer h4 {
+                font-size: 1rem;
+            }
+
+            .footer-link {
+                font-size: 0.9rem;
+            }
+
+
+            /* Изменяем позицию сердечка */
+            .heart-container {
+                top: 30%; /* Сдвигаем сердечко вверх */
+                left: 24%; /* Центрируем сердечко */
+                width: 30%;
+                transform: translateX(-50%); /* Центрируем по горизонтали */
+            }
+
+            /* Уменьшаем размер кнопок и их положение */
+            .banner-btn {
+                display: block; /* Делаем кнопки видимыми */
+                font-size: 13px; /* Уменьшаем размер текста в кнопках */
+
+                /*border-radius: 15px; !* Более округлые углы *!*/
+                position: relative; /* Для размещения внутри сердечка */
+
+                width: fit-content;
+                box-sizing: border-box;
+            }
+
+            .location-btn {
+                position: absolute;
+                top: 40%; /* Центрируем в верхней части сердечка */
+                left: 51%;
+                transform: translate(-50%, -70%);
+
+            }
+
+        }
+    }
+    @media (max-width: 1200px) {
+        .custom-col-7 {
+            flex: 0 0 16.66%; /* 6 колонок */
+            max-width: 16.66%;
+        }
     }
 
-
-}
-/* hero-section-end */
-
-/* about-us-mobile section */
-
-
-
-
-@media (max-width: 568px) {
-    .about-us  {
-        display: none;
-
-    }
-@media (max-width: 568px) {
-    /* Секция */
-
-
-    #about-us-mobile{
-        display: block;
+    @media (max-width: 992px) {
+        .custom-col-7 {
+            flex: 0 0 20%; /* 5 колонок */
+            max-width: 20%;
+        }
     }
 
-    .about-us-mobile {
-        display: block; /* Гарантируем, что секция ведёт себя как блочный элемент */
-        width: 100%; /* Растягиваем на всю ширину экрана */
-        padding: 1rem; /* Добавляем отступы по бокам */
-        background: linear-gradient(to bottom, #114F3C, #c6b58a); /* Фон секции */
-        box-sizing: border-box; /* Учитываем отступы в ширине */
-    }
-
-    /* Контейнер для изображения */
-    .about-img-container-mobile {
-        width: 100%; /* Растягиваем контейнер на всю ширину */
-        display: flex;
-        justify-content: center; /* Центрируем изображение */
-        margin-bottom: 2rem; /* Отступ снизу */
-    }
-
-    /* Изображение */
-    .about-img-mobile {
-        width: 80%; /* Задаём ширину изображения относительно контейнера */
-        height: auto; /* Сохраняем пропорции */
-        border-radius: 8px; /* Скругляем углы */
-    }
-
-    /* Контейнер для текста */
-    .about-text-container-mobile {
-        width: 100%; /* Растягиваем контейнер на всю ширину */
-        text-align: justify; /* Выравниваем текст по ширине */
-    }
-
-    /* Заголовок */
-    .about-title-mobile {
-        font-size: 1.8rem; /* Размер заголовка */
-        font-weight: 700; /* Жирный шрифт */
-        color: #fff; /* Цвет текста */
-        text-align: center; /* Центрируем заголовок */
-        margin-bottom: 1rem; /* Отступ снизу */
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Тень */
-    }
-
-    /* Абзацы текста */
-    .about-text-mobile {
-        font-size: 1rem; /* Размер текста */
-        line-height: 1.2; /* Межстрочный интервал */
-        color: #eee; /* Цвет текста */
-        margin-bottom: 1rem; /* Отступ между абзацами */
-    }
-
-    /* Подзаголовок */
-    .about-subtitle-mobile {
-        font-size: 1.2rem; /* Размер подзаголовка */
-        font-weight: 700; /* Жирный шрифт */
-        color: #000; /* Цвет текста */
-        text-align: center; /* Центрируем текст */
-        margin-top: 2rem; /* Отступ сверху */
-        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
-    }
-
-    .nav-link.desktop{
-        display: none;
-    }
-
-    .nav-link.mobile{
-        display: block;
-    }
-
-
-
-
-}
-
-
-    /* about-us-mobile section end */
-
-
-
-
-/*@media only screen and (min-width : 992px) {*/
-/*    .header-bottom .navbar .dropdown-menu-end {*/
-/*        margin-left: 0;*/
-/*        border: 0;*/
-/*    }*/
-
-/*    .header-bottom .navbar .nav-link {*/
-/*        padding: 0.5rem;*/
-/*    }*/
-/*}*/
-
-/*@media only screen and (max-width : 992px) {*/
-/*    .header-bottom .navbar .dropdown-menu {*/
-/*        padding-left: 1rem;*/
-/*    }*/
-/*}*/
-
-/*@media (min-width: 992px) {*/
-/*    .navbar-nav {*/
-/*        !* Когда открыто в обычном виде, а не в оффканвасе *!*/
-/*        display: flex;*/
-/*        flex: 1 1 auto;*/
-/*        justify-content: space-evenly; !* space-around или space-between *!*/
-/*    }*/
-/*    .navbar-nav .nav-item {*/
-/*        flex: 0 0 auto; !* или 1 1 auto, если хочешь равномерное распределение *!*/
-/*        text-align: center;*/
-/*    }*/
-/*}*/
-
-
-
-
-
-
-
-
-@media (max-width: 1024px) {
-    /* Перемещаем текст в верхнюю часть и в одну строчку */
-    .banner-text {
-        top: 5%; /* Сдвигаем текст вверх */
-        right: 5%; /* Немного правее */
-        font-size: 3rem; /* Уменьшаем размер текста */
-        text-align: left; /* Текст в одну строчку */
-    }
-
-
-
-    /* Уменьшаем размер сердечка */
-    .heart-svg {
-        width: 70%; /* Уменьшаем размер сердечка на планшетах */
-    }
-
-    /* Изменяем размер кнопок и их положение внутри сердечка */
-}
-
-@media (max-width: 480px) {
-    /* Перемещаем текст еще выше и уменьшаем его размер */
-    .banner-text {
-        top: 5%; /* Сдвигаем текст вверх */
-      left: 10%;
-        font-size: 1rem; /* Уменьшаем размер текста */
-        white-space: nowrap;
-    }
-
-    /* Изменяем позицию сердечка */
-    .heart-container {
-        top: 25%; /* Сдвигаем сердечко вверх */
-        left: 24%; /* Центрируем сердечко */
-        width: 30%;
-        transform: translateX(-50%); /* Центрируем по горизонтали */
-    }
-    /* Уменьшаем размер кнопок и их положение */
-    .banner-btn {
-        display: block; /* Делаем кнопки видимыми */
-        font-size: 8px; /* Уменьшаем размер текста в кнопках */
-        width: 70%; /* Сужаем ширину кнопок */
-        padding: 0.3rem 0.5rem; /* Уменьшаем внутренние отступы */
-        border-radius: 15px; /* Более округлые углы */
-        position: relative; /* Для размещения внутри сердечка */
-        margin: 0.2rem auto; /* Отступы между кнопками */
-    }
-    .location-btn{
-        position: absolute;
-        top: 35%; /* Центрируем в верхней части сердечка */
-        left: 50%;
-        width: 60%;
-        transform: translate(-50%, -70%);
-
-    }
-
-    .discount-btn{
-        position: absolute;
-        top: 60%; /* Сдвигаем вниз внутри сердечка */
-        left: 50%;
-        width: 40%;
-        transform: translate(-50%, -50%); /* Центрируем горизонтально */
-
-    }
-}
-@media (max-width: 1200px) {
-    .custom-col-7 {
-        flex: 0 0 16.66%; /* 6 колонок */
-        max-width: 16.66%;
-    }
-}
-
-@media (max-width: 992px) {
-    .custom-col-7 {
-        flex: 0 0 20%; /* 5 колонок */
-        max-width: 20%;
-    }
-}
-
-    @media (max-width: 576px){
-        .card-category{
+    @media (max-width: 576px) {
+        .card-category {
             padding: 0 0 0 0;
             margin: 0.1rem 0 0 0;
 
 
         }
 
-        .category-panel-wrapper{
+        .category-panel-wrapper {
             padding-top: 1rem;
         }
 
-        .card-category img{
+        .card-category img {
             max-width: 100%;
             height: auto;
             margin-bottom: 0.5rem;
-            margin-top:0;
+            margin-top: 0;
         }
-        .card-category h5{
+
+        .card-category h5 {
             margin: 0 0 0 0;
             padding: 0;
             font-size: 0.1rem !important;
         }
+
         .card-category .card-title {
-             /* Меньший размер текста для мобилок */
+            /* Меньший размер текста для мобилок */
             font-size: 0.1rem !important;
         }
 
-        .slider-wrapper .card{
-            padding: 0.2rem !important;
+        .slider-wrapper .card {
+
+            padding: 0.2rem;
         }
 
         .slider-wrapper .card-title {
-            font-size: 0.85rem !important;
+            font-size: 0.9rem !important;
+            color: black;
+            font-weight: bold;
+            text-shadow: -1px -1px 0 white,
+            1px -1px 0 white,
+            -1px 1px 0 white,
+            1px 1px 0 white;
+
 
         }
+
         .slider-wrapper .card-text {
             font-size: 0.7rem !important;
+            color: grey;
+        }
+
+
+        .slider-card img {
+
+            margin: 10px 10px 10px 0;
+            height: 180px !important;
+            width: auto;
         }
 
 
         .btn-row {
             flex-wrap: wrap;
             justify-content: center;
-            margin-top:-6%;
+            margin-top: -6%;
         }
+
         .btn-row .col {
             flex: 0 0 30%; /* Каждая кнопка занимает 30% ширины */
             max-width: 30%; /* Ограничиваем ширину кнопки */
@@ -414,177 +527,676 @@
             margin-top: 1%;
 
         }
+
         .btn-outline-primary {
             padding: 0.3rem 0.1rem; /* Уменьшаем отступы */
             font-size: 0.9rem; /* Уменьшаем шрифт */
+            max-width: 100%;
+            min-width: fit-content;
+            width: 100%;
+            display: flex; /* Гарантирует, что контент кнопки подстроится под её границы */
+            justify-content: center; /* Выравниваем текст по центру */
+            align-items: center; /* Центрируем текст */
+            white-space: nowrap;
         }
 
     }
 
 
 
+    @media (max-width: 768px) {
+        .custom-col-7 {
+            flex: 0 0 30%; /* 4 колонок */
+            max-width: 30%;
+        }
+
+        .partner-brands__item {
+            padding: 0 0.5rem;
+        }
+
+        .partner-brands__slider {
+            height: 90px;
+        }
+
+        .faq-section {
+            display: none;
+        }
+
+    }
+    @media (max-width: 767.98px) {
+        .product-cards {
+            display: none; /* Скрываем стандартные карточки */
+        }
+    }
+    @media (max-width: 576px) {
+        .faq-desktop {
+            display: none;
+        }
+    }
+
+    @media (max-width: 430px) {
+        .faq-mobile {
+            display: block;
+        }
+    }
+
+    @media (max-width: 768px) {
+        /* Баннер */
+        .cat-banner {
+            height: 161px; /* Уменьшаем высоту баннера */
+            margin-bottom: 0;
+        }
+
+        /* Текст в баннере */
+        .banner-text-cat {
+            display: none;
+        }
+
+        /* Сердечко */
+        .heart-container-cat {
+            bottom: 1px; /* Расположение ближе к нижней части баннера */
+            left: 90px; /* Центрируем сердечко */
+
+            transform: translateX(-50%);
+            width: 10rem; /* Уменьшаем размер сердечка */
+        }
+
+        .heart-svg-cat {
+            width: 80%; /* Сердечко заполняет контейнер */
+            filter: brightness(0) invert(1);
+
+        }
+
+        .round-btn-img {
+            width: 33px; /* Размер круга */
+            height: 33px;
+            border-radius: 50%; /* Делаем круглым */
+            top: 2px;
+            left: 5px;
+            position: absolute;
+            cursor: pointer; /* Указываем, что это кликабельно */
+            object-fit: cover; /* Сохраняем пропорции изображения */
+        }
+
+        /* Мобильное сердечко (если включено) */
+        .heart-container-cat-mobile {
+            display: block; /* Показываем мобильное сердечко */
+            top: 90px;
+            left: 75px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            width: 12%; /* Уменьшаем мобильное сердечко */
+        }
+
+        .heart-svg-cat-mobile {
+            width: 100%; /* Мобильное сердечко заполняет контейнер */
+            height: auto;
+        }
+
+        .highlighted-text {
+            color: #ef8585;
+            text-shadow: 2px 2px 2px #000000;
+
+        }
+
+        .text-inside-heart {
+            white-space: nowrap;
+            position: absolute;
+            text-align: center;
+            bottom: 70% !important; /* Смещаем текст вниз внутри сердечка */
+            z-index: 2; /* Убедимся, что текст выше сердечка */
+            color: #ef8585;
+            font-size: 1.1rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 2px #000000;
+
+        }
+
+        /* Изображение баннера */
+        .banner-image-cat {
+            object-fit: cover; /* Сохраняем пропорции */
+            object-position: center; /* Центрируем изображение */
+        }
+    }
+
+
+    @media (max-width: 768px) {
+        .content {
+            /*flex-direction: column; !* Слайдер сверху, карта снизу *!*/
+            align-items: center;
+            gap: 2rem;
+            padding: 0 1rem; /* Добавляем отступы по бокам */
+        }
+
+        .map-container {
+            max-width: 100%;
+            height: auto; /* Высота подстраивается под содержимое */
+        }
+
+        .slider-container {
+            display: none /* Уменьшенная высота для мобильных */
+        }
+
+        .reviews-container {
+            display: none;
+        }
+
+        .location-section {
+            height: 460px;
+            /*margin-top: 0;*/
+        }
+
+        .map-container {
+            height: 330px !important;
+            padding: 0 1rem; /* Отступы по бокам */
+        }
+
+        .map-container iframe {
+            height: 330px !important;; /* Уменьшенная высота для мобильных */
+            border-radius: 10px; /* Сглаженные края карты */
+        }
+
+        .button-container {
+            justify-content: center;
+            gap: 10px; /* Расстояние между кнопками */
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        .map-selector {
+            width: 100%; /* Карта будет растягиваться на всю ширину */
+            display: flex;
+            justify-content: center; /* Центрируем содержимое */
+            margin: 0 auto; /* Центрирование с учетом внешних отступов */
+            padding: 0 1rem; /* Добавляем отступы по бокам */
+        }
+
+        .map-selector iframe {
+            height: 250px !important; /* Уменьшенная высота карты на мобильных */
+        }
+
+        .btn-location {
+            background-color: #004d40;
+            color: white;
+            border: none;
+            padding: 8px 8px;
+            margin: 15px 0 0 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 0.8rem;
+        }
+
+        .description-text {
+            display: none;
+        }
+    }
+
+
+    @media only screen and (max-width: 500px) {
+        .product-content-details .nav-tabs .nav-link {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        .quiz-result {
+            padding: 8px; /* Уменьшаем внутренние отступы */
+            max-width: 25rem; /* Уменьшаем максимальную ширину */
+
+        }
+
+        .quiz-result .card {
+            padding: 8px; /* Уменьшаем отступы внутри карточки */
+            border-radius: 8px; /* Скругляем углы чуть сильнее для компактности */
+            margin-top: -30px;
+        }
+
+        .quiz-result .related-card {
+            width: 127.5px; /* Уменьшаем ширину на 15% */
+            height: 170px; /* Уменьшаем высоту на 15% */
+            margin: 15px; /* Уменьшаем отступы между карточками */
+            padding: 4px; /* Уменьшаем внутренние отступы */
+            border-radius: 8px; /* Скругляем углы */
+        }
+
+        .quiz-result .related-img {
+
+        }
+
+        .quiz-result h3 {
+            font-size: 1.3rem; /* Уменьшаем размер заголовка */
+            margin: 8px 0; /* Уменьшаем отступ сверху и снизу */
+        }
+
+        .card-reccomended-description {
+            font-size: 1rem; /* Уменьшаем размер шрифта */
+            line-height: 1.4; /* Немного уменьшаем межстрочный интервал */
+        }
+
+
+        .quiz-result .card-img {
+            width: auto; /* Уменьшаем ширину изображения */
+            height: auto;
+            max-width: 250px; /* Ограничиваем максимальную ширину */
+            max-height: 250px;
+            padding: 0;
+            border-radius: 10px; /* Скругляем углы */
+        }
+
+        .navbar > .container-fluid {
+            justify-content: space-around;
+        }
+
+        #restart-button {
+            position: absolute;
+            left: 60%;
+            transform: translateX(-50%);
+            z-index: 1;
+            background-color: #d19725;
+        }
+
+        .text-highlight {
+            font-size: 1rem;
+        }
+
+        .social-icons {
+            left: 10px;
+            padding-right: 5px;
+        }
+
+
+    }
+}
+
 @media (max-width: 768px) {
-    .custom-col-7 {
-        flex: 0 0 25%; /* 4 колонок */
-        max-width: 25%;
-    }
-    .partner-brands__item {
-        padding: 0 0.5rem;
-    }
-    .partner-brands__slider {
-        height: 90px;
+    .nav-link.mobile {
+        display: block;
     }
 
-
-
-}
-@media (max-width: 767.98px) {
-    .product-cards {
-        display: none; /* Скрываем стандартные карточки */
-    }
-}
-@media (max-width: 576px) {
-    .faq-desktop {
+    .nav-link.desktop {
         display: none;
     }
-}
 
-@media (max-width: 430px) {
-    .faq-mobile {
-        display: block; /* Отображать от 430px и выше */
-    }
-}
-
-@media (max-width: 768px) {
-    /* Баннер */
-    .cat-banner {
-        height: 11rem; /* Уменьшаем высоту баннера */
-    }
-
-    /* Текст в баннере */
-    .banner-text-cat {
+    .desktop{
         display: none;
     }
-    /* Сердечко */
-    .heart-container-cat {
-        bottom: -10%; /* Расположение ближе к нижней части баннера */
-        left: 30%; /* Центрируем сердечко */
-        transform: translateX(-50%);
-        width: 12rem; /* Уменьшаем размер сердечка */
+
+    .blog-section-mobile{
+        display: block;
     }
-
-    .heart-svg-cat {
-        width: 80%; /* Сердечко заполняет контейнер */
-        filter: brightness(0) invert(1);
-
-    }
-
-    .round-btn-img {
-        width: 2.3rem; /* Размер круга */
-        height: 2.3rem;
-        border-radius: 50%; /* Делаем круглым */
-        top: 6%;
-        left: 14%;
-        position: absolute;
-        cursor: pointer; /* Указываем, что это кликабельно */
-        object-fit: cover; /* Сохраняем пропорции изображения */
-    }
-
-    /* Мобильное сердечко (если включено) */
-    .heart-container-cat-mobile {
-        display: block; /* Показываем мобильное сердечко */
-        top: 60%;
-        left: 26%;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        width: 12%; /* Уменьшаем мобильное сердечко */
-    }
-
-    .heart-svg-cat-mobile {
-        width: 100%; /* Мобильное сердечко заполняет контейнер */
-        height: auto;
-    }
-    .highlighted-text{
-        color: #000;
-    }
-
-    .text-inside-heart {
-        white-space: nowrap;
-        position: absolute;
-        text-align: center;
-        bottom: 70% !important; /* Смещаем текст вниз внутри сердечка */
-        left: -160% !important;
-        z-index: 2; /* Убедимся, что текст выше сердечка */
-        color: #EF7070;
-        font-size: 1.1rem;
-        font-weight: bold;
-        letter-spacing: 2px;
-
-    }
-    /* Изображение баннера */
-    .banner-image-cat {
-        object-fit: cover; /* Сохраняем пропорции */
-        object-position: center; /* Центрируем изображение */
-    }
-}
-
-
-@media (max-width: 768px) {
-    .content {
-        flex-direction: column; /* Слайдер сверху, карта снизу */
-        align-items: center;
-        gap: 2rem;
-        padding: 0 1rem; /* Добавляем отступы по бокам */
-    }
-
-    .slider-container,
-    .map-container {
-        max-width: 100%;
-        height: auto; /* Высота подстраивается под содержимое */
-    }
-
-    .slider-container {
-        height: 250px; /* Уменьшенная высота для мобильных */
-    }
-
-    .map-container {
-        width: 100%; /* Карта занимает всю ширину */
-        padding: 0 1rem; /* Отступы по бокам */
-    }
-
-    .map-container iframe {
-        height: 200px; /* Уменьшенная высота для мобильных */
-        width: 100%; /* Подстройка под ширину */
-        border-radius: 10px; /* Сглаженные края карты */
-    }
-
-    .button-container {
-        justify-content: center;
-        gap: 1rem; /* Расстояние между кнопками */
-    }
-}
-
-@media (max-width: 768px) {
-
-    .map-selector {
-        width: 100%; /* Карта будет растягиваться на всю ширину */
+    #articles-container {
+        max-width: 600px;
+        margin: 0 auto; /* отступы сверху и снизу убраны */
+        padding: 0;
         display: flex;
-        justify-content: center; /* Центрируем содержимое */
-        margin: 0 auto; /* Центрирование с учетом внешних отступов */
-        padding: 0 1rem; /* Добавляем отступы по бокам */
+        flex-direction: column;
+        align-items: center;
+        overflow-y: scroll;  /* Прокрутка всегда видна */
+
     }
 
-    .map-selector iframe {
-        height: 250px; /* Уменьшенная высота карты на мобильных */
+    /* Слайдер с навигационными кнопками */
+    .slider-container-mobile {
+        /*display: flex;*/
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+        transition: transform 0.5s ease;
+
     }
 
-}
-}
-
-@media only screen and (max-width : 500px) {
-    .product-content-details .nav-tabs .nav-link{
-        padding-left: 8px;
-        padding-right: 8px;
+    /* Стили для навигационных кнопок (SVG заменяет текст) */
+    .slider-nav {
+        position: absolute;
+        top: 35%; /* Центрируем по вертикали */
+        transform: translateY(-50%); /* Центрируем */
+        cursor: pointer;
+        background: none; /* Убираем фон */
+        border: none; /* Убираем границу */
+        padding: 0; /* Убираем отступы */
+        transition: transform 0.3s ease;
     }
-}
 
+    .slider-nav:active {
+        transform: translateY(-50%) scale(1.1);
+    }
+    .slider-nav.prev {
+        left: 10px; /* Располагаем слева */
+    }
+
+    /* Стрелка "вперёд" справа */
+    .slider-nav.next {
+        right: 10px; /* Располагаем справа */
+    }
+    .slider-nav:hover {
+        transform: translateY(-50%) scale(1.1);
+    }
+    .slider-nav svg {
+        fill: #fff; /* Белый цвет стрелок */
+        width: 25px;
+        height: 25px;
+    }
+
+    /* Основной блок статьи */
+    .article-block {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: background 0.3s ease, box-shadow 0.3s ease,opacity 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+    }
+    .article-block:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Заголовок и изображение – картинка сверху */
+    .article-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Заголовок растягивается на всю ширину */
+        padding: 0;
+        position: relative;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+    .article-image {
+        width: 396px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+        transition: transform 0.3s ease;
+    }
+    .title-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .article-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+        margin: 10px 0 5px 0;
+        cursor: pointer; /* Добавляем курсор как указатель на заголовок */
+    }
+
+    /* Кнопка для разворачивания содержимого */
+    .toggle-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-top: 5px;
+        transition: transform 0.3s ease-in-out;
+
+
+    }
+    .toggle-button:hover {
+        transform: scale(1.1);
+    }
+    /* Повернутая стрелка для раскрытого состояния */
+    .toggle-button.open {
+        transform: rotate(180deg);
+
+    }
+    .toggle-button.open svg {
+        fill:black;
+
+    }
+
+    /* Содержимое статьи: по умолчанию свернуто с max-height 0, но всегда в DOM */
+    .article-content {
+        margin: 0;
+        padding: 0 10px; /* вертикальные отступы управляем через transition */
+        border-top: 1px solid #ccc;
+        max-height: 0;
+        overflow-y: hidden;
+        transition: max-height 0.5s ease, padding 0.5s ease;
+    }
+    /* Класс для раскрытого состояния: высота становится 400px, и добавляются отступы */
+    .article-content.visible {
+        max-height: 400px;
+        padding: 10px;
+        overflow-y: auto;
+    }
+    .article-content p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* Пагинация */
+    .pagination {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        font-family: 'Roboto', sans-serif; /* Можно заменить на другой шрифт */
+    }
+
+    .pagination button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        outline: none;
+    }
+
+    /* Эффекты при наведении */
+    .pagination button:hover svg {
+        transform: scale(1.2); /* Увеличиваем иконку */
+        color: #4c6ef5; /* Можете выбрать любой другой цвет */
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    /* Эффекты при нажатии (active) */
+    .pagination button:active svg {
+        animation: pulse 0.3s ease; /* Пульсирующий эффект */
+        transform: scale(1.1); /* Немного уменьшаем масштаб */
+        color: #333; /* Изменяем цвет при нажатии */
+    }
+
+    /* Анимация пульсации */
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1.2);
+            opacity: 0.9;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .pagination span {
+        display: inline-block;
+        padding: 8px 16px;
+        border: none; /* Убираем стандартную рамку */
+        border-radius: 25px; /* Более柔和ный borderRadius */
+        background: linear-gradient(135deg, #f0f0f0, #e0e0e0); /* Градиент для кнопок */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* Тени для глубины */
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        color: #333;
+        transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Эффект наведения */
+    .pagination span:hover {
+        transform: translateY(-2px); /* Приподнимаем при наведении */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Увеличиваем тень */
+        background: linear-gradient(135deg, #000000, #fcfcfc); /* Изменяем градиент */
+    }
+
+    /* Активная страница */
+    .pagination span.active {
+        background: grey; /* Яркий градиент для активной страницы */
+        color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Более заметная тень */
+    }
+
+    /* Эффект наведения на активную страницу */
+    .pagination span.active:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25); /* Усиливаем тень */
+        background: linear-gradient(135deg, #5f72be, #4c6ef5); /* Меняем градиент */
+    }
+
+    /* Отключенные элементы (например, "Предыдущая" или "Следующая") */
+    .pagination span.disabled {
+        background: #e0e0e0;
+        color: #aaa;
+        cursor: not-allowed;
+        box-shadow: none;
+        pointer-events: none; /* Запрещаем взаимодействие */
+    }
+
+    .category-container {
+        padding: 10px;
+        display: grid;               /* Используем CSS Grid */
+        grid-template-columns: repeat(3, 1fr);  /* Задаем 3 колонки одинаковой ширины */
+        /* Добавляем промежутки между кнопками */
+                 /* Разрешает кнопкам переходить на новую строку, если они не помещаются */
+    }
+
+
+    .category-btn {
+        padding: 10px 15px;
+        margin: 5px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: #F8A900;
+        transition: background 0.3s, color 0.3s;
+        box-sizing: border-box;
+    }
+
+    .category-btn.active {
+        background-color: rgba(87, 87, 87, 0.3);
+        color: white;
+        font-weight: bold;
+    }
+
+
+    #mobile-blog-content1 {
+      padding: 0;
+        margin: 0;
+    }
+    #mobile-blog-content2 {
+        padding: 0;
+        margin: 0;
+    }
+    #mobile-blog-content3 {
+        padding: 0;
+        margin: 0;
+    }
+    #mobile-blog-content4 {
+        padding: 0;
+        margin: 0;
+    }
+
+    #mobile-blog-section1 .mobile-blog-content {
+        background-color: #C0B187FF;
+        border-radius: 0;
+        border-bottom: 1px solid black;
+    }
+    #mobile-blog-section2 .mobile-blog-content {
+        background-color: #F8C959FF;
+        border-radius: 0;
+        border-bottom: 1px solid black;
+    }
+    #mobile-blog-section3 .mobile-blog-content {
+        background-color: #fdb64e;
+        border-radius: 0;
+        border-bottom: 1px solid black;
+    }
+    #mobile-blog-section4 .mobile-blog-content {
+        background-color: #f4d8a3;
+        border-radius: 0;
+        border-bottom: 1px solid black;
+    }
+
+    #mobile-blog-section2 .mobile-blog-hide-button{
+        background-color:grey;
+    }
+    #mobile-blog-section1 .mobile-blog-hide-button{
+        background-color:grey;
+    }
+    #mobile-blog-section3 .mobile-blog-hide-button{
+        background-color:grey;
+    }
+    #mobile-blog-section4 .mobile-blog-hide-button{
+        background-color:grey;
+    }
+    #mobile-blog-section1 .mobile-blog-toggle-button {
+        gap: 80px;
+        padding:10px 10px;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        margin-bottom: 0;
+    }
+    #mobile-blog-section2 .mobile-blog-toggle-button {
+        gap: 142px;
+        padding:10px 10px;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        margin-bottom: 0;
+    }
+    #mobile-blog-section3 .mobile-blog-toggle-button {
+        gap: 40px;
+        padding:10px 10px;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        margin-bottom: 0;
+    }
+    #mobile-blog-section4 .mobile-blog-toggle-button {
+        gap: 48px;
+        padding:10px 10px;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        margin-bottom: 0;
+    }
+    #mobile-blog-section1 h2 {
+        font-size: 35px;
+    }
+    #mobile-blog-section h2 {
+        font-size: 35px;
+    }
+    #mobile-blog-section2 h2 {
+        font-size: 35px;
+    }
+    #mobile-blog-section3 h2 {
+        font-size: 30px;
+    }
+    #mobile-blog-section4 h2 {
+        font-size: 30px;
+    }
+    #mobile-blog-section3 .faq-title-mobile{
+        font-size: 20px;
+    }
+
+
+    #mobile-blog-section1 .footer-icons{
+        gap:0;
+    }
+
+
+}

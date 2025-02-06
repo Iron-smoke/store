@@ -9,7 +9,7 @@
     --bg-gradiend-stores:linear-gradient(to bottom, #F6DEAE, #F48D09 50%, #F7DFAF);
     --bg-gradiend-questions:linear-gradient(to bottom, #F7DFAF, #F2A300, #B75A33);
     --bg-gradiend-brands: linear-gradient(to bottom, #F77A07, #416E54 70%);
-    --color-review: linear-gradient(to right, #338AFB, #B038FF, #CF29BF, #1A34DE);
+    --color-review: linear-gradient(to right, #338afb, #B038FF, #CF29BF, #1A34DE);
     --bg-color: #f5f5f5;
     --text-color: #000000;
     --accent-color: #ffd333;
@@ -27,9 +27,10 @@
     src: url('../fonts/Stylo_Bold.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'typography';
-    src: url('../fonts/Rosarium.ttf') format('truetype');
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap') format('truetype');
 }
+
 
 body,
 html {
@@ -38,23 +39,25 @@ html {
     padding: 0;
 overflow-x:hidden;
     scroll-behavior: smooth;
+
 }
 
 body {
     min-width: 320px;
     font-family: 'Roboto', sans-serif;
     font-family: 'Title',sans-serif;
-    font-family: 'typography',sans-serif;
+    font-family: 'Comfortaa', sans-serif;
 }
 
-h1,h2,h3 {
+h1,h2,h3,h5 {
     font-family: Title,sans-serif;
 }
 
 a {
-    color: var(--text-color);
-    text-decoration: underline;
+    text-decoration: none; /* Убирает подчеркивание */
 }
+
+
 
 a:hover {
     text-decoration: none;
@@ -112,29 +115,35 @@ main.main {
     flex: 1 1 auto;
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.lists-unstyled li {
+    margin-bottom: 8px; /* Можно увеличить, если нужно больше расстояния */
+}
+
+
+
 /* ============================= General rules ============================ */
 
 /* ============================= Header rules ============================ */
 
-.header-top-phone a {
-    text-decoration: none;
-}
 
-.header-top-phone a:hover {
-    text-decoration: underline;
-}
 
 ul.social-icons {
     list-style: none;
     margin-bottom: 0;
-    padding: 0;
+    padding: 10px;
+}
+
+.social-icons{
+    left: 10px;
+    padding-right: 35px;
 }
 
 
-
-.social-icons {
-    margin-right: 20px; /* Отступ справа для иконки */
-}
 
 .social-icons a {
     display: inline-block;
@@ -187,6 +196,10 @@ ul.social-icons {
 .header-bottom {
     box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
 }
+.navbar{
+    background-color:transparent !important;
+}
+
 .navbar-nav {
     width: 100%;              /* или auto, если нужно именно растягивать на всю полосу */
     justify-content: space-around;
@@ -209,6 +222,32 @@ ul.social-icons {
     letter-spacing: .1rem;
 }
 
+.nav-link{
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease-in-out, border-radius 0.5s ease;
+}
+
+
+.header-bottom .navbar .nav-link:hover {
+    background-color: #114F3C; /* Синий фон */
+    color: white; /* Белый текст */
+    border-radius: 10px; /* Закругленные углы */
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease-in-out, border-radius 0.5s ease;
+    padding: 8px 16px; /* Немного увеличиваем паддинг для эффекта */
+}
+
+/* Активное состояние */
+.header-bottom .navbar .nav-link:active {
+    background-color: #000000; /* Темно-синий фон */
+    color: #fff; /* Белый текст */
+    border-radius: 8px; /* Закругленные углы */
+    transform: scale(1.05); /* Немного увеличиваем размер для активного состояния */
+    padding: 8px 16px; /* Паддинг для эффекта */
+}
+
+
+
 
 
 .header-bottom .navbar .dropdown-menu {
@@ -224,7 +263,7 @@ ul.social-icons {
 
 footer {
     background-color: var(--contrast-color);
-    padding: 50px 0;
+    padding: 20px 0;
     color: #FFFFFF;
 
 }
@@ -239,11 +278,27 @@ footer a{
 footer a:hover{
     color: var(--accent-color);
 }
+
+
 .footer-icons{
     list-style: none;
     display: flex;
-    gap:20px;
+    gap:10px;
     padding: 0;
+    margin-bottom: 5px;
+}
+.footer-icons svg {
+    transition: transform 0.3s, border 0.3s, background-color 0.3s;
+    border-radius: 50%; /* Сделать иконку круглой */
+    border: 2px solid transparent; /* Начальная прозрачная обводка */
+    background-color: transparent; /* Начальная прозрачная заливка */
+}
+
+/* Hover-эффект */
+.footer-icons svg:hover {
+    transform: scale(1.2); /* Увеличиваем иконку */
+    border: 2px solid rgba(0, 0, 0, 0.2); /* Круглая обводка с полупрозрачным цветом */
+    background-color: black /* Полупрозрачная заливка */
 }
 
 
@@ -266,22 +321,6 @@ color: var(--contrast-color);
 .tab-content {
     padding-top: 20px;
 }
-
-
-/*.product-rating .active{*/
-/*    color: var(--accent-color);*/
-/*}*/
-/*.product-rating .count-reviews {*/
-/*    margin-left: 10px;*/
-
-/*}*/
-/*.product-review-header {*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*}*/
-/*.product-review-header .review-date{*/
-/*    color: var(--gray-color)*/
-/*}*/
 
 
 /* hero-section */
@@ -348,7 +387,30 @@ color: var(--contrast-color);
     background-color: transparent; /* Цвет внутри круга */
     overflow: hidden; /* Важно для маски */
     z-index: 0;
+    animation: slideInHerodog 3.5s ease-out forwards ;
 }
+@keyframes slideInHerodog {
+    0% {
+        transform: translateX(100%); /* Начинаем с правой стороны (за экраном) */
+        opacity: 0; /* Начинаем с невидимости */
+    }
+    30% {
+        transform: translateX(20%); /* 60% пути */
+        opacity: 0.7; /* Почти полностью видно */
+    }
+    60% {
+        transform: translateX(60%); /* 60% пути */
+        opacity: 0.8; /* Почти полностью видно */
+    }
+
+    100% {
+        transform: translateX(0); /* Достигаем своей позиции */
+        opacity: 1; /* Полностью видим */
+    }
+}
+
+
+
 
 /* Маска для изображения */
 .hero-dog-mask {
@@ -383,6 +445,26 @@ color: var(--contrast-color);
     background-color: transparent; /* Цвет внутри круга */
     overflow: hidden; /* Важно для маски */
     z-index: 0;
+    animation: slideInHerocat 3.5s ease-out forwards;
+}
+@keyframes slideInHerocat {
+    0% {
+        transform: translateX(-100%); /* Начинаем с правой стороны (за экраном) */
+        opacity: 0; /* Начинаем с невидимости */
+    }
+    30% {
+        transform: translateX(-30%); /* 60% пути */
+        opacity: 0.7; /* Почти полностью видно */
+    }
+    60% {
+        transform: translateX(-60%); /* 60% пути */
+        opacity: 0.8; /* Почти полностью видно */
+    }
+
+    100% {
+        transform: translateX(0); /* Достигаем своей позиции */
+        opacity: 1; /* Полностью видим */
+    }
 }
 
 /* Маска для изображения */
@@ -416,8 +498,23 @@ color: var(--contrast-color);
             -10px -1px 0 white,  /* Тень сверху справа */
             -10px 1px 0 white,  /* Тень снизу слева */
             -10px 1px 0 white;   /* Тень снизу справа */
+    opacity: 0; /* Начальная непрозрачность */
 
+    /* Анимация появления */
+    animation: fadeIn 3s ease-out forwards;
 }
+
+/*@keyframes appearFromTop {*/
+/*    0% {*/
+/*        opacity: 0;*/
+/*        transform: translateY(-100%); !* Начальная позиция за экраном *!*/
+/*    }*/
+/*    100% {*/
+/*        opacity: 1;*/
+/*        transform: translateY(0); !* Останавливаемся в нормальной позиции *!*/
+/*    }*/
+/*}*/
+
 
 .logo-subtitle {
     color: #ffffff !important; /* Например, ярко-красный */
@@ -425,7 +522,7 @@ color: var(--contrast-color);
     line-height: 1; /* Межстрочный интервал */
     text-align: center;
     transition: all 0.3s ease; /* Плавность при адаптации */
-
+    animation: fadeIn 2s ease-out forwards;
 
 }
 
@@ -440,24 +537,42 @@ color: var(--contrast-color);
     flex-wrap: nowrap;
     justify-content: flex-end;
     align-items: flex-end;
-    gap: 5%;             /* Пример: процентное расстояние между элементами */
-    width: 90%;          /* Делай блок шире/уже, чтобы «увеличить» или «уменьшить» */
+    gap: 5%;             /* Пример: процентное расстояние между элементами */     /* Делай блок шире/уже, чтобы «увеличить» или «уменьшить» */
     padding: 1rem;
     box-sizing: border-box;
 z-index: 1;
     transition: all 0.3s ease;
 }
+.hero-cat-shower{
+    height: 250px;
+    width: 100%;
+}
 
 /* Картинки внутри */
 .hero-image {
+
     flex: 0 0 auto;
-    max-width: 15%;       /* Например, каждая картинка занимает до 15%
+    width: auto;  /* Например, каждая картинка занимает до 15%
                            от ширины hero-images */
-    height: auto;
+    height: 300px;
     cursor: pointer;
 z-index: 1;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    animation: fadeUp 2s ease-out forwards; /* Применяем анимацию */
+    opacity: 0;
 }
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Начальная позиция за экраном снизу */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Остановиться на нормальной позиции */
+    }
+}
+
+
 .hero-image:hover {
     transform: scale(1.05);
 }
@@ -466,9 +581,15 @@ z-index: 1;
 .to-hide {
     display: block;
 }
+.to-hide-mobile{
+    display: none;
+}
+
+
 
 .discount{
     transition: all 0.3s ease;
+    animation: fadeIn 2.5s ease-out forwards;
 }
 .logo-homka {
     height: 100%;
@@ -480,7 +601,10 @@ z-index: 1;
 }
 
 /* end of hero-section */
-
+ul.row svg {
+    padding-left: 0; /* Убираем отступ слева у каждого элемента списка */
+    padding-right: 0; /* Убираем отступ справа */
+}
 
 
 .about-us .container {
@@ -552,7 +676,7 @@ z-index: 1;
 
 /* Абзацы c выделением */
 .about-highlight {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: #eee;
     line-height: 1.4;
     margin-bottom: 1rem;
@@ -566,7 +690,7 @@ z-index: 1;
     color: #f7ec5f; /* жёлтый акцент */
     font-weight: 600;
     line-height: 2;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: justify;
     letter-spacing: 3px;
     text-shadow:
@@ -582,7 +706,7 @@ z-index: 1;
 .about-us p {
     color: #f0f0f0;
     font-style: italic;
-    font-size: 1.4rem;
+    font-size: 1rem;
     line-height: 1.6; /* Добавляем больше межстрочного интервала для читабельности */
     text-align: justify; /* Растягиваем текст по ширине */
     letter-spacing: 2px;
@@ -602,6 +726,33 @@ z-index: 1;
     text-shadow: 1px 1px 2px rgb(255, 255, 255);
     white-space: nowrap;
 }
+
+.highlight-link {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #ffffff; /* Обычный цвет ссылки */
+    font-weight: bold;
+    transition: color 0.3s, transform 0.2s;
+    text-shadow: 0 0 8px rgb(255, 255, 255);
+    animation: blink-fade 2s infinite ease-in-out;
+}
+
+.highlight-link:hover {
+    color: #000000; /* Цвет при наведении */
+    transform: scale(1.1); /* Немного увеличиваем размер */
+    animation: none;
+}
+
+.highlight-link:active {
+    color: #e89937; /* Цвет при клике */
+    transform: scale(1.05); /* Чуть меньшее увеличение */
+}
+
+@keyframes blink-fade {
+    0% { opacity: 1; text-shadow: 0 0 5px rgb(255, 255, 255); }
+    50% { opacity: 0.7; text-shadow: 0 0 10px rgb(0, 0, 0); }
+    100% { opacity: 1; text-shadow: 0 0 5px rgb(255, 255, 255); }
+}
+
 
 
 /* end about-us section */
@@ -628,16 +779,43 @@ z-index: 1;
     font-family: 'Stylo', sans-serif;
     position: absolute;
     top: 15%; /* Позиция текста сверху */
-    right: 25%;
     width: 90%; /* Чтобы текст не вылезал за границы */
     text-align: center;
     z-index: 10;
-    font-size: 5rem;
-    color: #EF7070;
+    font-size: 5rem !important;
+    color: #ffffff;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
 }
 
+.highlight {
+    display: inline-block;
+    animation: pulseText 4s infinite;
 
+}
+
+/* Анимация текста */
+@keyframes pulseText {
+    0% {
+        transform: scale(0.95);
+        text-shadow: 0 0 0 rgba(106, 19, 178, 0); /* Основной цвет тени */
+    }
+    25% {
+        transform: scale(1); /* Увеличиваем размер текста на 10% */
+        text-shadow: 0 0 5px rgba(255, 64, 129, 0.5); /* Цвет тени 1 */
+    }
+    50% {
+        transform: scale(1.05);
+        text-shadow: 0 0 10px rgb(255, 255, 255); /* Цвет тени 2 */
+    }
+    75% {
+        transform: scale(1);
+        text-shadow: 0 0 15px rgba(255, 64, 129, 0.9); /* Цвет тени 3 */
+    }
+    100% {
+        transform: scale(0.95);
+        text-shadow: 0 0 0 rgb(255, 255, 255); /* Возвращаемся к исходному состоянию */
+    }
+}
 
 .heart-container {
     position: absolute;
@@ -663,10 +841,10 @@ z-index: 1;
 .banner-btn {
     position: absolute;
     display: none; /* По умолчанию скрыты */
-    margin: 0 auto; /* Центрируем горизонтально */
-    padding: 0.5rem 1rem;
+    /*margin: 0 auto; !* Центрируем горизонтально *!*/
+    /*padding: 0.5rem 1rem;*/
     border-radius: 20px;
-    font-family: 'Stylo', sans-serif;
+    font-family: 'Title', sans-serif;
     font-size: 14px;
     color: #FFFFFF;
     background-color: #EF7070;
@@ -721,7 +899,9 @@ z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    height: 100%;
+    max-height: 350px;
 }
 
 /* Эффект наведения на карточку */
@@ -751,12 +931,11 @@ z-index: 1;
 
 /* Заголовки внутри карточек */
 .product-cards .card-title {
-    font-family: 'Stylo', sans-serif;
+    font-family: 'Title', sans-serif;
     font-size: 1.2rem; /* Размер заголовка */
     color: #114F3C; /* Основной зелёный цвет */
     font-weight: bold;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Лёгкая тень текста */
-    margin: 0.5rem 0;
     position: relative;
     z-index: 1;
 }
@@ -773,11 +952,13 @@ z-index: 1;
 
 /* Изображения в карточках */
 .product-cards .card-img-top {
-    max-width: 80%;
-    height: auto;
+    max-width: 100%;
+    height: 250px;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     border-radius: 10px;
+    display: block;
+    object-fit: contain;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     z-index: 1;
@@ -956,6 +1137,8 @@ z-index: 1;
 
 
 
+
+
 #about-us-mobile{
     display: none;
 }
@@ -990,22 +1173,25 @@ z-index: 1;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     background-color: #FCEAB4;
-    padding: 1rem;
+    padding: 2rem;
+    position: relative;
     text-align: center;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    height: 300px !important;
+
 }
 
 .slider-card img {
-    max-height: 150px;
     object-fit: contain;
-    margin-bottom: 1rem;
+    margin-top: 10px;
 }
 
 .slider-button {
     position: absolute;
-    top: 50%;
+    top: 65%;
     transform: translateY(-50%);
     background: none;
     border: none;
@@ -1096,8 +1282,6 @@ z-index: 1;
 .partner-brands__track {
     display: flex;
     gap: 0 !important;
-/*    animation: partner-scroll 5s linear infinite; !* 40 секунд на полный цикл *!*/
-/*    will-change: transform;*/
 }
 
 
@@ -1149,6 +1333,7 @@ z-index: 1;
     color: #000000 !important;
     margin-bottom: 0;
     padding: 1rem;
+    line-height: 1.6;
     text-align: center;
     transition: color 0.3s ease;
 }
@@ -1176,6 +1361,12 @@ z-index: 1;
     overflow: hidden;
     transform: translateY(-10px);
     transition: max-height 1.2s ease, opacity 1.2s ease, transform 1.2s ease;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+    /*font-weight: bold;*/
+    font-family: 'typography' ;
+
 }
 
 .faq-block {
@@ -1214,7 +1405,9 @@ z-index: 1;
 
 }
 
-
+.faq-block.active .toggle-answer svg{
+    fill: rgba(110, 110, 110, 0.3);
+}
 
 
 
@@ -1223,7 +1416,6 @@ z-index: 1;
 
 .faq-mobile {
     background: linear-gradient(180deg, #FFEDB3, #FFB74D);
-    border-radius: 12px;
     padding: 20px;
 }
 
@@ -1231,7 +1423,6 @@ z-index: 1;
     font-family: 'Arial', sans-serif;
     font-weight: bold;
     color: #000;
-    margin-bottom: 16px;
 }
 
 /* Блоки вопросов */
@@ -1270,11 +1461,14 @@ display: none;
 }
 
 .faq-title-mobile {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    color: #333;
+    color: #000000;
     margin: 0;
     transition: color 0.3s ease;
+    font-family: 'Title',sans-serif !important;
+    text-align: center;
+
 }
 
 .faq-item.active .faq-title {
@@ -1290,6 +1484,7 @@ display: none;
     transition: height 0.8s ease, opacity 0.8s ease, transform 0.8s ease; /* Увеличено время анимации */
     padding: 0 16px;
     background: #fff; /* Белый фон для текста */
+    font-family: 'typography';
 }
 
 .faq-item.active .faq-content {
@@ -1455,54 +1650,13 @@ display: none;
     }
 }
 
-/*.blog-card {*/
-/*    border: 1px solid #ccc;*/
-/*    border-radius: 8px;*/
-/*    overflow: hidden;*/
-/*    position: relative;*/
-/*    transition: height 0.3s ease;*/
-/*    height: 300px;*/
-/*}*/
+/* start of blog section */
 
-/*.blog-card img.blog-image {*/
-/*    width: 100%; !* Изображение занимает всю ширину своей колонки *!*/
-/*    height: 100%;*/
-/*    object-fit: cover;*/
-/*}*/
 
-/*.blog-content {*/
-/*    padding: 1rem;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: flex-start;*/
-/*    height: 100%;*/
-/*}*/
+.blog-section{
 
-/*.toggle-icon {*/
-/*    margin: 0 auto;*/
-/*    font-size: 1.5rem;*/
-/*    cursor: pointer;*/
-/*    transition: transform 0.3s ease;*/
-/*}*/
+}
 
-/*.blog-extra {*/
-/*    display: none;*/
-/*    padding: 1rem;*/
-/*    background-color: #f9f9f9;*/
-/*}*/
-
-/*.blog-card.active .blog-extra {*/
-/*    display: block;*/
-/*}*/
-
-/*.blog-card.active .toggle-icon {*/
-/*    transform: rotate(180deg);*/
-/*}*/
-
-/*.icon-img {*/
-/*    width: 24px;*/
-/*    height: 24px;*/
-/*}*/
 
 .blog-card {
     border: 1px solid #ccc;
@@ -1542,28 +1696,54 @@ display: none;
     flex: 1; /* Описание занимает свободное пространство */
     overflow: hidden; /* Убираем переполнение текста */
 }
+.blog-content h2{
+    font-size: 19px;
+}
+.blog-content p{
+    font-size: 15px;
+    font-family: 'typography';
+    opacity: 0.5;
+    color:black;
+}
 
 .blog-extra {
-    display: none; /* По умолчанию скрыто */
-    padding: 1rem;
-    background-color: #f9f9f9;
-    border-top: 1px solid #ccc;
-    animation: fadeIn 0.3s ease; /* Добавим плавность */
+    max-height: 0; /* Элемент скрыт */
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    font-size: 18px;
+    font-family: 'typography';
+    text-align: center;
+    margin: 0;
+    padding-bottom: 0; /* Снижаем внутренние отступы снизу */
 }
+
+.blog-extra p{
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 0 !important;
+}
+
 
 .blog-card.active .blog-extra {
-    display: block; /* Показываем содержимое */
+    max-height: 500px; /* Достаточно большой для содержания */
+    opacity: 1;
 }
 
-.toggle-icon {
+.toggle-icon-blog {
     margin: 0 auto;
     font-size: 1.5rem;
     cursor: pointer;
     transition: transform 0.3s ease;
+    stroke: transparent;
+    fill: transparent;
+
 }
 
-.blog-card.active .toggle-icon {
+.blog-card.active .toggle-icon-blog {
     transform: rotate(180deg); /* Поворачиваем стрелку */
+    fill: white;
+
 }
 
 @keyframes fadeIn {
@@ -1581,134 +1761,12 @@ display: none;
 
 /* секция location */
 
-/*.btn-location {*/
-/*    background-color: #004d40;*/
-/*    color: #fff;*/
-/*    border: none;*/
-/*    padding: 10px 20px;*/
-/*    margin: 5px auto;*/
-/*    border-radius: 5px;*/
-/*    cursor: pointer;*/
-/*    transition: background-color 0.3s ease;*/
-/*}*/
-
-/*.btn-location.active {*/
-/*    background-color: #00796b;*/
-/*    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
-/*}*/
-
-/*.screen {*/
-/*    padding: 20px;*/
-/*    background-color: #f9f9f9;*/
-/*    border: 1px solid #ddd;*/
-/*    border-radius: 5px;*/
-/*}*/
-
-/*!* Общий стиль для слайдера *!*/
-/*.slider {*/
-/*    position: relative;*/
-/*    width: 100%;*/
-/*    max-width: 600px;*/
-/*    margin: 0 auto;*/
-/*    overflow: hidden;*/
-/*    border-radius: 10px;*/
-/*}*/
-
-/*!* Слайды *!*/
-/*.slider-images {*/
-/*    display: flex;*/
-/*    transition: transform 0.3s ease-in-out;*/
-/*}*/
-
-/*.slider-images img {*/
-/*    width: 100%;*/
-/*    height: auto;*/
-/*    flex-shrink: 0;*/
-/*    object-fit: cover;*/
-/*    border-radius: 10px;*/
-/*}*/
-
-/*!* Стрелки *!*/
-/*.slider-arrow {*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    transform: translateY(-50%);*/
-/*    background-color: rgba(0, 0, 0, 0.5);*/
-/*    color: #fff;*/
-/*    border: none;*/
-/*    padding: 10px;*/
-/*    cursor: pointer;*/
-/*    z-index: 10;*/
-/*    border-radius: 50%;*/
-/*    font-size: 1.5rem;*/
-/*}*/
-
-/*.left-arrow {*/
-/*    left: 5%;*/
-/*}*/
-
-/*.right-arrow {*/
-/*    right: 5%;*/
-/*}*/
-
-/*.slider-arrow:hover {*/
-/*    background-color: rgba(0, 0, 0, 0.7);*/
-/*}*/
-
-/*!* Адаптация для мобильных *!*/
-/*@media (max-width: 768px) {*/
-/*    .slider {*/
-/*        max-width: 100%;*/
-/*    }*/
-/*}*/
-
-
-
-/*.slider-container,*/
-/*.map-container {*/
-/*    height: 400px; !* Фиксированная высота *!*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*}*/
-
-/*!* Карта *!*/
-/*.map-container {*/
-/*    height: 400px; !* Высота, синхронизированная со слайдером *!*/
-/*    padding: 10px;*/
-/*}*/
-
-/*.map-container iframe {*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    border: 0;*/
-/*    border-radius: 10px;*/
-/*}*/
-
-/*!* Адаптация для мобильных *!*/
-/*@media (max-width: 768px) {*/
-/*    .screen {*/
-/*        flex-direction: column; !* Слайдер сверху, карта снизу *!*/
-/*    }*/
-
-/*    .slider-container, .map-container {*/
-/*        height: auto; !* Высота регулируется содержимым *!*/
-/*        width: 100%;*/
-/*    }*/
-/*}*/
-
 .location-section {
-    max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 10px !important;
-
-
-
+    padding: 0 12px ;
+    background: linear-gradient(359.87deg, #F6DEAE 28.36%, rgba(244, 141, 9, 0.5) 51.02%, #F7DFAF 99%);
 }
-
-
-
-
 .button-container {
     display: flex;
     justify-content: center;
@@ -1720,26 +1778,31 @@ display: none;
     color: white;
     border: none;
     padding: 10px 20px;
-    margin: 0 10px;
+    margin: 0 50px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
+
 .btn-location.active {
-    background-color: #00796b;
+    background-color: #28a292;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.offcanvas {
+    --bs-offcanvas-width: 200px !important;
+    opacity: 0.7;
+
+
+}
+
 
 /* Контейнер экранов */
 .screen-container {
     position: relative;
 
-
-
 }
-
-
 .screen {
     display: none;
 }
@@ -1771,6 +1834,7 @@ display: none;
     overflow: hidden;
     display: flex;
     align-items: center;
+    border-radius: 10%;
 }
 
 .slider-images {
@@ -1778,6 +1842,7 @@ display: none;
     transition: transform 0.3s ease-in-out;
     width: 100%;
     height: 100%;
+    border-radius: 10%;
 
 }
 
@@ -1797,6 +1862,8 @@ display: none;
 .slider-images img.active {
     opacity: 1; /* Активное изображение становится видимым */
 }
+
+
 
 
 
@@ -1829,17 +1896,17 @@ display: none;
 }
 
 .left-arrow {
-    left: 10px;
+    left: 1%;
 }
 
 .right-arrow {
-    right: 10px;
+    right: 1%;
 }
 
 /* Карта */
 .map-container {
     flex: 1;
-    max-width: 50%;
+    max-width: 30%;
     height: 35rem;
 }
 
@@ -1849,25 +1916,65 @@ display: none;
     border: none;
     border-radius: 10px;
 }
+.reviews-container{
+    max-width: 30%;
+}
 
-
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
 
 /* квиз */
+
+
+
+/* Плавные эффекты для модального окна */
+.modal.fade .modal-dialog {
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.modal.show .modal-dialog {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Плавные эффекты для вопросов и вариантов */
+.quiz-question, .quiz-options, .result-card {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+
+
+
 
 .quiz-section {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-    background-color: #f9f9f9;
+    background: linear-gradient(to bottom, #114F3C, #FCEAB4);
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
+
 
 .quiz-title {
     font-size: 2rem;
     margin-bottom: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .progress-bar {
@@ -1877,12 +1984,14 @@ display: none;
     border-radius: 5px;
     margin-bottom: 20px;
     overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+
 }
 
 .progress {
     width: 0%;
     height: 100%;
-    background-color: #00796b;
+    background: linear-gradient(to right, #43cea2, #185a9d);
     transition: width 0.3s ease;
 }
 
@@ -1899,32 +2008,52 @@ display: none;
 }
 
 .quiz-option {
-    background-color: #004d40;
+    background:linear-gradient(to right, #F8A900, #bbab8a);
     color: white;
     border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
+    padding: 12px 25px;
+    border-radius: 30px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 2s ease, transform 2s ease, box-shadow 0.3s ease;
 }
 
 .quiz-option:hover {
-    background-color: #00796b;
+    background: linear-gradient(to right, #F77A07, #416E54 70%) ;/* Смена направления градиента */
+    transform: translateY(-4px); /* Более заметный подъем */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Увеличенная тень */
+}
+
+.quiz-option:active {
+    background: linear-gradient(to right, #9d8c76, #D89200); /* Более темный градиент для эффекта нажатия */
+    transform: translateY(2px) scale(0.98); /* Легкое уменьшение кнопки и её возвращение вниз */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Меньшая тень при нажатии */
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .back-button {
-    background-color: #eee;
-    border: 1px solid #ccc;
-    padding: 10px 15px;
-    margin-top: 20px;
-    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    border: none; /* Убираем границу */
     cursor: pointer;
-    display: inline-block;
+    outline: none; /* Убираем рамку */
+    background-color: transparent; /* Убираем возможный фон */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .back-button:hover {
-    background-color: #ddd;
+    transform: scale(1.3); /* Лёгкое увеличение */
+    stroke: #fcfcfc;
+
+}
+
+.back-button:active {
+    transform: scale(0.95); /* Лёгкое уменьшение при нажатии */
+}
+
+/* Убираем лишние стили у SVG */
+.back-button svg {
+    pointer-events: none; /* Чтобы клики не срабатывали на иконке */
 }
 
 /* Результат: стили для карточки */
@@ -1937,22 +2066,49 @@ display: none;
     padding: 10px; /* Уменьшаем внутренние отступы */
     margin: 0 auto; /* Центрируем */
     max-width: 30rem ; /* Устанавливаем максимальную ширину */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
 }
 
 
 
 
 .quiz-result .card {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    padding: -10px;
+    background: linear-gradient(to right, #F8A900, #FCEAB4); /* Градиентный фон */
+    border: 1px solid #000000; /* Светлая рамка */
+    border-radius: 10px; /* Скруглённые углы */
+    overflow: hidden; /* Скрываем элементы, выходящие за границы */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1); /* Мягкая тень */
+    padding: 10px; /* Умеренный внутренний отступ */
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Выравнивание контента по вертикали */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Плавные эффекты */
+    animation: shadowPulse 4s infinite ease-in-out; /* Более медленная анимация */
+}
 
+/* Анимация пульсации */
+@keyframes shadowPulse {
+    0% {
+        box-shadow: 0px 10px 20px rgba(51, 138, 251, 0.9); /* Красная тень */
+        transform: scale(1); /* Исходный размер */
+    }
+    25% {
+        box-shadow: 0px 12px 24px rgba(176, 56, 255, 0.9); /* Зелёная тень */
+        transform: scale(1.02); /* Лёгкое увеличение */
+    }
+    50% {
+        box-shadow: 0 15px 30px rgba(207, 41, 191, 0.9); /* Синяя тень */
+        transform: scale(1.03); /* Едва заметное увеличение */
+    }
+    75% {
+        box-shadow: 0 12px 24px rgb(255, 255, 255); /* Жёлтая тень */
+        transform: scale(1.02); /* Лёгкое уменьшение */
+    }
+    100% {
+        box-shadow: 0 10px 20px rgba(26, 52, 222, 0.9); /* Возвращаемся к красной */
+        transform: scale(1); /* Исходный размер */
+    }
 }
 
 .quiz-result .related-cards {
@@ -1965,42 +2121,54 @@ display: none;
 }
 
 .quiz-result .related-card {
+    width: 150px; /* Фиксированная ширина контейнера */
+    height: 200px; /* Фиксированная высота контейнера */
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 5px;
-    flex-direction: row;
     justify-content: center;
-    margin-top: 5px; /* Уменьшаем верхний отступ */
-
+    background:  linear-gradient(to right, #F8A900, #FCEAB4); /* Цвет фона */
+    border-radius: 10px; /* Скруглённые углы */
+    box-shadow:
+            8px 8px 15px rgba(0, 0, 0, 0.8),   /* Тень снизу справа */
+            -8px -8px 15px rgba(255, 255, 255, 0.9); /* Тень сверху слева */
+; /* Лёгкая тень */
+    margin: 20px; /* Отступы между карточками */
+    overflow: hidden; /* Чтобы изображения не выходили за границы */
+    padding: 5px; /* Отступы внутри контейнера */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.quiz-result .related-card:hover {
+    transform: translateY(-10px);
+    box-shadow:
+            12px 12px 20px rgb(22, 121, 244),
+            -12px -12px 20px rgb(0, 0, 0,0.6); /* Более заметная тень */
 }
 
 .quiz-result .related-img {
-    max-width: 80%;
-    height: auto;
-    object-fit: contain;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    background-color: #f9f9f9;
-    margin-bottom: 10px;
+    width: 100%; /* Подгоняем по ширине контейнера */
+    height: 140px; /* Сохраняем пропорции */
+    max-height: 100%; /* Ограничиваем высоту изображения */
+    object-fit: contain; /* Вписываем изображение в контейнер */
+    transition: transform 0.3s ease;
+}
+.quiz-result .related-img:hover {
+    transform: scale(1.05); /* Увеличение изображения при наведении */
 }
 
 .quiz-result .related-img-2 {
-    max-width: 80%;
-    height: auto;
-    object-fit: contain;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    background-color: #f9f9f9;
-    margin-bottom: 10px;
+    width: 100%; /* Подгоняем по ширине контейнера */
+    height: 140px; /* Сохраняем пропорции */
+    max-height: 100%; /* Ограничиваем высоту изображения */
+    object-fit: contain; /* Вписываем изображение в контейнер */
+    transition: transform 0.3s ease;
+}
+.quiz-result .related-img-2:hover {
+    transform: scale(1.05); /* Увеличение изображения при наведении */
 }
 
-.quiz-result .related-img-3 {
-    max-width: 80%;
-    height: auto;
-    object-fit: contain;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    background-color: #f9f9f9;
-    margin-bottom: 10px;
+.quiz-result .related-img-3:hover {
+    transform: scale(1.05); /* Увеличение изображения при наведении */
 }
 
 .image-mobile-wrapper{
@@ -2011,13 +2179,27 @@ display: none;
 .quiz-result h3 {
     font-size: 1.5rem;
     margin: 10px 0;
-    color: #333;
+    color: black;
+    font-weight: bold;
+    text-shadow: 4px 4px 5px rgb(255, 255, 255);
+    font-family: 'Comfortaa', sans-serif;
+    transition: transform 0.3s ease, color 0.3s ease; /* Плавные эффекты при наведении */
 }
+
 
 .quiz-result p {
     font-size: 1rem;
-    color: #555;
-    margin: 10px;
+    margin: 5px;
+}
+.card-reccomended-description{
+    font-size: 1.2rem; /* Чуть больше базового размера для акцента */
+    font-weight: 500; /* Полужирный текст для выразительности */
+    color: #000000; /* Нейтральный, но контрастный цвет */
+    text-align: center; /* Центрируем текст */
+    text-transform: capitalize; /* Первые буквы каждого слова с заглавной */
+    letter-spacing: 0.5px; /* Лёгкое увеличение межбуквенного интервала */
+    line-height: 1.5; /* Улучшенная читаемость */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .related-icon {
@@ -2027,33 +2209,66 @@ display: none;
     text-align: center;
 }
 .quiz-result .card-img {
-    width: 35%; /* Уменьшаем ширину до 70% от родительского блока */
-    height: auto; /* Сохраняем пропорции */
-    object-fit: contain; /* Обеспечиваем корректное отображение содержимого */
-    border-bottom: 1px solid #ddd;
-    margin: 0 auto ; /* Центрируем изображение внутри карточки */
-    display: block; /* Гарантируем, что изображение является блочным */
+    width: 100%; /* Подгоняем под ширину контейнера */
+    max-width: 250px; /* Ограничиваем максимальную ширину */
+    height: 300px; /* Сохраняем пропорции */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    object-fit:contain; /* Обеспечиваем, чтобы изображение вписывалось */
+    margin: 20px auto; /* Центрируем и добавляем отступ сверху/снизу */
+    display: block; /* Блочное отображение */
+    border-radius: 12px; /* Скругляем углы изображения */
+    box-shadow:
+            8px 8px 15px rgba(0, 0, 0, 0.8),   /* Тень снизу справа */
+            -8px -8px 15px rgba(255, 255, 255, 0.9); /* Тень сверху слева */
+; /* Лёгкая тень */
+    background:linear-gradient(to right, #FCEAB4,#F8A900); /* Фон за изображением */
+    padding: 10px; /* Визуальная рамка вокруг изображения */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Эффект при наведении */
+    overflow: hidden; /* Чтобы изображения не выходили за границы */
+}
+.quiz-result .card-img:hover {
+    transform: scale(1.05); /* Увеличение изображения при наведении */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Увеличение тени */
 }
 
+
 #restart-button {
+    border-radius: 20%;
     margin: 0 auto; /* Центрируем её */
+    color: white;
+    position: absolute;
+    left: 50%;
+    background-color: #d19725;
+    transform: translateX(-50%);
     display: none; /* Скрываем кнопку изначально */
+}
+
+#restart-button:hover {
+    background-color: var(--bg-color-green); /* Цвет фона при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавляем тень */
+}
+
+#restart-button:active {
+    background-color: #e89937; /* Цвет фона при нажатии */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Меняем тень */
 }
 
 .modal-header {
     position: relative;
     display: flex;
+    background: #F1DEA0;
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
 }
 
-#restart-button {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
+.modal-body{
+    background: #F1DEA0;
 }
+
+
 
 .btn-close {
     position: absolute;
@@ -2061,6 +2276,44 @@ display: none;
     top: 10px;
     z-index: 2;
 }
+
+
+.question-counter {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-right: 20%; /* Если нужно еще точнее */
+}
+.quiz-section-start {
+    animation: slideIn 1s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-out {
+    opacity: 1;
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(-20px); /* Сдвиг влево для визуального эффекта */
+    }
+}
+
+
+
 
 /* Отступы между рядами */
 /* Настройки для карточек */
@@ -2092,6 +2345,9 @@ display: none;
 .discount-card-body {
     text-align: center;
 }
+
+
+
 
 .discount-card-title {
     font-size: 1rem;
@@ -2155,3 +2411,274 @@ display: none;
 .scroll-to-top.show {
     opacity: 1;
 }
+.card-reccomended-title{
+    font-family: Comfortaa,sans-serif;
+    margin: 15px 0; /* Добавляем пространство для дыхания */
+    color: #505050; /* Нейтральный и современный цвет */
+    text-align: center; /* Центрируем текст */
+    letter-spacing: 1px; /* Лёгкое увеличение межбуквенного интервала */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.text-highlight {
+    background: linear-gradient(to right, #338afb, #B038FF, #CF29BF, #1A34DE);
+    background-size: 200% 200%; /* Увеличиваем размер фона для плавного движения */
+    -webkit-background-clip: text; /* Обеспечивает отображение градиента только на тексте */
+    color: transparent; /* Очищаем основной цвет текста, чтобы отображался только градиент */
+    font-weight: bold;
+    font-size: 1.5rem;
+    animation: gradientShift 3s ease-in-out infinite; /* Анимация для переливания градиента */
+}
+
+/* Анимация для плавного изменения градиента */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.offcanvas-img{
+ width: 150px;
+    height: auto;
+}
+
+.blog-section-mobile {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 1rem;
+}
+
+.blog-title-mobile {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.blog-content-mobile {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Скрываем секцию на десктопах */
+/* Скрываем секцию на десктопах */
+.mobile-only {
+    display: none;
+}
+
+/* Показываем секцию только на мобильных экранах */
+@media (max-width: 768px) {
+    .mobile-only {
+        display: block;
+    }
+}
+
+/*!* Общие стили для мобильной секции *!*/
+/*.mobile-blog-section {*/
+/*    position: relative; !* Необходимо для абсолютного позиционирования кнопки "Свернуть" *!*/
+/*}*/
+
+/* Стиль кнопки "Блог" */
+.mobile-blog-toggle-button {
+    padding: 10px 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 110px;
+    width: 100%;
+    margin-bottom: -10px;
+    margin-top: -5px;
+    position: relative;
+    overflow: hidden; /* Ограничиваем область, чтобы градиент не выходил */
+    background-color: #114F3C; /* Фоновый цвет по умолчанию */
+
+}
+
+
+.mobile-blog-toggle-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Начинаем за пределами видимой области */
+    width: 5%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3); /* Полупрозрачный белый цвет для блика */
+    background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.5) 50%,
+            rgba(255, 255, 255, 0) 100%
+    ); /* Градиент для создания эффекта блика */
+    z-index: 1;
+    transform: skewX(-20deg); /* Добавляем наклон для более естественного эффекта */
+    animation: shineblog 6s infinite; /* Анимация перемещения блика */
+}
+
+@keyframes shineblog {
+    0% {
+        left: -100%; /* Блик начинается за левой границей */
+        width: 5%;
+        opacity: 0.6;
+    }
+    50% {
+        left: 100%;
+        width: 10%;/* Блик достигает правой границы */
+        opacity: 1;
+    }
+    100% {
+        left: 110%;
+        width: 5%;/* Блик остается за правой границей */
+        opacity: 0.6
+    }
+}
+
+
+
+
+
+
+
+/*!* Тонкая белая линия *!*/
+/*.mobile-blog-toggle-button::before {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 50%;*/
+/*    width: 4px; !* Толщина линии *!*/
+/*    height: 100%;*/
+/*    background: rgba(255, 255, 255, 0.5);*/
+/*    transform: rotate(30deg) translateX(-50%);*/
+/*}*/
+
+/*!* Двигающаяся линия *!*/
+/*.mobile-blog-toggle-button::after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: -100%;*/
+/*    left: -100%;*/
+/*    width: 6px; !* Толщина движущейся линии *!*/
+/*    height: 250%;*/
+/*    background: rgba(255, 255, 255, 0.7);*/
+/*    filter: blur(2px); !* Мягкость линии *!*/
+/*    transform: rotate(30deg);*/
+/*    animation: lightMove 4s linear infinite;*/
+/*}*/
+
+/*!* Анимация движения линии *!*/
+/*@keyframes lightMove {*/
+/*    0% {*/
+/*        top: -100%;*/
+/*        left: -100%;*/
+/*    }*/
+/*    100% {*/
+/*        top: 100%;*/
+/*        left: 100%;*/
+/*    }*/
+/*}*/
+
+/*!* Эффект свечения вокруг кнопки *!*/
+/*@keyframes glowEffect {*/
+/*    0% {*/
+/*        box-shadow: 0px 0px 10px rgba(0, 255, 170, 0.3);*/
+/*    }*/
+/*    50% {*/
+/*        box-shadow: 0px 0px 20px rgba(255, 255, 0, 0.6);*/
+/*    }*/
+/*    100% {*/
+/*        box-shadow: 0px 0px 10px rgba(0, 255, 170, 0.3);*/
+/*    }*/
+/*}*/
+
+/* Плывущая белая линия */
+
+
+/* Анимация движения белой линии */
+
+/* Градиентный перелив фона */
+
+
+/* Эффект свечения вокруг кнопки */
+
+
+
+/* Анимация для прозрачности */
+
+/* Плывущий градиент */
+
+
+
+.mobile-blog-toggle-button:hover {
+    background-color: #f7af14;
+}
+
+/* SVG-иконка */
+.mobile-blog-toggle-button svg {
+    display: block;
+    width: 65px;
+    height: 65px;
+    fill: none;
+    stroke: white;
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+
+}
+
+.mobile-blog-toggle-button.active svg {
+    display: block;
+    width: 65px;
+    height: 65px;
+    stroke: white;
+    transform: rotate(180deg);
+    fill: black;
+}
+
+/* Стиль содержимого блога */
+.mobile-blog-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 0 15px;
+    position: relative; /* Для позиционирования кнопки "Свернуть" */
+}
+
+.mobile-blog-content.open {
+    max-height: 2300px; /* Максимальная высота для открытого состояния */
+    padding: 15px;
+}
+
+/* Стиль кнопки "Свернуть" */
+.mobile-blog-hide-button {
+    display: block; /* Блоковый элемент */
+    margin: 10px auto  1px; /* Автоматический горизонтальный отступ для центрирования */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(61, 61, 61, 0.3);
+    color: white;
+    transition: background-color 0.3s ease;
+    width: fit-content; /* Ширина подстраивается под содержимое */
+}
+
+
+.mobile-blog-hide-button:hover {
+    background-color: #000000;
+}
+
+

@@ -1,0 +1,311 @@
+let articles = [];
+let currentIndex = 0;
+
+// Функция загрузки статей
+function fetchArticles() {
+fetch('./articles.json')
+.then(response => response.json())
+.then(data => {
+articles = data;
+renderSlider();
+renderPagination();
+})
+.catch(error => console.error('Ошибка загрузки:', error));
+}
+
+
+
+
+function renderSlider() {
+  const container = document.getElementById("articles-container");
+  container.innerHTML = "";  // Очистка контейнера перед рендером
+
+  const sliderContainer = document.createElement("div");
+  sliderContainer.classList.add("slider-container-mobile");
+
+  const articleBlock = document.createElement("div");
+  articleBlock.classList.add("article-block");
+
+  const articleHeader = document.createElement("div");
+  articleHeader.classList.add("article-header");
+
+  const imageContainer = document.createElement("div");
+  imageContainer.classList.add("article-image-container");
+
+  const articleImage = document.createElement("img");
+  articleImage.classList.add("article-image");
+  articleImage.alt = "Картинка";
+  imageContainer.appendChild(articleImage);
+
+  const prevButton = document.createElement("button");
+  prevButton.classList.add("slider-nav", "prev");
+  prevButton.innerHTML = <svg viewBox="0 0 24 24">
+  <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+  </svg>;
+  prevButton.addEventListener("click", () => changePage(currentIndex - 1));
+
+  const nextButton = document.createElement("button");
+  nextButton.classList.add("slider-nav", "next");
+  nextButton.innerHTML = <svg viewBox="0 0 24 24">
+  <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+  </svg>;
+  nextButton.addEventListener("click", () => {
+  if (currentIndex < articles.length - 1) {
+  changeArticleWithAnimation(currentIndex + 1);
+}
+});
+
+imageContainer.appendChild(prevButton);
+imageContainer.appendChild(nextButton);
+
+// Создаем контейнер для заголовка и кнопки
+const titleWrapper = document.createElement("div");
+titleWrapper.classList.add("title-wrapper");
+
+const articleTitle = document.createElement("h3");
+articleTitle.classList.add("article-title");
+articleTitle.textContent = "Заголовок статьи"; // Заглушка, обновится динамически
+
+const toggleButton = document.createElement("button");
+toggleButton.classList.add("toggle-button");
+toggleButton.innerHTML =
+<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.4999 33.9167C27.0143 33.9167 33.9166 27.0144 33.9166 18.5C33.9166 9.98565 27.0143 3.08337 18.4999 3.08337C9.98553 3.08337 3.08325 9.98565 3.08325 18.5C3.08325 27.0144 9.98553 33.9167 18.4999 33.9167Z" stroke="#FFFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.3333 18.5L18.4999 24.6667L24.6666 18.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.5 12.3334V24.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+;
+toggleButton.addEventListener("click", function () {
+toggleArticle(toggleButton);
+});
+
+// Добавляем заголовок и кнопку в обертку
+titleWrapper.appendChild(articleTitle);
+titleWrapper.appendChild(toggleButton);
+
+const articleInfo = document.createElement("div");
+articleInfo.classList.add("article-info");
+articleInfo.appendChild(titleWrapper);
+
+articleHeader.appendChild(imageContainer);
+articleHeader.appendChild(articleInfo);
+
+articleBlock.appendChild(articleHeader);
+
+const articleContent = document.createElement("div");
+articleContent.classList.add("article-content");
+articleContent.innerHTML = <p class="article-text"></p>;
+articleBlock.appendChild(articleContent);
+
+sliderContainer.appendChild(articleBlock);
+container.appendChild(sliderContainer);
+
+updateUI();
+}
+
+
+
+
+
+
+
+// Обновление содержимого статьи
+function updateArticle() {
+if (!articles.length) return;
+const article = articles[currentIndex];
+const articleBlock = document.querySelector(".article-block");
+const contentBlock = document.querySelector(".article-content");
+
+// Меняем фон блока по значению color из JSON
+articleBlock.style.backgroundColor = article.color;
+contentBlock.style.backgroundColor = article.color;
+// Обновляем изображение
+articleBlock.querySelector(".article-image").src = article.image;
+// Добавляем нумерацию к заголовку (если в JSON нет поля id, используем индекс + 1)
+const articleNumber = article.id || (currentIndex + 1);
+articleBlock.querySelector(".article-title").textContent = ${articleNumber}. ${article.title};
+// Обновляем содержимое статьи
+articleBlock.querySelector(".article-text").textContent = article.content;
+// Сбрасываем состояние содержимого (свернуто)
+const content = articleBlock.querySelector(".article-content");
+content.classList.remove("visible");
+}
+
+// Переключение состояния раскрытия содержимого с плавной анимацией
+function toggleArticle(button) {
+const content = document.querySelector(".article-content");
+content.classList.toggle("visible");
+button.classList.toggle("open");  // Меняем класс для стрелки
+}
+
+function updateUI() {
+updateArticle();
+renderPagination();
+}
+
+// Функция для переключения страниц и слайдера
+function changePage(newIndex) {
+if (newIndex >= 0 && newIndex < articles.length) {
+currentIndex = newIndex;
+updateUI();
+}
+}
+
+
+
+
+function renderPagination() {
+const container = document.getElementById("articles-container");
+let paginationContainer = document.querySelector(".pagination");
+
+if (!paginationContainer) {
+paginationContainer = document.createElement("div");
+paginationContainer.classList.add("pagination");
+container.appendChild(paginationContainer);
+} else {
+paginationContainer.innerHTML = "";
+}
+
+const totalPages = articles.length;
+const maxVisiblePages = 4;
+let startPage = Math.max(0, currentIndex - Math.floor(maxVisiblePages / 2));
+let endPage = startPage + maxVisiblePages;
+
+if (endPage > totalPages) {
+endPage = totalPages;
+startPage = Math.max(0, endPage - maxVisiblePages);
+}
+
+const prevButton = document.createElement("button");
+prevButton.innerHTML =
+<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.4999 33.9167C27.0143 33.9167 33.9166 27.0144 33.9166 18.5C33.9166 9.98565 27.0143 3.08337 18.4999 3.08337C9.98553 3.08337 3.08325 9.98565 3.08325 18.5C3.08325 27.0144 9.98553 33.9167 18.4999 33.9167Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.3333 18.5L18.4999 24.6667L24.6666 18.5"
+transform="rotate(90 18.5 18.5)"
+stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.5 12.3334V24.6667"
+transform="rotate(-90 18.5 18.5)"
+stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>;
+prevButton.disabled = currentIndex === 0;
+prevButton.addEventListener("click", () => {
+if (currentIndex > 0) {
+changeArticleWithAnimation(currentIndex - 1);
+}
+});
+paginationContainer.appendChild(prevButton);
+
+for (let i = startPage; i < endPage; i++) {
+const pageItem = document.createElement("span");
+pageItem.textContent = articles[i].id;
+pageItem.classList.add("page-item");
+if (i === currentIndex) {
+pageItem.classList.add("active");
+}
+pageItem.addEventListener("click", () => {
+changeArticleWithAnimation(i);
+});
+paginationContainer.appendChild(pageItem);
+}
+
+const nextButton = document.createElement("button");
+nextButton.innerHTML = <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.4999 33.9167C27.0143 33.9167 33.9166 27.0144 33.9166 18.5C33.9166 9.98565 27.0143 3.08337 18.4999 3.08337C9.98553 3.08337 3.08325 9.98565 3.08325 18.5C3.08325 27.0144 9.98553 33.9167 18.4999 33.9167Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.3333 18.5L18.4999 24.6667L24.6666 18.5"
+transform="rotate(-90 18.5 18.5)"
+stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.5 12.3334V24.6667"
+transform="rotate(90 18.5 18.5)"
+stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+;
+nextButton.disabled = currentIndex === totalPages - 1;
+nextButton.addEventListener("click", () => {
+if (currentIndex < totalPages - 1) {
+changeArticleWithAnimation(currentIndex + 1);
+}
+});
+paginationContainer.appendChild(nextButton);
+}
+
+function changeArticleWithAnimation(newIndex) {
+const articleBlock = document.querySelector(".article-block");
+articleBlock.style.opacity = "0";
+setTimeout(() => {
+currentIndex = newIndex;
+updateArticle();
+renderPagination();
+articleBlock.style.opacity = "1";
+}, 300);
+}
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", fetchArticles); вот js, который создает slider  и пагинатор , вот так выглядит json [
+{
+"id": 1,
+"title": "Почему кошки злятся при поглаживаниях и можно ли это скорректировать?",
+"image": "images/blog/cat-blog-1.jpg",
+"content": "пример текстового контента",
+"color": "#ADABAF"
+},
+{
+"id": 2,
+"title": "Можно ли содержать несколько видов рыб вместе и как их правильно сочетать?",
+"image": "images/blog/fish.jpg",
+"content": "пример текстового контента",
+"color": "#2c98a6"
+},
+{
+"id": 3,
+"title": "Почему кролик стучит задними лапами и всегда ли это признак протеста?",
+"image": "images/blog/krolik-blog-mobile.jpg",
+"content": "пример текстового контента",
+"color": "#F1DEA0"
+},
+{
+"id": 4,
+"title": "Можно ли самому делать игрушки для хомяка из картонных коробок, и как не навредить?",
+"image": "images/blog/hamster-blog.jpg",
+"content": "пример текстового контента",
+"color": "#DDB486"
+},
+{
+"id": 5,
+"title": "Как приучить попугая к рукам и общению с хозяином?",
+"image": "images/blog/popugai.jpg",
+"content": "пример текстового контента",
+"color": "#F67C0A"
+},
+{
+"id": 6,
+"title": "Как подобрать лакомства для питомца, чтобы они были вкусными и полезными?",
+"image": "images/blog/lakomstva-dlya-pitomca.jpg",
+"content": "пример текстового контента",
+"color": "#D5D9DB"
+},
+{
+"id": 7,
+"title": "Можно ли предотвратить ожирение у стерилизованных кошек подбором специального рациона?",
+"image": "images/blog/catblog1-mobile.png",
+"content": "пример текстового контента",
+"color": "#E17F12"
+},
+{
+"id": 8,
+"title": "Какие основные причины аллергии у животных на корм, и как подобрать альтернативы?",
+"image": "images/blog/dog8.png",
+"content": "пример текстового контента",
+"color": "#E27385"
+},
+{
+"id": 9,
+"title": "Третья статья",
+"image": "images/blog/fish2.jpg",
+"content": "Это содержимое третьей статьи. Дополнительная информация представлена здесь.",
+"color": "#ddddff"
+}
+] я хочу этот код усложнить, я хочу добавить 5 кнопок-категорий, кошки, собаки, грызуны, рыбки, птицы.  и в json  добавить статьям привязку к этим буквам, создать как бы категорию, и настроить на это работу слайдера, чтобы ты выбирал категорию-кнопку, и слайдер показывал только содержимое это кнопки категори, и чтобы по умолчанию, в default режиме показывало первую категорию 1 статью, и просто при выборе категори-кнопки показывал всегда первую статьи первой категонии.  То есть пример Категори 1- статья 1 default состояние slider, выбираем категорию 2 "собаки"  показывает первую статью категории 2 собаки. Ну и базовых стояний кнопок тоже накинуть, активное и пассивное, поехали, все внутри js само собой

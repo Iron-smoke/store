@@ -1,0 +1,7 @@
+const categoryFiles = {
+  "кошки": "articles_koshki.json",
+  "собаки": "articles_sobaki.json",
+  "грызуны": "articles_gryzuny.json",
+  "рыбки": "articles_rybki.json",
+  "птицы": "articles_ptitsy.json"
+};
